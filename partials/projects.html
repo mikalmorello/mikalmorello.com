@@ -1,0 +1,15 @@
+
+<h1>Projects</h1>
+<section>
+  <div ng-controller="ProjectCtrl">
+    <div ng-repeat="project in projects">
+        <h2>{{project.title}}</h2>
+        <a href="#projects/{{project.title}}" role="button">ISOLATE</a>
+        <small>{{project.subtitle}}</small>
+        <div ng-include="project.url"></div>
+        <p>{{project.description}}</p>
+        <p>{{project.image}}</p>
+      </div>
+    </div>
+  </div>
+</section>

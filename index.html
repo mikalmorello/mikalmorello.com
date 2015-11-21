@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>
+<html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>
+<html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>
+<html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+
+    <!-- Meta-Information -->
+    <title>Portfolio of Mikal Morello</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="description" content="Mikal Morello, interface designer portfolio ">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Our Website CSS Styles -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/themify-icons.css">
+  
+</head>
+<body ng-app="portfolio" ng-controller="MainCtrl" >
+  <div id="wrapper" ng-class="sidebarClass"> 
+    <!-- SIDEBAR -->
+    <div ng-include='"templates/sidebar.html"'></div>
+    <!-- SIDEBAR END-->
+    <div id="page-content-wrapper">
+      <header><div ng-include='"templates/header.html"'></div></header>
+      <main><div ng-view class="fade"></div></main>
+    </div>
+  </div>
+<!-- Vendor: Javascripts -->
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
+<!-- Vendor: Angular, followed by our custom Javascripts -->
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular-route.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular-animate.js"></script>
+
+<!-- Our Website Javascripts -->
+<script src="js/apps.js"></script>
+
+
+
+</body>
+</html>

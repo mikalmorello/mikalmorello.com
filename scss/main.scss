@@ -1,0 +1,38 @@
+/* 
+CSS OUTLINE 
+
+-- VARIABLES -- 
+- GLOBAL
+- TYPOGRAPHY
+- LAYOUT
+- SECTIONS
+- COMPONENTS
+- ANIMATION
+- ACCESSIBILITY
+- VENDOR
+- PAGES
+- THEMES
+
+*/
+
+
+// VARIABLES
+@import "variables/variables";
+
+// GLOBAL
+@import "global/global";
+@import "global/helper";
+
+
+// TYPOGRAPHY
+@import "typography/typography";
+
+// LAYOUT
+@import "layout/layout";
+
+// SECTIONS
+@import "sections/sidebar";
+
+
+// ANIMATION
+@import "animation/animation";
