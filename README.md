@@ -1,2 +1,1 @@
-# angular-styleguide
 # mikalmorello.com
