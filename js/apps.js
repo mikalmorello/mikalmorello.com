@@ -39,21 +39,21 @@ app.factory("Project", function() {
 var projects = [
   {   title: 'Project-Name-1',
       subtitle: 'Project Details Subtitle',
-	  image: 'Image', 
+	  image: 'assets/images/project-1.jpg', 
 	  description: 'Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient monte',
-      url:'partials/projects/project-name.html'
+      url:'partials/projects/project-name-1.html'
 	},
   {   title: 'Project-Name-2',
       subtitle: 'Project Details Subtitle',
-	  image: 'image', 
+	  image: 'assets/images/project-2.jpg', 
 	  description: 'Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient monte',
-     url:'partials/projects/project-name.html'
+      url:'partials/projects/project-name-2.html'
 	},
   {   title: 'Project-Name-3',
       subtitle: 'Project Details Subtitle',
-	  imge: 'image', 
+	  image: 'assets/images/project-3.jpg', 
 	  description: 'Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient monte',
-     url:'partials/projects/project-name.html'
+      url:'partials/projects/project-name-3.html'
 	},
   
 ]
@@ -102,16 +102,16 @@ app.controller("MainCtrl", function($scope, $location, $anchorScroll) {
   
   
    /* MENU TOGGLE - ANGULAR */
-    $scope.sidebarClass = "sidebar-closed";
-    $scope.iconClass ="ti-close icon-large";
+    $scope.sidebarClass = "sidebar-open";
+    $scope.iconClass ="ti-menu icon-large";
     
     $scope.changeClass = function(){
-        if ($scope.sidebarClass === "sidebar-open")
-            $scope.sidebarClass = "sidebar-closed",
-            $scope.iconClass ="ti-menu icon-large";
-         else
+        if ($scope.sidebarClass === "sidebar-closed")
             $scope.sidebarClass = "sidebar-open",
-            $scope.iconClass = "ti-close icon-large";
+            $scope.iconClass ="ti-close icon-large";
+         else
+            $scope.sidebarClass = "sidebar-closed",
+            $scope.iconClass = "ti-menu icon-large";
     };
     
   /* SCROLL TO CONTENT */

@@ -1,7 +1,13 @@
 <section>
   <div ng-controller="myController">
-    <a href="#/projects" >Back</a>
-    <p>{{project.description}}</p>
-    <div ng-include="project.url"></div>
+    <!--<div ng-class="project.title">{{project.title}}</div>-->
+    <div class="project-header" ng-style="{'background-image': 'url({{project.image}})'}">
+      <div class="container-header">
+        <h1>project.title</h1>
+      </div>
+    </div>
+    <a href="#/projects" class="back">Back</a>
+    <!--<img ng-src="{{project.image}}" alt="" />-->
+    <div class="container-text" ng-include="project.url"></div>
   </div>
 </section>

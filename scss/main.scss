@@ -23,14 +23,19 @@ CSS OUTLINE
 @import "global/global";
 @import "global/helper";
 
-
 // TYPOGRAPHY
 @import "typography/typography";
 
 // LAYOUT
 @import "layout/layout";
 
+// COMPONENTS
+@import "components/components";
+
+
 // SECTIONS
+@import "sections/header";
+@import "sections/main";
 @import "sections/sidebar";
 
 

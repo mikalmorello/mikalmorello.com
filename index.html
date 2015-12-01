@@ -19,18 +19,40 @@
     <!-- Our Website CSS Styles -->
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/themify-icons.css">
+    <link rel="stylesheet" href="css/style8.css">
   
 </head>
 <body ng-app="portfolio" ng-controller="MainCtrl" >
   <div id="wrapper" ng-class="sidebarClass"> 
+    <!-- OVERLAY -->
+    <div ng-include='"templates/overlay.html"'></div>
     <!-- SIDEBAR -->
     <div ng-include='"templates/sidebar.html"'></div>
-    <!-- SIDEBAR END-->
-    <div id="page-content-wrapper">
+    <!-- MAIN-->
+    <div id="page-content-wrapper" class="container">
       <header><div ng-include='"templates/header.html"'></div></header>
       <main><div ng-view class="fade"></div></main>
     </div>
   </div>
+  
+  
+  
+  <!-- OVERLAY MENU -->
+<p><button id="trigger-overlay" type="button" class="clickme">Open Overlay</button></p>
+<div class="overlay overlay-contentscale">
+  <button type="button" class="overlay-close">Close</button>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Projects</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+</div>
+<!-- OVERLAY MENU END -->
+  
 <!-- Vendor: Javascripts -->
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 
@@ -39,10 +61,18 @@
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular-route.min.js"></script>
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular-animate.js"></script>
 
-<!-- Our Website Javascripts -->
+<!-- Javascript -->
 <script src="js/apps.js"></script>
-
-
-
+<!-- Javascript Menu -->
+<script src="js/modernizr.custom.js"></script>
+<script src="js/classie.js"></script>
+<script src="js/demo7.js"></script>
+<script>
+  /* FOR MENU OVERLAY */
+  $(document).on("click", ".clickme", function() {
+  console.log("click");
+});
+  </script>
+  
 </body>
 </html>
