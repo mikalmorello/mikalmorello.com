@@ -29,7 +29,6 @@ app.config(['$routeProvider', '$locationProvider', function ($routeProvider,$loc
  */
 app.controller('PageCtrl', function ($scope) {
   console.log("Page Controller reporting for duty.");
-
 });
 
 
@@ -54,19 +53,18 @@ var projects = [
 	  image: 'assets/images/project-3.jpg', 
 	  description: 'Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient monte',
       url:'partials/projects/project-name-3.html'
-	},
-  
+	}
 ]
     return {
-    all: function() {
-      return projects;
-    },
-    get: function(title) {
-      var result = null;
-      angular.forEach(projects, function(p) {
-        if (p.title == title) result = p;
-      });
-      return result;
+      all: function() {
+        return projects;
+      },
+      get: function(title) {
+        var result = null;
+        angular.forEach(projects, function(p) {
+          if (p.title == title) result = p;
+        });
+       return result;
     }
   };
 });
@@ -79,28 +77,12 @@ app.controller("ShowProjectCtrl", function($scope, $routeParams, Project) {
   $scope.project = Project.get($routeParams.title);
 });
 
-
-
-// TABS
-app.controller("PanelController", function(){
-  this.tab = 1;
-  this.selectTab = function (setTab){
-     this.tab = setTab;
-  };
-  this.isSelected = function(checkTab){
-    return this.tab === checkTab;
-  }
-});
-
-
-
 app.controller("MainCtrl", function($scope, $location, $anchorScroll) {
   $scope.menuClass = function(page) {
     var current = $location.path().substring(1);
     return page === current ? "active" : "";
   };
-  
-  
+
    /* MENU TOGGLE - ANGULAR */
     $scope.sidebarClass = "sidebar-open";
     $scope.iconClass ="ti-menu icon-large";
@@ -113,47 +95,12 @@ app.controller("MainCtrl", function($scope, $location, $anchorScroll) {
             $scope.sidebarClass = "sidebar-closed",
             $scope.iconClass = "ti-menu icon-large";
     };
-    
-  /* SCROLL TO CONTENT */
-  
 });
 
-// NOT USED, BUT WANT TO USE DYNAMIC CUSTOM DIRECTIVES
-   app.directive("myButtons", function () {
-        return {
-            restrict: 'E',
-           // template: '<div>This is a snippet</div>',
-            templateUrl: 'partials/components/button.html',
-           // replace: true
-        };
-     });
-
-// COMPONENT DETAILS - ASIDE SLIDE    
-app.directive('slideToggle', function() {  
+// APP MENU DIRECTIVE
+app.directive("menuOverlay", function(){
   return {
-    restrict: 'A',      
-    scope:{},
-    controller: function ($scope) {}, 
-    link: function(scope, element, attr) {
-      element.bind('click', function() {                  
-        var $slideBox = angular.element(attr.slideToggle);
-        var slideDuration = parseInt(attr.slideToggleDuration, 10) || 200;
-        $slideBox.stop().slideToggle(slideDuration);
-      });
-    }
-  };  
+    restrict: 'E',
+    templateUrl: 'templates/overlay.html'
+  };
 });
-
-// COMPONENT DETAILS - MAIN / ASIDE SPACING
-app.controller("myController", function($scope){	    
-    $scope.class = "col-lg-8";
-    
-    $scope.toggleClass = function(){
-        if ($scope.class === "col-lg-8")
-            $scope.class = "col-lg-12 ";
-        else
-            $scope.class = "col-lg-8";
-    };
-});
-
-
