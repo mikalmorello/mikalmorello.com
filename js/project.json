@@ -1,0 +1,23 @@
+[
+    {
+        "title": "Project-Name-1x",
+        "subtitle": "Project Details Subtitle",
+        "image": "assets/images/project-1.jpg",
+        "description": "Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient monte",
+        "url": "partials/projects/project-name-1.html"
+    },
+    {
+        "title": "Project-Name-2x",
+        "subtitle": "Project Details Subtitle",
+        "image": "assets/images/project-2.jpg",
+        "description": "Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient monte",
+        "url": "partials/projects/project-name-2.html"
+    },
+    {
+        "title": "Project-Name-3x",
+        "subtitle": "Project Details Subtitle",
+        "image": "assets/images/project-3.jpg",
+        "description": "Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient monte",
+        "url": "partials/projects/project-name-3.html"
+    }
+]

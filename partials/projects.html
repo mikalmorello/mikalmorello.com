@@ -1,6 +1,7 @@
 
 <h1>Projects</h1>
-<section>
+<!--
+    <section>
   <div ng-controller="ProjectCtrl">
     <div class="container-text"  ng-repeat="project in projects">
         <h2>{{project.title}}</h2>
@@ -10,6 +11,19 @@
         <p>{{project.description}}</p>
         <p>{{project.image}}</p>
       </div>
+    </div>
+  </div>
+</section> -->
+
+<section>
+  <div ng-controller="Test as store">
+    <div class="container-text" ng-repeat="project in store.projects">
+          <h2>{{project.title}}</h2>
+          <a href="#projects/{{project.title}}" role="button">ISOLATE</a>
+          <br />
+          <small>{{project.subtitle}}</small>
+          <p>{{project.description}}</p>
+          <p>{{project.image}}</p>
     </div>
   </div>
 </section>

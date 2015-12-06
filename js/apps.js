@@ -69,6 +69,22 @@ var projects = [
   };
 });
 
+// TEST APP CONTROLLER
+  app.controller('Test', ['$http', function($http){
+    var store = this;
+    store.projects = [];
+    $http.get('js/project.json').success(function(data){
+      store.projects = data;
+    });
+  }]);
+
+
+
+// TEST END
+
+
+
+
 app.controller("ProjectCtrl", function($scope, Project) {
   $scope.projects = Project.all();
 });
