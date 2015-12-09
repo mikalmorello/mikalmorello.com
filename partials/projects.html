@@ -1,29 +1,18 @@
-
-<h1>Projects</h1>
-<!--
-    <section>
-  <div ng-controller="ProjectCtrl">
-    <div class="container-text"  ng-repeat="project in projects">
-        <h2>{{project.title}}</h2>
-        <a href="#projects/{{project.title}}" role="button">ISOLATE</a>
-        <br />
-        <small>{{project.subtitle}}</small>
-        <p>{{project.description}}</p>
-        <p>{{project.image}}</p>
-      </div>
+<section>
+  <div class="projects-header">
+    <div class="container-header">
+      <h1>Projects</h1>
     </div>
   </div>
-</section> -->
-
+</section>
 <section>
-  <div ng-controller="Test as store">
-    <div class="container-text" ng-repeat="project in store.projects">
-          <h2>{{project.title}}</h2>
-          <a href="#projects/{{project.title}}" role="button">ISOLATE</a>
-          <br />
-          <small>{{project.subtitle}}</small>
-          <p>{{project.description}}</p>
-          <p>{{project.image}}</p>
-    </div>
+  <div class="container-text" ng-repeat="project in projects">
+    <div class="project-header" ng-style="{'background-image': 'url('+ project.image +')'}"></div>
+      <h2><a href="#/projects/{{project.title}}">{{project.title}}</a></h2>
+      <a href="#/projects/{{project.title}}" role="button">ISOLATE</a>
+      <br />
+      <small>{{project.subtitle}}</small>
+      <p>{{project.description}}</p>
+      <p>{{project.image}}</p>
   </div>
 </section>

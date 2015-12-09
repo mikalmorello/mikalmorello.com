@@ -1,117 +1,96 @@
 
-/**
- * Main AngularJS Web Application
- */
 var app = angular.module('portfolio', ['ngRoute', 'ngAnimate']);
 
-/**
- * Configure the Routes
- */
-app.config(['$routeProvider', '$locationProvider', function ($routeProvider,$locationProvider ) {
+// APP CONFIG
+
+app.config(function ($routeProvider){
   $routeProvider
-    // Home
-    .when("/", {templateUrl: "partials/home.html", controller: "PageCtrl"})
-    // Pages
-    .when("/about", {templateUrl: "partials/about.html", controller: "PageCtrl"})
-    .when("/projects", {templateUrl: "partials/projects.html", controller: "PageCtrl"})
-    .when("/blog", {templateUrl: "partials/blog.html", controller: "PageCtrl"})
-    .when("/contact", {templateUrl: "partials/contact.html", controller: "PageCtrl"})
-    // COMPONENT
-    .when("/project", { templateUrl: "partials/projects_list.html"})
-    .when("/projects/:title", { templateUrl: "partials/project_details.html", controller: "ShowProjectCtrl" })
-    // else 404
-    .otherwise("/404", {templateUrl: "partials/404.html", controller: "PageCtrl"})
+  .when('/', { 
+    controller: 'MainCtrl',
+    templateUrl: 'partials/home.html'
+  })
+  .when('/projects', {
+    controller: 'MainCtrl',
+    templateUrl: 'partials/projects.html'
+  })
+  .when('/projects/:title', {
+    controller: 'ProjectCtrl',
+    templateUrl: 'partials/project_details.html'
+  })
+  .otherwise({
+    redirectTo: '/'
+  });
+});
+
+// HOME CONTROLLER
+app.controller('MainCtrl', ['$scope', 'projects', function($scope, projects) {
+  projects.success(function(data) {
+    $scope.projects = data;
+  });
+}]);
+  
+// PROJECT CONTROLLER
+  app.controller('ProjectCtrl', ['$scope', 'projects', '$routeParams', 'sharedProperties', function($scope, projects, $routeParams, sharedProperties) {
+  projects.success(function(data) {
+    $scope.detail = sharedProperties.getUrlTitle(data, $scope, $routeParams);    
+  });
+    projects.error(function(data) {
+    console.log('error');
+  });
 }]);
 
 
-/**
- * Controls all other Pages
- */
-app.controller('PageCtrl', function ($scope) {
-  console.log("Page Controller reporting for duty.");
-});
+// PROJECT SERVICE
+app.factory('projects', ['$http', function($http) {
+  return $http.get('js/project.json')
+   .success(function(data) {
+     return data;
+   })
+   .error(function(data) {
+     return data;
+   });
+}]);
 
 
-// DATA TYPE PROJECTS
-app.factory("Project", function() {
-  
-var projects = [
-  {   title: 'Project-Name-1',
-      subtitle: 'Project Details Subtitle',
-	  image: 'assets/images/project-1.jpg', 
-	  description: 'Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient monte',
-      url:'partials/projects/project-name-1.html'
-	},
-  {   title: 'Project-Name-2',
-      subtitle: 'Project Details Subtitle',
-	  image: 'assets/images/project-2.jpg', 
-	  description: 'Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient monte',
-      url:'partials/projects/project-name-2.html'
-	},
-  {   title: 'Project-Name-3',
-      subtitle: 'Project Details Subtitle',
-	  image: 'assets/images/project-3.jpg', 
-	  description: 'Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient monte',
-      url:'partials/projects/project-name-3.html'
-	}
-]
-    return {
-      all: function() {
-        return projects;
-      },
-      get: function(title) {
-        var result = null;
-        angular.forEach(projects, function(p) {
-          if (p.title == title) result = p;
-        });
-       return result;
-    }
+// SHARED SERVICE FOR STORING REUSABLE FUNCTIONS
+
+
+app.service('sharedProperties', function () {
+  return {
+    getUrlTitle: function(data, $scope, $routeParams ) {   
+      $scope.data = data;
+          angular.forEach($scope.data, function(value, key){
+            if(value.title == $routeParams.title) {
+              $scope.detail = $scope.data[key];
+              console.log('Match: ' + value.title);
+            } else {
+              console.log('Not a match: ' + value.title);
+            }
+          });
+        return $scope.detail;
+      }
   };
 });
 
-// TEST APP CONTROLLER
-  app.controller('Test', ['$http', function($http){
-    var store = this;
-    store.projects = [];
-    $http.get('js/project.json').success(function(data){
-      store.projects = data;
-    });
-  }]);
+// APP MENU OVERLAY
 
-
-
-// TEST END
-
-
-
-
-app.controller("ProjectCtrl", function($scope, Project) {
-  $scope.projects = Project.all();
-});
-
-app.controller("ShowProjectCtrl", function($scope, $routeParams, Project) {
-  $scope.project = Project.get($routeParams.title);
-});
-
-app.controller("MainCtrl", function($scope, $location, $anchorScroll) {
-  $scope.menuClass = function(page) {
-    var current = $location.path().substring(1);
-    return page === current ? "active" : "";
-  };
+app.controller("MenuCtrl", function($scope) {
 
    /* MENU TOGGLE - ANGULAR */
-    $scope.sidebarClass = "sidebar-open";
-    $scope.iconClass ="ti-menu icon-large";
+    $scope.overlayClass = "overlay overlay-contentscale";
+    $scope.containerClass = "container";
     
-    $scope.changeClass = function(){
-        if ($scope.sidebarClass === "sidebar-closed")
-            $scope.sidebarClass = "sidebar-open",
-            $scope.iconClass ="ti-close icon-large";
-         else
-            $scope.sidebarClass = "sidebar-closed",
-            $scope.iconClass = "ti-menu icon-large";
+    $scope.overlayMenu = function(){
+        if ($scope.overlayClass === "overlay overlay-contentscale") {
+            $scope.overlayClass = "overlay"
+            $scope.containerClass = "container overlay-open";
+          } else {
+            $scope.overlayClass = "overlay overlay-contentscale"
+            $scope.containerClass = "container";
+          }
     };
 });
+
 
 // APP MENU DIRECTIVE
 app.directive("menuOverlay", function(){

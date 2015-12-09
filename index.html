@@ -19,23 +19,28 @@
     <!-- Our Website CSS Styles -->
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/themify-icons.css">
-    <link rel="stylesheet" href="css/style8.css">
   
 </head>
-<body ng-app="portfolio" ng-controller="MainCtrl" >
+<body ng-app="portfolio" ng-controller="MenuCtrl">
   <div id="wrapper" ng-class="sidebarClass"> 
+    
     <!-- OVERLAY -->
-    <menu-overlay></menu-overlay>
+    <menu-overlay></menu-overlay> 
+    
     <!-- SIDEBAR -->
-    <div ng-include='"templates/sidebar.html"'></div>
+    <!--<div ng-include='"templates/sidebar.html"'></div>-->
+    
     <!-- MAIN-->
-    <div id="page-content-wrapper" class="container">
+    <div id="page-content-wrapper" ng-class="containerClass">
       <header><div ng-include='"templates/header.html"'></div></header>
       <main><div ng-view class="fade"></div></main>
     </div>
   </div>
 
+  
 
+  
+  
 <!-- Vendor: Javascripts -->
 <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 
@@ -45,17 +50,6 @@
 <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular-animate.js"></script>
 
 <!-- Javascript -->
-<script src="js/apps.js"></script>
-<!-- Javascript Menu -->
-<script src="js/modernizr.custom.js"></script>
-<script src="js/classie.js"></script>
-<script src="js/demo7.js"></script>
-<script>
-  /* FOR MENU OVERLAY */
-  $(document).on("click", ".clickme", function() {
-  console.log("click");
-});
-  </script>
-  
+  <script src="js/apps.js"></script>
   </body>
 </html>
