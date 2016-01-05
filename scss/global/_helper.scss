@@ -30,3 +30,16 @@
     padding-left: 0 !important;
     padding-right: 0 !important;
 }
+
+.hide {
+    display: none;
+}
+
+.accessible-text {
+    position:absolute;
+    left:-10000px;
+    top:auto;
+    width:1px;
+    height:1px;
+    overflow:hidden;
+}

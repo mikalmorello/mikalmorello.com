@@ -23,7 +23,10 @@
 </head>
 <body ng-app="portfolio" ng-controller="MenuCtrl">
   <div id="wrapper" ng-class="sidebarClass"> 
-    
+<!-- MORPHING ICON TEST -->
+<button class="c-hamburger c-hamburger--htx">
+  <span>toggle menu</span>
+</button>
     <!-- OVERLAY -->
     <menu-overlay></menu-overlay> 
     
@@ -33,7 +36,7 @@
     <!-- MAIN-->
     <div id="page-content-wrapper" ng-class="containerClass">
       <header><div ng-include='"templates/header.html"'></div></header>
-      <main><div ng-view class="fade"></div></main>
+      <main><div ng-view class="fade" autoscroll="true"></div></main>
     </div>
   </div>
 
@@ -51,5 +54,26 @@
 
 <!-- Javascript -->
   <script src="js/apps.js"></script>
+<script >
+   (function() {
+
+  "use strict";
+
+  var toggles = document.querySelectorAll(".c-hamburger");
+
+  for (var i = toggles.length - 1; i >= 0; i--) {
+    var toggle = toggles[i];
+    toggleHandler(toggle);
+  };
+
+  function toggleHandler(toggle) {
+    toggle.addEventListener( "click", function(e) {
+      e.preventDefault();
+      (this.classList.contains("is-active") === true) ? this.classList.remove("is-active") : this.classList.add("is-active");
+    });
+  }
+
+})();
+  </script>
   </body>
 </html>

@@ -75,27 +75,54 @@ app.service('sharedProperties', function () {
 // APP MENU OVERLAY
 
 app.controller("MenuCtrl", function($scope) {
-
-   /* MENU TOGGLE - ANGULAR */
-    $scope.overlayClass = "overlay overlay-contentscale";
-    $scope.containerClass = "container";
-    
-    $scope.overlayMenu = function(){
-        if ($scope.overlayClass === "overlay overlay-contentscale") {
-            $scope.overlayClass = "overlay"
-            $scope.containerClass = "container overlay-open";
-          } else {
-            $scope.overlayClass = "overlay overlay-contentscale"
-            $scope.containerClass = "container";
-          }
-    };
 });
 
 
 // APP MENU DIRECTIVE
+
+/*app.directive("menuOverlay", function(){
+  return {
+    restrict: 'E',
+    templateUrl: 'templates/overlay.html',
+    controller: function($scope){
+        $scope.overlayClass = "overlay overlay-contentscale";
+        $scope.containerClass = "container";
+    
+        $scope.overlayMenu = function(){
+            if ($scope.overlayClass === "overlay") {
+                $scope.overlayClass = "overlay overlay-contentscale"
+                $scope.containerClass = "container";
+              } else {
+                $scope.overlayClass = "overlay"
+                $scope.containerClass = "container overlay-open";
+              }
+            };
+        }
+  }
+});*/
+
 app.directive("menuOverlay", function(){
   return {
     restrict: 'E',
-    templateUrl: 'templates/overlay.html'
-  };
+    templateUrl: 'templates/overlay.html',
+    controller: function($scope){
+        $scope.overlayClass = "hide";
+        $scope.containerClass = "container";
+    
+        $scope.overlayMenu = function(){
+              if ($scope.overlayClass === "hide") {
+                $scope.overlayClass = "overlay"
+                $scope.containerClass = "container overlay-open";
+              } else if ($scope.overlayClass === "overlay"){
+                $scope.overlayClass = "overlay overlay-contentscale"
+                $scope.containerClass = "container";
+              } else {
+                $scope.overlayClass = "overlay"
+                $scope.containerClass = "container overlay-open";
+              }
+            };
+        }
+  }
 });
+
+
