@@ -43,3 +43,18 @@
     height:1px;
     overflow:hidden;
 }
+
+.pull-top, .container-card.pull-top {
+    margin-top: -150px;
+    position: relative;
+}
+
+
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}

@@ -80,27 +80,6 @@ app.controller("MenuCtrl", function($scope) {
 
 // APP MENU DIRECTIVE
 
-/*app.directive("menuOverlay", function(){
-  return {
-    restrict: 'E',
-    templateUrl: 'templates/overlay.html',
-    controller: function($scope){
-        $scope.overlayClass = "overlay overlay-contentscale";
-        $scope.containerClass = "container";
-    
-        $scope.overlayMenu = function(){
-            if ($scope.overlayClass === "overlay") {
-                $scope.overlayClass = "overlay overlay-contentscale"
-                $scope.containerClass = "container";
-              } else {
-                $scope.overlayClass = "overlay"
-                $scope.containerClass = "container overlay-open";
-              }
-            };
-        }
-  }
-});*/
-
 app.directive("menuOverlay", function(){
   return {
     restrict: 'E',
@@ -108,21 +87,53 @@ app.directive("menuOverlay", function(){
     controller: function($scope){
         $scope.overlayClass = "hide";
         $scope.containerClass = "container";
-    
+        $scope.menuOverlayClass = "";  
+           
         $scope.overlayMenu = function(){
               if ($scope.overlayClass === "hide") {
                 $scope.overlayClass = "overlay"
-                $scope.containerClass = "container overlay-open";
+                $scope.containerClass = "container overlay-open"
+                $scope.menuOverlayClass = "is-active";
               } else if ($scope.overlayClass === "overlay"){
                 $scope.overlayClass = "overlay overlay-contentscale"
                 $scope.containerClass = "container";
+                $scope.menuOverlayClass = ""
               } else {
                 $scope.overlayClass = "overlay"
-                $scope.containerClass = "container overlay-open";
+                $scope.containerClass = "container overlay-open"
+                $scope.menuOverlayClass = "is-active";
               }
             };
         }
   }
 });
+
+// FIXED TOP MENU
+
+app.directive('setClassWhenAtTop', function ($window) {
+    var $win = angular.element($window); // wrap window object as jQuery object
+
+    return {
+        restrict: 'A',
+        link: function (scope, element, attrs) {
+            var topClass = attrs.setClassWhenAtTop, // get CSS class from directive's attribute value
+                offsetTop = element.offset().top; // get element's top relative to the document
+
+            $win.on('scroll', function (e) {
+                if ($win.scrollTop() >= offsetTop) {
+                    element.addClass(topClass);
+                } else {
+                    element.removeClass(topClass);
+                }
+            });
+        }
+    };
+});
+
+app.controller('ctrl', function ($scope) {
+    $scope.scrollTo = function (target){
+    };
+});
+
 
 

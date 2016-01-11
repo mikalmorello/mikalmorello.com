@@ -6,13 +6,16 @@
   </div>
 </section>
 <section>
-  <div class="container-text" ng-repeat="project in projects">
-    <div class="project-header" ng-style="{'background-image': 'url('+ project.image +')'}"></div>
-      <h2><a href="#/projects/{{project.title}}">{{project.title}}</a></h2>
-      <a href="#/projects/{{project.title}}" role="button">ISOLATE</a>
-      <br />
-      <small>{{project.subtitle}}</small>
-      <p>{{project.description}}</p>
-      <p>{{project.image}}</p>
+  <div class="container-card card-list pull-top">
+      <div class="card" ng-repeat="project in projects">
+        <div class="card-header" ng-style="{'background-image': 'url('+ project.image +')'}"></div>
+          <h2><a href="#/projects/{{project.title}}">{{project.title}}</a></h2>
+          <a href="#/projects/{{project.title}}" role="button">ISOLATE</a>
+          <br />
+          <small>{{project.subtitle}}</small>
+          <p>{{project.description}}</p>
+          <p>{{project.image}}</p>
+      </div>
+      <div class="clear"></div>
   </div>
 </section>
