@@ -45,5 +45,19 @@ small, .font_small {font-size: 0.707em;}
 }
 
 p.introduction:first-letter { 
-    float: left; color: #903; font-size: 75px; line-height: 60px; padding-top: 4px; padding-right: 8px; padding-left: 3px; font-family: Georgia; 
+    float: left;  
+    font-size: 75px; 
+    line-height: 60px; 
+    padding-top: 4px; 
+    padding-right: 8px; 
+    padding-left: 3px; 
+    font-family: Georgia; 
+}
+
+.card-list h2 {
+    font-size: 1.6em;
+}
+
+a {
+    text-decoration: none;
 }

@@ -13,6 +13,7 @@
 /* OVERLAY */
 body {
 	background: #ddd;
+    min-height: 900px;
 }
 
 .overlay {
@@ -159,7 +160,3 @@ body {
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cc000000', endColorstr='#66000000',GradientType=0 ); /* IE6-9 */
   }
 
-/* IMAGES */
-.brand-image {
-    max-width: 400px;
-}

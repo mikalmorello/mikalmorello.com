@@ -110,13 +110,18 @@ small, .font_small {
 
 p.introduction:first-letter {
   float: left;
-  color: #903;
   font-size: 75px;
   line-height: 60px;
   padding-top: 4px;
   padding-right: 8px;
   padding-left: 3px;
   font-family: Georgia; }
+
+.card-list h2 {
+  font-size: 1.6em; }
+
+a {
+  text-decoration: none; }
 
 /* LAYOUT */
 .container-text {
@@ -175,14 +180,33 @@ p.introduction:first-letter {
   background: #fff;
   float: left;
   width: 31%;
-  margin-right: 2%; }
+  margin-right: 2%;
+  transition: all 0.5s ease; }
+
+.card:hover {
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.48);
+  -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.48);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.48); }
 
 .card-header {
   background-size: 100%;
   height: 195px; }
 
+.card:hover .card-header {
+  transition: all 0.1s ease;
+  background-size: 110%;
+  background-position: center; }
+
 .card h2 {
   margin-top: .5em; }
+
+.card-body {
+  padding: 1em; }
+
+/* FOOTER */
+footer {
+  background: #ececec;
+  text-align: center; }
 
 /* COMPONENTS*/
 .back {
@@ -194,7 +218,8 @@ p.introduction:first-letter {
 
 /* OVERLAY */
 body {
-  background: #ddd; }
+  background: #ddd;
+  min-height: 900px; }
 
 .overlay {
   position: fixed;
@@ -322,20 +347,20 @@ html.responsive-video {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cc000000', endColorstr='#66000000',GradientType=0 );
   /* IE6-9 */ }
 
-/* IMAGES */
-.brand-image {
-  max-width: 400px; }
-
 /* HEADER */
 header {
   background: none;
   box-sizing: border-box;
   display: block;
-  height: 60px;
+  height: 55px;
   position: relative;
   margin-bottom: -60px;
   width: 100%;
   z-index: 12; }
+
+.min header {
+  background-color: #111;
+  transition: background-color 0.2s; }
 
 header a {
   color: #fff; }
@@ -431,8 +456,20 @@ header a {
 /* BRANDING */
 .branding {
   color: #fff;
-  float: left;
-  margin: 0 auto; }
+  text-align: center;
+  margin-right: 60px;
+  padding-top: 5px; }
+
+/* IMAGES */
+.brand-image {
+  max-width: 400px; }
+
+.branding .brand-image, footer .brand-image {
+  max-width: 160px; }
+
+.min .branding .brand-image, footer .brand-image {
+  max-width: 130px;
+  transition: background-color 0.2s; }
 
 /* MAIN */
 main {

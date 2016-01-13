@@ -4,20 +4,53 @@
         "subtitle": "Project Details Subtitle",
         "image": "assets/images/project-1.jpg",
         "description": "Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient monte",
-        "url": "partials/projects/project-name-1.html"
+        "url": "partials/projects/project-name-1.html",
+        "role": "role",
+        "skills":"skills"
     },
     {
         "title": "Project-Name-2x",
         "subtitle": "Project Details Subtitle",
         "image": "assets/images/project-2.jpg",
         "description": "Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient monte",
-        "url": "partials/projects/project-name-2.html"
+        "url": "partials/projects/project-name-2.html",
+        "role": "role",
+        "skills":"skills"
     },
     {
         "title": "Project-Name-3x",
         "subtitle": "Project Details Subtitle",
         "image": "assets/images/project-3.jpg",
         "description": "Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient monte",
-        "url": "partials/projects/project-name-3.html"
+        "url": "partials/projects/project-name-3.html",
+        "role": "role",
+        "skills":"skills"
+    },
+    {
+        "title": "Project-Name-4x",
+        "subtitle": "Project Details Subtitle",
+        "image": "assets/images/project-1.jpg",
+        "description": "Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient monte",
+        "url": "partials/projects/project-name-4.html",
+        "role": "role",
+        "skills":"skills"
+    },
+    {
+        "title": "Project-Name-5x",
+        "subtitle": "Project Details Subtitle",
+        "image": "assets/images/project-2.jpg",
+        "description": "Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient monte",
+        "url": "partials/projects/project-name-5.html",
+        "role": "role",
+        "skills":"skills"
+    },
+    {
+        "title": "Project-Name-6x",
+        "subtitle": "Project Details Subtitle",
+        "image": "assets/images/project-3.jpg",
+        "description": "Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient monte",
+        "url": "partials/projects/project-name-6.html",
+        "role": "role",
+        "skills":"skills"
     }
 ]

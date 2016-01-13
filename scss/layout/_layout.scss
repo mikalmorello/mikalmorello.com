@@ -70,6 +70,13 @@
     float: left;
     width: 31%;
     margin-right: 2%;
+    transition: all 0.5s ease;
+}
+
+.card:hover {
+    -webkit-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.48);
+    -moz-box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.48);
+    box-shadow: 0px 0px 10px 0px rgba(0,0,0,0.48);
 }
 
 .card-header {
@@ -77,8 +84,22 @@
     height: 195px;
 }
 
+.card:hover .card-header {
+    transition: all 0.1s ease;
+    background-size: 110%;
+    background-position: center;
+}
+
 .card h2 {
     margin-top: .5em;
 }
 
+.card-body {
+    padding: 1em;
+}
 
+/* FOOTER */
+footer {
+    background: #ececec;
+    text-align: center;
+}

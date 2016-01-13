@@ -3,12 +3,19 @@ header {
     background: none;
     box-sizing: border-box;
     display: block;
-    height:  60px;
+    height:  55px;
     //float: left;
     position: relative;
     margin-bottom: -60px;
     width: 100%;
     z-index: 12;
+}
+
+//SCROLL TEST CHANGE COLOR 
+
+.min header {
+   background-color: #111;
+   transition: background-color 0.2s;
 }
 
 header a {
@@ -123,8 +130,21 @@ header a {
 /* BRANDING */
 .branding {
     color: $header-color;
-    float: left;
-    margin: 0 auto;
-    
+    text-align: center;
+    margin-right: 60px;
+    padding-top: 5px;
 }
 
+/* IMAGES */
+.brand-image {
+    max-width: 400px;
+}
+
+.branding .brand-image, footer .brand-image {
+    max-width: 160px; 
+}
+
+.min .branding .brand-image, footer .brand-image {
+    max-width: 130px; 
+    transition: background-color 0.2s;
+}

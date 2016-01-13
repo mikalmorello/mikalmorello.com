@@ -5,5 +5,13 @@
     </div>
   </div>
   <a href="#/projects" class="back">Back</a>
-  <div class="container-text first-character" ng-include="detail.url"></div>
+  <div class="container-text">
+    <aside style="float:right; position:relative; background: #eee; width: 15em; margin-top: 20px; margin-right: -6em; margin-left: 2em; padding: 1em;">
+      {{detail.role}}
+      <br />
+      {{detail.skills}}
+    </aside>
+      <div class="first-character" ng-include="detail.url"></div>
+  </div>
+    
 </section>
