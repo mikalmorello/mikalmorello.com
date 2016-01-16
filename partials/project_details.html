@@ -1,15 +1,24 @@
-<section>
+<section class="project">
   <div class="project-header" ng-style="{'background-image': 'url('+ detail.image +')'}">
     <div class="container-header">
       <h1>{{detail.title}}</h1>
+      <small>{{detail.subtitle}}</small>
     </div>
   </div>
   <a href="#/projects" class="back">Back</a>
   <div class="container-text">
-    <aside style="float:right; position:relative; background: #eee; width: 15em; margin-top: 20px; margin-right: -6em; margin-left: 2em; padding: 1em;">
-      {{detail.role}}
-      <br />
-      {{detail.skills}}
+    <aside>
+    <img ng-src="{{detail.brandimage}}" class="project-brand"/>
+      <h3>ROLES</h3>
+      <div ng-repeat="role in detail.roles">
+          <a href="">{{role.rolename}}</a>
+      </div>
+      <hr />
+      <!-- TEST SKILLS LIST -->
+      <h3>SKILLS</h3>
+      <div class="skill" ng-repeat="skill in detail.skills">
+          <a href="">{{skill.skillname}}</a>
+      </div>
     </aside>
       <div class="first-character" ng-include="detail.url"></div>
   </div>

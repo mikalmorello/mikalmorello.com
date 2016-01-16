@@ -14,6 +14,7 @@
 body {
 	background: #ddd;
     min-height: 900px;
+    
 }
 
 .overlay {
@@ -28,6 +29,8 @@ body {
 
 .container {
 	background: #fff;
+    background-image: url(../assets/images/paper_fibers.png);
+    background-repeat: repeat;
 	-webkit-transition: -webkit-transform 0.5s;
 	transition: transform 0.5s;
 }
