@@ -7,18 +7,22 @@ app.config(function ($routeProvider){
   $routeProvider
   .when('/', { 
     controller: 'MainCtrl',
-    templateUrl: 'partials/home.html'
+    templateUrl: 'partials/home.html',
+    title: 'Home'
   })
   .when('/projects', {
     controller: 'MainCtrl',
-    templateUrl: 'partials/projects.html'
+    templateUrl: 'partials/projects.html',
+    title: 'Projects'
   })
   .when('/projects/:title', {
     controller: 'ProjectCtrl',
-    templateUrl: 'partials/project_details.html'
+    templateUrl: 'partials/project_details.html',
+    title: 'Project'
   })
   .otherwise({
-    redirectTo: '/'
+    redirectTo: '/',
+    title: 'Home'
   });
 });
 
@@ -152,3 +156,11 @@ app.directive("scroll", function ($window) {
     };
 });
 
+
+// change Page Title based on the routers
+app.run(['$rootScope', function($rootScope) {
+    $rootScope.$on('$routeChangeSuccess', function (event, current, previous) {
+        $rootScope.title = current.$$route.title;
+        $rootScope.bodyClass = angular.lowercase(current.$$route.title);
+    });
+}]);

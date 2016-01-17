@@ -28,6 +28,7 @@ header a {
     z-index: 12;
 }
 
+
 /* MENU OVERLAY MORPHING BUTTON */
 
 .menu-overlay {
@@ -147,4 +148,8 @@ header a {
 .min .branding .brand-image, footer .brand-image {
     max-width: 130px; 
     transition: background-color 0.2s;
+}
+
+.home .branding {
+    display: none;
 }

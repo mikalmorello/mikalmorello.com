@@ -261,11 +261,18 @@ footer {
 
 /* COMPONENTS*/
 .back {
-  background: #fff;
-  color: #111;
+  background: #eee;
+  border-radius: 30px;
+  color: #fff;
+  font-size: 3em;
   float: left;
+  height: 60px;
   margin-bottom: -80px;
-  position: relative; }
+  padding-top: 20px;
+  position: relative;
+  text-align: center;
+  vertical-align: middle;
+  width: 60px; }
 
 /* OVERLAY */
 body {
@@ -524,6 +531,9 @@ header a {
   max-width: 130px;
   transition: background-color 0.2s; }
 
+.home .branding {
+  display: none; }
+
 /* MAIN */
 main {
   position: relative;
@@ -606,6 +616,10 @@ main {
     position: relative;
     margin-right: 0; } 
 }*/
+/* FOOTER */
+.home footer {
+  display: none; }
+
 /* ANIMATION */
 .fade {
   /*position: absolute;*/
