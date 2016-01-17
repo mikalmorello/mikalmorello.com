@@ -19,6 +19,14 @@ img {
   max-width: 100%;
   width: 100%; }
 
+::selection {
+  background: #00F3D7;
+  /* WebKit/Blink Browsers */ }
+
+::-moz-selection {
+  background: #00F3D7;
+  /* Gecko Browsers */ }
+
 /* HELPER */
 .bg-black {
   background: #000;
@@ -143,50 +151,6 @@ a {
   text-align: center;
   max-width: 1000px; }
 
-/* PROJECTS */
-.project-header {
-  background-attachment: fixed;
-  background-position: top center;
-  height: 500px;
-  width: 100%; }
-
-.projects-header {
-  background-color: #111;
-  background-attachment: fixed;
-  background-position: top center;
-  color: #fff;
-  height: 500px;
-  width: 100%; }
-
-.project aside {
-  background: #eee;
-  float: right;
-  margin-top: -100px;
-  margin-right: -6em;
-  margin-left: 2em;
-  margin-bottom: 1em;
-  padding: 1em;
-  position: relative;
-  width: 15em; }
-
-.project aside hr {
-  border: 0;
-  background: #e9e9e9;
-  height: 3px;
-  margin-left: 0px;
-  position: relative;
-  width: 50%; }
-
-.project aside h3 {
-  font-size: .9em;
-  font-family: 'Oswald', sans-serif; }
-
-.project-brand {
-  display: block;
-  max-width: 125px;
-  margin: 0 auto;
-  width: 100%; }
-
 .skill {
   background: #fff;
   border-radius: 3;
@@ -225,6 +189,21 @@ a {
 
 .half-width.left {
   background: #fff; }
+
+.quarter-width, .three-quarter-width {
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  overflow: hidden;
+  z-index: 10; }
+
+.quarter-width {
+  background: #111;
+  width: 25vw; }
+
+.three-quarter-width {
+  background: #fff;
+  width: 75vw; }
 
 /* CARDS */
 .card {
@@ -280,12 +259,13 @@ body {
   min-height: 900px; }
 
 .overlay {
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
   background: rgba(0, 0, 0, 0.95);
+  font-family: "Oswald", sans-serif;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
   z-index: 10; }
 
 .container {
@@ -314,6 +294,7 @@ body {
   transition: transform 0.5s; }
 
 .overlay nav {
+  color: #fff;
   text-align: center;
   position: relative;
   top: 50%;
@@ -335,17 +316,31 @@ body {
   height: calc(100% / 5);
   min-height: 54px; }
 
+.overlay ul li:first-child {
+  height: 30px;
+  margin-bottom: 15%;
+  min-height: 1em; }
+
 .overlay ul li a {
+  color: #fff;
+  display: block;
   font-size: 54px;
   font-weight: 300;
-  display: block;
-  color: #fff;
+  text-transform: uppercase;
   -webkit-transition: color 0.2s;
   transition: color 0.2s; }
 
 .overlay ul li a:hover,
-.overlay ul li a:focus {
-  color: #f0f0f0; }
+.overlay ul li a:focus,
+.overlay ul li a.active {
+  color: #00F3D7; }
+
+.overlay .menu-title {
+  color: #999;
+  border-bottom: 2px solid #333;
+  display: inline-block;
+  padding-bottom: 2em;
+  text-transform: uppercase; }
 
 /* RESPONSIVE VIDEO */
 .responsive-video {
@@ -436,6 +431,7 @@ header a {
   box-shadow: none;
   border-radius: none;
   border: none;
+  color: #fff;
   cursor: pointer;
   display: block;
   font-size: 0;
@@ -619,6 +615,85 @@ main {
 /* FOOTER */
 .home footer {
   display: none; }
+
+/* ARTICLES */
+.article-header {
+  background-attachment: fixed;
+  background-position: top center;
+  height: 300px;
+  width: 100%; }
+
+.articles-header {
+  background-color: #111;
+  background-attachment: fixed;
+  background-position: top center;
+  color: #fff;
+  height: 300px;
+  width: 100%; }
+
+.article-header h1 {
+  color: #fff; }
+
+/* PROJECTS */
+.project-header {
+  background-attachment: fixed;
+  background-position: top center;
+  height: 500px;
+  width: 100%; }
+
+.projects-header {
+  background-color: #111;
+  background-attachment: fixed;
+  background-position: top center;
+  color: #fff;
+  height: 500px;
+  width: 100%; }
+
+.project aside {
+  background: #eee;
+  float: right;
+  margin-top: -100px;
+  margin-right: -6em;
+  margin-left: 2em;
+  margin-bottom: 1em;
+  padding: 1em;
+  position: relative;
+  width: 15em; }
+
+.project aside hr {
+  border: 0;
+  background: #e9e9e9;
+  height: 3px;
+  margin-left: 0px;
+  position: relative;
+  width: 50%; }
+
+.project aside h3 {
+  font-size: .9em;
+  font-family: 'Oswald', sans-serif; }
+
+.project-brand {
+  display: block;
+  max-width: 125px;
+  margin: 0 auto;
+  width: 100%; }
+
+/* ARTICLES */
+.about-header h1 {
+  color: #fff; }
+
+.about .three-quarter-width {
+  background-position: top center;
+  background: url("../assets/images/mikal-photo.jpg");
+  float: left;
+  height: 800px;
+  position: relative; }
+
+.about .quarter-width {
+  background: #fff;
+  height: 800px;
+  float: left;
+  position: relative; }
 
 /* ANIMATION */
 .fade {

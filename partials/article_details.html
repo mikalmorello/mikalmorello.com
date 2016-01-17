@@ -1,0 +1,11 @@
+<section class="article">
+  <div class="article-header" ng-style="{'background-image': 'url('+ detail.image +')'}">
+    <div class="container-header">
+      <h1>{{detail.title}}</h1>
+    </div>
+  </div>
+  <a href="#/articles" class="back"><span class="ti-angle-left"></span><span class="accessible-text">Back</span></a>
+  <div class="container-text">
+      <div class="first-character" ng-include="detail.url"></div>
+  </div>  
+</section>

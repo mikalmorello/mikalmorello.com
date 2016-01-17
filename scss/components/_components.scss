@@ -25,12 +25,13 @@ body {
 }
 
 .overlay {
+    background: rgba(00,00,00,0.95);
+    font-family:  $font-title;
+    height: 100%;
+    left: 0;
 	position: fixed;
+    top: 0;
 	width: 100%;
-	height: 100%;
-	top: 0;
-	left: 0;
-	background: rgba(00,00,00,0.95);
     z-index: 10;
 }
 
@@ -64,6 +65,7 @@ body {
 }
 
 .overlay nav {
+    color: #fff;
 	text-align: center;
 	position: relative;
 	top: 50%;
@@ -88,19 +90,37 @@ body {
 	min-height: 54px;
 }
 
+.overlay ul li:first-child {
+    height: 30px;
+    margin-bottom: 15%;
+	min-height: 1em;
+}
+
 .overlay ul li a {
+    color: #fff;
+    display: block;
 	font-size: 54px;
 	font-weight: 300;
-	display: block;
-	color: #fff;
-	-webkit-transition: color 0.2s;
+    text-transform: uppercase;
+    -webkit-transition: color 0.2s;
 	transition: color 0.2s;
 }
 
 .overlay ul li a:hover,
-.overlay ul li a:focus {
-	color: #f0f0f0;
+.overlay ul li a:focus,
+.overlay ul li a.active
+{
+	color: $menu-background;
 }
+
+.overlay .menu-title {
+    color: #999;
+    border-bottom: 2px solid #333;
+    display: inline-block;
+    padding-bottom: 2em;
+    text-transform: uppercase;
+}
+
 
 /* RESPONSIVE VIDEO */
 .responsive-video {

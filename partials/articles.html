@@ -1,0 +1,14 @@
+<section>
+  <div class="articles-header">
+    <div class="container-header">
+      <h1>Articles</h1>
+    </div>
+  </div>
+</section>
+<section>
+  <ul class="container-text">
+    <li ng-repeat="article in articles">
+        <a href="#/articles/{{article.title}}">{{article.title}}</a>
+    </li>
+  </ul>
+</section>

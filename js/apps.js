@@ -10,6 +10,16 @@ app.config(function ($routeProvider){
     templateUrl: 'partials/home.html',
     title: 'Home'
   })
+  .when('/about', {
+    controller: 'MainCtrl',
+    templateUrl: 'partials/about.html',
+    title: 'About'
+  })
+  .when('/contact', {
+    controller: 'MainCtrl',
+    templateUrl: 'partials/contact.html',
+    title: 'Contact'
+  })
   .when('/projects', {
     controller: 'MainCtrl',
     templateUrl: 'partials/projects.html',
@@ -20,6 +30,16 @@ app.config(function ($routeProvider){
     templateUrl: 'partials/project_details.html',
     title: 'Project'
   })
+ .when('/articles', {
+    controller: 'MainCtrl',
+    templateUrl: 'partials/articles.html',
+    title: 'Articles'
+  })
+  .when('/articles/:title', {
+    controller: 'ArticleCtrl',
+    templateUrl: 'partials/article_details.html',
+    title: 'Article'
+  })
   .otherwise({
     redirectTo: '/',
     title: 'Home'
@@ -27,9 +47,12 @@ app.config(function ($routeProvider){
 });
 
 // HOME CONTROLLER
-app.controller('MainCtrl', ['$scope', 'projects', function($scope, projects) {
+app.controller('MainCtrl', ['$scope', 'projects', 'articles', function($scope, projects, articles) {
   projects.success(function(data) {
     $scope.projects = data;
+  });
+  articles.success(function(data) {
+    $scope.articles = data;
   });
 }]);
   
@@ -47,6 +70,29 @@ app.controller('MainCtrl', ['$scope', 'projects', function($scope, projects) {
 // PROJECT SERVICE
 app.factory('projects', ['$http', function($http) {
   return $http.get('js/project.json')
+   .success(function(data) {
+     return data;
+   })
+   .error(function(data) {
+     return data;
+   });
+}]);
+
+
+// ARTICLE CONTROLLER
+  app.controller('ArticleCtrl', ['$scope', 'articles', '$routeParams', 'sharedProperties', function($scope, articles, $routeParams, sharedProperties) {
+  articles.success(function(data) {
+    $scope.detail = sharedProperties.getUrlTitle(data, $scope, $routeParams);    
+  });
+    articles.error(function(data) {
+    console.log('error');
+  });
+}]);
+
+
+// ARTICLE SERVICE
+app.factory('articles', ['$http', function($http) {
+  return $http.get('js/article.json')
    .success(function(data) {
      return data;
    })
@@ -78,7 +124,16 @@ app.service('sharedProperties', function () {
 
 // APP MENU OVERLAY
 
-app.controller("MenuCtrl", function($scope) {
+app.controller("MenuCtrl", function($scope, $location) {
+
+    // SET ACTIVE MENU CLASS
+    $scope.getClass = function (path) {
+      if ($location.path().substr(0, path.length) === path) {
+        return 'active';
+      } else {
+        return '';
+      }
+    }
 });
 
 

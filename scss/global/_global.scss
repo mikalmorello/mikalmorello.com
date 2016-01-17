@@ -6,5 +6,12 @@ img {
   width: 100%; 
 }
 
+::selection {
+  background: $menu-background; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: $menu-background; /* Gecko Browsers */
+}
+
 
 

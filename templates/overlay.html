@@ -3,10 +3,12 @@
     <!--<button type="button" class="overlay-close ti-close" ng-click="overlayMenu()"><span class="accessible-text">Close Menu</span></button>-->
       <nav>
         <ul>
-          <li><a href="#/home" ng-click="overlayMenu()">Home</a></li>
-          <li><a href="#/projects" ng-click="overlayMenu()">Projects</a></li>
-          <li><a href="#/blog" ng-click="overlayMenu()">Blog</a></li>
-          <li><a href="#/contact" ng-click="overlayMenu()">Contact</a></li>
+          <li class="menu-title">Menu</li>
+          <li><a href="#/home" ng-class="getClass('/home')" ng-click="overlayMenu()">Home</a></li>
+          <li><a href="#/about" ng-class="getClass('/about')" ng-click="overlayMenu()">About</a></li>
+          <li><a href="#/projects" ng-class="getClass('/projects')" ng-click="overlayMenu()">Projects</a></li>
+          <li><a href="#/articles" ng-class="getClass('/articles')" ng-click="overlayMenu()">Articles</a></li>
+          <li><a href="#/contact" ng-class="getClass('/contact')" ng-click="overlayMenu()">Contact</a></li>
         </ul>
       </nav>
   </div>

@@ -36,6 +36,7 @@ header a {
   box-shadow: none;
   border-radius: none;
   border: none;
+  color: #fff;
   cursor: pointer;
   display: block;
   font-size: 0;
@@ -127,6 +128,7 @@ header a {
 .menu-overlay-transform.is-active span::after {
   transition-delay: 0s, 0.3s;
 }
+
 
 /* BRANDING */
 .branding {
