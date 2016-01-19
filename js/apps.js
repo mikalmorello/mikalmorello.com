@@ -35,6 +35,11 @@ app.config(function ($routeProvider){
     templateUrl: 'partials/articles.html',
     title: 'Articles'
   })
+   .when('/search', {
+    controller: 'MainCtrl',
+    templateUrl: 'partials/search.html',
+    title: 'Search'
+  })
   .when('/articles/:title', {
     controller: 'ArticleCtrl',
     templateUrl: 'partials/article_details.html',
@@ -166,6 +171,31 @@ app.directive("menuOverlay", function(){
         }
   }
 });
+
+
+// APP SEARCH DIRECTIVE
+
+app.directive("searchOverlay", function(){
+  return {
+    restrict: 'E',
+    templateUrl: 'templates/search.html',
+    controller: function($scope){
+        $scope.searchClass = "hide";
+        $scope.searchIconClass = "ti-search";
+           
+        $scope.searchDisplay = function(){
+              if ($scope.searchClass === "hide"){
+                $scope.searchClass = "show"
+                $scope.searchIconClass="ti-close";
+              } else {
+                $scope.searchClass = "hide"
+                $scope.searchIconClass="ti-search";
+              }
+            };
+        }
+  }
+});
+
 
 // FIXED TOP MENU
 
