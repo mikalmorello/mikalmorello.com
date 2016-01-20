@@ -89,6 +89,10 @@
     width: 75vw;
 }
 
+.home {
+  font-family:  $font-title;
+}
+
 /* CARDS */
 
 .card {
@@ -123,6 +127,7 @@
 .card-body {
     padding: 1em;
 }
+
 
 /* FOOTER */
 footer {

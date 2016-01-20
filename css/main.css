@@ -249,6 +249,9 @@ a {
   background: #fff;
   width: 75vw; }
 
+.home {
+  font-family: "Oswald", sans-serif; }
+
 /* CARDS */
 .card {
   background: #fff;
@@ -743,7 +746,7 @@ input.search-input {
 .home .menu-overlay span, .home .menu-overlay span::before, .home .menu-overlay span::after, .search .menu-overlay span, .search .menu-overlay span::before, .search .menu-overlay span::after {
   background: #00F3D7; }
 
-.search .search-overlay {
+.search .search-overlay, .about .search-overlay {
   color: #00F3D7; }
 
 .home .menu-overlay-transform.is-active span, .search .menu-overlay-transform.is-active span, .contact .menu-overlay-transform.is-active span {
@@ -890,20 +893,27 @@ main {
   width: 100%; }
 
 /* ARTICLES */
+.about-header {
+  top: 0; }
+
 .about-header h1 {
-  color: #fff; }
+  color: #111; }
 
 .about .three-quarter-width {
   background-position: top center;
   background: url("../assets/images/mikal-photo.jpg");
+  background-repeat: none;
+  background-size: cover;
   float: left;
   height: 800px;
   position: relative; }
 
 .about .quarter-width {
-  background: #fff;
+  background: #eee;
+  color: #111;
   height: 800px;
   float: left;
+  padding: 100px 50px;
   position: relative; }
 
 /* ANIMATION */
