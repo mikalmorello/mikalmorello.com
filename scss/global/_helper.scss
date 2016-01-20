@@ -6,6 +6,18 @@
 	color: #fff;
 }
 
+.bg-white{
+	background: #fff;
+}
+
+.bg-lightgrey{
+	background: #eee;
+}
+
+.bg-darkgrey{
+	background: #111;
+}
+
 .clear {
   clear: both;
 }
@@ -49,7 +61,43 @@
     position: relative;
 }
 
+.hover-text {
+   position: absolute;
+   top: -9999px ;
+   left: -9999px;
+}
 
+.hover-text:hover, a:hover .hover-text {
+  position:relative;
+  top:auto;
+  left: auto;
+}
+
+hr.small {
+  margin-bottom: 2em;
+  width: 6em;
+}
+
+.button {
+  background: $menu-background;
+  border: 0;
+  color: #fff;
+  font-family: $font-title;
+  font-size: 1.25em;
+  padding: .75em 1.25em;
+  text-transform: uppercase; 
+  transition: all 0.3s;
+}
+
+.button:hover {
+  background: darken( $menu-background, 20% );
+  transition: all 0.3s;
+}
+
+.pull-right {
+  float: right;
+  position: relative;
+}
 
 *,
 *:before,

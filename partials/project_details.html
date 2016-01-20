@@ -1,11 +1,12 @@
 <section class="project">
-  <div class="project-header" ng-style="{'background-image': 'url('+ detail.image +')'}">
+  <div class="project-header header" ng-style="{'background-image': 'url('+ detail.image +')'}">
+          <a href="#/projects" class="back fix-to-top"><span class="ti-angle-left icon"></span><span class="hover-text">Back</span></a>
     <div class="container-header">
       <h1>{{detail.title}}</h1>
+      <hr class="small"/>
       <small>{{detail.subtitle}}</small>
     </div>
   </div>
-  <a href="#/projects" class="back"><span class="ti-angle-left"></span><span class="accessible-text">Back</span></a>
   <div class="container-text">
     <aside>
     <img ng-src="{{detail.brandimage}}" class="project-brand"/>
@@ -24,3 +25,7 @@
   </div>
     
 </section>
+<!--<section class="project-nav">
+  <div class="previous">PREVIOUS</div>
+  <div class="next">NEXT</div>
+</section>-->

@@ -6,20 +6,38 @@ header {
     min-height:  55px;
     //float: left;
     position: relative;
-    margin-bottom: -60px;
+    margin-bottom: -70px;
     width: 100%;
     z-index: 12;
 }
 
+
+.header {
+    background-color: #111;
+    color:#fff;
+    height: 500px;
+    width: 100%;
+}
+
+
 //SCROLL TEST CHANGE COLOR 
 
 .min header {
-   background-color: #111;
+   //background-color: #111;
+  background-color: rgba(0,0,0, .8);
    transition: background-color 0.2s;
 }
 
 header a {
   color: #fff;
+}
+
+.header small {
+  color:#fff;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1em;
+  font-weight: 400;
+  text-transform:  uppercase;
 }
 
 .fix-to-top {
@@ -235,15 +253,14 @@ header a {
 input:-moz-placeholder { color: #fff; }
 
 
-input:focus {
+input.search-input:focus {
   animation: none;
   border-left:none;
 }
 
-input {
+input.search-input {
   animation: blink-empty 1.5s infinite;
   border-left: transparent solid 1px;
-  margin:2em;
 }
 
 @keyframes blink-empty {
@@ -261,11 +278,11 @@ input {
 }
 
 
-.home .menu-overlay span, .home .menu-overlay span::before,.home .menu-overlay span::after, .search .menu-overlay span, .search .menu-overlay span::before,.search .menu-overlay span::after, .contact .menu-overlay span, .contact .menu-overlay span::before,.contact .menu-overlay span::after{
+.home .menu-overlay span, .home .menu-overlay span::before,.home .menu-overlay span::after, .search .menu-overlay span, .search .menu-overlay span::before,.search .menu-overlay span::after{
   background: $menu-background;
 }
 
-.search .search-overlay, .contact .search-overlay{
+.search .search-overlay{
   color: $menu-background;
 }
 
