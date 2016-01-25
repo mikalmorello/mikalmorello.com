@@ -324,6 +324,13 @@ body {
   background: #ddd;
   min-height: 900px; }
 
+.container {
+  background: #fff;
+  background-image: url(../assets/images/paper_fibers.png);
+  background-repeat: repeat;
+  -webkit-transition: -webkit-transform 0.5s;
+  transition: transform 0.5s; }
+
 .overlay {
   background: rgba(0, 0, 0, 0.95);
   font-family: "Oswald", sans-serif;
@@ -334,25 +341,25 @@ body {
   width: 100%;
   z-index: 10; }
 
-.container {
-  background: #fff;
-  background-image: url(../assets/images/paper_fibers.png);
-  background-repeat: repeat;
-  -webkit-transition: -webkit-transform 0.5s;
-  transition: transform 0.5s; }
-
 .container.overlay-open {
   -webkit-transform: scale(0.9);
   transform: scale(0.9); }
 
-.overlay-contentscale {
+.overlay.overlay-contentscale {
   visibility: hidden;
   -webkit-transform: translateY(100%);
   transform: translateY(100%);
   -webkit-transition: -webkit-transform 0.5s, visibility 0s 0.5s;
   transition: transform 0.5s, visibility 0s 0.5s; }
 
-.overlay-contentscale.open {
+/*.overlay-contentscale.open {
+	visibility: visible;
+	-webkit-transform: translateY(0%);
+	transform: translateY(0%);
+	-webkit-transition: -webkit-transform 0.5s;
+	transition: transform 0.5s;
+}*/
+.overlay {
   visibility: visible;
   -webkit-transform: translateY(0%);
   transform: translateY(0%);
@@ -918,7 +925,8 @@ main {
 
 /* ANIMATION */
 .fade {
-  /*position: absolute;*/
+  position: absolute;
+  /* COMMENTED THIS OUT FOR SOME REASON */
   top: 0;
   left: 0;
   right: 0;

@@ -88,5 +88,20 @@
                     {"skillname" : "skill2"},
                     {"skillname" : "skill3"}
                   ]
+    },
+      {
+        "title": "Paulie",
+        "subtitle": "Project Details Subtitle",
+        "image": "assets/images/project-3.jpg",
+        "description": "Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient monte",
+        "url": "partials/projects/project-name-6.html",
+        "roles": [ {"rolename" : "role1"},
+                   {"rolename" : "role2"}
+                ],
+        "brandimage": "assets/images/crest.png",
+        "skills": [ {"skillname" : "skill1"},
+                    {"skillname" : "skill2"},
+                    {"skillname" : "skill3"}
+                  ]
     }
 ]
