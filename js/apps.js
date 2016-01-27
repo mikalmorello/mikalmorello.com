@@ -46,8 +46,9 @@ app.config(function ($routeProvider){
     title: 'Article'
   })
   .otherwise({
-    redirectTo: '/',
-    title: 'Home'
+    redirectTo: '/404',
+    templateUrl: 'partials/404.html',
+    title: '404'
   });
 });
 
@@ -247,5 +248,9 @@ app.run(['$rootScope', function($rootScope) {
     $rootScope.$on('$routeChangeSuccess', function (event, current, previous) {
         $rootScope.title = current.$$route.title;
         $rootScope.bodyClass = angular.lowercase(current.$$route.title);
+        // ANIMATE TO TOP
+        //document.body.scrollTop = document.documentElement.scrollTop = 0;
     });
 }]);
+
+

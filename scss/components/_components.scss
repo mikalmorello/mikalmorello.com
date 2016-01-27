@@ -257,9 +257,9 @@ body {
   border-bottom: 4px solid $menu-background;
 } 
 
-.contact-form :placeholder-shown {
+/*.contact-form :placeholder-shown {
   color:#E6E8E8;
-}
+}*/
 
 .contact-form .form-group:first-child {
   margin-top: .75em;
@@ -270,4 +270,17 @@ body {
   top: 0;
   width: 10em;
   right: -10em;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: #E6E8E8;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  color: #E6E8E8;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  color: #E6E8E8;
+}
+:-moz-placeholder { /* Firefox 18- */
+  color: #E6E8E8;
 }
