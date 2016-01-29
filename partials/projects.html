@@ -8,16 +8,43 @@
   </section>
   <section>
     <div class="container-card card-list pull-top">
-      <div class="card" ng-repeat="project in projects">
-        <div class="card-header" ng-style="{'background-image': 'url('+ project.image +')'}"></div>
-        <div class="card-body">
-          <h2><a href="#/projects/{{project.title}}">{{project.title}}</a></h2>
-          <small>{{project.subtitle}}</small>
-          <p>{{project.description}}</p>
+      <div class="column1 offset-third">
+        <div class="card" ng-repeat="project in projects | limitTo:2:0">
+          <a href="#/projects/{{project.title}}">
+            <div class="card-header" ng-style="{'background-image': 'url('+ project.thumbnail +')'}"></div>
+            <div class="card-body">
+              <h2><a href="#/projects/{{project.title}}">{{project.title}}</a></h2>
+            </div>
+            <div class="clear"></div>
+          </a>
+        </div>
+      </div>
+      <div class="column2">
+        <div class="card" ng-repeat="project in projects | limitTo:3:2">
+          <a href="#/projects/{{project.title}}">
+            <div class="card-header" ng-style="{'background-image': 'url('+ project.thumbnail +')'}"></div>
+            <div class="card-body">
+              <h2>{{project.title}}</h2>
+            </div>
+            <div class="clear"></div>
+          </a>
+        </div>
+      </div>
+      <div class="column3 offset-half">
+        <div class="card" ng-repeat="project in projects | limitTo:3:5">
+          <a href="#/projects/{{project.title}}">
+            <div class="card-header" ng-style="{'background-image': 'url('+ project.thumbnail +')'}"></div>
+            <div class="card-body">
+              <h2><a href="#/projects/{{project.title}}">{{project.title}}</a></h2>
+            </div>
+            <div class="clear"></div>
+          </a>
         </div>
       </div>
       <div class="clear"></div>
     </div>
   </section>
 </main>
+<!-- TEST -->
+
 <footer><div ng-include='"templates/footer.html"'></div></footer>

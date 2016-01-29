@@ -252,5 +252,3 @@ app.run(['$rootScope', function($rootScope) {
         //document.body.scrollTop = document.documentElement.scrollTop = 0;
     });
 }]);
-
-

@@ -1,8 +1,9 @@
 [
     {
-        "title": "Project-Name-1x",
+        "title": "CASE Conference",
         "subtitle": "Project Details Subtitle",
         "image": "assets/images/project-1.jpg",
+        "thumbnail": "assets/images/example1.jpg",
         "description": "Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient monte",
         "url": "partials/projects/project-name-1.html",
         "roles": [ {"rolename" : "role1"},
@@ -15,9 +16,10 @@
                   ]
     },
     {
-        "title": "Project-Name-2x",
+        "title": "Boston College Redesign",
         "subtitle": "Project Details Subtitle",
         "image": "assets/images/project-2.jpg",
+        "thumbnail": "assets/images/thumbnail-boston-college-redesign.jpg",
         "description": "Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient monte",
         "url": "partials/projects/project-name-2.html",
         "roles": [ {"rolename" : "role1"},
@@ -30,9 +32,10 @@
                   ]
     },
     {
-        "title": "Project-Name-3x",
+        "title": "Accessibility Analytics",
         "subtitle": "Project Details Subtitle",
         "image": "assets/images/project-3.jpg",
+        "thumbnail": "assets/images/thumbnail-accessibility-analytics.jpg",
         "description": "Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient monte",
         "url": "partials/projects/project-name-3.html",
         "roles": [ {"rolename" : "role1"},
@@ -45,9 +48,10 @@
                   ]
     },
     {
-        "title": "Project-Name-4x",
+        "title": "BC Social",
         "subtitle": "Project Details Subtitle",
         "image": "assets/images/project-1.jpg",
+        "thumbnail": "assets/images/thumbnail-bc-social.jpg",
         "description": "Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient monte",
         "url": "partials/projects/project-name-4.html",
         "roles": [ {"rolename" : "role1"},
@@ -60,9 +64,10 @@
                   ]
     },
     {
-        "title": "Project-Name-5x",
+        "title": "EagleApps",
         "subtitle": "Project Details Subtitle",
         "image": "assets/images/project-2.jpg",
+        "thumbnail": "assets/images/example2.jpg",
         "description": "Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient monte",
         "url": "partials/projects/project-name-5.html",
         "roles": [ {"rolename" : "role1"},
@@ -75,9 +80,10 @@
                   ]
     },
     {
-        "title": "Project-Name-6x",
+        "title": "University Advancement",
         "subtitle": "Project Details Subtitle",
         "image": "assets/images/project-3.jpg",
+        "thumbnail": "assets/images/example3.png",
         "description": "Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient monte",
         "url": "partials/projects/project-name-6.html",
         "roles": [ {"rolename" : "role1"},
@@ -90,9 +96,10 @@
                   ]
     },
       {
-        "title": "Paulie",
+        "title": "150 on the Road",
         "subtitle": "Project Details Subtitle",
         "image": "assets/images/project-3.jpg",
+        "thumbnail": "assets/images/example1.jpg",
         "description": "Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient monte",
         "url": "partials/projects/project-name-6.html",
         "roles": [ {"rolename" : "role1"},

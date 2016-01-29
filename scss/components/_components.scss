@@ -268,8 +268,8 @@ body {
 .contact-form aside {
   position: absolute;
   top: 0;
-  width: 10em;
-  right: -10em;
+  width: 3em;
+  right: -3em;
 }
 
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
@@ -283,4 +283,20 @@ body {
 }
 :-moz-placeholder { /* Firefox 18- */
   color: #E6E8E8;
+}
+
+/* VERTICAL LIST */
+
+.vertical-list {
+  padding-left: 1em;
+}
+
+.contact-form aside {
+  background: #f3f3f3;
+  font-size: 2em;
+}
+
+.contact-form .vertical-list {
+  color:#fff;
+  list-style: none;
 }

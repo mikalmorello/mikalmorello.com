@@ -72,7 +72,7 @@ img {
   overflow: hidden; }
 
 .pull-top, .container-card.pull-top {
-  margin-top: -150px;
+  margin-top: -200px;
   position: relative; }
 
 .hover-text {
@@ -256,29 +256,78 @@ a {
 .card {
   background: #fff;
   float: left;
-  width: 31%;
-  margin-right: 2%;
-  transition: all 0.5s ease; }
+  height: 300px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  transition: all 0.5s ease;
+  transform: scale(1); }
 
 .card:hover {
-  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.48);
-  -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.48);
-  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.48); }
+  -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.8);
+  -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.8);
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.8);
+  transition: all 0.5s ease; }
 
 .card-header {
   background-size: 100%;
-  height: 195px; }
+  height: 300px; }
 
 .card:hover .card-header {
-  transition: all 0.1s ease;
-  background-size: 110%;
-  background-position: center; }
+  transform: scale(1.3);
+  background-position: center center; }
 
 .card h2 {
+  font-size: 2em;
   margin-top: .5em; }
+
+.card:hover .card-body {
+  background: rgba(0, 0, 0, 0.75);
+  color: white;
+  cursor: pointer;
+  display: table;
+  height: 300px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 101%;
+  transition: all 0.5s ease; }
+
+.card:hover .card-body h2 {
+  display: table-cell;
+  font-family: "Oswald", sans-serif;
+  text-align: center;
+  vertical-align: middle; }
+
+.card-body a {
+  color: #fff; }
 
 .card-body {
   padding: 1em; }
+
+/* COLUMNS */
+.column1, .column2, .column3 {
+  float: left;
+  position: relative;
+  width: 33.33%; }
+
+.column1 {
+  background: #111; }
+
+.column2 {
+  background: #660000; }
+
+.column3 {
+  background: #eee; }
+
+.offset-half {
+  margin-top: 150px; }
+
+.offset-third {
+  margin-top: 100px; }
+
+.offset-two-thirds {
+  margin-top: 200px; }
 
 /* FOOTER */
 footer {
@@ -510,8 +559,8 @@ html.responsive-video {
 .contact-form aside {
   position: absolute;
   top: 0;
-  width: 10em;
-  right: -10em; }
+  width: 3em;
+  right: -3em; }
 
 ::-webkit-input-placeholder {
   /* Chrome/Opera/Safari */
@@ -528,6 +577,18 @@ html.responsive-video {
 :-moz-placeholder {
   /* Firefox 18- */
   color: #E6E8E8; }
+
+/* VERTICAL LIST */
+.vertical-list {
+  padding-left: 1em; }
+
+.contact-form aside {
+  background: #f3f3f3;
+  font-size: 2em; }
+
+.contact-form .vertical-list {
+  color: #fff;
+  list-style: none; }
 
 /* HEADER */
 header {
