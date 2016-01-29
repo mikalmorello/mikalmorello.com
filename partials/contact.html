@@ -13,20 +13,21 @@
       Contact coming soon
       <div class="pull-top">
         <div class="contact-form bg-lightgrey">
-          <form>
+          <form ng-submit="submitForm()" ng-controller="FormController" novalidate>
             <div class="form-group">
               <label for="inputName">Name</label>
-              <input type="text" class="form-control" id="inputName" placeholder="Name"></input>
+              <input type="text" class="form-control" id="inputName" placeholder="Name" ng-model="formData.name" ng-class="{'error' : errorName}"></input>
             </div>
             <div class="form-group">
               <label for="inputEmail">Email</label>
-              <input type="email" class="form-control" id="inputEmail" placeholder="Email@netscape.com"></input>
+              <input type="email" class="form-control" id="inputEmail" placeholder="Email@netscape.com" ng-model="formData.email" ng-class="{'error' : errorEmail}"></input>
             </div>
             <div class="form-group">
               <label for="inputMessage">Message</label>
-              <textarea class="form-control" id="inputMessage" rows="3"></textarea>
+              <textarea class="form-control" id="inputMessage" rows="3" ng-class="{'error' : errorTextarea}" ng-model="formData.message"></textarea>
             </div>
-            <button type="submit" class="button pull-right">Submit</button>
+            <button type="submit" class="button pull-right" value="Send!" name="submit">Submit</button>
+            <div ng-class="{'submissionMessage' : submission}" ng-bind="submissionMessage"></div>
             <div class="clear"></div>
           </form>
           <aside class="bg-darkgrey">
