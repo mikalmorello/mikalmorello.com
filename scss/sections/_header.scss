@@ -180,6 +180,10 @@ header a {
     max-width: 400px;
 }
 
+.home .brand-image {
+    max-width: 200px;
+}
+
 .branding .brand-image, footer .brand-image {
     max-width: 160px; 
 }
@@ -188,6 +192,8 @@ header a {
     max-width: 130px; 
     transition: background-color 0.2s;
 }
+
+
 
 .home .branding {
     display: none;

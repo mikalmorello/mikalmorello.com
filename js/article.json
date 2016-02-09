@@ -3,6 +3,7 @@
         "title": "Article-Name-1x",
         "subtitle": "Article Details Subtitle",
         "image": "assets/images/project-1.jpg",
+        "thumbnail": "assets/images/example1.jpg",
         "description": "Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient monte",
         "url": "partials/projects/project-name-1.html"
     },
@@ -10,6 +11,7 @@
         "title": "Article-Name-2x",
         "subtitle": "Article Details Subtitle",
         "image": "assets/images/project-2.jpg",
+        "thumbnail": "assets/images/example1.jpg",
         "description": "Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient monte",
         "url": "partials/articles/article-name-2.html"
     },
@@ -17,6 +19,7 @@
         "title": "Article-Name-3x",
         "subtitle": "Article Details Subtitle",
         "image": "assets/images/project-3.jpg",
+        "thumbnail": "assets/images/example1.jpg",
         "description": "Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient monte",
         "url": "partials/articles/article-name-3.html"
     }
