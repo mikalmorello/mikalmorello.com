@@ -94,6 +94,16 @@ hr.small {
   transition: all 0.3s;
 }
 
+.button-outline {
+  background: none;
+  border: 1px solid #eee;
+}
+
+.button-small {
+  font-size: 1em;
+  padding: .5em 1em;
+}
+
 .pull-right {
   float: right;
   position: relative;

@@ -7,18 +7,21 @@
     </div>
   </section>
   <section>
-    <div class="container-text">
+    <div class="container-card">
       <div class="card-box" ng-repeat="article in articles">
           <a href="#/articles/{{article.title}}">
             <div class="card-header" ng-style="{'background-image': 'url('+ article.thumbnail +')'}"></div>
             <div class="card-body">
               <h2><a href="#/articles/{{article.title}}">{{article.title}}</a></h2>
+              <p>{{article.description}}</p>
+              <a class="button button-outline button-small" href="#/articles/{{article.title}}">READ MORE</a>
             </div>
             <div class="clear"></div>
           </a>
         </div>
       </div>
     </div>
+    <div class="clear"></div>
   </section>
 </main> 
 <footer><div ng-include='"templates/footer.html"'></div></footer>
