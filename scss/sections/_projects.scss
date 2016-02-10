@@ -1,13 +1,20 @@
 /* PROJECTS */
 
-  .project-header {
-    background-attachment: fixed;
-    background-position:  top center;
-  }
-
   .projects-header {
     background-attachment: fixed;
     background-position:  top center;
+    background-image: $header-placer;
+    background-repeat: none;
+    background-size: cover;
+    color:#fff;
+  }
+
+  .project-header {
+    background-attachment: fixed;
+    background-position:  top center;
+    background-image: $header-placer;
+    background-repeat: none;
+    background-size: cover;
     color:#fff;
   }
 

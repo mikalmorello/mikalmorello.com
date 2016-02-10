@@ -1,5 +1,11 @@
 /* CONTACT */
 
+.contact-header {
+    background-image: $header-placer;
+    background-repeat: none;
+    background-size: cover;
+}
+
 .error {
   background-color: rgba(255, 0, 0, 0.2);
 }

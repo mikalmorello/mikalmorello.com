@@ -229,11 +229,12 @@ a {
 
 .half-width.right {
   background: #111;
-  left: 50%; }
+  left: 50%;
+  background-image: url("../assets/images/header-placer.png"); }
 
 .half-width.left {
   background: #fff;
-  background-image: url("../assets/images/paper-texture-04.png"); }
+  background-image: url("../assets/images/background-placer.png"); }
 
 .quarter-width, .three-quarter-width {
   position: absolute;
@@ -272,6 +273,8 @@ a {
 
 .card-header {
   background-size: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
   height: 300px; }
 
 .card:hover .card-header {
@@ -577,6 +580,10 @@ html.responsive-video {
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cc000000', endColorstr='#66000000',GradientType=0 );
   /* IE6-9 */ }
 
+.full-size {
+  min-height: 100vh;
+  width: 100%; }
+
 /* CONTACT FORM */
 .contact-form {
   padding: 50px; }
@@ -789,6 +796,7 @@ header a {
 
 /* IMAGES */
 .brand-image {
+  width: auto;
   max-width: 400px; }
 
 .home .brand-image {
@@ -1010,25 +1018,38 @@ main {
 .article-header {
   background-attachment: fixed;
   background-position: top center;
+  background-image: url("../assets/images/header-placer.png");
+  background-repeat: none;
+  background-size: cover;
   height: 300px; }
 
 .articles-header {
   background-color: #111;
   background-attachment: fixed;
   background-position: top center;
+  background-image: url("../assets/images/header-placer.png");
+  background-repeat: none;
+  background-size: cover;
   height: 300px; }
 
 .article-header h1 {
   color: #fff; }
 
 /* PROJECTS */
-.project-header {
-  background-attachment: fixed;
-  background-position: top center; }
-
 .projects-header {
   background-attachment: fixed;
   background-position: top center;
+  background-image: url("../assets/images/header-placer.png");
+  background-repeat: none;
+  background-size: cover;
+  color: #fff; }
+
+.project-header {
+  background-attachment: fixed;
+  background-position: top center;
+  background-image: url("../assets/images/header-placer.png");
+  background-repeat: none;
+  background-size: cover;
   color: #fff; }
 
 .project aside {
@@ -1069,7 +1090,7 @@ main {
 
 .about .three-quarter-width {
   background-position: top center;
-  background: url("../assets/images/mikal-photo.jpg");
+  background: url("../assets/images/header-placer.png");
   background-repeat: none;
   background-size: cover;
   float: left;
@@ -1085,6 +1106,11 @@ main {
   position: relative; }
 
 /* CONTACT */
+.contact-header {
+  background-image: url("../assets/images/header-placer.png");
+  background-repeat: none;
+  background-size: cover; }
+
 .error {
   background-color: rgba(255, 0, 0, 0.2); }
 

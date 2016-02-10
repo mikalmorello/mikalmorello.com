@@ -64,11 +64,12 @@
 .half-width.right {
     background: #111;
     left: 50%;
+    background-image: $header-placer;
 }
 
 .half-width.left {
     background: #fff;
-    background-image: url('../assets/images/paper-texture-04.png');
+    background-image: url('../assets/images/background-placer.png');
 }
 
 .quarter-width, .three-quarter-width {
@@ -116,6 +117,8 @@
 
 .card-header {
     background-size: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
     height: 300px;
 }
 

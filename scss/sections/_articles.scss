@@ -3,6 +3,9 @@
   .article-header {
     background-attachment: fixed;
     background-position:  top center;
+    background-image: $header-placer;
+    background-repeat: none;
+    background-size: cover;
     height: 300px;
     //overflow: hidden;
   }
@@ -11,6 +14,9 @@
     background-color: #111;
     background-attachment: fixed;
     background-position:  top center;
+    background-image: $header-placer;
+    background-repeat: none;
+    background-size: cover;
     height: 300px;
   }
 
