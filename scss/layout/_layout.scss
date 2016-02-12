@@ -125,8 +125,8 @@
 .card {
     background: #fff;
     float: left;
-    height: 300px;
-    overflow: hidden;
+    // height: 300px;
+    // overflow: hidden;
     position: relative;
     width: 100%;
     transition: all 0.5s ease;
@@ -148,8 +148,8 @@
 }
 
 .card:hover .card-header {
-    transform: scale(1.3);
-    background-position: center center;
+    //transform: scale(1.3);
+    //background-position: center center;
 }
 
 .card h2 {
@@ -160,22 +160,21 @@
 
 .card:hover .card-body {
   background: rgba(0,0,0,0.75);
-  color: white;
+  //color: white;
   cursor: pointer;
-  display: table;
-  height: 300px;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 101%;
+  // display: table;
+  //height: 300px;
+  //left: 0;
+  // position: absolute;
+  // top: 0;
+  // width: 101%;
   transition: all 0.5s ease;
 }
 
 .card:hover .card-body h2 {
-  display: table-cell;
-  font-family: $font-title;
-  text-align: center;
-  vertical-align: middle;
+  //display: table-cell;
+  //text-align: center;
+  //vertical-align: middle;
 }
 
 .card-body a{

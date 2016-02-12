@@ -12,9 +12,10 @@
           <a href="#/articles/{{article.title}}">
             <div class="card-header" ng-style="{'background-image': 'url('+ article.thumbnail +')'}"></div>
             <div class="card-body">
-              <h2><a href="#/articles/{{article.title}}">{{article.title}}</a></h2>
+              <h2>{{article.title}}</h2>
+              <div class="card-index">{{$index + 1}}</div>
               <p>{{article.description}}</p>
-              <a class="button button-outline button-small" href="#/articles/{{article.title}}">READ MORE</a>
+              <a class="button button-outline button-small" href="#/articles/{{article.title}}">READ</a>
             </div>
             <div class="clear"></div>
           </a>

@@ -1,6 +1,6 @@
 [
     {
-        "title": "Article-Name-1x",
+        "title": "Article Name 1",
         "subtitle": "Article Details Subtitle",
         "image": "assets/images/project-1.jpg",
         "thumbnail": "assets/images/project-thumbnail-placer.png",
@@ -8,7 +8,7 @@
         "url": "partials/projects/project-name-1.html"
     },
     {
-        "title": "Article-Name-2x",
+        "title": "Article Name 2",
         "subtitle": "Article Details Subtitle",
         "image": "assets/images/project-2.jpg",
         "thumbnail": "assets/images/project-thumbnail-placer.png",
@@ -16,7 +16,7 @@
         "url": "partials/articles/article-name-2.html"
     },
     {
-        "title": "Article-Name-3x",
+        "title": "Article Name 3",
         "subtitle": "Article Details Subtitle",
         "image": "assets/images/project-3.jpg",
         "thumbnail": "assets/images/project-thumbnail-placer.png",

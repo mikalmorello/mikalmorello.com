@@ -60,7 +60,7 @@ header a {
   font-size: 0;
   float: left;
   height: 55px;
-  margin: 0;
+  margin: 10px;
   overflow: hidden;
   padding: 0;
   position: relative;
@@ -159,6 +159,7 @@ header a {
   font-size: 30px;
   float: right;
   height: 55px;
+  margin:10px;
   position: relative;
   width: 60px;
 }
@@ -170,7 +171,7 @@ header a {
     float: left; /* ADDED FOR SEARCH ICON */
     margin: 0 auto;
     padding-top: 5px;
-    width: calc( 100vw - 120px );
+    width: calc( 100vw - 160px );
     position: relative;
     text-align: center;
 }
