@@ -10,12 +10,16 @@
     </div>
     <div class="container-text">
       <aside>
-      <img ng-src="{{detail.brandimage}}" class="project-brand"/>
+      <!--<img ng-src="{{detail.brandimage}}" class="project-brand"/>-->
+        <h3>CLIENT</h3>
+        <div>
+            <a href="">{{detail.client}}</a>
+        </div>
         <h3>ROLES</h3>
         <div ng-repeat="role in detail.roles">
             <a href="">{{role.rolename}}</a>
         </div>
-        <hr />
+        <!--<hr />-->
         <!-- TEST SKILLS LIST -->
         <h3>SKILLS</h3>
         <div class="skill" ng-repeat="skill in detail.skills">

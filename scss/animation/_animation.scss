@@ -2,17 +2,18 @@
 /* ANIMATION */
 
 .fade {
-    //position: absolute; COMMENTED OUT AGAIN - SIGH
+    //position: absolute; 
     top: 0;
     left: 0;
     right: 0;
     height: 100%;
     opacity: 1;
+   //clear: both;
 }
 .fade.ng-enter,
 .fade.ng-leave {
-    -webkit-transition: all .5s ease;
-    transition: all .5s ease;
+    -webkit-transition: opacity .35s ease-in;
+    transition: opacity .35s ease-in;
 }
 .fade.ng-enter {
     opacity: 0;

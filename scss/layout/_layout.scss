@@ -9,7 +9,7 @@
 
   .container-card {
     margin: 0 auto;
-    max-width: 1000px; 
+    max-width: 1100px; 
     padding: 25px;
   }
 
@@ -24,11 +24,11 @@
 
 
 .skill {
-    background: #fff;
-    border-radius: 3;
-    float: left;
-    margin: 2px;
-    padding: 5px;
+   // background: #fff;
+   // border-radius: 3;
+    //float: left;
+    //margin: 2px;
+    //padding: 5px;
 }
 
 .image-block-set {
@@ -159,7 +159,7 @@
 }
 
 .card:hover .card-body {
-  background: rgba(0,0,0,0.75);
+  //background: rgba(0,0,0,0.75);
   //color: white;
   cursor: pointer;
   // display: table;
@@ -177,12 +177,22 @@
   //vertical-align: middle;
 }
 
-.card-body a{
-  color: #fff;
-}
 
 .card-body {
     padding: 1em;
+}
+
+.card-body p {
+    font-size: .85em;
+  line-height: 2em;
+  margin-bottom: 3em;
+  margin-top:2em;
+  text-align: left;
+}
+
+.card {
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+  overflow: visible;
 }
 
 /* CARD BOX */
@@ -215,11 +225,6 @@
     background-position: center center;
 }
 
-.card-box h2 {
-    font-size: 2em;
-    margin-top: .5em;
-  
-}
 
 .card-box .card-body {
   background: rgba(0,0,0,0.75);
@@ -234,18 +239,22 @@
   transition: all 0.5s ease;
 }
 
-.card-box .card-body h2 {
+.card-body h2 {
+  text-transform: uppercase;
+  letter-spacing: 3px;
   font-family: $font-title;
   text-align: center;
   vertical-align: middle;
-}
-
-.card-body a{
-  color: #fff;
+  font-size: 1.75em;
+    margin-top: .5em;
 }
 
 .card-body {
-    padding: 1em;
+    padding: 2em;
+}
+
+.card a{
+  color: #111;
 }
 
 

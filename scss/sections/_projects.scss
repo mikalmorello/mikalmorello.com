@@ -23,15 +23,22 @@
   }
 
 .project aside {
-    background: #eee; 
+    //background: #eee; 
+    border-left: 1px solid #eee;
+    font-family: $font-title;
+    font-weight: 300;
     float:right; 
-    margin-top: -100px; 
-    margin-right: -6em; 
-    margin-left: 2em; 
-    margin-bottom: 1em;
-    padding: 1em;
+    //margin-top: -100px; 
+    margin: 3em -6em 1em 2em;
+    padding-left: 2.5em;
     position:relative; 
+    text-transform: uppercase;
     width: 15em; 
+}
+
+.project aside a {
+    font-size: .8em;
+    letter-spacing: 1px;
 }
 
 .project aside hr {
@@ -44,8 +51,12 @@
 }
 
 .project aside h3 {
-    font-size: .9em;
-    font-family: 'Oswald', sans-serif;
+    font-size: 1em;
+    font-weight: 400;
+}
+
+.project aside h3:first-child {
+  margin-top: 0;
 }
 
 .project-brand {
@@ -54,3 +65,4 @@
     margin: 0 auto;
     width: 100%;
 }
+

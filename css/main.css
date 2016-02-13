@@ -93,6 +93,8 @@ hr.small {
   border: 0;
   color: #fff;
   font-family: "Oswald", sans-serif;
+  font-weight: 300;
+  letter-spacing: 1px;
   font-size: 1.25em;
   padding: .75em 1.25em;
   text-transform: uppercase;
@@ -192,7 +194,7 @@ a {
 
 .container-card {
   margin: 0 auto;
-  max-width: 1000px;
+  max-width: 1100px;
   padding: 25px; }
 
 .container-header {
@@ -201,13 +203,6 @@ a {
   padding-top: 150px;
   text-align: center;
   max-width: 1000px; }
-
-.skill {
-  background: #fff;
-  border-radius: 3;
-  float: left;
-  margin: 2px;
-  padding: 5px; }
 
 .image-block-set {
   float: left;
@@ -307,15 +302,22 @@ a {
   margin-top: .5em; }
 
 .card:hover .card-body {
-  background: rgba(0, 0, 0, 0.75);
   cursor: pointer;
   transition: all 0.5s ease; }
 
-.card-body a {
-  color: #fff; }
-
 .card-body {
   padding: 1em; }
+
+.card-body p {
+  font-size: .85em;
+  line-height: 2em;
+  margin-bottom: 3em;
+  margin-top: 2em;
+  text-align: left; }
+
+.card {
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
+  overflow: visible; }
 
 /* CARD BOX */
 .card-box {
@@ -342,10 +344,6 @@ a {
   transform: scale(1.3);
   background-position: center center; }
 
-.card-box h2 {
-  font-size: 2em;
-  margin-top: .5em; }
-
 .card-box .card-body {
   background: rgba(0, 0, 0, 0.75);
   color: white;
@@ -358,16 +356,20 @@ a {
   width: 101%;
   transition: all 0.5s ease; }
 
-.card-box .card-body h2 {
+.card-body h2 {
+  text-transform: uppercase;
+  letter-spacing: 3px;
   font-family: "Oswald", sans-serif;
   text-align: center;
-  vertical-align: middle; }
-
-.card-body a {
-  color: #fff; }
+  vertical-align: middle;
+  font-size: 1.75em;
+  margin-top: .5em; }
 
 .card-body {
-  padding: 1em; }
+  padding: 2em; }
+
+.card a {
+  color: #111; }
 
 /* COLUMNS */
 .column1, .column2, .column3 {
@@ -688,7 +690,8 @@ header a {
   color: #fff;
   font-family: 'Oswald', sans-serif;
   font-size: 1em;
-  font-weight: 400;
+  font-weight: 300;
+  letter-spacing: 2px;
   text-transform: uppercase; }
 
 .fix-to-top {
@@ -1061,10 +1064,6 @@ main {
   position: relative;
   width: 50%; }
 
-.articles .card-box {
-  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
-  overflow: visible; }
-
 .articles .card-box:hover {
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.6); }
 
@@ -1114,16 +1113,8 @@ main {
   background: #EF8A7E;
   color: #fff; }
 
-.articles .card-body h2 {
-  text-transform: uppercase;
-  letter-spacing: 3px; }
-
-.articles .card-body p {
-  font-size: .9em;
-  line-height: 2em;
-  margin-bottom: 3em;
-  margin-top: 2em;
-  text-align: left; }
+.card-box {
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2); }
 
 .articles .card-index {
   color: #fff;
@@ -1160,15 +1151,19 @@ main {
   color: #fff; }
 
 .project aside {
-  background: #eee;
+  border-left: 1px solid #eee;
+  font-family: "Oswald", sans-serif;
+  font-weight: 300;
   float: right;
-  margin-top: -100px;
-  margin-right: -6em;
-  margin-left: 2em;
-  margin-bottom: 1em;
-  padding: 1em;
+  margin: 3em -6em 1em 2em;
+  padding-left: 2.5em;
   position: relative;
+  text-transform: uppercase;
   width: 15em; }
+
+.project aside a {
+  font-size: .8em;
+  letter-spacing: 1px; }
 
 .project aside hr {
   border: 0;
@@ -1179,8 +1174,11 @@ main {
   width: 50%; }
 
 .project aside h3 {
-  font-size: .9em;
-  font-family: 'Oswald', sans-serif; }
+  font-size: 1em;
+  font-weight: 400; }
+
+.project aside h3:first-child {
+  margin-top: 0; }
 
 .project-brand {
   display: block;
@@ -1216,7 +1214,8 @@ main {
 .contact-header {
   background-image: url("../assets/images/header-placer.png");
   background-repeat: none;
-  background-size: cover; }
+  background-size: cover;
+  box-shadow: inset 0 0 200px 50px rgba(0, 0, 0, 0.6); }
 
 .error {
   background-color: rgba(255, 0, 0, 0.2); }
@@ -1254,8 +1253,8 @@ main {
 
 .fade.ng-enter,
 .fade.ng-leave {
-  -webkit-transition: all .5s ease;
-  transition: all .5s ease; }
+  -webkit-transition: opacity .35s ease-in;
+  transition: opacity .35s ease-in; }
 
 .fade.ng-enter {
   opacity: 0; }
