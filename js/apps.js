@@ -1,5 +1,5 @@
 
-var app = angular.module('portfolio', ['ngRoute', 'ngAnimate']);
+var app = angular.module('portfolio',  ['ngRoute', 'ngAnimate', 'filters']);
 
 // APP CONFIG
 
@@ -106,6 +106,30 @@ app.factory('articles', ['$http', function($http) {
      return data;
    });
 }]);
+
+// RESUME CONTROLLER
+  app.controller('ResumeCtrl', ['$scope', 'resume', function($scope, resume) {
+  resume.success(function(data) {
+    $scope.resume = data;    
+  });
+    resume.error(function(data) {
+    console.log('error');
+  });
+}]);
+
+
+// RESUME SERVICE
+app.factory('resume', ['$http', function($http) {
+  return $http.get('js/resume.json')
+   .success(function(data) {
+     return data;
+   })
+   .error(function(data) {
+     return data;
+   });
+}]);
+
+
 
 
 // SHARED SERVICE FOR STORING REUSABLE FUNCTIONS
@@ -252,6 +276,22 @@ app.run(['$rootScope', function($rootScope) {
         //document.body.scrollTop = document.documentElement.scrollTop = 0;
     });
 }]);
+
+
+
+//FILTERS - TRUNCATE
+angular.module('filters', []).
+    filter('truncate', function () {
+        return function (text, length, end) {
+
+                return String(text).slice(2);
+                 console.log(String(text).slice(2));
+
+        };
+    });
+
+
+
 
 
 // CONTACT FORM

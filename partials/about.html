@@ -6,15 +6,16 @@
           <h1>ABOUT</h1>
         </div>
       </div>
-      <div class="quarter-width right">
-        <h2>RESUME</h2>
-        <ul>
-          <li>Skill Name</li>
-          <li>Skill Name</li>
-          <li>Skill Name</li>
-          <li>Skill Name</li>
-          <li>Skill Name</li>
-        </ul>
+      <div class="quarter-width right" ng-controller="ResumeCtrl">
+       <h2>POSITIONS</h2>
+       <div class="resume" ng-repeat="job in resume">
+         <h3 class="position">{{job.position}}</h3>
+         <span class="location">{{job.location}}</span>
+         <div class="date-tag">
+           <span class="date-tag-start">{{job.startdate}}</span>
+           <span class="date-tag-end">{{job.enddate | truncate}}</span>
+         </div>
+       </div>
 
       </div>
     </div>

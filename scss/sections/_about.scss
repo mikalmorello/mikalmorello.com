@@ -11,10 +11,15 @@
     color: #111;
   }
 
+  .about-header h2 {
+    color: #494B4D;
+    font-family: $font-title;
+  }
+
   .about .three-quarter-width {
     background-position:  top center;
     background: $header-placer;
-    background-repeat: none;
+    background-repeat: no-repeat;
     background-size: cover;
     float: left;
     height: 800px;
@@ -26,6 +31,63 @@
     color:#111;
     height: 800px;
     float: left;
+    overflow: visible;
     padding:  100px 50px;
     position: relative;
+  }
+
+  .resume {
+    color: #494B4D;
+    padding-top: .6em;
+    position: relative;
+  }
+  
+  .resume .position, .resume .location{
+    font-family: $font-title;
+    font-size: 1rem;
+  }
+
+  .resume .position {
+    margin-bottom: 0;
+    text-transform: uppercase;
+  }
+
+  .resume .location {
+    font-weight: 300;
+  }
+
+  .resume:nth-of-type(1) .date-tag{
+    border-right: 5px solid $menu-background;
+    opacity: 1;
+  }
+
+  .resume:hover .date-tag {
+    opacity: 1;
+    transition: opacity .25s ease-in;
+  }
+
+  .date-tag {
+    border-right: 5px solid #ECE1A6;
+    color: #fff;
+    opacity: 0;
+    float: left;
+    font-family:  Georgia, Times, 'Times New Roman', serif;
+    padding: .5em 1em .5em 0;
+    position: relative;
+    margin-left: -116px;
+    margin-top: -2.2em;
+    min-width: 4.1em;
+  }
+
+  .date-tag-start,.date-tag-end {
+    display: block;
+  }
+
+  .date-tag-start {
+    font-weight: 300;
+  }
+
+  .date-tag-end {
+    font-size: 2.3em;
+    line-height: 1em;
   }
