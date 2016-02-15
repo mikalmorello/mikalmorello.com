@@ -3,10 +3,11 @@ header {
     background: none;
     box-sizing: border-box;
     display: block;
-    min-height:  55px;
+    min-height:  75px;
     //float: left;
-    position: relative;
-    margin-bottom: -70px;
+    //position: relative;
+    position: absolute;
+    margin-bottom: -75px;
     width: 100%;
     z-index: 12;
 }

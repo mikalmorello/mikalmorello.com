@@ -52,7 +52,7 @@ app.config(function ($routeProvider){
   });
 });
 
-// HOME CONTROLLER
+// MAIN CONTROLLER
 app.controller('MainCtrl', ['$scope', 'projects', 'articles', function($scope, projects, articles) {
   projects.success(function(data) {
     $scope.projects = data;
@@ -60,8 +60,11 @@ app.controller('MainCtrl', ['$scope', 'projects', 'articles', function($scope, p
   articles.success(function(data) {
     $scope.articles = data;
   });
+  
+  $scope.date = new Date();
 }]);
   
+
 // PROJECT CONTROLLER
   app.controller('ProjectCtrl', ['$scope', 'projects', '$routeParams', 'sharedProperties', function($scope, projects, $routeParams, sharedProperties) {
   projects.success(function(data) {

@@ -21,6 +21,12 @@
     max-width: 1000px;
   }
 
+.container-wide {
+    margin: 0 auto;
+    max-width: 1400px; 
+    padding: 25px;
+}
+
 
 
 .skill {
@@ -201,7 +207,7 @@
     background: #fff;
     float: left;
     height: 300px;
-    overflow: hidden;
+    //overflow: hidden;
     position: relative;
     width: 100%;
     transition: all 0.5s ease;

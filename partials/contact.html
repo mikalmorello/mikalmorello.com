@@ -13,6 +13,9 @@
       Contact coming soon
       <div class="pull-top">
         <div class="contact-form bg-lightgrey">
+          <div class="current-date">
+            {{date | date:'MMM-dd'}}
+          </div>
           <form ng-submit="submitForm()" ng-controller="FormController" novalidate>
             <div class="form-group">
               <label for="inputName">Name</label>
@@ -30,7 +33,9 @@
             <div ng-class="{'submissionMessage' : submission}" ng-bind="submissionMessage"></div>
             <div class="clear"></div>
           </form>
-          <aside class="bg-darkgrey">
+          <aside class="">
+            CURRENT LOCATION <br />
+            Watertown, MA
             <ul class="vertical-list">
               <li><a href="https://www.linkedin.com/in/mikalmorello"><span class="ti-linkedin"></span></a></li>
               <li><a href="https://github.com/mikalmorello"><span class="ti-github"></span></a></li>

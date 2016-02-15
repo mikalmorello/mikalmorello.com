@@ -10,6 +10,7 @@
 .error {
   background-color: rgba(255, 0, 0, 0.2);
 }
+
 .submissionMessage {
   background-color: rgba(255,255,255, 0.2);
   border-radius: 5px;
@@ -18,4 +19,78 @@
   display: block;
   box-shadow: 0 0 2px white;
   width: 60%;
+}
+
+/* CONTACT FORM */
+.contact-form {
+  padding: 50px;
+}
+
+.contact-form input, .contact-form label {
+  font-family: $font-sans;
+}
+
+.contact-form label {
+  color:#999;
+  font-size: 1.25em;
+}
+
+.contact-form input, .contact-form textarea {
+  background: #fff;
+  border:none;
+  border-bottom: 4px solid #E6E8E8;
+  border-radius: 0.25em;
+  color:#111;
+  font-size: 1.25em;
+  margin-bottom: 2em;
+  margin-top: .5em;
+  padding: 22px;
+  width: 100%;
+}
+
+.contact-form input:focus, .contact-form textarea:focus {
+  border-bottom: 4px solid $menu-background;
+} 
+
+/*.contact-form :placeholder-shown {
+  color:#E6E8E8;
+}*/
+
+.contact-form .form-group:first-child {
+  margin-top: .75em;
+}
+
+.contact-form aside {
+  position: absolute;
+  top: 0;
+  width: 6em;
+  right: -6em;
+}
+
+
+.contact-form aside {
+  font-size: 2em;
+}
+
+.contact-form .vertical-list {
+  color:#fff;
+  list-style: none;
+}
+
+.current-date {
+    background: #EF8A7E;
+    font-family: "Oswald", sans-serif;
+    font-size: 1.2em;
+    font-weight: 400;
+   height: 152px;
+    position: absolute;
+    z-index: 2;
+    width: 10px;
+    padding: .51em 1.5em .51em .75em;
+    word-break: break-all;
+    color: #fff;
+    text-transform: uppercase;
+    line-height: 1.1em;
+    margin-left: -93px;
+  top: 0;
 }
