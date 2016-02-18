@@ -254,8 +254,9 @@ app.controller('ctrl', function ($scope) {
 
 // SCROLL TEST
 
-app.directive("scroll", function ($window) {
+app.directive("scroll", function ($window ) {
     return function(scope, element, attrs) {
+        // STICKY MENU SCROLL CHECK
         angular.element($window).bind("scroll", function() {
              if (this.pageYOffset >= 100) {
                  scope.boolChangeClass = true;
@@ -265,9 +266,33 @@ app.directive("scroll", function ($window) {
                  console.log('Header is in view.');
              }
             scope.$apply();
+          
+        // BACK TO TOP BUTTON CHECK
+          scope.topClass = 'hide';
+          
+          if (this.pageYOffset >= 900) {
+            console.log('SCROLL TO TOP');
+            scope.topClass = 'show';
+          } else {
+            scope.topClass = 'hide';
+          }
+        // BOTTOM OF PAGE FOOTER CHECK
+            var windowHeight = "innerHeight" in window ? window.innerHeight : document.documentElement.offsetHeight;
+            var body = document.body, html = document.documentElement;
+            var docHeight = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight,  html.scrollHeight, html.offsetHeight);
+            windowBottom = windowHeight + window.pageYOffset;
+            scope.footerClass = "";
+            if (windowBottom >= (docHeight - 20)) {
+                console.log('bottom reached');
+                scope.footerClass = "color";
+            } 
         });
     };
 });
+
+
+
+
 
 
 // change Page Title based on the routers

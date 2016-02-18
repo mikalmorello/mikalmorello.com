@@ -321,11 +321,11 @@ input.search-input {
   content: '';
   position: absolute;
   left: 0;
-  top: -50px;
+  top: -60px;
   overflow: visible;
   width: 100%;
   height: 380px;
-  background: #00F3D7;
+  background: $menu-background;
   z-index: -1;
   -webkit-transform: skewY(-4deg);
   -moz-transform: skewY(-4deg);
@@ -343,7 +343,7 @@ input.search-input {
 }
 
 .diagnol-header small {
-  color:#00F3D7;
+  color:$menu-background;
   font-size: .15em;
   margin-top: -2em;
   position: relative;

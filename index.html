@@ -36,6 +36,7 @@
   
 </head>
 <body ng-controller="MenuCtrl" ng-class="bodyClass">
+  <a name="top"></a>
   <!--<div id="wrapper" ng-class="sidebarClass">-->
   <div id="wrapper" scroll ng-class="{min:boolChangeClass}"> 
     <!-- SIDEBAR -->
@@ -49,7 +50,9 @@
       <div ng-view class="fade" autoscroll="true"></div>
     </div>
     <div class="clear"></div>
+    <a href="#top" class="top-button" ng-class="topClass"><span class="ti-arrow-up"></span></a>
   </div>
+  
 
   
 

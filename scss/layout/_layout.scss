@@ -299,3 +299,38 @@ footer {
     background: #ececec;
     text-align: center;
 }
+
+footer.grey {
+}
+
+footer.color {
+   background: $menu-background;
+}
+
+/* SCROLL TO TOP */
+
+
+.top-button.show {
+  opacity: .4;
+  position: fixed;
+  right: 4em;
+  bottom: 10em;
+  transition: opacity .3s 0s, visibility 0s 0s;
+  z-index: 10;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    white-space: nowrap;
+    background: rgba(232, 98, 86, 0.8);
+      visibility: visible;
+  padding: 1em;
+  color: #fff;
+}
+
+.top-button, .top-button.hide {
+  visibility: visible;
+  opacity: 0;
+}
+
+.top-button.show:hover {
+  opacity: 1;
+}

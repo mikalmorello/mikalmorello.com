@@ -61,15 +61,15 @@
 }
 
 .contact-form aside {
+  font-family: $font-title;
   position: absolute;
   top: 0;
-  width: 6em;
-  right: -6em;
+  width: 12em;
+  right: -14em;
 }
 
 
 .contact-form aside {
-  font-size: 2em;
 }
 
 .contact-form .vertical-list {
@@ -93,4 +93,58 @@
     line-height: 1.1em;
     margin-left: -93px;
   top: 0;
+}
+
+.current-location{
+  color: white;
+  font-size: 1.4em;
+  margin-bottom: 4em;
+  margin-top: 2em;
+  padding-left: 1em;
+}
+
+.current-location-title {
+  display: block;
+  font-weight: 300; 
+  font-size: .7em;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.current-location-title .ti-location-pin {
+  float: left;
+  position: relative;
+  margin-left: -1.3em;
+}
+
+.social-contact {
+  color: #111;
+  text-transform: uppercase;
+  text-align:  center;
+  width: 4em;
+}
+
+.join-me {
+  margin-bottom: 1em;
+}
+
+.social-contact hr {
+  width: 50%;
+}
+
+.social-contact .vertical-list {
+  padding-left: 0;
+}
+
+.social-contact li {
+  font-size: 1.5em;
+  margin: 1em auto;
+}
+
+.social-contact a {
+  color: #111;
+}
+
+.social-contact a:hover {
+  color: #EF8A7E;
 }

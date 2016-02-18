@@ -261,3 +261,20 @@ body {
   padding-left: 1em;
 }
 
+/* ICONS */
+.icon-large {
+  font-size: 2em;
+}
+
+/* BUTTONS */
+
+a.button {
+  font-size: .9em;
+  margin-top: 2em;
+  padding: 1em 1.75em;
+}
+
+a.button:hover {
+  background: $secondary-background;
+  color:#fff;
+}
