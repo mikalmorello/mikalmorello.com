@@ -148,3 +148,60 @@
 .social-contact a:hover {
   color: #EF8A7E;
 }
+
+    /* Medium Devices, Desktops */
+    @media only screen and (max-width : 1138px) {
+      
+      .contact-form aside {
+          float: left;
+          margin-top: 4em;
+          position: relative;
+          right: 0;
+          width: 100%;
+      }
+      
+      .current-location{
+         color: #111;
+         float: left;
+         margin-top: 0;
+         margin-bottom: 0;
+      }
+      
+      .social-contact {
+        float: right;
+        width: auto;
+        
+      }
+      
+      .social-contact li {
+        float: left;
+        margin-top: 0;
+        padding-right: .25em;
+      }
+      
+      .social-contact hr {
+          display: none;
+      }
+      
+      .social-contact .vertical-list {
+            margin-top: 0;
+      }
+      
+      
+    }
+
+    @media only screen and (max-width : 768px) {
+      .current-date {
+        height: auto;
+        left: 0;
+        margin-left: 0;
+        padding: .51em 1.5em .51em 1.5em;
+        width: 150px;
+        word-break: normal;
+        text-align: center;
+        top: -41px;
+      }
+      
+
+
+    }

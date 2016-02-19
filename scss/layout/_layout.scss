@@ -271,18 +271,6 @@
   width: 33.33%;
 }
 
-.column1 {
-  background: #111;
-}
-
-.column2 {
-  background: #660000;
-}
-
-.column3 {
-  background: #eee;
-}
-
 .offset-half {
   margin-top: 150px;
 }
@@ -297,6 +285,7 @@
 /* FOOTER */
 footer {
     background: #ececec;
+    clear: both;
     text-align: center;
 }
 
@@ -333,4 +322,20 @@ footer.color {
 
 .top-button.show:hover {
   opacity: 1;
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px) {
+  .column1, .column2, .column3 {
+    width: 100%;
+  }
+  offset-third {
+      margin-top: 0;
+  }
+  .offset-half {
+      margin-top: 0;
+  }
+  .card {
+      margin-bottom: 25px;
+  }
 }

@@ -121,3 +121,13 @@ hr.small {
 
 
 :focus {outline:none;}
+
+
+/* Small Devices, Tablets */
+    @media only screen and (max-width : 768px) {
+      .pull-top, .container-card.pull-top {
+    margin-top: -150px;
+    position: relative;
+}
+
+    }
