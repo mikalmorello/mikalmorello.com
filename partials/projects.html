@@ -10,10 +10,10 @@
     <div class="container-card card-list pull-top">
       <div class="column1 offset-third">
         <div class="card" ng-repeat="project in projects | limitTo:2:0">
-          <a href="#/projects/{{project.title}}">
+          <a href="/projects/{{project.title}}">
             <div class="card-header" ng-style="{'background-image': 'url('+ project.thumbnail +')'}"></div>
             <div class="card-body">
-              <h2>{{project.title}}</h2>
+              <h2>{{project.projecttitle}}</h2>
                <p>{{project.description}}</p>
             </div>
             <div class="clear"></div>
@@ -22,10 +22,10 @@
       </div>
       <div class="column2">
         <div class="card" ng-repeat="project in projects | limitTo:3:2">
-          <a href="#/projects/{{project.title}}">
+          <a href="/projects/{{project.title}}">
             <div class="card-header" ng-style="{'background-image': 'url('+ project.thumbnail +')'}"></div>
             <div class="card-body">
-              <h2>{{project.title}}</h2>
+              <h2>{{project.projecttitle}}</h2>
               <p>{{project.description}}</p>
             </div>
             <div class="clear"></div>
@@ -34,10 +34,10 @@
       </div>
       <div class="column3 offset-half">
         <div class="card" ng-repeat="project in projects | limitTo:3:5">
-          <a href="#/projects/{{project.title}}">
+          <a href="/projects/{{project.title}}">
             <div class="card-header" ng-style="{'background-image': 'url('+ project.thumbnail +')'}"></div>
             <div class="card-body">
-              <h2>{{project.title}}</h2>
+              <h2>{{project.projecttitle}}</h2>
               <p>{{project.description}}</p>
             </div>
             <div class="clear"></div>
@@ -50,4 +50,4 @@
 </main>
 <!-- TEST -->
 
-<footer><div ng-include='"templates/footer.html"'></div></footer>
+<footer ng-class="footerClass"><div ng-include='"templates/footer.html"'></div></footer>

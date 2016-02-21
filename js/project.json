@@ -1,6 +1,7 @@
 [
     {
-        "title": "CASE Conference",
+        "title": "case-conference",
+        "projecttitle": "CASE Conference",
         "subtitle": "Project Details Subtitle",
         "client": "Boston College",
         "image": "assets/images/project-full-placer.png",
@@ -17,7 +18,8 @@
                   ]
     },
     {
-        "title": "Boston College Redesign",
+        "title": "boston-college-redesign",
+        "projecttitle": "Boston College Redesign",
         "subtitle": "Project Details Subtitle",
         "client": "Boston College",
         "image": "assets/images/project-full-placer.png",
@@ -34,7 +36,8 @@
                   ]
     },
     {
-        "title": "Accessibility Analytics",
+        "title": "accessibility-analytics",
+        "projecttitle": "Accessibility Analytics",
         "subtitle": "Project Details Subtitle",
         "client": "Boston College",
         "image": "assets/images/project-full-placer.png",
@@ -51,7 +54,8 @@
                   ]
     },
     {
-        "title": "BC Social",
+        "title": "bc-social",
+        "projecttitle": "BC Social",
         "subtitle": "Project Details Subtitle",
         "client": "Boston College",
         "image": "assets/images/project-full-placer.png",
@@ -68,7 +72,8 @@
                   ]
     },
     {
-        "title": "EagleApps",
+        "title": "eagleapps",
+        "projecttitle": "EagleApps",
         "subtitle": "Project Details Subtitle",
         "client": "Boston College",
         "image": "assets/images/project-full-placer.png",
@@ -85,7 +90,8 @@
                   ]
     },
     {
-        "title": "University Advancement",
+        "title": "university-advancement",
+        "projecttitle": "University Advancement",
         "subtitle": "Project Details Subtitle",
         "client": "Boston College",
         "image": "assets/images/project-full-placer.png",
@@ -102,7 +108,8 @@
                   ]
     },
       {
-        "title": "150 on the Road",
+        "title": "150-on-the-road",
+        "projecttitle": "150 on the Road",
         "subtitle": "Project Details Subtitle",
         "client": "Boston College",
         "image": "assets/images/project-full-placer.png",

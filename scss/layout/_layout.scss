@@ -290,11 +290,47 @@ footer {
 }
 
 footer.grey {
+    -webkit-animation-name: fadeout; /* Chrome, Safari, Opera */
+    -webkit-animation-duration: 1s; /* Chrome, Safari, Opera */
+    animation-name: fadeout;
+    animation-duration: 1s;
 }
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes fadeout {
+    from {background-color: $menu-background;}
+    to {background-color: #ececec;}
+}
+
+/* Standard syntax */
+@keyframes fadeout {
+    from {background-color: $menu-background;}
+    to {background-color: #ececec;}
+}
+
 
 footer.color {
    background: $menu-background;
+    -webkit-animation-name: fadein; /* Chrome, Safari, Opera */
+    -webkit-animation-duration: 2s; /* Chrome, Safari, Opera */
+    animation-name: fadein;
+    animation-duration: 2s;
 }
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes fadein {
+    from {background-color: #ececec;}
+    to {background-color: $menu-background;}
+}
+
+/* Standard syntax */
+@keyframes fadein {
+    from {background-color: #ececec;}
+    to {background-color: $menu-background;}
+}
+
+
+
 
 /* SCROLL TO TOP */
 
@@ -339,3 +375,11 @@ footer.color {
       margin-bottom: 25px;
   }
 }
+
+
+  @media only screen and (max-width : 768px) {
+    .top-button.show {
+      display: none;
+    }
+
+    }

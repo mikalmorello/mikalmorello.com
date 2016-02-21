@@ -1,14 +1,14 @@
 <main>
   <section class="project">
-    <div class="project-header header fade-in one" ng-style="{'background-image': 'url('+ detail.image +')'}">
-            <a href="#/projects" class="back fix-to-top"><span class="ti-angle-left icon"></span><span class="hover-text">Back</span></a>
+    <div class="project-header header" ng-style="{'background-image': 'url('+ detail.image +')'}">
+            <a href="/projects" class="back fix-to-top"><span class="ti-angle-left icon"></span><span class="hover-text">Back</span></a>
       <div class="container-header">
-        <h1>{{detail.title}}</h1>
+        <h1>{{detail.projecttitle}}</h1>
         <hr class="small"/>
         <small>{{detail.subtitle}}</small>
       </div>
     </div>
-    <div class="container-text fade-in two">
+    <div class="container-text">
       <aside>
       <!--<img ng-src="{{detail.brandimage}}" class="project-brand"/>-->
         <h3>CLIENT</h3>
@@ -34,4 +34,4 @@
     <div class="next">NEXT</div>
   </section>-->
 </main>
- <footer class="fade-in three"><div ng-include='"templates/footer.html"'></div></footer>
+ <footer ng-class="footerClass"><div ng-include='"templates/footer.html"'></div></footer>

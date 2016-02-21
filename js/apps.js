@@ -3,7 +3,7 @@ var app = angular.module('portfolio',  ['ngRoute', 'ngAnimate', 'filters']);
 
 // APP CONFIG
 
-app.config(function ($routeProvider){
+app.config(function ($routeProvider, $locationProvider){
   $routeProvider
   .when('/', { 
     controller: 'MainCtrl',
@@ -50,6 +50,7 @@ app.config(function ($routeProvider){
     templateUrl: 'partials/404.html',
     title: '404'
   });
+  $locationProvider.html5Mode(true)
 });
 
 // MAIN CONTROLLER
@@ -271,7 +272,6 @@ app.directive("scroll", function ($window ) {
           scope.topClass = 'hide';
           
           if (this.pageYOffset >= 900) {
-            console.log('SCROLL TO TOP');
             scope.topClass = 'show';
           } else {
             scope.topClass = 'hide';
@@ -282,10 +282,12 @@ app.directive("scroll", function ($window ) {
             var docHeight = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight,  html.scrollHeight, html.offsetHeight);
             windowBottom = windowHeight + window.pageYOffset;
             scope.footerClass = "";
-            if (windowBottom >= (docHeight - 20)) {
+            if (windowBottom >= (docHeight - 60)) {
                 console.log('bottom reached');
                 scope.footerClass = "color";
-            } 
+            } else {
+                 scope.footerClass = "grey";
+            }
         });
     };
 });
@@ -365,5 +367,15 @@ angular.module('filters', []).
       }
      });
    };
+});
+
+
+// ANCHORS?
+
+app.run(function($rootScope, $location, $anchorScroll, $routeParams) {
+  $rootScope.$on('$routeChangeSuccess', function(newRoute, oldRoute) {
+    $location.hash($routeParams.scrollTo);
+    $anchorScroll();  
+  });
 });
 
