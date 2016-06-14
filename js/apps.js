@@ -211,14 +211,17 @@ app.directive("searchOverlay", function(){
     controller: function($scope){
         $scope.searchClass = "hide";
         $scope.searchIconClass = "ti-search";
+        $scope.searchDisplayClass = "";
            
         $scope.searchDisplay = function(){
               if ($scope.searchClass === "hide"){
-                $scope.searchClass = "show"
+                $scope.searchClass = "show";
                 $scope.searchIconClass="ti-close";
+                $scope.searchDisplayClass = "search-open";
               } else {
-                $scope.searchClass = "hide"
+                $scope.searchClass = "hide";
                 $scope.searchIconClass="ti-search";
+                $scope.searchDisplayClass = "";
               }
             };
         }

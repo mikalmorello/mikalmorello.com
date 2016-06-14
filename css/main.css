@@ -523,6 +523,9 @@ footer.color {
 .min .back {
   background: #E1CF84; }
 
+.back.fix-to-top.search-open {
+  top: 100px; }
+
 /* OVERLAY */
 body {
   background: #ddd;

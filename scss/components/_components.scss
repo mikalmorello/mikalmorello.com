@@ -45,6 +45,10 @@
    background: $menu-background;
 }
 
+.back.fix-to-top.search-open {
+  top: 100px;
+}
+
 
 /* OVERLAY */
 body {
