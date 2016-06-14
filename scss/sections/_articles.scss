@@ -26,14 +26,14 @@
       color: #fff;
   }
 
-.articles .card-box {
+.articles-body .card-box {
   height: auto;
   min-height: 390px;
   margin-bottom: 30px;
   /*width: 970px;*/
 }
 
-.articles .card-header, .articles .card-body {
+.articles-body .card-header, .articles-body .card-body {
   background: none;
   background-size: cover;
   background-position: center center;
@@ -44,15 +44,15 @@
 
 
 
-.articles .card-box:hover {
+.articles-body .card-box:hover {
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.6);
 }
 
-.articles .card-box:first-child {
+.articles-body .card-box:first-child {
   margin-top: -108px;
 }
 
-.articles .card-box:first-child::before { 
+.articles-body .card-box:first-child::before { 
     content: "new";
     background: $secondary-background;
     font-family: $font-title;
@@ -70,7 +70,7 @@
 }
 
 
-.articles .card-body {
+.articles-body .card-body {
 -webkit-box-shadow: -19px 0px 5px 2px rgba(0,0,0,0.08);
 -moz-box-shadow: -19px 0px 5px 2px rgba(0,0,0,0.08);
 box-shadow: -19px 0px 5px 2px rgba(0,0,0,0.08);
@@ -80,20 +80,20 @@ box-shadow: -19px 0px 5px 2px rgba(0,0,0,0.08);
   text-align: center;
 }
 
-.articles .card-header {
+.articles-body .card-header {
   height: 390px;
 }
 
-.articles .card-box:hover .card-header {
+.articles-body .card-box:hover .card-header {
       transform: scale(1);
 }
 
-.articles .card-body, .articles .card-body a {
+.articles-body .card-body, .articles-body .card-body a {
   color: #111;
 }
 
 
-.articles a.button {
+.articles-body a.button {
   font-family: $font-stack;
 }
 
@@ -105,7 +105,7 @@ box-shadow: -19px 0px 5px 2px rgba(0,0,0,0.08);
 .card-box {
    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2);
 }
-.articles .card-index {
+.articles-body .card-index {
   color:#fff;
   background-image: url(../assets/images/decagon-background.png);
   background-repeat:no-repeat;
@@ -123,7 +123,7 @@ box-shadow: -19px 0px 5px 2px rgba(0,0,0,0.08);
 
 
 @media only screen and (max-width : 1136px) {
-  .articles .card-box:first-child::before { 
+  .articles-body .card-box:first-child::before { 
     width: 100px;
     padding: .51em 1.5em .51em 1.5em;
     word-break:normal;
@@ -134,13 +134,13 @@ box-shadow: -19px 0px 5px 2px rgba(0,0,0,0.08);
 }
 
 @media only screen and (max-width : 768px) {
-  .articles .card-header, .articles .card-body {
+  .articles-body .card-header, .articles .card-body {
      /* height: auto;*/
       min-height: auto;
       width: 100%;
   }
   
-  .articles .card-index {
+  .articles-body .card-index {
       float: left;
       left: calc(50% - 30px);
       margin: -155px auto 0 auto;

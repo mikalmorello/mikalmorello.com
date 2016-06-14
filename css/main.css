@@ -273,7 +273,7 @@ a {
   background: #fff;
   width: 75vw; }
 
-.home {
+.home-text .subtitle, .subtitle {
   font-family: "Oswald", sans-serif; }
 
 .home-text {
@@ -288,10 +288,10 @@ a {
   height: 5px;
   width: 15%; }
 
-.home h1 {
+.home-text h1 {
   letter-spacing: -1px; }
 
-.home p {
+.home-text p {
   font-family: helvetica neue; }
 
 /* CARDS */
@@ -1111,13 +1111,13 @@ main {
 .article-header h1 {
   color: #fff; }
 
-.articles .card-box {
+.articles-body .card-box {
   height: auto;
   min-height: 390px;
   margin-bottom: 30px;
   /*width: 970px;*/ }
 
-.articles .card-header, .articles .card-body {
+.articles-body .card-header, .articles-body .card-body {
   background: none;
   background-size: cover;
   background-position: center center;
@@ -1125,13 +1125,13 @@ main {
   position: relative;
   width: 50%; }
 
-.articles .card-box:hover {
+.articles-body .card-box:hover {
   box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.6); }
 
-.articles .card-box:first-child {
+.articles-body .card-box:first-child {
   margin-top: -108px; }
 
-.articles .card-box:first-child::before {
+.articles-body .card-box:first-child::before {
   content: "new";
   background: #EF8A7E;
   font-family: "Oswald", sans-serif;
@@ -1147,7 +1147,7 @@ main {
   line-height: 1.1em;
   margin-left: -43px; }
 
-.articles .card-body {
+.articles-body .card-body {
   -webkit-box-shadow: -19px 0px 5px 2px rgba(0, 0, 0, 0.08);
   -moz-box-shadow: -19px 0px 5px 2px rgba(0, 0, 0, 0.08);
   box-shadow: -19px 0px 5px 2px rgba(0, 0, 0, 0.08);
@@ -1156,22 +1156,22 @@ main {
   padding: 4em;
   text-align: center; }
 
-.articles .card-header {
+.articles-body .card-header {
   height: 390px; }
 
-.articles .card-box:hover .card-header {
+.articles-body .card-box:hover .card-header {
   transform: scale(1); }
 
-.articles .card-body, .articles .card-body a {
+.articles-body .card-body, .articles-body .card-body a {
   color: #111; }
 
-.articles a.button {
+.articles-body a.button {
   font-family: "Libre Baskerville", serif; }
 
 .card-box {
   box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.2); }
 
-.articles .card-index {
+.articles-body .card-index {
   color: #fff;
   background-image: url(../assets/images/decagon-background.png);
   background-repeat: no-repeat;
@@ -1187,7 +1187,7 @@ main {
   width: 59px; }
 
 @media only screen and (max-width: 1136px) {
-  .articles .card-box:first-child::before {
+  .articles-body .card-box:first-child::before {
     width: 100px;
     padding: .51em 1.5em .51em 1.5em;
     word-break: normal;
@@ -1195,12 +1195,12 @@ main {
     margin-top: -43px;
     text-align: center; } }
 @media only screen and (max-width: 768px) {
-  .articles .card-header, .articles .card-body {
+  .articles-body .card-header, .articles .card-body {
     /* height: auto;*/
     min-height: auto;
     width: 100%; }
 
-  .articles .card-index {
+  .articles-body .card-index {
     float: left;
     left: calc(50% - 30px);
     margin: -155px auto 0 auto;
@@ -1671,7 +1671,32 @@ main {
   color: #111; }
 
 /* ANIMATION */
+/*.fade {
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    opacity: 1;
+}
+.fade.ng-enter,
+.fade.ng-leave {
+    -webkit-transition: opacity .10s ease-in;
+    transition: opacity .10s ease-in;
+}
+.fade.ng-enter {
+    opacity: 0;
+}
+.fade.ng-enter-active {
+    opacity: 1;
+}
+.fade.ng-leave {
+    opacity: 1;
+}
+.fade.ng-leave-active {
+    opacity: 0;
+}*/
 .fade {
+  /*position: absolute;*/
   top: 0;
   left: 0;
   right: 0;
@@ -1680,20 +1705,24 @@ main {
 
 .fade.ng-enter,
 .fade.ng-leave {
-  -webkit-transition: opacity .30s ease-in;
-  transition: opacity .30s ease-in; }
+  -webkit-transition: all .9s ease;
+  transition: all .9s ease; }
 
 .fade.ng-enter {
-  opacity: 0; }
+  opacity: 0;
+  height: 0; }
 
 .fade.ng-enter-active {
-  opacity: 1; }
+  opacity: 1;
+  height: auto; }
 
 .fade.ng-leave {
-  opacity: 1; }
+  opacity: 1;
+  height: auto; }
 
 .fade.ng-leave-active {
-  opacity: 0; }
+  opacity: 0;
+  height: 0; }
 
 /* slide in from the bottom */
 /* slide in from the bottom */

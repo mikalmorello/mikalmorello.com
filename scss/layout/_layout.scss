@@ -100,7 +100,7 @@
     width: 75vw;
 }
 
-.home {
+.home-text .subtitle, .subtitle {
   font-family:  $font-title;
 }
 
@@ -118,11 +118,11 @@
   width: 15%;
 }
 
-.home h1 {
+.home-text h1 {
   letter-spacing: -1px;
 }
 
-.home p {
+.home-text p {
   font-family: helvetica neue;
 }
 

@@ -1,7 +1,7 @@
 
 /* ANIMATION */
 
-.fade {
+/*.fade {
     top: 0;
     left: 0;
     right: 0;
@@ -10,8 +10,8 @@
 }
 .fade.ng-enter,
 .fade.ng-leave {
-    -webkit-transition: opacity .30s ease-in;
-    transition: opacity .30s ease-in;
+    -webkit-transition: opacity .10s ease-in;
+    transition: opacity .10s ease-in;
 }
 .fade.ng-enter {
     opacity: 0;
@@ -24,6 +24,37 @@
 }
 .fade.ng-leave-active {
     opacity: 0;
+}*/
+
+.fade {
+    /*position: absolute;*/
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    opacity: 1;
+}
+.fade.ng-enter,
+.fade.ng-leave {
+    -webkit-transition: all .9s ease;
+    transition: all .9s ease;
+    
+}
+.fade.ng-enter {
+    opacity: 0;
+  height:0;
+}
+.fade.ng-enter-active {
+    opacity: 1;
+  height: auto;
+}
+.fade.ng-leave {
+    opacity: 1;
+  height: auto;
+}
+.fade.ng-leave-active {
+    opacity: 0;
+    height:0;
 }
 
     //.fade.ng-enter           { animation: scaleUp 0.5s both ease-in; z-index: 8888; }
