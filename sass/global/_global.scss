@@ -1,0 +1,41 @@
+
+/* GLOBAL */
+
+img {
+  max-width: 100%;
+  width: 100%; 
+}
+
+::selection {
+  background: $menu-background; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: $menu-background; /* Gecko Browsers */
+}
+
+
+/* Large Devices, Wide Screens */
+    @media only screen and (max-width : 1200px) {
+
+    }
+
+    /* Medium Devices, Desktops */
+    @media only screen and (max-width : 992px) {
+      
+
+    }
+
+    /* Small Devices, Tablets */
+    @media only screen and (max-width : 768px) {
+
+    }
+
+    /* Extra Small Devices, Phones */ 
+    @media only screen and (max-width : 480px) {
+
+    }
+
+    /* Custom, iPhone Retina */ 
+    @media only screen and (max-width : 320px) {
+        
+    }

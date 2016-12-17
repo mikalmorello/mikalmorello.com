@@ -1,0 +1,28 @@
+ <main>
+  <section>
+    <div class="articles-header header">
+      <div class="container-header">
+        <h1>Articles</h1>
+      </div>
+    </div>
+  </section>
+  <section class="articles-body">
+    <div class="container-card">
+      <div class="card-box" ng-repeat="article in articles">
+          <a href="/articles/{{article.title}}">
+            <div class="card-header" ng-style="{'background-image': 'url('+ article.thumbnail +')'}"></div>
+            <div class="card-body">
+              <h2>{{article.articletitle}}</h2>
+              <div class="card-index">{{$index + 1}}</div>
+              <p>{{article.description}}</p>
+              <a class="button button-outline button-small" href="/articles/{{article.title}}">READ</a>
+            </div>
+            <div class="clear"></div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="clear"></div>
+  </section>
+</main> 
+<footer ng-class="footerClass"><div ng-include='"templates/footer.html"'></div></footer>

@@ -1,0 +1,133 @@
+
+/* HELPER */
+
+.bg-black{
+	background: #000;
+	color: #fff;
+}
+
+.bg-white{
+	background: #fff;
+}
+
+.bg-lightgrey{
+	background: #eee;
+}
+
+.bg-darkgrey{
+	background: #111;
+}
+
+.clear {
+  clear: both;
+}
+
+.max-height {
+  height: 100vh;
+}
+
+.no-margin {
+	margin: 0;
+}
+
+.no-margin-bottom {
+	margin-bottom: 0;
+}
+
+.no-margin-top {
+	margin-bottom: 0;
+}
+
+.no-padding {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+.hide {
+    display: none;
+}
+
+.accessible-text {
+    position:absolute;
+    left:-10000px;
+    top:auto;
+    width:1px;
+    height:1px;
+    overflow:hidden;
+}
+
+.pull-top, .container-card.pull-top {
+    margin-top: -200px;
+    position: relative;
+}
+
+.hover-text {
+   position: absolute;
+   top: -9999px ;
+   left: -9999px;
+}
+
+.hover-text:hover, a:hover .hover-text {
+  position:relative;
+  top:auto;
+  left: auto;
+}
+
+hr.small {
+  margin-bottom: 2em;
+  width: 6em;
+}
+
+.button {
+  background: $menu-background;
+  border: 0;
+  color: #fff;
+  font-family: $font-title;
+  font-weight: 300;
+  letter-spacing: 1px;
+  font-size: 1.25em;
+  padding: .75em 1.25em;
+  text-transform: uppercase; 
+  transition: all 0.3s;
+}
+
+.button:hover {
+  background: darken( $menu-background, 20% );
+  transition: all 0.3s;
+}
+
+.button-outline {
+  background: none;
+  border: 1px solid #eee;
+}
+
+.button-small {
+  font-size: 1em;
+  padding: .5em 1em;
+}
+
+.pull-right {
+  float: right;
+  position: relative;
+}
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+
+:focus {outline:none;}
+
+
+/* Small Devices, Tablets */
+    @media only screen and (max-width : 768px) {
+      .pull-top, .container-card.pull-top {
+    margin-top: -150px;
+    position: relative;
+}
+
+    }

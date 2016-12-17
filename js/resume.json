@@ -1,0 +1,44 @@
+[
+    {
+        "position": "Front-end Web Developer",
+        "location": "Tufts University Digital Services",
+        "startdate": "2016",
+        "enddate": "2016",
+        "description": "Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient monte"
+    },
+   {
+        "position": "Interface Designer",
+        "location": "Boston College ITS",
+        "startdate": "2013",
+        "enddate": "2016",
+        "description": "Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient monte"
+    },
+      {
+        "position": "Marketing Co-Chair, Designer",
+        "location": "CASE DI Conference",
+        "startdate": "2013",
+        "enddate": "2015",
+        "description": "Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient monte"
+    },
+      {
+        "position": "Web Designer/ Developer",
+        "location": "Boston College University Advancement",
+        "startdate": "2012",
+        "enddate": "2013",
+        "description": "Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient monte"
+    },
+      {
+        "position": "Web Specialist",
+        "location": "Boston College University Advancement",
+        "startdate": "2010",
+        "enddate": "2012",
+        "description": "Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient monte"
+    },
+      {
+        "position": "Project Manager, Designer",
+        "location": "Polar Design / IMS, LLC",
+        "startdate": "2007",
+        "enddate": "2009",
+        "description": "Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient monte"
+    }
+]

@@ -1,0 +1,350 @@
+/* HEADER */
+header {
+    background: none;
+    box-sizing: border-box;
+    display: block;
+    min-height:  75px;
+    //float: left;
+    //position: relative;
+    position: absolute;
+    margin-bottom: -75px;
+    width: 100%;
+    z-index: 12;
+}
+
+
+.header {
+    background-color: #111;
+    color:#fff;
+    height: 500px;
+    width: 100%;
+}
+
+
+//SCROLL TEST CHANGE COLOR 
+
+.min header {
+   //background-color: #111;
+  background-color: rgba(0,0,0, .8);
+   transition: background-color 0.2s;
+}
+
+header a {
+  color: #fff;
+}
+
+.header small {
+  color:#fff;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1em;
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-transform:  uppercase;
+}
+
+.fix-to-top {
+    position: fixed;
+    top: 0;
+    z-index: 12;
+}
+
+
+/* MENU OVERLAY MORPHING BUTTON */
+
+.menu-overlay {
+  appearance: none;
+  box-shadow: none;
+  border-radius: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  display: block;
+  font-size: 0;
+  float: left;
+  height: 55px;
+  margin: 10px;
+  overflow: hidden;
+  padding: 0;
+  position: relative;
+  text-indent: -9999px;
+  transition: background 0.3s;
+  width: 60px;
+}
+
+.menu-overlay:focus {
+  outline: none;
+}
+
+.menu-overlay span {
+  display: block;
+  position: absolute;
+  top: 24px;
+  left: 14px;
+  right: 14px;
+  height: 2px;
+  background: $header-color;
+}
+
+.menu-overlay span::before,
+.menu-overlay span::after {
+  background-color: $header-color;
+  content: "";
+  display: block;
+  height: 2px;
+  left: 0;
+  position: absolute;
+  width: 100%;
+}
+
+.menu-overlay span::before {
+  top: -10px;
+}
+
+.menu-overlay span::after {
+  bottom: -10px;
+}
+.menu-overlay-transform {
+  //background-color: $menu-background;
+  background: none;
+}
+
+.menu-overlay-transform span {
+  transition: background 0s 0.3s;
+}
+
+.menu-overlay-transform span::before,
+.menu-overlay-transform span::after {
+  transition-duration: 0.3s, 0.3s;
+  transition-delay: 0.3s, 0s;
+}
+
+.menu-overlay-transform span::before {
+  transition-property: top, transform;
+}
+
+.menu-overlay-transform span::after {
+  transition-property: bottom, transform;
+}
+
+/* active state, i.e. menu open */
+.menu-overlay-transform.is-active {
+  background-color: darken( $menu-background, 10% );
+}
+
+.menu-overlay-transform.is-active span {
+  background: none;
+}
+
+.menu-overlay-transform.is-active span::before {
+  top: 0;
+  transform: rotate(45deg);
+}
+
+.menu-overlay-transform.is-active span::after {
+  bottom: 0;
+  transform: rotate(-45deg);
+}
+
+.menu-overlay-transform.is-active span::before,
+.menu-overlay-transform.is-active span::after {
+  transition-delay: 0s, 0.3s;
+}
+
+/* SEARCH OVERLAY BUTTON*/
+.search-overlay {
+  //background-color: $menu-background;
+  background: none;
+  border: 0;
+  color: #fff;
+  cursor: pointer;
+  display: block;
+  font-size: 30px;
+  float: right;
+  height: 55px;
+  margin:10px;
+  position: relative;
+  width: 60px;
+}
+
+
+/* BRANDING */
+.branding {
+    color: $header-color;
+    float: left; /* ADDED FOR SEARCH ICON */
+    margin: 0 auto;
+    padding-top: 5px;
+    width: calc( 100vw - 160px );
+    position: relative;
+    text-align: center;
+}
+
+/* IMAGES */
+.brand-image {
+    width: auto;
+    max-width: 400px;
+}
+
+.home .brand-image {
+    max-width: 200px;
+}
+
+.branding .brand-image, footer .brand-image {
+    max-width: 160px; 
+}
+
+.min .branding .brand-image, footer .brand-image {
+    max-width: 130px; 
+    transition: background-color 0.2s;
+}
+
+
+
+.home .branding {
+    display: none;
+}
+
+/* SEARCH */
+.search{
+  background: #111;
+  display: block;
+  min-height: 0;
+  transition: all 0.3s;
+}
+
+.search.show {
+  background: $menu-background;
+  display: block;
+  min-height: 60px;
+  width: 100%;
+  transition: all 0.3s;
+  
+}
+
+.search-form {
+  font-size: 30px;
+  height: 60px;
+  width: 100%;
+}
+
+.search-input {
+  background: none;
+  border: none;
+  border-left:$menu-background solid 1px;
+  color: #fff;
+  font-style: italic;
+  font-size: 26px;
+  height: 30px;
+  margin: 15px 20px;
+  //padding: 1em;
+  width: calc( 100vw - 100px);
+}
+
+.search-submit {
+  background-color: lighten( $menu-background, 20% );
+  border: 0;
+  color: #fff;
+  float: right;
+  font-size: 30px;
+  height: 60px;
+  line-height: 60px;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  width: 60px;
+}
+
+
+
+input.search-input:focus {
+  animation: none;
+  border-left:none;
+}
+
+input.search-input {
+  animation: blink-empty 1.5s infinite;
+  border-left: transparent solid 1px;
+}
+
+.search-form ::-webkit-input-placeholder {
+  color: #fff;
+}
+
+@keyframes blink-empty {
+  50% {border-left: 1px solid #fff;}
+}
+
+.search.hide {
+  height: 0;
+  min-height: 0;
+  transition: all 0.3s;
+}
+
+.search.hide .search-form{
+  display: none;
+}
+
+
+.home .menu-overlay span, .home .menu-overlay span::before,.home .menu-overlay span::after, .search .menu-overlay span, .search .menu-overlay span::before,.search .menu-overlay span::after{
+  background: $menu-background;
+}
+
+
+
+.search .search-overlay, .about .search-overlay {
+  color: $menu-background;
+}
+
+.home .menu-overlay-transform.is-active span, .search .menu-overlay-transform.is-active span, .contact .menu-overlay-transform.is-active span,  .home .min .menu-overlay-transform.is-active span {
+  background: none;
+}
+
+.about .min .search-overlay  {
+  color:#fff;
+}
+
+
+.home .min .menu-overlay span, .home .min .menu-overlay span::before,.home .min .menu-overlay span::after, .search .min .menu-overlay span, .search .min .menu-overlay span::before {
+  background: #fff;
+  transition: none;
+}
+
+/* 404 */
+
+.diagnol-header {
+  background: #fff;
+  height: 600px;
+  position: relative;
+  z-index: 1;
+}
+
+.header .skew:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: -60px;
+  overflow: visible;
+  width: 100%;
+  height: 380px;
+  background: $menu-background;
+  z-index: -1;
+  -webkit-transform: skewY(-4deg);
+  -moz-transform: skewY(-4deg);
+  -ms-transform: skewY(-4deg);
+  -o-transform: skewY(-4deg);
+  transform: skewY(-4deg);
+    -webkit-backface-visibility: hidden;
+}
+
+.diagnol-header h1 {
+  font-size: 13em;
+  margin-bottom: 0;
+  padding-right: .75em;
+  
+}
+
+.diagnol-header small {
+  color:$menu-background;
+  font-size: .15em;
+  margin-top: -2em;
+  position: relative;
+}

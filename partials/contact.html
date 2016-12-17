@@ -1,3 +1,56 @@
-<h1>CONTACT</h1>
-
-
+<main>
+  <section>
+    <div class="header contact-header">
+      <div class="container-header">
+        <h1>Contact</h1>
+        <hr class="small"/>
+        <small>Questions, comments, spam?  I respond to them all.</small>
+      </div>
+    </div>
+  </section>
+  <section>
+    <div class="container-text">
+      Contact coming soon
+      <div class="pull-top">
+        <div class="contact-form bg-lightgrey">
+          <div class="current-date">
+            {{date | date:'MMM-dd'}}
+          </div>
+          <form ng-submit="submitForm()" ng-controller="FormController" novalidate>
+            <div class="form-group">
+              <label for="inputName">Name</label>
+              <input type="text" class="form-control" id="inputName" placeholder="Name" ng-model="formData.name" ng-class="{'error' : errorName}"></input>
+            </div>
+            <div class="form-group">
+              <label for="inputEmail">Email</label>
+              <input type="email" class="form-control" id="inputEmail" placeholder="Email@netscape.com" ng-model="formData.email" ng-class="{'error' : errorEmail}"></input>
+            </div>
+            <div class="form-group">
+              <label for="inputMessage">Message</label>
+              <textarea class="form-control" id="inputMessage" rows="3" ng-class="{'error' : errorTextarea}" ng-model="formData.message"></textarea>
+            </div>
+            <button type="submit" class="button pull-right" value="Send!" name="submit">Submit</button>
+            <div ng-class="{'submissionMessage' : submission}" ng-bind="submissionMessage"></div>
+            <div class="clear"></div>
+          </form>
+          <aside>
+            <div class="current-location">
+              <span class="current-location-title"><i class="ti-location-pin icon-large"></i> Current Location:</span>
+            Watertown, MA</div>
+            <div class="social-contact">
+              <span class="join-me">Join Me</span>
+              <hr />
+              <ul class="vertical-list">
+                <li><a href="https://www.linkedin.com/in/mikalmorello"><span class="ti-linkedin"></span></a></li>
+                <li><a href="https://github.com/mikalmorello"><span class="ti-github"></span></a></li>
+                <li><a href="mikaljmorello"><span class="ti-skype"></span></a></li>
+              </ul>
+              <hr />
+            </div>
+          </aside>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+<footer ng-class="footerClass"><div ng-include='"templates/footer.html"'></div></footer>

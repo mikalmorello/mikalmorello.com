@@ -1,56 +1,128 @@
 [
     {
-        "title": "Project-Name-1x",
+        "title": "case-conference",
+        "projecttitle": "CASE Conference",
         "subtitle": "Project Details Subtitle",
-        "image": "assets/images/project-1.jpg",
+        "client": "Boston College",
+        "image": "assets/images/project-full-placer.png",
+        "thumbnail": "assets/images/project-thumbnail-placer.png",
         "description": "Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient monte",
         "url": "partials/projects/project-name-1.html",
-        "role": "role",
-        "skills":"skills"
+        "roles": [ {"rolename" : "role1"},
+                   {"rolename" : "role2"}
+                ],
+        "brandimage": "assets/images/crest.png",
+        "skills": [ {"skillname" : "skill1"},
+                    {"skillname" : "skill2"},
+                    {"skillname" : "skill3"}
+                  ]
     },
     {
-        "title": "Project-Name-2x",
+        "title": "boston-college-redesign",
+        "projecttitle": "Boston College Redesign",
         "subtitle": "Project Details Subtitle",
-        "image": "assets/images/project-2.jpg",
+        "client": "Boston College",
+        "image": "assets/images/project-full-placer.png",
+        "thumbnail": "assets/images/project-thumbnail-placer.png",
         "description": "Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient monte",
         "url": "partials/projects/project-name-2.html",
-        "role": "role",
-        "skills":"skills"
+        "roles": [ {"rolename" : "role1"},
+                   {"rolename" : "role2"}
+                ],
+        "brandimage": "assets/images/crest.png",
+        "skills": [ {"skillname" : "skill1"},
+                    {"skillname" : "skill2"},
+                    {"skillname" : "skill3"}
+                  ]
     },
     {
-        "title": "Project-Name-3x",
+        "title": "accessibility-analytics",
+        "projecttitle": "Accessibility Analytics",
         "subtitle": "Project Details Subtitle",
-        "image": "assets/images/project-3.jpg",
+        "client": "Boston College",
+        "image": "assets/images/project-full-placer.png",
+        "thumbnail": "assets/images/project-thumbnail-placer.png",
         "description": "Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient monte",
         "url": "partials/projects/project-name-3.html",
-        "role": "role",
-        "skills":"skills"
+        "roles": [ {"rolename" : "role1"},
+                   {"rolename" : "role2"}
+                ],
+        "brandimage": "assets/images/crest.png",
+        "skills": [ {"skillname" : "skill1"},
+                    {"skillname" : "skill2"},
+                    {"skillname" : "skill3"}
+                  ]
     },
     {
-        "title": "Project-Name-4x",
+        "title": "bc-social",
+        "projecttitle": "BC Social",
         "subtitle": "Project Details Subtitle",
-        "image": "assets/images/project-1.jpg",
+        "client": "Boston College",
+        "image": "assets/images/project-full-placer.png",
+        "thumbnail": "assets/images/project-thumbnail-placer.png",
         "description": "Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient monte",
         "url": "partials/projects/project-name-4.html",
-        "role": "role",
-        "skills":"skills"
+        "roles": [ {"rolename" : "role1"},
+                   {"rolename" : "role2"}
+                ],
+        "brandimage": "assets/images/crest.png",
+        "skills": [ {"skillname" : "skill1"},
+                    {"skillname" : "skill2"},
+                    {"skillname" : "skill3"}
+                  ]
     },
     {
-        "title": "Project-Name-5x",
+        "title": "eagleapps",
+        "projecttitle": "EagleApps",
         "subtitle": "Project Details Subtitle",
-        "image": "assets/images/project-2.jpg",
+        "client": "Boston College",
+        "image": "assets/images/project-full-placer.png",
+        "thumbnail": "assets/images/project-thumbnail-placer.png",
         "description": "Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient monte",
         "url": "partials/projects/project-name-5.html",
-        "role": "role",
-        "skills":"skills"
+        "roles": [ {"rolename" : "role1"},
+                   {"rolename" : "role2"}
+                ],
+        "brandimage": "assets/images/crest.png",
+        "skills": [ {"skillname" : "skill1"},
+                    {"skillname" : "skill2"},
+                    {"skillname" : "skill3"}
+                  ]
     },
     {
-        "title": "Project-Name-6x",
+        "title": "university-advancement",
+        "projecttitle": "University Advancement",
         "subtitle": "Project Details Subtitle",
-        "image": "assets/images/project-3.jpg",
+        "client": "Boston College",
+        "image": "assets/images/project-full-placer.png",
+        "thumbnail": "assets/images/project-thumbnail-placer.png",
         "description": "Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient monte",
         "url": "partials/projects/project-name-6.html",
-        "role": "role",
-        "skills":"skills"
+        "roles": [ {"rolename" : "role1"},
+                   {"rolename" : "role2"}
+                ],
+        "brandimage": "assets/images/crest.png",
+        "skills": [ {"skillname" : "skill1"},
+                    {"skillname" : "skill2"},
+                    {"skillname" : "skill3"}
+                  ]
+    },
+      {
+        "title": "150-on-the-road",
+        "projecttitle": "150 on the Road",
+        "subtitle": "Project Details Subtitle",
+        "client": "Boston College",
+        "image": "assets/images/project-full-placer.png",
+        "thumbnail": "assets/images/project-thumbnail-placer.png",
+        "description": "Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient monte",
+        "url": "partials/projects/project-name-6.html",
+        "roles": [ {"rolename" : "role1"},
+                   {"rolename" : "role2"}
+                ],
+        "brandimage": "assets/images/crest.png",
+        "skills": [ {"skillname" : "skill1"},
+                    {"skillname" : "skill2"},
+                    {"skillname" : "skill3"}
+                  ]
     }
 ]
