@@ -1,0 +1,36 @@
+/* FOOTER */
+/*
+- FOOTER
+*/
+
+
+.footer {
+  background-color: $theme-dark;
+  color: $white;
+  &__container {
+    @include layout-container();
+    @include layout-vertical-padding($vertical-padding-large);
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  &__brand {
+  }
+  &__logo {
+  }
+  &__actions {
+    margin-top: 1rem;
+  }
+  &__links {
+    @include list-horizontal(1rem);
+  }
+  &__link {
+    
+  }
+  a {
+    @include link-light;
+    @include small-text(uppercase);
+    letter-spacing: $letter-space-extra-large;
+  }
+}

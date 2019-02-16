@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <head>
   <meta charset="UTF-8">
-  <title>Mikal Morello - Interactive Front-end Web Developer</title>
+  <title>Interactive Front-end Web Developer - Mikal Morello</title>
   <link rel="stylesheet" href="assets/css/animate.css"> 
   <link rel="stylesheet" href="assets/css/mikal-morello.css">
-  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700|Oswald:300,400,500" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato:300,400,600,700|Oswald:300,400,500" rel="stylesheet">
 </head>
 <body>
   <!-- HEADER -->
@@ -56,16 +56,111 @@
       </div>
     </div>
     <div class="banner__media">
-      <p>Headr Media goes here</p>
     </div>
   </section>
   <!-- MAIN -->
-  <main>
-    <p>Testing 123</p>
+  <main id="main" class="main">
+    <section id="sectionIntroduction" class="section section--introduction">
+      <div class="introduction">
+        <div class="introduction__container">
+          <div class="introduction__text">
+            <p>I am currently the  <span class="semi-bold">lead front-end web developer</span> at Tufts University.  I am passionate about building scalable design systems.  From accessibility to analytics, I love it all.  Check out some of my work below.</p>
+          </div>
+          <div class="introduction__divider">
+            <img src="/assets/images/wave-divider.svg" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="sectionProjects" class="section section--projects">
+      <div class="projects">
+        <div class="projects__container">
+          <div class="project">
+            <div class="project__container">
+              <a href="" class="project__content">
+               <h3 class="project__title">
+                  <span class="project__white-background">Tufts University Magazine</span>
+                </h3>
+                <h4 class="project__subtitle">
+                  <span class="project__white-background">A conversion of the Tufts Magazine website online</span>
+                </h4>
+              </a>
+              <div class="project__media">
+                <img src="/assets/images/project-tufts-magazine-thumbnail.png" /> 
+              </div>
+            </div>
+          </div>
+          <div class="project">
+            <div class="project__container">
+              <a href="" class="project__content">
+               <h3 class="project__title">
+                  <span class="project__white-background">Tufts Standard</span>
+                </h3>
+                <h4 class="project__subtitle">
+                  <span class="project__white-background">A standard web system for running Tufts University Drupal 8 websites</span>
+                </h4>
+              </a>
+              <div class="project__media">
+                <img src="/assets/images/project-tufts-magazine-thumbnail.png" /> 
+              </div>
+            </div>
+          </div>
+          <div class="project">
+            <div class="project__container">
+              <a href="" class="project__content">
+               <h3 class="project__title">
+                  <span class="project__white-background">Boston College Website Redesign</span>
+                </h3>
+                <h4 class="project__subtitle">
+                  <span class="project__white-background">Re-imaging of the Boston College website on Adobe Experience Manager</span>
+                </h4>
+              </a>
+              <div class="project__media">
+                <img src="/assets/images/project-tufts-magazine-thumbnail.png" /> 
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="sectionContact" class="section section--contact">
+      <div class="contact-card">
+        <div class="contact-card__container">
+          <h2 class="contact-card__titles">
+            <a href="/contact">
+              <span class="contact-card__subtitle">Located in</span>
+              <span class="contact-card__title">Watertown Ma</span>
+            </a>
+          </h2>
+          <div class="contact-card__icon">
+            <img src="/assets/images/contact-cannon-white.svg" />
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
-
   <!-- FOOTER -->
-  <footer>
+  <footer id="footer" class="footer">
+    <div class="footer__container">
+      <div class="footer__brand">
+        <a class="footer__logo" href="/">
+          <img src="/assets/images/header-logo-white.svg" />
+        </a>
+      </div>
+      <div class="footer__actions">
+        <ul class="footer__links">
+          <li class="footer__link">
+            <a href="">Github</a>
+          </li>
+          <li class="footer__link">
+             <a href="">Codepen</a>
+          </li>
+          <li class="footer__link">
+             <a href="">Linkedin</a>
+          </li>
+        </ul>
+      </div>
+    </div>
   </footer>
 
   <script src="assets/js/main.js"></script>

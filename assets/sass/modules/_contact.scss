@@ -1,0 +1,45 @@
+/* CONTACT */
+/*
+- CONTACT CARD
+- CONTACT PAGE
+*/
+
+
+
+// CONTACT SECTION
+
+.contact-card {
+  color: $type-dark;
+  &__container {
+    @include container-small;
+    @include layout-vertical-padding($vertical-padding-standard);
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; 
+  }
+  &__titles {
+    a {
+      @include link-dark;
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+  &__title {
+    @include contact-large-text(uppercase);
+    letter-spacing: $letter-space-large;
+  }
+  &__subtitle {
+    @include contact-small-text(uppercase); 
+    letter-spacing: $letter-space-large;
+  }
+  &__icon {
+  }
+}
+
+
+// CONTACT PAGE
+
+.contact {
+}

@@ -8,6 +8,7 @@
 
 .banner { 
   @include layout-fullscreen;
+  color: $type-dark;
   display: flex;
   flex-direction: row;
   position: relative;
@@ -39,10 +40,10 @@
     
   }
   &__title-small {
-    @include header-title-small(inherit);
+    @include header-title-small;
   }
   &__title-large {
-    @include header-title(inherit);
+    @include header-title;
     display: block;
     button {
       text-decoration: none;
@@ -52,7 +53,7 @@
     }
   }
   &__subtitle {
-    @include header-subtitle(inherit);
+    @include header-subtitle;
     display: block;
     &--hidden {
       visibility: hidden;
@@ -101,7 +102,7 @@
 .banner--development {
   .banner__introduction {
     background-color: $theme-light-blue;
-    color: $black;
+    color: $type-dark;
   }
 }
 

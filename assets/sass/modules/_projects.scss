@@ -1,10 +1,56 @@
 /* PROJECTS */
 /*
 - PROJECTS
+- PROJECT
 */
 
 
 // PROJECTS
 
 .projects {
+  &__container {
+    @include container-normal;
+    //padding-bottom: 4rem;
+  }
+}
+
+
+// PROJECT 
+
+.project {
+  @include layout-vertical-padding($vertical-padding-large);
+  color: $type-dark;
+  position: relative;
+  &__container {
+    
+  }
+  &__content {
+    @include link-dark(none);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: $z-project-title;
+  }
+  &__title {
+    @include project-large-text;
+    max-width: 80%;
+  }
+  &__subtitle {
+    @include project-small-text;
+    max-width: 60%;
+  }
+  &__white-background {
+    background-color: $white;
+    display: inline;
+    box-shadow: 1em 0 0 $white,-1em 0 0 $white;
+  }
+  &__media {
+    position: absolute;
+    top: 0;
+    right: 0;
+    visibility: hidden;
+    .project:hover & {
+      visibility: visible;
+    }
+  }
 }

@@ -1,6 +1,7 @@
 /* SECTION */
 /*
 - SECTION
+- SECTION STATES
 */
 
 
@@ -8,4 +9,26 @@
 // SECTION
 
 .section {
+  @include layout-vertical-padding($vertical-padding-standard);
+  align-items: center;
+  display: flex;
+  justify-content: center; 
+
 }
+
+
+// SECTION STATES
+
+.section--introduction {
+}
+
+.section--contact {
+  background-color: $theme-light-green; 
+  background-image: url(/assets/images/wave-group.svg);
+  background-position: bottom center;
+  background-repeat: repeat-x;
+}
+
+.section--projects {
+}
+

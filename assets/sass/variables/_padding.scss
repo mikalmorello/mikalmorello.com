@@ -2,6 +2,7 @@
 /*
 - PADDING PERCENTAGES
 - PADDING SIZES
+- VERTICAL PADDING
 */
 
 
@@ -16,8 +17,11 @@ $padding-small-size: 1rem;
 $padding-standard-size: 2rem;
 $padding-medium-size: 2rem;
 $padding-large-size: 4rem; 
+$padding-extra-large-size: 5rem; 
 
 
 // VERTICAL PADDING
 
 $vertical-padding-standard: $padding-medium-size;
+$vertical-padding-large: $padding-large-size;
+$vertical-padding-extra-large: $padding-extra-large-size;

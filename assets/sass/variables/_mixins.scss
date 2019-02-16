@@ -2,7 +2,11 @@
 /*
 - CLEAR
 - LAYOUT
+- SECTIONS
+- CONTAINERS
 - TYPOGRAPHY
+- LISTS
+- LINKS
 */
 
 // CLEAR
@@ -58,11 +62,40 @@
 }
 
 
+// SECTIONS
+
+@mixin section(){
+}
+
+
+// CONTAINERS
+
+// CONTAINER SMALL
+
+@mixin container-small(){
+  @include layout-container();
+  width: $container-small;
+}
+
+// CONTAINER NORMAL
+
+@mixin container-normal(){
+  @include layout-container();
+  width: $container-normal;
+}
+
+// CONTAINER WIDE
+@mixin container-wide(){
+  @include layout-container();
+  width: $container-wide;
+}
+
+
 // TYPOGRAPHY 
 
 // TYPOGRAPHY -- TITLE
 
-@mixin header-title ($text-transform){
+@mixin header-title ($text-transform:"inherit"){
   font-family: $oswald;
   font-size: $title-large;
   font-weight: $font-weight-medium;
@@ -72,7 +105,7 @@
 
 // TYPOGRAPHY -- TITLE SMALL
 
-@mixin header-title-small ($text-transform){
+@mixin header-title-small ($text-transform:"inherit"){
   font-family: $lato;
   font-size: $title-small;
   font-weight: $font-weight-semi-bold;
@@ -82,7 +115,7 @@
 
 // TYPOGRAPHY -- SUBTITLE
 
-@mixin header-subtitle ($text-transform){
+@mixin header-subtitle ($text-transform:"inherit"){
   font-family: $oswald;
   font-size: $subtitle-large;
   font-weight: $font-weight-light;
@@ -92,11 +125,118 @@
 
 // TYPOGRAPHY -- STANDALONE LINK
 
-@mixin standalone-link ($text-transform){
+@mixin standalone-link ($text-transform:"uppercase"){
   font-family: $lato;
-  font-size: $link-large;
+  font-size: $text-large;
   font-weight: $font-weight-bold;
   line-height: $line-height-standard;
   text-transform: $text-transform;
 }
 
+// TYPOGRAPHY -- SMALL TEXT
+
+@mixin small-text ($text-transform:"inherit"){
+  font-family: $oswald;
+  font-size: $text-small;
+  font-weight: $font-weight-medium;
+  line-height: $line-height-standard;
+  text-transform: $text-transform;
+}
+
+// TYPOGRAPHY -- INTRODUCTION TEXT
+
+@mixin introduction-text ($text-transform:"inherit"){
+  font-family: $lato;
+  font-size: $text-extra-large;
+  font-weight: $font-weight-regular;
+  line-height: $line-height-extra-large;
+  text-transform: $text-transform;
+} 
+
+// TYPOGRAPHY -- CONTACT LARGE TEXT
+
+@mixin contact-large-text ($text-transform:"uppercase"){
+  font-family: $oswald;
+  font-size: $title-large;
+  font-weight: $font-weight-medium;
+  line-height: $line-height-large;
+  text-transform: $text-transform;
+}
+
+// TYPOGRAPHY -- CONTACT SMALL TEXT
+
+@mixin contact-small-text ($text-transform:"uppercase"){
+  font-family: $oswald;
+  font-size: $title-medium;
+  font-weight: $font-weight-medium;
+  line-height: $line-height-none;
+  text-transform: $text-transform;
+}
+
+// TYPOGRAPHY -- CONTACT LARGE TEXT
+
+@mixin project-large-text ($text-transform:"inherit"){
+  font-family: $oswald;
+  font-size: $title-large;
+  font-weight: $font-weight-bold;
+  line-height: $line-height-large;
+  text-transform: $text-transform;
+}
+
+// TYPOGRAPHY -- CONTACT SMALL TEXT
+
+@mixin project-small-text ($text-transform:"inherit"){
+  font-family: $oswald;
+  font-size: $title-medium;
+  font-weight: $font-weight-light;
+  line-height: $line-height-large;
+  text-transform: $text-transform;
+}
+
+
+// LISTS 
+
+// HORIZONTAL LIST
+
+@mixin list-horizontal($horizontal-padding) {
+  padding: 0;
+  text-align: center;
+  word-spacing: -1em;
+  display: table;
+  width: 100%;
+  li {
+    display: inline-block;
+    padding-left: $horizontal-padding;
+    padding-right: $horizontal-padding;
+    word-spacing: 0;
+  }
+}
+
+
+// LINKS
+
+// LINK - LIGHT
+@mixin link-light {
+  color: $white;
+  text-decoration: none;
+  &:hover {
+    text-decoration: underline;
+  }
+  &:active {
+    text-decoration: underline;
+  }
+}
+
+
+// LINK - DARK
+
+@mixin link-dark($text-decoration:"underline") {
+  color: $type-dark;
+  text-decoration: none;
+  &:hover {
+    text-decoration: $text-decoration;
+  }
+  &:active {
+    text-decoration: $text-decoration;
+  }
+}
