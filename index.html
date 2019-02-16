@@ -9,7 +9,18 @@
 <body>
   <!-- HEADER -->
   <header id="header" class="header">
-    <img src="/assets/images/header-logo-black.svg" />
+    <div class="header__container">
+      <div class="header__brand">
+        <a class="header__logo" href="/">
+          <img src="/assets/images/header-logo-black.svg" />
+        </a>
+      </div>
+      <div class="header__actions">
+        <button class="header__menu">
+          <img src="/assets/images/header-menu-black.svg" />
+        </button>
+      </div>
+    </div>
   </header>
   <!--  NAV -->
   <!--<nav>
@@ -23,24 +34,26 @@
   <section id="banner" class="banner banner--split">
     <div class="banner__introduction">
       <div class="banner__content">
-        <h1 class="banner__title">
-          <span class="banner__title-small">
-            Hi, my name is Mikal Morello,  I am a:
-          </span>
-          <span class="banner__title-large">
-            <button>Designer</button>, <button>developer</button>, and <button>strategist</button>.
-          </span>
-        </h1>
-        <h2 class="banner__description">
-          Description
-        </h2>
+        <div class="banner__header">
+          <h1 class="banner__title">
+            <span class="banner__title-small">
+              Hi, my name is Mikal Morello,  I am a:
+            </span>
+            <span class="banner__title-large">
+              <button>Designer</button>, <button>developer</button>, and <button>strategist</button>.
+            </span>
+          </h1>
+          <h2 class="banner__subtitle">
+            It is a long established fact that a reader will be distracted by the readable <a href="">content link</a>.
+          </h2>
+        </div>
         <div class="banner__link">
-          Link
+          <a href="">Learn More</a>
         </div>
       </div>
-      <!--<div class="banner__portrait">
-        <img scr="/assets/images/banner-portrait.png" />
-      </div>-->
+      <div class="banner__portrait">
+        <img src="/assets/images/banner-portrait.png" />
+      </div>
     </div>
     <div class="banner__media">
       <p>Headr Media goes here</p>

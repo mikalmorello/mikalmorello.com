@@ -11,16 +11,29 @@
   display: flex;
   flex-direction: row;
   position: relative;
+  overflow: hidden;
   &__introduction {
     @include layout-width(50%);
     @include layout-container();
     align-items: center;
     background: $white;
     display: flex;
-    justify-content: center;
+
     order: 1;
   }
   &__content {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center;
+    
+  }
+  &__header {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: center;
+    margin-top: 5.625rem;
   }
   &__title {
     
@@ -31,21 +44,42 @@
   &__title-large {
     @include header-title(inherit);
     display: block;
+    button {
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
   }
   &__subtitle {
     @include header-subtitle(inherit);
     display: block;
+    &--hidden {
+      visibility: hidden;
+    }
   }
   &__link {
-    align-self: flex-end;
+    @include standalone-link(uppercase);
+    @include layout-vertical-padding($vertical-padding-standard);
+    
   }
   &__portrait {
+    display: flex;
+    justify-content: flex-end;
+    position: absolute;
+    right: 0;
+    height: 100vh;
+    width:50vw;
+    img {
+      object-fit: contain; 
+    }
   }
   &__media {
     @include layout-width(50%);
     background-image: url(/assets/images/banner-background.jpg);
     background-size: cover;
     background-position: center center;
+    box-shadow: inset 8px 0 20px -8px rgba(68, 68, 68, 0.6);
     display: flex;
     order:2;
   }
@@ -55,4 +89,25 @@
 // BANNER STATES
 
 .banner--split {
+}
+
+.banner--design {
+  .banner__introduction {
+    background-color: $theme-green;
+    color: $white;
+  }
+}
+
+.banner--development {
+  .banner__introduction {
+    background-color: $theme-light-blue;
+    color: $black;
+  }
+}
+
+.banner--strategy {
+  .banner__introduction {
+    background-color: $theme-blue;
+    color: $white;
+  }
 }

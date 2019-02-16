@@ -8,20 +8,46 @@
 // HEADER
 
 .header { 
-  @include layout-container();
-  display: flex;
-  flex-direction: row;
-  height: 5.625rem;
-  padding-bottom: 2rem;
-  padding-top: 2rem;
   position: absolute;
   z-index: $z-index-header;
-  &__logo {
+  &__container {
+    @include layout-container();
+    @include layout-vertical-padding($vertical-padding-standard);
+    display: flex;
+    flex-direction: row;
+    height: 5.625rem;
+    width: 100vw;
+  }
+  &__brand {
+    @include layout-width(50%); 
+    align-items: center;
+    display: flex;
     height: 1.625rem;
+    justify-content: flex-start;
+  }
+  &__logo {
+    height: 100%;
+    img {
+      height: 100%;
+    }
+  }
+  &__actions {
+    @include layout-width(50%); 
+    align-items: center;
+    display: flex;
+    height: 1.625rem;
+    justify-content: flex-end;
+  }
+  &__menu {
+    height: 100%;
   }
 }
 
 
 // HEADER STATES
 
+.header--light {
+}
 
+.header--dark {
+}

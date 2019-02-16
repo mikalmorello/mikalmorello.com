@@ -2,11 +2,7 @@
 /*
 - CLEAR
 - LAYOUT
-- LAYOUT -- FULLSCREEN
-- LAYOUT -- WIDTH
-- LAYOUT -- CONTAINER
 - TYPOGRAPHY
-- TYPOGRAPHY -- TITLE
 */
 
 // CLEAR
@@ -48,9 +44,17 @@
 }
 
 // LAYOUT -- CONTAINER
+
 @mixin layout-container(){
   padding-left: $padding-standard-size;
   padding-right: $padding-standard-size;
+}
+
+// LAYOUT -- VERTICAL PADDING
+
+@mixin layout-vertical-padding($padding-size){
+  padding-top: $padding-size;
+  padding-bottom: $padding-size;
 }
 
 
@@ -80,5 +84,19 @@
 
 @mixin header-subtitle ($text-transform){
   font-family: $oswald;
+  font-size: $subtitle-large;
+  font-weight: $font-weight-light;
+  line-height: $line-height-standard;
+  text-transform: $text-transform;
+}
+
+// TYPOGRAPHY -- STANDALONE LINK
+
+@mixin standalone-link ($text-transform){
+  font-family: $lato;
+  font-size: $link-large;
+  font-weight: $font-weight-bold;
+  line-height: $line-height-standard;
+  text-transform: $text-transform;
 }
 
