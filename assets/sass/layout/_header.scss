@@ -8,8 +8,19 @@
 // HEADER
 
 .header { 
+  @include layout-container();
+  display: flex;
+  flex-direction: row;
+  height: 5.625rem;
+  padding-bottom: 2rem;
+  padding-top: 2rem;
   position: absolute;
+  z-index: $z-index-header;
+  &__logo {
+    height: 1.625rem;
+  }
 }
+
 
 // HEADER STATES
 

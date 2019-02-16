@@ -4,6 +4,7 @@
 - LAYOUT
 - LAYOUT -- FULLSCREEN
 - LAYOUT -- WIDTH
+- LAYOUT -- CONTAINER
 - TYPOGRAPHY
 - TYPOGRAPHY -- TITLE
 */
@@ -31,17 +32,25 @@
 
 // LAYOUT
 
-// LAYOUT--FULLSCREEN
+// LAYOUT -- FULLSCREEN
+
 @mixin layout-fullscreen(){
   height: 100vh;
   width: 100vw;
 }
 
-// LAYOUT--WIDTH
+// LAYOUT -- WIDTH
+
 @mixin layout-width($width){
   max-width: $width;
   min-width: $width;
   width: $width;
+}
+
+// LAYOUT -- CONTAINER
+@mixin layout-container(){
+  padding-left: $padding-standard-size;
+  padding-right: $padding-standard-size;
 }
 
 
