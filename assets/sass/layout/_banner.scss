@@ -1,9 +1,58 @@
 /* BANNER REGION */
 /*
 - BANNER
+- BANNER - STATES
 */
 
 // BANNER
 
-.banner {
+.banner { 
+  @include layout-fullscreen;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  &__introduction {
+    @include layout-width(50%);
+    align-items: center;
+    background: $white;
+    display: flex;
+    justify-content: center;
+    order: 1;
+    padding: $padding-standard-size;
+  }
+  &__content {
+  }
+  &__title {
+    
+  }
+  &__title-small {
+    @include header-title-small(inherit);
+  }
+  &__title-large {
+    @include header-title(inherit);
+    display: block;
+  }
+  &__subtitle {
+    @include header-subtitle(inherit);
+    display: block;
+  }
+  &__link {
+    align-self: flex-end;
+  }
+  &__portrait {
+  }
+  &__media {
+    @include layout-width(50%);
+    background-image: url(/assets/images/header-background.jpg);
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    order:2;
+  }
+  
+}
+
+// BANNER STATES
+
+.banner--split {
 }

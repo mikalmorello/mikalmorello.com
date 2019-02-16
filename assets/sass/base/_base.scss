@@ -29,6 +29,17 @@ html {
 }
 
 
+// LINKS
+
+a, button {
+  text-decoration: underline;
+  &:hover {
+  }
+  &:active {
+  }
+}
+
+
 // HIDE & SHOW
 
 .hide {

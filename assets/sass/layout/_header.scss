@@ -8,27 +8,9 @@
 // HEADER
 
 .header { 
-  @include layout-fullscreen;
-  display: flex;
-  flex-direction: row;
-  &__content {
-    @include layout-width(50%);
-    align-items: center;
-    background: $white;
-    display: flex;
-    justify-content: center;
-    order: 1;
-    padding: $padding-standard-size;
-  }
-  &__media {
-    @include layout-width(50%);
-    background: orange;
-    display: flex;
-    order:2;
-  }
+  position: absolute;
 }
 
 // HEADER STATES
 
-.header--split {
-}
+

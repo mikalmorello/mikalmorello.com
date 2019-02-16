@@ -2,8 +2,10 @@
 /*
 - CLEAR
 - LAYOUT
-- LAYOUT--FULLSCREEN
-- LAYOUT--WIDTH
+- LAYOUT -- FULLSCREEN
+- LAYOUT -- WIDTH
+- TYPOGRAPHY
+- TYPOGRAPHY -- TITLE
 */
 
 // CLEAR
@@ -41,3 +43,33 @@
   min-width: $width;
   width: $width;
 }
+
+
+// TYPOGRAPHY 
+
+// TYPOGRAPHY -- TITLE
+
+@mixin header-title ($text-transform){
+  font-family: $oswald;
+  font-size: $title-large;
+  font-weight: $font-weight-medium;
+  line-height: $line-height-standard;
+  text-transform: $text-transform;
+}
+
+// TYPOGRAPHY -- TITLE SMALL
+
+@mixin header-title-small ($text-transform){
+  font-family: $lato;
+  font-size: $title-small;
+  font-weight: $font-weight-semi-bold;
+  line-height: $line-height-standard;
+  text-transform: $text-transform;
+}
+
+// TYPOGRAPHY -- SUBTITLE
+
+@mixin header-subtitle ($text-transform){
+  font-family: $oswald;
+}
+

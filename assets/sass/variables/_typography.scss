@@ -1,6 +1,10 @@
-/* MIXINS */
+/* TYPOGRSAPHY */
 /*
 - FONTS
+- LETTER SPACING
+- LINE HEIGHT
+- FONT SIZE
+- FONT WEIGHT
 */
 
 
@@ -18,4 +22,24 @@ $letter-space-small: .03em;
 
 // LINE HEIGHT
 
-$line-height: 1.6rem;
+$line-height-small: 1.2em;
+$line-height-standard: 1.3em;
+$line-height-large: 1.4em;
+$line-height-none: 1em;
+
+
+
+// FONT SIZE
+
+$title-large: 4.25rem;
+$title-small: 1.25rem;
+
+
+// FONT WEIGHT
+
+$font-weight-extra-light: 300;
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-semi-bold: 600;
+$font-weight-bold: 700;
