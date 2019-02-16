@@ -1,0 +1,43 @@
+/* MIXINS */
+/*
+- CLEAR
+- LAYOUT
+- LAYOUT--FULLSCREEN
+- LAYOUT--WIDTH
+*/
+
+// CLEAR
+@mixin clearFix(){
+  &:before,
+  &:after{
+    content: " "; 
+    display: table; 
+  }
+
+  &:after{
+    display: block;
+    clear: both;
+    height: 1px;
+    margin-top: -1px;
+    visibility: hidden;
+  }
+  &{
+    *zoom: 1;
+  }
+}
+
+
+// LAYOUT
+
+// LAYOUT--FULLSCREEN
+@mixin layout-fullscreen(){
+  height: 100vh;
+  width: 100vw;
+}
+
+// LAYOUT--WIDTH
+@mixin layout-width($width){
+  max-width: $width;
+  min-width: $width;
+  width: $width;
+}
