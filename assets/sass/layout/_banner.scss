@@ -30,11 +30,13 @@
     
   }
   &__header {
+    align-self: center;
     display: flex;
     flex-direction: column;
     flex-grow: 1;
     justify-content: center;
     margin-top: 5.625rem;
+    max-width: 80%;
   }
   &__title {
     
