@@ -1,123 +1,141 @@
 /* BANNER REGION */
 /*
 - BANNER
-- BANNER - STATES
+- BANNER SPLIT
+- BANNER STATES
+- BANNER CONTACT
+
 */
 
 // BANNER
 
 .banner { 
-  @include layout-fullscreen;
   color: $type-dark;
   display: flex;
   flex-direction: row;
   position: relative;
   overflow: hidden;
-  &__introduction {
-    @include layout-width(50%);
-    @include layout-container();
-    align-items: center;
-    background: $theme-offwhite;
-    display: flex;
-
-    order: 1;
-  }
-  &__content {
-    align-items: center;
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    justify-content: center;
-    
-  }
-  &__header {
-    display: flex;
-    flex-direction: column;
-    flex-grow: 1;
-    justify-content: center;
-    margin-top: 5.625rem;
-    max-width: 80%;
-  }
-  &__title {
-    
-  }
-  &__title-small {
-    @include header-title-small;
-  }
-  &__title-large {
-    @include header-title;
-    display: block;
-    button {
-      text-decoration: none;
-      &:hover {
-        text-decoration: underline;
-      }
-    }
-  }
-  &__subtitle {
-    @include header-subtitle;
-    display: block;
-    &--hidden {
-      visibility: hidden;
-    }
-    a {
-      @include link-dark-underline;
-    }
-  }
-  &__link {
-    @include standalone-link(uppercase);
-    @include layout-vertical-padding($vertical-padding-large);
-    width: 80%;
-    a {
-      @include link-dark-underline;
-      padding-bottom: $link-padding;
-    }
-  }
-  &__portrait {
-    display: flex;
-    justify-content: flex-end;
-    position: absolute;
-    right: 0;
-    height: 100vh;
-    width:50vw;
-    img {
-      object-fit: contain; 
-    }
-  }
-  &__media {
-    @include layout-width(50%);
-    background-image: url(/assets/images/banner-background.jpg);
-    background-size: cover;
-    background-position: center center;
-    box-shadow: inset 8px 0 20px -8px rgba(68, 68, 68, 0.6);
-    display: flex;
-    order:2;
-  }
-  
 }
+
+// BANNER SPLIT
+
+.banner--split {
+  @include layout-fullscreen;
+  .banner {
+    &__introduction {
+        @include layout-width(50%);
+        @include layout-container();
+        align-items: center;
+        background: $theme-offwhite;
+        display: flex;
+
+        order: 1;
+      }
+      &__content {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        justify-content: center;
+
+      }
+      &__header {
+        display: flex;
+        flex-direction: column;
+        flex-grow: 1;
+        justify-content: center;
+        margin-top: 5.625rem;
+        max-width: 80%;
+      }
+      &__title {
+
+      }
+      &__title-small {
+        @include header-title-small;
+      }
+      &__title-large {
+        @include header-title;
+        display: block;
+        button {
+          text-decoration: none;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+      &__subtitle {
+        @include header-subtitle;
+        display: block;
+        &--hidden {
+          visibility: hidden;
+        }
+        a {
+          @include link-dark-underline;
+        }
+      }
+      &__link {
+        @include standalone-link(uppercase);
+        @include layout-vertical-padding($vertical-padding-large);
+        width: 80%;
+        a {
+          @include link-dark-underline;
+          padding-bottom: $link-padding;
+        }
+      }
+      &__portrait {
+        display: flex;
+        justify-content: flex-end;
+        position: absolute;
+        right: 0;
+        height: 100vh;
+        width:50vw;
+        img {
+          object-fit: contain; 
+        }
+      }
+      &__media {
+        @include layout-width(50%);
+        background-image: url(/assets/images/banner-background.jpg);
+        background-size: cover;
+        background-position: center center;
+        box-shadow: inset 8px 0 20px -8px rgba(68, 68, 68, 0.6);
+        display: flex;
+        order:2;
+      }
+  
+  }
+}
+
 
 // BANNER STATES
 
-.banner--split {
-}
-
-.banner--design {
+.banner--designer {
   .banner__introduction {
     background-color: $theme-green;
     color: $white;
   }
 }
 
-.banner--development {
+.banner--developer {
   .banner__introduction {
     background-color: $theme-light-blue;
     color: $type-dark;
   }
 }
 
-.banner--strategy {
+.banner--strategist {
   .banner__introduction {
     background-color: $theme-blue;
     color: $white;
+  }
+}
+
+// BANNER CONTACT 
+
+.banner--contact {
+  @include layout-partialscreen;
+  background: $theme-light-green;
+  .banner {
+    
   }
 }

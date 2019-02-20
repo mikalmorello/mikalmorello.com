@@ -39,6 +39,13 @@
   width: 100vw;
 }
 
+// LAYOUT -- PARTIALSCREEN
+
+@mixin layout-partialscreen(){
+  height: 80vh;
+  width: 100vw;
+}
+
 // LAYOUT -- WIDTH
 
 @mixin layout-width($width){
