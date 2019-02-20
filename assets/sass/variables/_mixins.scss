@@ -193,6 +193,16 @@
   text-transform: $text-transform;
 }
 
+// TYPOGRAPHY -- MAIN MENU
+
+@mixin main-menu-text ($text-transform:uppercase){
+  font-family: $oswald;
+  font-size: $title-large;
+  font-weight: $font-weight-light;
+  line-height: $line-height-large;
+  text-transform: $text-transform;
+}
+
 
 // LISTS 
 
@@ -212,6 +222,15 @@
   }
 }
 
+// VERTICAL LIST
+
+@mixin list-vertical($vertical-padding) {
+  list-style: none;
+  li {
+    padding-bottom: $vertical-padding;
+    padding-top: $vertical-padding;
+  }
+}
 
 // LINKS
 

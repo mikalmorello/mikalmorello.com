@@ -1,31 +1,47 @@
 /* MENU */
 /*
-- MENU
-- MENU STATES
+- MAIN MENU
+- MAIN MENU STATES
 */
 
 
-// MENU
+// MAIN MENU
 
 .main-menu { 
-  transition-duration: .4s;
-  transform: translateY(-100%);
-  background: rgba(0, 0, 0, 0.95);
+  align-items: center;
+  background-color: rgba($theme-blue,0.99);
+  background-image: url(/assets/images/wave-group-large.svg);
+  background-position: bottom center;
+  background-repeat: repeat-x;
   backface-visibility: hidden;
+  color: $white;
   display: flex;
   height: 100%;
+  justify-content: center;
   left: 0;
   overflow: auto;
   position: fixed;
   text-align: center;
   top: 0;
+  transition-duration: .4s;
+  transform: translateY(-100%);
   width: 100%;
   -webkit-overflow-scrolling: touch;
-  z-index:  200;
+  z-index: $z-index-main-menu;
+  &__links {
+    @include list-vertical($padding-standard-size);
+    margin-bottom: 9rem;
+  }
+  &__link {
+    @include main-menu-text;
+    a {
+      @include link-light;
+    }
+  }
 }
 
 
-// MENU STATES
+// MAIN MENU STATES
 
 .main-menu--is-visible {
   transform: translateY(0);
