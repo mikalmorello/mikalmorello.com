@@ -58,7 +58,7 @@
             </h2>
           </div>
           <div class="banner__link">
-            <a href="#main">Learn More</a>
+            <a href="#main" class="scroll">Learn More</a>
           </div>
         </div>
         <div class="banner__portrait">
@@ -71,7 +71,7 @@
     <!-- MAIN -->
     <main id="main" class="main">
       <section id="sectionIntroduction" class="section section--introduction">
-        <div class="introduction">
+        <div class="introduction hidden">
           <div class="introduction__container">
             <div class="introduction__text">
               <p>I am currently the  <span class="semi-bold">lead front-end web developer</span> at Tufts University.  I am passionate about building scalable design systems.  From accessibility to analytics, I love it all.  Check out some of my work below.</p>
@@ -85,7 +85,7 @@
       <section id="sectionProjects" class="section section--projects">
         <div class="projects">
           <div class="projects__container">
-            <div class="project">
+            <div class="project hidden">
               <div class="project__container">
                 <a href="/tufts-magazine.html" class="project__content">
                  <h3 class="project__title">
@@ -100,7 +100,7 @@
                 </div>
               </div>
             </div>
-            <div class="project">
+            <div class="project hidden">
               <div class="project__container">
                 <a href="/tufts-university-web-standard.html" class="project__content">
                  <h3 class="project__title">
@@ -115,7 +115,7 @@
                 </div>
               </div>
             </div>
-            <div class="project">
+            <div class="project hidden">
               <div class="project__container">
                 <a href="/boston-college-redesign.html" class="project__content">
                  <h3 class="project__title">
@@ -133,7 +133,7 @@
           </div>
         </div>
       </section>
-      <section id="sectionContact" class="section section--contact">
+      <section id="sectionContact" class="section section--contact hidden">
         <div class="contact-card">
           <div class="contact-card__container">
             <h2 class="contact-card__titles">
@@ -150,7 +150,7 @@
       </section>
     </main>
     <!-- FOOTER -->
-    <footer id="footer" class="footer">
+    <footer id="footer" class="footer hidden">
       <div class="footer__container">
         <div class="footer__brand">
           <a class="footer__logo" href="/">
@@ -176,6 +176,8 @@
     <!-- SCRIPTS -->
     <script src="assets/js/header.js"></script>
     <script src="assets/js/main-menu.js"></script>
+    <script src="assets/js/fadein.js"></script>
+    <script src="assets/js/scroll.js"></script>
     <script src="assets/js/main.js"></script>
   </body>
 </html>
