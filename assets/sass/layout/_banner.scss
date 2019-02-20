@@ -17,12 +17,13 @@
     @include layout-width(50%);
     @include layout-container();
     align-items: center;
-    background: $white;
+    background: $theme-offwhite;
     display: flex;
 
     order: 1;
   }
   &__content {
+    align-items: center;
     display: flex;
     flex-direction: column;
     height: 100vh;
@@ -30,7 +31,6 @@
     
   }
   &__header {
-    align-self: center;
     display: flex;
     flex-direction: column;
     flex-grow: 1;
@@ -60,11 +60,18 @@
     &--hidden {
       visibility: hidden;
     }
+    a {
+      @include link-dark-underline;
+    }
   }
   &__link {
     @include standalone-link(uppercase);
-    @include layout-vertical-padding($vertical-padding-standard);
-    
+    @include layout-vertical-padding($vertical-padding-large);
+    width: 80%;
+    a {
+      @include link-dark-underline;
+      padding-bottom: $link-padding;
+    }
   }
   &__portrait {
     display: flex;

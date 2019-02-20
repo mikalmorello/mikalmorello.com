@@ -12,10 +12,10 @@
   // FUNCTIONS
   
   function stickyNavigation() {
-    var scrollAmount = window.scrollY;
-    var headerOffset = 600;
-    console.log('headerTop = ' + headerTop);
-    console.log('scrollY = ' + scrollAmount);
+    var scrollAmount = window.scrollY,
+        windowHeight = window.innerHeight,
+        headerOffset = windowHeight;
+
     // Make the navigation fixed but hidden after scrolling past navigation
     if (scrollAmount >= headerHeight) {
       header.classList.add('header--scroll');
