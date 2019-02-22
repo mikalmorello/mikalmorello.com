@@ -7,6 +7,9 @@
 - TYPOGRAPHY
 - LISTS
 - LINKS
+- ACCESSIBILITY
+- FORMS
+- BUTTONS
 */
 
 // CLEAR
@@ -42,7 +45,7 @@
 // LAYOUT -- PARTIALSCREEN
 
 @mixin layout-partialscreen(){
-  height: 80vh;
+  min-height: 80vh;
   width: 100vw;
 }
 
@@ -95,6 +98,7 @@
 @mixin container-wide(){
   @include layout-container();
   width: $container-wide;
+  
 }
 
 
@@ -122,7 +126,7 @@
 
 // TYPOGRAPHY -- SUBTITLE
 
-@mixin header-subtitle ($text-transform:"inherit"){
+@mixin header-subtitle ($text-transform:inherit){
   font-family: $oswald;
   font-size: $subtitle-large;
   font-weight: $font-weight-light;
@@ -132,7 +136,7 @@
 
 // TYPOGRAPHY -- STANDALONE LINK
 
-@mixin standalone-link ($text-transform:"uppercase"){
+@mixin standalone-link ($text-transform:uppercase){
   font-family: $lato;
   font-size: $text-large;
   font-weight: $font-weight-bold;
@@ -142,7 +146,7 @@
 
 // TYPOGRAPHY -- SMALL TEXT
 
-@mixin small-text ($text-transform:"inherit"){
+@mixin small-text ($text-transform:inherit){
   font-family: $oswald;
   font-size: $text-small;
   font-weight: $font-weight-medium;
@@ -152,7 +156,7 @@
 
 // TYPOGRAPHY -- INTRODUCTION TEXT
 
-@mixin introduction-text ($text-transform:"inherit"){
+@mixin introduction-text ($text-transform:inherit){
   font-family: $lato;
   font-size: $text-extra-large;
   font-weight: $font-weight-regular;
@@ -162,7 +166,7 @@
 
 // TYPOGRAPHY -- CONTACT LARGE TEXT
 
-@mixin contact-large-text ($text-transform:"uppercase"){
+@mixin contact-large-text ($text-transform:uppercase){
   font-family: $oswald;
   font-size: $title-large;
   font-weight: $font-weight-medium;
@@ -172,7 +176,7 @@
 
 // TYPOGRAPHY -- CONTACT SMALL TEXT
 
-@mixin contact-small-text ($text-transform:"uppercase"){
+@mixin contact-small-text ($text-transform:inherit){
   font-family: $oswald;
   font-size: $title-medium;
   font-weight: $font-weight-medium;
@@ -182,7 +186,7 @@
 
 // TYPOGRAPHY -- CONTACT LARGE TEXT
 
-@mixin project-large-text ($text-transform:"inherit"){
+@mixin project-large-text ($text-transform:inherit){
   font-family: $oswald;
   font-size: $title-large;
   font-weight: $font-weight-bold;
@@ -192,7 +196,7 @@
 
 // TYPOGRAPHY -- CONTACT SMALL TEXT
 
-@mixin project-small-text ($text-transform:"inherit"){
+@mixin project-small-text ($text-transform:inherit){
   font-family: $oswald;
   font-size: $title-medium;
   font-weight: $font-weight-light;
@@ -206,6 +210,28 @@
   font-family: $oswald;
   font-size: $title-large;
   font-weight: $font-weight-light;
+  line-height: $line-height-large;
+  text-transform: $text-transform;
+}
+
+// TYPOGRAPHY -- INPUT
+
+@mixin input-text ($text-transform:uppercase){
+  font-family: $oswald;
+  font-size: $text-medium;
+  font-weight: $font-weight-regular;
+  letter-spacing: $letter-space-large;
+  line-height: $line-height-large;
+  text-transform: $text-transform;
+}
+
+// TYPOGRAPHY -- BODY
+
+@mixin body-text ($text-transform:inherit){
+  font-family: $lato;
+  font-size: $text-body;
+  font-weight: $font-weight-regular;
+  letter-spacing: $letter-space-none;
   line-height: $line-height-large;
   text-transform: $text-transform;
 }
@@ -239,6 +265,7 @@
   }
 }
 
+
 // LINKS
 
 // LINK - LIGHT
@@ -252,7 +279,6 @@
     text-decoration: underline;
   }
 }
-
 
 // LINK - DARK
 
@@ -268,6 +294,7 @@
 }
 
 // LINK - WITH UNDERLINE DARK
+
 @mixin link-dark-underline() {
   
   background:
@@ -288,3 +315,55 @@
     background-size: 4px 50px;
   }
 }
+
+// ACCESSIBILITY
+
+// Accessible hiding
+@mixin screen-reader-text() {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+}
+
+// FORMS
+
+@mixin form-input() {
+  @include layout-width(100%);
+  @include input-text;
+  display: flex;
+  height: 5rem;
+  margin-bottom: 1.25rem;
+  padding-left: $padding-small-size;
+  padding-right: $padding-small-size;
+}
+
+@mixin placeholder ($color) {
+  &::-webkit-input-placeholder {
+    color: $color;
+    opacity: 1;
+  }
+  &:-moz-placeholder           {
+    color: $color;
+    opacity: 1;
+  }
+  &::-moz-placeholder          {
+    color: $color;
+    opacity: 1;
+  }
+  &:-ms-input-placeholder      {
+    color: $color;
+    opacity: 1;
+  } 
+  &:placeholder {
+    color: $color;
+    opacity: 1;
+  }
+}
+
+// BUTTONS
+
+@mixin button() {
+  display: flex;
+  justify-content: center;
+}
+

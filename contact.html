@@ -42,14 +42,43 @@
     </nav>
     <!-- BANNER -->
     <section id="banner" class="banner banner--contact">
-      <div class="banner__form">
-        Banner form goes here
+      <div class="banner__container">
+        <div class="banner__content">
+          <div class="banner__content-container">
+            <div class="banner__divider">
+              <img src="/assets/images/wave-divider.svg" alt=""/>
+            </div>
+            <h1 class="banner__title">Get In Touch</h1>
+            <div class="banner__subtitle">
+              Located at the Arsenal in Watertown MA, just outside of Boston.  I’m always looking for new projects, so feel free to reach out.
+            </div>
+            <div class="banner__form-wrapper">
+              <form class="banner__form form form--vertical" action="">
+                <label class="form__label">Name</label>
+                <input id="contactName" class="form__input" type="text"  name="name" placeholder="Your Name" />
+                <label class="form__label">Email</label>
+                <input id="contactEmail" class="form__input" type="email" name="email" placeholder="Your Email" />
+                <label class="form__label">Subject</label>
+                <input id="contactSubject" class="form__input" type="text" name="subject" placeholder="Subject" />
+                <input id="contactSubmit" class="form__submit" type="submit" value="Send" />
+              </form>
+          </div>
+        </div>
       </div>
-    </section>
+      <div class="banner__media">
+        <img src="/assets/images/watertown-arsenal.jpg" alt="Watertown Arsenal" />
+      </div>
+    </div>
+  </section>
     
   <!-- MAIN -->
   <main id="main" class="main">
-    <p>Contact Page</p>
+    <section class="contact-information">
+      <p>Contact Information</p>
+    </section>
+    <section class="map">
+      <p>Map</p>
+    </section>
   </main>
 
   <!-- FOOTER -->

@@ -134,8 +134,59 @@
 
 .banner--contact {
   @include layout-partialscreen;
+  align-items: center;
   background: $theme-light-green;
+  background-image: url(/assets/images/wave-group-angled.svg);
+  background-position: bottom right;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
   .banner {
-    
+    &__container {
+      @include container-wide;
+      align-items: center;
+      display: flex;
+      flex-direction: row;
+      padding-bottom: $padding-navigation-desktop;
+      padding-top: $padding-navigation-desktop;
+    }
+    &__content {
+      @include layout-width(50%);
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    &__content-container {
+      @include layout-width(26.25rem);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    &__form {
+      display: flex;
+      justify-content: center;
+    }
+    &__divider {
+      align-self: flex-start;
+      margin-bottom: .5rem;
+      width: $divider-width;
+    }
+    &__title {
+      @include contact-large-text(uppercase);
+      margin-bottom: 2rem;
+    }
+    &__subtitle {
+      @include body-text;
+      margin-bottom: 2rem;
+    }
+    &__media {
+      @include layout-width(50%);
+      display: flex;
+      img {
+        object-fit: none;
+        object-position: 0 150%;
+      }
+    }
   }
 }

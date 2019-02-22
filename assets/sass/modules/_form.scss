@@ -1,0 +1,39 @@
+/* FORM */
+/*
+- FORM
+- FORM STATES
+- FORM VALIDATION
+*/
+
+
+// FORM
+
+.form {
+  &__label {
+    @include screen-reader-text();
+  }
+  &__input {
+    @include form-input;
+    @include placeholder($theme-dark);
+    background: transparent;
+    border: 1px solid $theme-dark;
+    color: $theme-dark;
+  }
+  &__submit {
+    @include form-input;
+    @include button;
+    background: $theme-dark;
+    color: $white;
+  }
+}
+
+
+// FORM STATES
+
+.form--vertical {
+  display: flex;
+  flex-direction: column;
+}
+
+
+// FORM VALIDATION
