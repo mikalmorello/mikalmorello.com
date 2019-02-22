@@ -18,7 +18,7 @@
     justify-content: center;
   }
   &__text {
-      @include layout-vertical-padding($vertical-padding-standard);
+    @include layout-vertical-padding($vertical-padding-standard);
   }
   &__divider {
     width: $divider-width;

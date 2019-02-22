@@ -74,10 +74,31 @@
   <!-- MAIN -->
   <main id="main" class="main">
     <section class="contact-information">
-      <p>Contact Information</p>
+      <div class="contact-information__container">
+        <div class="contact-information__address">
+          <h2 class="contact-information__title">Address</h2>
+          <div class="contact-information__details">
+            The Arsenal<br />
+            Watertown, MA 02472
+          </div>
+        </div>
+        <div class="contact-information__contact">
+          <h2 class="contact-information__title">Contact</h2>
+          <div class="contact-information__details">
+            <a class="contact-information__link" href="tel:+1-978-502-1080">+1 (978) 502-1080</a>
+            <a class="contact-information__link" href="mailto:bossorello@mikalmorello.com" >bossorello@mikalmorello.com</a>
+          </div>
+        </div>
+        <div class="contact-information__availability">
+          <h2 class="contact-information__title">Work Availability</h2>
+          <div class="contact-information__details">
+            Limited
+          </div>
+        </div>
+      </div>
     </section>
     <section class="map">
-      <p>Map</p>
+      <div id="map"></div>
     </section>
   </main>
 
@@ -105,6 +126,11 @@
     </div>
   </footer>
 
+    
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC09n_z2tAcPw6cjfrR3z3TyWFlpxy2q2c&callback=initMap">
+    </script>
+    <script src="assets/js/map.js"></script>
+    
    <!-- SCRIPTS -->
     <script src="assets/js/header.js"></script>
     <script src="assets/js/main-menu.js"></script>

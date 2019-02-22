@@ -236,6 +236,17 @@
   text-transform: $text-transform;
 }
 
+// TYPOGRAPHY -- BODY LARGE
+
+@mixin body-text-large ($text-transform:inherit){
+  font-family: $lato;
+  font-size: $text-extra-large;
+  font-weight: $font-weight-regular;
+  letter-spacing: $letter-space-none;
+  line-height: $line-height-large;
+  text-transform: $text-transform;
+}
+
 
 // LISTS 
 
@@ -282,7 +293,7 @@
 
 // LINK - DARK
 
-@mixin link-dark($text-decoration:"underline") {
+@mixin link-dark($text-decoration:underline) {
   color: $type-dark;
   text-decoration: none;
   &:hover {
@@ -296,7 +307,6 @@
 // LINK - WITH UNDERLINE DARK
 
 @mixin link-dark-underline() {
-  
   background:
      linear-gradient(
        to bottom, $theme-blue 0%,
