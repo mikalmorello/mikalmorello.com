@@ -1,0 +1,35 @@
+/* PROJECT */
+/*
+- PROJECT
+*/
+
+
+// PROJECT
+
+.project {
+  &__section {
+    display: flex;
+    justify-content: center;
+    padding-bottom: $padding-large-size;
+  }
+  &__banner {
+    img {
+      object-fit: contain;
+      max-height: 50rem;
+      max-width: 100%;
+      min-width:$container-wide;
+    }
+  }
+  &__text-block {
+    @include container-extra-small;
+    @include body-text;
+    > p {
+        &:first-child:first-letter {
+        @include dropcap-text;
+        float: left;
+        padding-top: .25rem;
+        padding-right: .5rem;
+      }
+    }
+  }
+}

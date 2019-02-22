@@ -1,7 +1,7 @@
 /* PROJECTS */
 /*
 - PROJECTS
-- PROJECT
+- PROJECT TEASER
 */
 
 
@@ -17,7 +17,7 @@
 
 // PROJECT 
 
-.project {
+.project-teaser {
   @include layout-vertical-padding($vertical-padding-large);
   color: $type-dark;
   position: relative;
@@ -49,7 +49,7 @@
     top: 0;
     right: 0;
     visibility: hidden;
-    .project:hover & {
+    .project-teaser:hover & {
       visibility: visible;
     }
   }

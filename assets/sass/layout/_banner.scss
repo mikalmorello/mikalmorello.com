@@ -28,16 +28,16 @@
         align-items: center;
         background: $theme-offwhite;
         display: flex;
-
         order: 1;
       }
       &__content {
         align-items: center;
         display: flex;
         flex-direction: column;
-        height: 100vh;
+        min-height: 100vh;
         justify-content: center;
-
+        padding-bottom: $padding-navigation-desktop;
+        padding-top: $padding-navigation-desktop; 
       }
       &__header {
         display: flex;
@@ -187,6 +187,57 @@
         object-fit: none;
         object-position: 0 150%;
       }
+    }
+  }
+}
+
+// BANNER PROJECT
+
+.banner--project {
+  display: flex;
+  justify-content: center;
+  .banner {
+    &__container {
+      @include container-normal;
+      align-items: flex-start;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      padding-bottom: $padding-project-bottom;
+      padding-top: $padding-project-top;
+    }
+    &__introduction {
+      display: flex;
+      flex-direction: column;
+      width: calc(73% - .75rem);
+    }
+    &__title {
+      @include project-title-text;
+      margin-bottom: 2rem;
+    }
+    &__description {
+      @include project-introduction-text;
+    }
+    &__sidebar {
+      align-items: flex-start;
+      display: flex;
+      flex-direction: row;
+      width: calc(27% - .75rem);
+    }
+    &__divider {
+      align-self: flex-start;
+      margin-bottom: 5rem;
+      width: $divider-width;
+    }
+    &__role {
+      margin-bottom: 2rem;
+    }
+    &__role-title {
+      @include project-aside-title-text; 
+      margin-bottom: .75rem;
+    }
+    &__role-position {
+      @include project-aside-text;
     }
   }
 }

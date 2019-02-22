@@ -38,7 +38,7 @@
 // LAYOUT -- FULLSCREEN
 
 @mixin layout-fullscreen(){
-  height: 100vh;
+  min-height: 100vh;
   width: 100vw;
 }
 
@@ -79,6 +79,13 @@
 
 
 // CONTAINERS
+
+// CONTAINER EXTRA SMALL
+
+@mixin container-extra-small(){
+  @include layout-container();
+  width: $container-extra-small;
+}
 
 // CONTAINER SMALL
 
@@ -232,7 +239,7 @@
   font-size: $text-body;
   font-weight: $font-weight-regular;
   letter-spacing: $letter-space-none;
-  line-height: $line-height-large;
+  line-height: $line-height-extra-large;
   text-transform: $text-transform;
 }
 
@@ -244,6 +251,62 @@
   font-weight: $font-weight-regular;
   letter-spacing: $letter-space-none;
   line-height: $line-height-large;
+  text-transform: $text-transform;
+}
+
+// TYPOGRAPHY -- PROJECT TITLE
+
+@mixin project-title-text ($text-transform:inherit){
+  font-family: $lato;
+  font-size: $text-project-title;
+  font-weight: $font-weight-medium;
+  letter-spacing: $letter-space-none;
+  line-height: $line-height-large;
+  text-transform: $text-transform;
+}
+
+// TYPOGRAPHY -- PROJECT INTRODUCTION
+
+@mixin project-introduction-text ($text-transform:inherit){
+  font-family: $lato;
+  font-size: $text-large;
+  font-weight: $font-weight-light;
+  letter-spacing: $letter-space-none;
+  line-height: $line-height-extra-large;
+  text-transform: $text-transform;
+}
+
+// TYPOGRAPHY -- PROJECT ASIDE TITLE
+
+@mixin project-aside-title-text ($text-transform:inherit){
+  font-family: $lato;
+  font-size: $text-small;
+  font-weight: $font-weight-regular;
+  letter-spacing: $letter-space-none;
+  line-height: $line-height-standard;
+  text-transform: $text-transform;
+}
+
+// TYPOGRAPHY -- PROJECT ASIDE TEXT
+
+@mixin project-aside-text ($text-transform:inherit){
+  font-family: $lato;
+  font-size: $text-large;
+  font-weight: $font-weight-regular;
+  letter-spacing: $letter-space-none;
+  line-height: $line-height-standard;
+  text-transform: $text-transform;
+}
+
+
+// TYPOGRAPHY -- DROP CAP
+
+@mixin dropcap-text ($text-transform:uppercase){
+  font-family: $lato;
+  font-size: $text-dropcap;
+  font-weight: $font-weight-regular;
+  letter-spacing: $letter-space-none;
+  line-height: .9em;
   text-transform: $text-transform;
 }
 
