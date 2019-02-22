@@ -333,6 +333,7 @@
 
 @mixin list-vertical($vertical-padding) {
   list-style: none;
+  padding-left: 0;
   li {
     padding-bottom: $vertical-padding;
     padding-top: $vertical-padding;

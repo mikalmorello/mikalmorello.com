@@ -202,14 +202,19 @@
       align-items: flex-start;
       display: flex;
       flex-direction: row;
-      justify-content: space-between;
+      justify-content: center;
       padding-bottom: $padding-project-bottom;
       padding-top: $padding-project-top;
+      @include breakpoint($desktop) {
+        padding-left: 0;
+        padding-right: 0;
+      }
     }
     &__introduction {
       display: flex;
       flex-direction: column;
-      width: calc(73% - .75rem);
+      margin-right: 3rem;
+      width: calc(75% - 3rem);
     }
     &__title {
       @include project-title-text;
@@ -222,11 +227,12 @@
       align-items: flex-start;
       display: flex;
       flex-direction: row;
-      width: calc(27% - .75rem);
+      width: calc(25%);
     }
     &__divider {
       align-self: flex-start;
       margin-bottom: 5rem;
+      opacity: .25;
       width: $divider-width;
     }
     &__role {
@@ -237,6 +243,7 @@
       margin-bottom: .75rem;
     }
     &__role-position {
+      @include list-vertical(.25rem);
       @include project-aside-text;
     }
   }
