@@ -20,16 +20,4 @@
       min-width:$container-wide;
     }
   }
-  &__text-block {
-    @include container-extra-small;
-    @include body-text;
-    > p {
-        &:first-child:first-letter {
-        @include dropcap-text;
-        float: left;
-        padding-top: .25rem;
-        padding-right: .5rem;
-      }
-    }
-  }
 }

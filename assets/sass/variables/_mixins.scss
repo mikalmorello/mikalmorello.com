@@ -278,7 +278,7 @@
 
 // TYPOGRAPHY -- PROJECT ASIDE TITLE
 
-@mixin project-aside-title-text ($text-transform:inherit){
+@mixin project-aside-title-text ($text-transform:uppercase){
   font-family: $lato;
   font-size: $text-small;
   font-weight: $font-weight-regular;
