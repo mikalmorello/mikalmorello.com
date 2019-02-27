@@ -24,10 +24,7 @@
 }
 
 .section--contact {
-  background-color: $theme-light-green; 
-  background-image: url(/assets/images/wave-group.svg);
-  background-position: bottom center;
-  background-repeat: repeat-x;
+  @include layout-vertical-padding($vertical-padding-none); 
 }
 
 .section--projects {
