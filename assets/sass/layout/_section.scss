@@ -23,7 +23,8 @@
   padding-top: $padding-large-size;
 }
 
-.section--contact {
+.section--contact, 
+.section--horizontal-scroll {
   @include layout-vertical-padding($vertical-padding-none); 
 }
 
