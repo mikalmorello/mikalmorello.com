@@ -29,7 +29,7 @@
   width: $container-normal;
   .text-block {
     &__main {
-      width: calc(65% - 4rem);
+      width: calc(75% - 4rem);
       margin-right: 4rem;
       > p {
         &:first-child:first-letter {
@@ -43,7 +43,7 @@
       }
     }
     &__sidebar {
-      width: calc(35%);
+      width: calc(25%);
       a {
         @include link-dark;
       }
