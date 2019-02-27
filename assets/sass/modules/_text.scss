@@ -1,6 +1,7 @@
 /* TEXT */
 /*
-- TEXT
+- TEXT BLOCK
+- TEXT BLOCK STATES
 */
 
 
@@ -9,13 +10,20 @@
 .text-block {
   @include container-extra-small;
   @include body-text;
-  &__main {
-    > p {
-        &:first-child:first-letter {
-        @include dropcap-text;
-        float: left;
-        padding-top: .25rem;
-        padding-right: .5rem;
+}
+
+// TEXT BLOCK STATES
+
+.text-block--intro {
+  .text-block {
+    &__main {
+      > p {
+          &:first-child:first-letter {
+          @include dropcap-text;
+          float: left;
+          padding-top: .25rem;
+          padding-right: .5rem;
+        }
       }
     }
   }
@@ -31,16 +39,6 @@
     &__main {
       width: calc(75% - 4rem);
       margin-right: 4rem;
-      > p {
-        &:first-child:first-letter {
-          @include body-text;
-          float: none;
-          font-weight: $font-weight-regular;
-          letter-spacing: inherit;
-          line-height: inherit;
-          padding: 0;
-        }
-      }
     }
     &__sidebar {
       width: calc(25%);

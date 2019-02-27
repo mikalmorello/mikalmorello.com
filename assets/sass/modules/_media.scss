@@ -1,0 +1,53 @@
+/* MEDIA */
+/*
+- MEDIA BLOCK
+- MEDIA BLOCK STATES
+- MEDIA BACKGROUND BLOCK
+- MEDIA BACKGROUND BLOCK STATES
+*/
+
+
+// MEDIA BLOCK
+
+.media {
+}
+
+
+// MEDIA BLOCK STATES
+
+.media--fullwidth {
+  min-width: $container-max;
+}
+
+
+// MEDIA BACKGROUND
+
+.media-background {
+  @include layout-container;
+  align-items:center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  object-fit: contain;
+  max-width: $container-max;
+  width: 100%;
+  &__title {
+    @include subheader-text;
+    @include layout-vertical-padding($vertical-padding-large);
+    text-align: center;
+  }
+  &__subtitle {
+  }
+  &__content{
+    max-width: $container-normal;
+  }
+}
+
+// MEDIA BACKGROUND STATES
+
+.media-background--grid {
+  background: no-repeat;
+  background-image: url(/assets/images/tufts-standard-grid-banner.jpg);
+  background-position: top center;
+  
+}

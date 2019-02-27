@@ -16,7 +16,7 @@
     img {
       object-fit: contain;
       max-height: 50rem;
-      max-width: 100%;
+      max-width: $container-max;
       min-width:$container-wide;
     }
   }

@@ -161,6 +161,18 @@
   text-transform: $text-transform;
 }
 
+
+// TYPOGRAPHY -- SUBHEADER TEXT
+
+@mixin subheader-text ($text-transform:uppercase){
+  font-family: $oswald;
+  font-size: $text-subheader;
+  font-weight: $font-weight-regular;
+  line-height: $line-height-standard;
+  text-transform: $text-transform;
+}
+
+
 // TYPOGRAPHY -- INTRODUCTION TEXT
 
 @mixin introduction-text ($text-transform:inherit){
@@ -191,7 +203,7 @@
   text-transform: $text-transform;
 }
 
-// TYPOGRAPHY -- CONTACT LARGE TEXT
+// TYPOGRAPHY -- PROJECT LARGE TEXT
 
 @mixin project-large-text ($text-transform:inherit){
   font-family: $oswald;
@@ -201,7 +213,7 @@
   text-transform: $text-transform;
 }
 
-// TYPOGRAPHY -- CONTACT SMALL TEXT
+// TYPOGRAPHY -- PROJECT SMALL TEXT
 
 @mixin project-small-text ($text-transform:inherit){
   font-family: $oswald;
