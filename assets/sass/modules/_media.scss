@@ -4,18 +4,19 @@
 - MEDIA BLOCK STATES
 - MEDIA BACKGROUND BLOCK
 - MEDIA BACKGROUND BLOCK STATES
+- MEDIA GRID
 */
 
 
 // MEDIA BLOCK
 
-.media {
+.media-block {
 }
 
 
 // MEDIA BLOCK STATES
 
-.media--fullwidth {
+.media-block--fullwidth {
   min-width: $container-max;
 }
 
@@ -50,4 +51,88 @@
   background-image: url(/assets/images/tufts-standard-grid-banner.jpg);
   background-position: top center;
   
+}
+
+
+// MEDIA GRID
+
+.media-grid {
+  color: $white;
+  display: grid;
+  grid-template-areas: 
+    'media-one media-two media-introduction'
+    'media-three media-four media-introduction'
+    'media-three media-four media-five';
+  grid-template-columns: 33% 33% 33%; 
+  grid-template-rows: 50% 25% 25%; 
+  height: 824px;
+  max-width: $container-wide;
+  overflow: hidden; 
+  width: 100%;
+  
+  &__introduction {
+    @include media-overlay-text;
+    align-items: center;
+    background: $theme-dark; 
+    display: flex;
+    grid-area: media-introduction;
+    justify-content: center;
+    padding: $padding-medium-size;
+    grid-area: media-introduction;
+    text-align: center;
+  }
+  &__media {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+    &--one {
+      grid-area: media-one;
+    }
+    &--two {
+      grid-area: media-two;
+    }
+    &--three {
+      grid-area: media-three;
+    }
+    &--four {
+      grid-area: media-four;
+    }
+    &--five {
+      grid-area: media-five;
+    }
+  }
+    &__media-element {
+      display: flex;
+      height: 100%;
+      position: absolute;
+      width: 100%;
+      img {
+        position: relative;
+      }
+    }
+    &__media-text {
+      @include media-overlay-text;
+      align-items: center;
+      display: flex;
+      height: 100%;
+      justify-content: center;
+      width: 100%;
+      z-index: $z-media-title;
+      a {
+        @include link-light;
+        @include animate-opacity;
+        align-items: center;
+        display: flex;
+        height: 100%;
+        justify-content: center;
+        opacity: 0;
+        width: 100%;
+        &:hover {
+          opacity: 100;
+          background-color: rgba($theme-dark, 0.9);
+        }
+      }
+    }
 }

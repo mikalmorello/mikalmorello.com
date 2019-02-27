@@ -10,6 +10,7 @@
 - ACCESSIBILITY
 - FORMS
 - BUTTONS
+- ANIMATION
 */
 
 // CLEAR
@@ -322,6 +323,16 @@
   text-transform: $text-transform;
 }
 
+// TYPOGRAPHY -- MEDIA OVERLAY TEXT
+
+@mixin media-overlay-text ($text-transform:inherit){
+  font-family: $lato;
+  font-size: $title-medium;
+  font-weight: $font-weight-regular;
+  letter-spacing: $letter-space-none;
+  text-transform: $text-transform;
+}
+
 
 // LISTS 
 
@@ -453,3 +464,10 @@
   justify-content: center;
 }
 
+// ANIMATION
+
+// ANIMATE OPACITY
+
+@mixin animate-opacity($duration: .3s){
+  transition: opacity $duration;
+}
