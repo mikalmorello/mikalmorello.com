@@ -9,6 +9,8 @@
 .horizontal-scroll {
   background-image: url(/assets/images/pattern-paper-fiber.png);
   background-repeat: repeat;
+  overflow-x: scroll;
+  overflow-y: hidden;
   width: 100%;
   &__title {
     @include subheader-text;
@@ -16,45 +18,33 @@
   &__description {
     @include body-text;  
   }
-}
-
-
-// PHASE OUT 
- 
-  .grid-item {
-    font-size: 1em;
-    font-weight: 700;
+  &__item-container {
+    display: flex;
+    flex-direction: column;
+    height: 28rem;
+    justify-content: center;
   }
-
-  .main-class {
+  &__items {
+    cursor: pointer;
     overflow-x: scroll;
     overflow-y: hidden;
-  }
-
-  .items {
-    @include layout-vertical-padding($vertical-padding-standard);
+    padding: $padding-large-size $padding-small-size;
     position: relative;
-    width: 100%;
-    overflow-x: scroll;
-    overflow-y: hidden;
     white-space: nowrap;
     transition: all 0.2s;
     transform: scale(0.98);
-    will-change: transform;
     user-select: none;
-    cursor: pointer;
-    padding: 3.5em 1em;
+    width: 100%;
+    will-change: transform;
   }
-
-  .items.active {
+  &__items--active {
     background: rgba(0,0,0,0.3);
     cursor: grabbing;
     transform: scale(1);
   }
-
-  .item {
+  &__item {
     display: inline-block;
-    min-height: 400px;
+    height: 28rem;
     margin: 2em 1em;
     vertical-align: top;
     @media screen and (max-width: 500px) {
@@ -66,3 +56,5 @@
       white-space: normal;
     }
   }
+}
+
