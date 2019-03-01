@@ -56,8 +56,11 @@
 }
 
 .contact-card--minimal {
-  min-height: 18.75rem;
+  min-height: 14.75rem;
   .contact-card {
+    &__container {
+      justify-content: start; 
+    }
     &__titles {
       a {
         @include link-dark-underline;
