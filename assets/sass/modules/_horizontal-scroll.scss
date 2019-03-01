@@ -1,6 +1,7 @@
 /* HORIZONTAL SCROLL */
 /*
 - HORIZONTAL SCROLL
+- HORIZONTAL SCROLL STATES
 */
 
 
@@ -22,7 +23,6 @@
   &__item-container {
     display: flex;
     flex-direction: column;
-    height: 28rem;
     justify-content: center;
   }
   &__items {
@@ -45,17 +45,37 @@
   }
   &__item {
     display: inline-block;
-    height: 28rem;
     margin: 2em 1em;
     vertical-align: top;
-    @media screen and (max-width: 500px) {
-      min-height: 200px;
-      min-width: 200px;
+  }
+}
+
+
+// HORIZONTAL SCROLL STATES
+
+
+.horizontal-scroll--left {
+  .horizontal-scroll {
+    &__item-container {
+      height: 28rem;
     }
-    &:first-child {
-      width: 300px;
-      white-space: normal;
+    &__item {
+      height: 28rem;
+      &:first-child {
+        width: 300px;
+        white-space: normal;
+      }
     }
   }
 }
 
+.horizontal-scroll--center {
+  .horizontal-scroll {
+    &__item-container {
+      height: 700px;
+    }
+    &__item {
+      height: 700px;
+    }
+  }
+}
