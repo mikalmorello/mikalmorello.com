@@ -159,6 +159,7 @@
   &__introduction-header {
     @include flex-center;
     @include container-extra-small;
+    margin-bottom: $padding-medium-size;
     order: 2;
   }
   &__title {
