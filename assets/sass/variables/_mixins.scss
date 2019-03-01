@@ -2,6 +2,7 @@
 /*
 - CLEAR
 - LAYOUT
+- ALIGNMENTS
 - SECTIONS
 - CONTAINERS
 - TYPOGRAPHY
@@ -107,6 +108,17 @@
   @include layout-container();
   width: $container-wide;
   
+}
+
+// ALIGNMENTS
+
+// ALIGNMENTS -- FLEX CENTER
+
+@mixin flex-center(){
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 

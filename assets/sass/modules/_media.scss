@@ -5,6 +5,7 @@
 - MEDIA BACKGROUND BLOCK
 - MEDIA BACKGROUND BLOCK STATES
 - MEDIA GRID
+- MEDIA CARDS
 */
 
 
@@ -135,4 +136,73 @@
         }
       }
     }
+}
+
+// MEDIA CARDS
+
+.media-cards {
+  @include flex-center;
+  background-image: url(/assets/images/pattern-paper-fiber.png);
+  background-position: 100% calc(100% - 200px); 
+  background-repeat: repeat;
+  margin-top: 15rem;
+  width: 100%;
+  &__container {
+    @include flex-center;
+    max-width: $container-wide;
+  }
+  &__introduction {
+    @include flex-center;
+    margin-top: -15rem;
+    text-align: center;
+  }
+  &__introduction-header {
+    @include flex-center;
+    @include container-extra-small;
+    order: 2;
+  }
+  &__title {
+    @include subheader-text;
+    margin-bottom: .5rem;
+  }
+  &__description {
+    @include body-text;  
+  }
+  &__introduction-media {
+    @include flex-center;
+    padding-bottom: ($padding-large-size);
+    order: 1;
+  }
+  &__media-element {
+    border-top-left-radius: .25em;
+    border-top-right-radius: .25em;
+    box-shadow: 0 0 1rem 0 rgba(0,0,0,0.05);
+    margin-bottom: $padding-medium-size;
+    &:before {
+      background: $white;
+      border-bottom: 1px solid rgba(0,0,0,0.05);
+      border-top-left-radius: .25em;
+      border-top-right-radius: .25em;
+      color: $gray;
+      content: "\2022\2022\2022";
+      display: block;
+      letter-spacing: .2em;
+      padding-left: .625rem;
+      font-size: 1rem;
+      line-height: 1.5rem;
+      
+    }
+    img {
+      vertical-align: bottom;
+    }
+  }
+  &__media-element--wrap {
+    width: calc(50% - 1rem);
+  }
+  &__content {
+    @include layout-vertical-padding($padding-large-size);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
 }
