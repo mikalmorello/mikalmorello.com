@@ -44,11 +44,13 @@
     width: 15.75rem;
   }
   &__phone {
+    cursor: pointer;
     max-width: 14.125rem;
     min-width: 14.125rem;
     height: 25rem;
     overflow: scroll;
     position: relative;
+    user-select: none;
     &:after {
       content: '';
       position: absolute;
