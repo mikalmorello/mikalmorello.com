@@ -48,6 +48,10 @@
     margin: 2em 1em;
     vertical-align: top;
   }
+  &__item-label {
+    @include header-title-small(uppercase);
+    text-align: center;
+  }
 }
 
 
