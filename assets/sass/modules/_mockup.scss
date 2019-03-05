@@ -1,6 +1,7 @@
 /* MOCKUP */
 /*
 - MOCKUP
+- MOCKUP ANIMATIONS
 */
 
 
@@ -16,6 +17,8 @@
   }
   &__description {
     @include body-text;  
+  }
+  &__button {
   }
 }
 
@@ -112,59 +115,46 @@
   img {
     display: block;
     position: relative;
-    /* Firefox bug - 3D CSS transform, jagged edges */
     outline: 1px solid transparent;
   }
 }
 
-@media only screen and (min-width: 1170px) {
-  .is-product-tour .cd-product-mockup {
+.is-product-tour .cd-product-mockup {
+  @include breakpoint($desktop) {
     transform: translateX(0);
   }
-  .is-product-tour .cd-product-mockup::before {
-    transform: translateZ(-100px) translateX(226px) translateY(216px);
+  &:before {
+    @include breakpoint($desktop) {
+      transform: translateZ(-100px) translateX(226px) translateY(216px);
+    }
   }
-}
-
-.no-csstransforms3d .cd-product:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-.no-csstransforms3d .cd-product-mockup {
-  float: right;
-}
-.no-csstransforms3d .cd-product-mockup::before {
-  display: none;
 }
 
 .cd-3d-right-side, .cd-3d-bottom-side {
   display: none;
-}
-@media only screen and (min-width: 1170px) {
-  .cd-3d-right-side, .cd-3d-bottom-side {
+  @include breakpoint($desktop) {
     display: block;
     position: absolute;
     left: 0;
     background-image: url(/assets/images/cd-app-image.png);
-    /* Firefox bug - 3D CSS transform, jagged edges */
     outline: 1px solid transparent;
   }
-  .cd-3d-right-side::after, .cd-3d-bottom-side::after {
-    /* darken the right/bottom sides */
-    content: '';
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.2);
+  &:after {
+    @include breakpoint($desktop) {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.2);
+    }
   }
 }
 
-@media only screen and (min-width: 1170px) {
-  .cd-3d-right-side {
+.cd-3d-right-side {
+  @include breakpoint($desktop) {
     top: -1px;
     width: 10px;
     height: 100%;
@@ -172,8 +162,10 @@
     transform-origin: left center;
     transform: translateZ(-1px) translateY(1px) rotateY(-90deg);
   }
+}
 
-  .cd-3d-bottom-side {
+.cd-3d-bottom-side {
+  @include breakpoint($desktop) {
     bottom: 0;
     width: 100%;
     height: 10px;
@@ -182,20 +174,16 @@
     transform-origin: center bottom;
     transform: translateZ(-1px) rotateX(-90deg);
   }
-  .cd-3d-bottom-side::after {
-    background-color: rgba(0, 0, 0, 0.4);
+  &:after {
+    @include breakpoint($desktop) {
+      background-color: rgba(0, 0, 0, 0.4);
+    }
   }
-}
-.no-csstransforms3d .cd-3d-right-side, .no-csstransforms3d .cd-3d-bottom-side {
-  display: none;
 }
 
 .cd-close-product-tour {
-  /* close icon - product tour */
   display: none;
-}
-@media only screen and (min-width: 1170px) {
-  .cd-close-product-tour {
+  @include breakpoint($desktop) {
     display: block;
     position: absolute;
     top: 40px;
@@ -205,26 +193,28 @@
     opacity: 0;
     visibility: hidden;
   }
-  .no-touch .cd-close-product-tour:hover {
-    opacity: .8;
+  &:after, &:before {
+    @include breakpoint($desktop) {
+      content: '';
+      height: 40px;
+      width: 2px;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      background-color: $white;
+    }
   }
-  .cd-close-product-tour::after, .cd-close-product-tour::before {
-    /* these are used to create the 'X' icon */
-    content: '';
-    height: 40px;
-    width: 2px;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    background-color: #ffffff;
+  &:after{
+    @include breakpoint($desktop) {
+      transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    }
   }
-  .cd-close-product-tour::after { 
-    transform: translateX(-50%) translateY(-50%) rotate(45deg);
+  &:before {
+    @include breakpoint($desktop) {
+      transform: translateX(-50%) translateY(-50%) rotate(-45deg);
+    }
   }
-  .cd-close-product-tour::before {
-    transform: translateX(-50%) translateY(-50%) rotate(-45deg);
-  }
-  .cd-close-product-tour.is-visible {
+  &.is-visible {
     visibility: visible;
     opacity: 1;
   }
@@ -233,111 +223,216 @@
 .cd-single-point {
   position: absolute;
   border-radius: 50%;
-}
-.cd-single-point > a {
-  position: relative;
-  display: block;
-  width: 30px;
-  height: 30px;
-  border-radius: inherit;
-  background: #ea4a55;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.3);
-  z-index: 2;
-  transition: background-color 0.3s;
-}
-.cd-single-point > a::after, .cd-single-point > a:before {
-  /* rotating plus icon */
-  content: '';
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  bottom: auto;
-  right: auto;
-  transform: translateX(-50%) translateY(-50%);
-  background-color: #ffffff;
-  transition: transform 0.3s;
-}
-.cd-single-point > a::after {
-  height: 2px;
-  width: 12px;
-}
-.cd-single-point > a::before {
-  height: 12px;
-  width: 2px;
-}
-.cd-single-point::after {
-  /* this is used to create the pulse animation */
-  content: '';
-  position: absolute;
-  z-index: 1;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  border-radius: inherit;
-  background-color: transparent;
-}
-.cd-single-point:nth-of-type(1) {
-    right: 6.2%;
-    top: 26%;
-}
-.cd-single-point:nth-of-type(2) {
-  right: 6.2%;
-    top: 9%;
-}
-.cd-single-point:nth-of-type(3) {
-  left: 48%;
-    top: 36%;
-}
-.cd-single-point.is-open > a {
-  background-color: #03d5c9;
-}
-.cd-single-point.is-open > a::after, .cd-single-point.is-open > a::before {
-  transform: translateX(-50%) translateY(-50%) rotate(135deg);
-}
-.cd-single-point.is-open .cd-more-info {
-  visibility: visible;
-  opacity: 1;
-  transform: scale(1);
-  transition: opacity 0.3s 0s, visibility 0s 0s, transform 0.3s 0s, top 0.3s 0s, bottom 0.3s 0s, left 0.3s 0s, right 0.3s 0s;
-}
-.cd-single-point.visited > a {
-  background-color: #03d5c9;
-}
-.cd-single-point.visited::after {
-  /* pulse effect no more active on visited elements */
-  display: none;
-}
-@media only screen and (min-width: 480px) {
-  .cd-single-point.is-open .cd-more-info.cd-left {
-    right: 140%;
-  }
-  .cd-single-point.is-open .cd-more-info.cd-right {
-    left: 140%;
-  }
-  .cd-single-point.is-open .cd-more-info.cd-top {
-    bottom: 140%;
-  }
-  .cd-single-point.is-open .cd-more-info.cd-bottom {
-    top: 140%;
-  }
-}
-@media only screen and (min-width: 1170px) {
-  .cd-single-point {
+  @include breakpoint($desktop) {
     transform: scale(0);
   }
-  .cd-single-point::after {
-    animation: none;
+  &:after {
+    /* this is used to create the pulse animation */
+    content: '';
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: inherit;
+    background-color: transparent;
+    @include breakpoint($desktop) {
+      animation: none;
+    }
   }
-  .points-enlarged .cd-single-point {
+  &:nth-of-type(1) {
+    right: 6.2%;
+    top: 26%;
+  }
+  &:nth-of-type(2) {
+    right: 6.2%;
+    top: 9%;
+  }
+  &:nth-of-type(3) {
+    left: 48%;
+    top: 36%;
+  }
+  > a {
+    position: relative;
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-radius: inherit;
+    background: #ea4a55;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.3);
+    z-index: 2;
+    transition: background-color 0.3s;
+    &:after, &:before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      bottom: auto;
+      right: auto;
+      transform: translateX(-50%) translateY(-50%);
+      background-color: #ffffff;
+      transition: transform 0.3s;
+    }
+    &:after {
+      height: 2px;
+      width: 12px;
+    }
+    &:before {
+      height: 12px;
+      width: 2px;
+    }
+  }
+  &.is-open {
+    > a {
+      background-color: #03d5c9;
+      &:after, &:before {
+        transform: translateX(-50%) translateY(-50%) rotate(135deg);
+      }
+    }
+    .cd-more-info {
+      visibility: visible;
+      opacity: 1;
+      transform: scale(1);
+      transition: opacity 0.3s 0s, visibility 0s 0s, transform 0.3s 0s, top 0.3s 0s, bottom 0.3s 0s, left 0.3s 0s, right 0.3s 0s;
+    }
+    .cd-more-info.cd-left {
+      @include breakpoint($mobile) {
+        right: 140%;
+      }
+    }
+    .cd-more-info.cd-right {
+      @include breakpoint($mobile) {
+        left: 140%;
+      }
+    }
+   .cd-more-info.cd-top {
+      @include breakpoint($mobile) {
+        bottom: 140%;
+      }
+    }
+    .cd-more-info.cd-bottom {
+      @include breakpoint($mobile) {
+        top: 140%;
+      }
+    }
+  }
+  .cd-more-info {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    text-align: left;
+    line-height: 1.5;
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 2em 1em 1em;
+    visibility: hidden;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: opacity 0.3s 0s, visibility 0s 0.3s, transform 0.3s 0s, top 0.3s 0s, bottom 0.3s 0s, left 0.3s 0s, right 0.3s 0s;
+    @include breakpoint($mobile) {
+      position: absolute;
+      width: 220px;
+      height: 240px;
+      padding: 1em;
+      overflow-y: visible;
+      line-height: 1.4;
+      border-radius: .25em;
+      box-shadow: 0 0 20px rgba(61, 56, 90, 0.3);
+    }
+    &:before {
+      content: '';
+      position: absolute;
+      height: 0;
+      width: 0;
+      display: none;
+      border: 8px solid transparent;
+      @include breakpoint($mobile) {
+        display: block;  
+      }
+    }
+    &.cd-left, &.cd-right {
+      @include breakpoint($mobile) {
+        top: 50%;
+        bottom: auto;
+        transform: translateY(-50%);
+        &:before {
+          top: 50%;
+          bottom: auto;
+          transform: translateY(-50%);
+        }
+      }
+    }
+    &.cd-left {
+      @include breakpoint($mobile) {
+        right: 160%;
+        left: auto;
+      }
+      &:before {
+        @include breakpoint($mobile) {
+          border-left-color: rgba(255, 255, 255, 0.95);
+          left: 100%;
+        }
+      }
+    }
+    &.cd-right {
+      @include breakpoint($mobile) {
+        left: 160%;
+      }
+      &:before {
+        @include breakpoint($mobile) {
+          border-right-color: rgba(255, 255, 255, 0.95);
+          right: 100%;
+        }
+      }
+    }
+  }
+}
+
+.points-enlarged .cd-single-point {
+  @include breakpoint($desktop) {
     transform: scale(1);
     animation: cd-bounce 0.4s;
   }
 }
 
-.no-csstransforms3d .cd-single-point {
-  transform: scale(1);
+.cd-close-info {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 44px;
+  width: 44px;
+  @include breakpoint($mobile) {
+    display: none;
+  }
+  &:after, &:before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    bottom: auto;
+    right: auto;
+    background-color: #ea4a55;
+    transform: translateX(-50%) translateY(-50%) rotate(45deg);
+    transition-property: transform 0.2s;
+  }
+  &:after {
+    height: 2px;
+    width: 16px;
+  }
+  &:before {
+    height: 16px;
+    width: 2px;
+  }
 }
+
+
+
+// MOCKUP ANIMATIONS
 
 @-webkit-keyframes cd-bounce {
   0% {
@@ -370,146 +465,5 @@
   }
   100% {
     transform: scale(1);
-  }
-}
-
-.cd-single-point .cd-more-info {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 3;
-  width: 100%;
-  height: 100%;
-  overflow-y: auto;
-  -webkit-overflow-scrolling: touch;
-  text-align: left;
-  line-height: 1.5;
-  background-color: rgba(255, 255, 255, 0.95);
-  padding: 2em 1em 1em;
-  visibility: hidden;
-  opacity: 0;
-  transform: scale(0.8);
-  transition: opacity 0.3s 0s, visibility 0s 0.3s, transform 0.3s 0s, top 0.3s 0s, bottom 0.3s 0s, left 0.3s 0s, right 0.3s 0s;
-}
-.cd-single-point .cd-more-info::before {
-  /* triangle next to the interest point description - hidden on mobile */
-  content: '';
-  position: absolute;
-  height: 0;
-  width: 0;
-  display: none;
-  border: 8px solid transparent;
-}
-.cd-single-point .cd-more-info h2 {
-  font-size: 2.2rem;
-  font-family: "PT Sans", sans-serif;
-  font-weight: bold;
-  margin-bottom: .6em;
-}
-.cd-single-point .cd-more-info p {
-  color: #3d385a;
-}
-@media only screen and (min-width: 480px) {
-  .cd-single-point .cd-more-info {
-    position: absolute;
-    width: 220px;
-    height: 240px;
-    padding: 1em;
-    overflow-y: visible;
-    line-height: 1.4;
-    border-radius: .25em;
-    box-shadow: 0 0 20px rgba(61, 56, 90, 0.3);
-  }
-  .cd-single-point .cd-more-info::before {
-    display: block;
-  }
-  .cd-single-point .cd-more-info.cd-left, .cd-single-point .cd-more-info.cd-right {
-    top: 50%;
-    bottom: auto;
-    transform: translateY(-50%);
-  }
-  .cd-single-point .cd-more-info.cd-left::before, .cd-single-point .cd-more-info.cd-right::before {
-    top: 50%;
-    bottom: auto;
-    transform: translateY(-50%);
-  }
-  .cd-single-point .cd-more-info.cd-left {
-    right: 160%;
-    left: auto;
-  }
-  .cd-single-point .cd-more-info.cd-left::before {
-    border-left-color: rgba(255, 255, 255, 0.95);
-    left: 100%;
-  }
-  .cd-single-point .cd-more-info.cd-right {
-    left: 160%;
-  }
-  .cd-single-point .cd-more-info.cd-right::before {
-    border-right-color: rgba(255, 255, 255, 0.95);
-    right: 100%;
-  }
-  .cd-single-point .cd-more-info.cd-top, .cd-single-point .cd-more-info.cd-bottom {
-    left: 50%;
-    right: auto;
-    transform: translateX(-50%);
-  }
-  .cd-single-point .cd-more-info.cd-top::before, .cd-single-point .cd-more-info.cd-bottom::before {
-    left: 50%;
-    right: auto;
-    transform: translateX(-50%);
-  }
-  .cd-single-point .cd-more-info.cd-top {
-    bottom: 160%;
-    top: auto;
-  }
-  .cd-single-point .cd-more-info.cd-top::before {
-    border-top-color: rgba(255, 255, 255, 0.95);
-    top: 100%;
-  }
-  .cd-single-point .cd-more-info.cd-bottom {
-    top: 160%;
-  }
-  .cd-single-point .cd-more-info.cd-bottom::before {
-    border-bottom-color: rgba(255, 255, 255, 0.95);
-    bottom: 100%;
-  }
-  .cd-single-point .cd-more-info h2 {
-    margin-bottom: 0;
-  }
-  .cd-single-point .cd-more-info p {
-    font-size: 1.3rem;
-  }
-}
-
-.cd-close-info {
-  /* close the interest point description - only on mobile */
-  position: fixed;
-  top: 0;
-  right: 0;
-  height: 44px;
-  width: 44px;
-}
-.cd-close-info::after, .cd-close-info:before {
-  content: '';
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  bottom: auto;
-  right: auto;
-  background-color: #ea4a55;
-  transform: translateX(-50%) translateY(-50%) rotate(45deg);
-  transition-property: transform 0.2s;
-}
-.cd-close-info::after {
-  height: 2px;
-  width: 16px;
-}
-.cd-close-info::before {
-  height: 16px;
-  width: 2px;
-}
-@media only screen and (min-width: 480px) {
-  .cd-close-info {
-    display: none;
   }
 }
