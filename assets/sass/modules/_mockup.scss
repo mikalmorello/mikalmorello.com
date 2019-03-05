@@ -1,7 +1,6 @@
 /* MOCKUP */
 /*
 - MOCKUP
-- MOCKUP ANIMATIONS
 */
 
 
@@ -67,227 +66,137 @@
     text-indent: 100%;
     white-space: nowrap;
   }
-}
-
-
-// REPLACE 
-
-
-
-.mockup__container {
-  position: relative;
-  width: 90%;
-  max-width: 1170px;
-  margin: 0 auto;
-  @include breakpoint($desktop) {
-    padding-top: 100px;
-    height: 100vh;
-  }
-  &.mockup__container--open{
+  &__container {
+    position: relative;
+    width: 90%;
+    max-width: 1170px;
+    margin: 0 auto;
     @include breakpoint($desktop) {
-      height: auto;
-      padding-bottom: 100px;
+      padding-top: 100px;
+      height: 100vh;
+    }
+    &.mockup__container--open{
+      @include breakpoint($desktop) {
+        height: auto;
+        padding-bottom: 100px;
+      }
     }
   }
-}
-
-
-.mockup__intro {
-  padding: 50px 0;
-  text-align: center;
-  @include breakpoint($desktop) {
-    transform: translateZ(0);
-    backface-visibility: hidden;
-    position: absolute;
-    top: 200px;
-    left: 0;
-    width: 50%;
-    padding: 0;
-    text-align: left;
-    transition: transform 0.6s, opacity 0.6s;
-  }
-  &:before {
-    /* never visible - this is used in jQuery to check the current MQ */
-    content: 'mobile';
-    display: none;
+  &__intro {
+    padding: 50px 0;
+    text-align: center;
     @include breakpoint($desktop) {
-      /* never visible - this is used in jQuery to check the current MQ */
-      content: 'desktop';
-    }
-  }
-}
-
-.mockup__container--open .mockup__intro {
-  @include breakpoint($desktop) {
-    opacity: 0;
-    transform: translateX(-50%);
-  }
-}
-
-.mockup__image {
-  width: 90%;
-  max-width: 450px;
-  margin: 0 auto 50px;
-  position: relative;
-  @include breakpoint($desktop) {
-    margin-bottom: 0;
-    transform: translateZ(0);
-    backface-visibility: hidden;
-    transform-style: preserve-3d;
-    transform-origin: center top;
-    transform: rotateX(-60deg) rotateZ(-40deg) translateX(50px) translateY(300px);
-    transition: transform 0.6s;
-  }
-  &:before {
-    @include breakpoint($desktop) {
-      display: block;
-      content: '';
+      transform: translateZ(0);
+      backface-visibility: hidden;
       position: absolute;
-      top: 0;
+      top: 200px;
       left: 0;
-      width: 0;
-      /* play with these values to create a realistic shadow */
-      height: 45%;
-      box-shadow: 0px 0px 30px 225px rgba(0, 0, 0, 0.1);
-      transform: translateZ(-100px) translateY(480px);
+      width: 50%;
+      padding: 0;
+      text-align: left;
+      transition: transform 0.6s, opacity 0.6s;
+    }
+    &:before {
+      display: none;
+    }
+  }
+  &__container--open .mockup__intro {
+    @include breakpoint($desktop) {
+      opacity: 0;
+      transform: translateX(-50%);
+    }
+  }
+  &__image {
+    width: 90%;
+    max-width: 450px;
+    margin: 0 auto 50px;
+    position: relative;
+    @include breakpoint($desktop) {
+      margin-bottom: 0;
+      transform: translateZ(0);
+      backface-visibility: hidden;
+      transform-style: preserve-3d;
+      transform-origin: center top;
+      transform: rotateX(-60deg) rotateZ(-40deg) translateX(50px) translateY(300px);
       transition: transform 0.6s;
     }
-  }
-  img {
-    display: block;
-    position: relative;
-    outline: 1px solid transparent;
-  }
-}
-
-.mockup__container--open .mockup__image {
-  @include breakpoint($desktop) {
-    transform: translateX(0);
-  }
-  &:before {
-    @include breakpoint($desktop) {
-      transform: translateZ(-100px) translateX(226px) translateY(216px);
+    &:before {
+      @include breakpoint($desktop) {
+        display: block;
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 0;
+        /* play with these values to create a realistic shadow */
+        height: 45%;
+        box-shadow: 0px 0px 30px 225px rgba(0, 0, 0, 0.1);
+        transform: translateZ(-100px) translateY(480px);
+        transition: transform 0.6s;
+      }
+    }
+    img {
+      display: block;
+      position: relative;
+      outline: 1px solid transparent;
     }
   }
-}
-
-.mockup__image-right, .mockup__image-left{
-  display: none;
-  @include breakpoint($desktop) {
-    display: block;
-    position: absolute;
-    left: 0;
-    background-image: url(/assets/images/cd-app-image.png);
-    outline: 1px solid transparent;
-  }
-  &:after {
+  &__container--open .mockup__image {
     @include breakpoint($desktop) {
-      content: '';
+      transform: translateX(0);
+    }
+    &:before {
+      @include breakpoint($desktop) {
+        transform: translateZ(-100px) translateX(226px) translateY(216px);
+      }
+    }
+  }
+  &__image-right, .mockup__image-left{
+    display: none;
+    @include breakpoint($desktop) {
       display: block;
       position: absolute;
-      top: 0;
       left: 0;
-      width: 100%;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.2);
+      background-image: url(/assets/images/cd-app-image.png);
+      outline: 1px solid transparent;
+    }
+    &:after {
+      @include breakpoint($desktop) {
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.2);
+      }
     }
   }
-}
-
-.mockup__image-right {
-  @include breakpoint($desktop) {
-    top: -1px;
-    width: 10px;
-    height: 100%;
-    background-size: auto 100%;
-    transform-origin: left center;
-    transform: translateZ(-1px) translateY(1px) rotateY(-90deg);
-  }
-}
-
-.mockup__image-left {
-  @include breakpoint($desktop) {
-    bottom: 0;
-    width: 100%;
-    height: 10px;
-    background-position: bottom center;
-    background-size: 100% auto;
-    transform-origin: center bottom;
-    transform: translateZ(-1px) rotateX(-90deg);
-  }
-  &:after {
+  &__image-right {
     @include breakpoint($desktop) {
-      background-color: rgba(0, 0, 0, 0.4);
+      top: -1px;
+      width: 10px;
+      height: 100%;
+      background-size: auto 100%;
+      transform-origin: left center;
+      transform: translateZ(-1px) translateY(1px) rotateY(-90deg);
     }
   }
-}
-
-
-
-.cd-close-info {
-  position: fixed;
-  top: 0;
-  right: 0;
-  height: 44px;
-  width: 44px;
-  @include breakpoint($mobile) {
-    display: none;
-  }
-  &:after, &:before {
-    content: '';
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    bottom: auto;
-    right: auto;
-    background-color: #ea4a55;
-    transform: translateX(-50%) translateY(-50%) rotate(45deg);
-    transition-property: transform 0.2s;
-  }
-  &:after {
-    height: 2px;
-    width: 16px;
-  }
-  &:before {
-    height: 16px;
-    width: 2px;
-  }
-}
-
-
-
-// MOCKUP ANIMATIONS
-
-@-webkit-keyframes cd-bounce {
-  0% {
-    -webkit-transform: scale(0);
-  }
-  60% {
-    -webkit-transform: scale(1.2);
-  }
-  100% {
-    -webkit-transform: scale(1);
-  }
-}
-@-moz-keyframes cd-bounce {
-  0% {
-    -moz-transform: scale(0);
-  }
-  60% {
-    -moz-transform: scale(1.2);
-  }
-  100% {
-    -moz-transform: scale(1);
-  }
-}
-@keyframes cd-bounce {
-  0% {
-    transform: scale(0);
-  }
-  60% {
-    transform: scale(1.2);
-  }
-  100% {
-    transform: scale(1);
+  &__image-left {
+    @include breakpoint($desktop) {
+      bottom: 0;
+      width: 100%;
+      height: 10px;
+      background-position: bottom center;
+      background-size: 100% auto;
+      transform-origin: center bottom;
+      transform: translateZ(-1px) rotateX(-90deg);
+    }
+    &:after {
+      @include breakpoint($desktop) {
+        background-color: rgba(0, 0, 0, 0.4);
+      }
+    }
   }
 }

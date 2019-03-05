@@ -148,7 +148,7 @@
     </section>
     <section class="section section--mockup project__section fadein">
       <div class="mockup">
-        <div class="mockup__container">
+        <div id="mockupContainer"  class="mockup__container">
           <div class="mockup__intro">
 			<h1 class="mockup__title">Boston College Prototype Example</h1>
 			<div class="mockup__description">
@@ -160,10 +160,10 @@
           </div>
           <div id="infoOverlay" class="mockup__image">
             <img src="/assets/images/cd-app-image.png" alt="Preview image">
-            <div class="cd-3d-right-side"></div>
-            <div class="cd-3d-bottom-side"></div>
+            <div class="mockup__image-right"></div>
+            <div class="mockup__image-left"></div>
           </div> 
-          <a href="#0" class="mockup__close-button mockup__hide-text"></a>
+          <a href="#0" id="mockupCloseButton" class="mockup__close-button mockup__hide-text"></a>
         </div>
       </div>
     </section>
@@ -247,7 +247,6 @@
     <script src="assets/js/scroll.js"></script>
     <script src="assets/js/main.js"></script>
     <script src="assets/js/horizontal-scroll.js"></script>
-    <script src="assets/js/jquery-2.1.1.js"></script>
     <script src="assets/js/mockup.js"></script>
   </body>
 </html>
