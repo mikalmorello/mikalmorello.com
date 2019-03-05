@@ -8,6 +8,7 @@
 - MEDIA CARDS
 - MEDIA & TEXT
 - MEDIA & TEXT STATES
+- MEDIA RESPONSIVE
 */
 
 
@@ -20,7 +21,8 @@
 // MEDIA BLOCK STATES
 
 .media-block--fullwidth {
-  min-width: $container-max;
+  max-width: 100%;
+  width: $container-max;
 }
 
 
@@ -244,9 +246,6 @@
   &__description {
     @include body-text;  
   }
-  &__content {
-    max-width: $container-normal;
-  }
 }
 
 
@@ -278,6 +277,36 @@
     }
     &__media {
       order: 1;
+    }
+  }
+}
+
+
+// MEDIA RESPONSIVE
+
+.media-responsive {
+  @include layout-container;
+  align-items:center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  &__container {
+    @include layout-vertical-padding($padding-large-size);
+    border-bottom: 3px solid $gray;
+    display: flex;
+    flex-direction: row;
+    max-height: 50rem;
+    max-width: $container-wide;
+    overflow: hidden;
+  }
+  &__media {
+    margin: 0 1.5rem;
+    &:first-child {
+      margin-left: 0;
+    }
+    &:last-child {
+      margin-right: 0;
     }
   }
 }

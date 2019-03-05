@@ -50,6 +50,7 @@
   }
   &__item-label {
     @include header-title-small(uppercase);
+    margin-top: $padding-standard-size;
     text-align: center;
   }
 }
