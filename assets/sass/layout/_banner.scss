@@ -29,6 +29,7 @@
         background: $theme-offwhite;
         display: flex;
         order: 1;
+        transition: all .75s ease, background-color 0.5s ease;
       }
       &__content {
         align-items: center;
@@ -38,6 +39,7 @@
         justify-content: center;
         padding-bottom: $padding-navigation-desktop;
         padding-top: $padding-navigation-desktop; 
+        width: calc(50vw - 4rem);
       }
       &__header {
         display: flex;
@@ -45,7 +47,7 @@
         flex-grow: 1;
         justify-content: center;
         margin-top: 5.625rem;
-        max-width: 80%;
+        max-width: 40vw;
       }
       &__title {
 
@@ -61,13 +63,16 @@
           &:hover {
             text-decoration: underline;
           }
+          &.button--active {
+            text-decoration: underline;
+          }
         }
       }
       &__subtitle {
         @include header-subtitle;
-        display: block;
-        &--hidden {
-          visibility: hidden;
+        display: none;
+        &--active {
+          display: block;
         }
         a {
           @include link-dark-underline;
@@ -76,7 +81,7 @@
       &__link {
         @include standalone-link(uppercase);
         @include layout-vertical-padding($vertical-padding-large);
-        width: 80%;
+        width: 40vw;
         a {
           @include link-dark-underline;
           padding-bottom: $link-padding;
@@ -101,6 +106,7 @@
         box-shadow: inset 8px 0 20px -8px rgba(68, 68, 68, 0.6);
         display: flex;
         order:2;
+        transition: all .75s ease, background-color 0.5s ease;
       }
   
   }
@@ -110,23 +116,41 @@
 // BANNER STATES
 
 .banner--designer {
-  .banner__introduction {
-    background-color: $theme-green;
-    color: $white;
+  .banner {
+    &__introduction {
+      @include layout-width(100%);
+      background-color: $theme-green;
+      color: $white;
+    }
+    &__media {
+      @include layout-width(100%);
+    }
   }
 }
 
 .banner--developer {
-  .banner__introduction {
-    background-color: $theme-light-blue;
-    color: $type-dark;
+  .banner {
+    &__introduction {
+      @include layout-width(100%);
+      background-color: $theme-light-blue;
+      color: $type-dark;
+    }
+    &__media {
+      @include layout-width(100%);
+    }
   }
 }
 
 .banner--strategist {
-  .banner__introduction {
-    background-color: $theme-blue;
-    color: $white;
+  .banner {
+    &__introduction {
+      @include layout-width(100%);
+      background-color: $theme-blue;
+      color: $white;
+    }
+    &__media {
+      @include layout-width(100%);
+    }
   }
 }
 

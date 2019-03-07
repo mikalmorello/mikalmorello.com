@@ -21,6 +21,9 @@ body {
   &--overflow-hidden {
     overflow: hidden;
   }
+  &--contact {
+    background: $theme-light-green;
+  }
 }
 
 

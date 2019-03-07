@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="assets/css/mikal-morello.css">
     <link href="https://fonts.googleapis.com/css?family=Lato:300,400,600,700|Oswald:300,400,500" rel="stylesheet">
   </head>
-  <body class="body">
+  <body class="body body--home">
     <!-- HEADER -->
     <header id="header" class="header">
       <div class="header__container">
@@ -50,8 +50,14 @@
                 <button class="banner__button banner__button--designer">Designer</button>, <button class="banner__button banner__button--developer">developer</button>, and <button class="banner__button banner__button--strategist">digital strategist</button>.
               </span>
             </h1>
-            <h2 class="banner__subtitle">
-              It is a long established fact that a reader will be distracted by the readable <a href="">content link</a>.
+            <h2 id="subtitleDesigner" class="banner__subtitle banner__subtitle--designer">
+              Designer - It is a long established fact that a reader will be distracted by the readable <a href="">content link</a>.
+            </h2>
+            <h2 id="subtitleDeveloper" class="banner__subtitle banner__subtitle--developer">
+              Developer - It is a long established fact that a reader will be distracted by the readable <a href="">content link</a>.
+            </h2>
+            <h2 id="subtitleStrategist" class="banner__subtitle banner__subtitle--strategist">
+              Strategist - It is a long established fact that a reader will be distracted by the readable <a href="">content link</a>.
             </h2>
           </div>
           <div class="banner__link">
@@ -59,7 +65,9 @@
           </div>
         </div>
         <div class="banner__portrait">
-          <img src="/assets/images/banner-portrait.png" />
+          <button id="bannerPortrait">
+            <img src="/assets/images/banner-portrait.png" alt="Mikal Morello"/>
+          </button>
         </div>
       </div>
       <div class="banner__media">
