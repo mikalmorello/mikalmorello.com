@@ -9,7 +9,7 @@
 
 .main-menu { 
   align-items: center;
-  background-position: bottom center;
+  background-position: bottom -10rem center;
   background-repeat: repeat-x;
   backface-visibility: hidden;
   background-color: rgba($theme-blue,0.99);
@@ -29,9 +29,16 @@
   width: 100%;
   -webkit-overflow-scrolling: touch;
   z-index: $z-index-main-menu;
+  @include breakpoint($tablet) {
+    background-position: bottom center;
+  }
   &__links {
-    @include list-vertical($padding-standard-size);
-    margin-bottom: 9rem;
+    @include list-vertical($padding-small-size);
+    margin: 0;
+    @include breakpoint($tablet) {
+      @include list-vertical($padding-standard-size);
+      margin-bottom: 9rem;
+    }
   }
   &__link {
     @include main-menu-text;

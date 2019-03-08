@@ -20,98 +20,131 @@
 // BANNER SPLIT
 
 .banner--split {
-  @include layout-fullscreen;
+  flex-direction: column;
+  min-height: 150vh;
+  width: 100vw;
+  @include breakpoint($tablet-large) {
+    @include layout-fullscreen;
+    flex-direction: row;
+  }
   .banner {
     &__introduction {
+      @include layout-container();
+      align-items: center;
+      background: $theme-offwhite;
+      display: flex;
+      flex-direction: column;
+      min-height: 75vh;
+      order: 1;
+      transition: background-color .5s ease-out, height 0.75s ease-out;
+      @include breakpoint($tablet-large) {
         @include layout-width(50%);
-        @include layout-container();
-        align-items: center;
-        background: $theme-offwhite;
-        display: flex;
-        order: 1;
+        flex-direction: row;
+        height: 100vh;
         transition: background-color .5s ease-out, max-width 0.75s ease-out, width 0.75s ease-out, min-width 0.75s ease;
       }
-      &__content {
-        align-items: center;
-        display: flex;
-        flex-direction: column;
+    }
+    &__content {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      min-height: 75vh; 
+      padding-bottom: $padding-navigation-desktop;
+      padding-top: $padding-navigation-desktop; 
+      @include breakpoint($tablet-large) {
         min-height: 100vh;
-        justify-content: center;
-        padding-bottom: $padding-navigation-desktop;
-        padding-top: $padding-navigation-desktop; 
         width: calc(50vw - 4rem);
       }
-      &__header {
-        display: flex;
-        flex-direction: column;
-        flex-grow: 1;
-        //justify-content: center;
-        //margin-top: 5.625rem;
+    }
+    &__header {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      margin-bottom: 5rem;
+      //margin-top: 10vh;
+      max-width: 80vw;
+      @include breakpoint($tablet-large) {
+        margin-bottom: 0;
         margin-top: 25vh;
         max-width: 40vw;
       }
-      &__title {
+    }
+    &__title {
 
+    }
+    &__title-small {
+      @include header-title-small;
+    }
+    &__title-large {
+      @include header-title;
+      display: block;
+      button {
+        text-decoration: none;
+        &:hover {
+          text-decoration: underline;
+        }
+        &.button--active {
+          text-decoration: underline;
+        }
       }
-      &__title-small {
-        @include header-title-small;
-      }
-      &__title-large {
-        @include header-title;
+    }
+    &__subtitle {
+      @include header-subtitle;
+      display: none;
+      margin-top: $padding-small-size;
+      &--active {
         display: block;
-        button {
-          text-decoration: none;
-          &:hover {
-            text-decoration: underline;
-          }
-          &.button--active {
-            text-decoration: underline;
-          }
-        }
       }
-      &__subtitle {
-        @include header-subtitle;
-        display: none;
-        &--active {
-          display: block;
-        }
-        a {
-          @include link-dark-underline;
-        }
+      a {
+        @include link-dark-underline;
       }
-      &__link {
-        @include standalone-link(uppercase);
-        //@include layout-vertical-padding($vertical-padding-large);
+    }
+    &__link {
+      @include standalone-link(uppercase);
+      //@include layout-vertical-padding($vertical-padding-large);
+      width: 80vw;
+      @include breakpoint($tablet-large) {
         width: 40vw;
-        a {
-          @include link-dark-underline;
-          padding-bottom: $link-padding;
-        }
       }
-      &__portrait {
-        bottom: 0;
-        display: flex;
-        justify-content: flex-end;
-        position: absolute;
+      a {
+        @include link-dark-underline;
+        padding-bottom: $link-padding;
+      }
+    }
+    &__portrait {
+      align-content: flex-end;
+      bottom: 0;
+      display: flex;
+      max-height: 75vh; 
+      position: absolute;
+      width: 100%;
+      @include breakpoint($tablet-large) {
+        justify-content: center;
+        height: auto;
         right: 0;
-        //height: 100vh;
         width:50vw;
-        img {
-          object-fit: contain; 
-          vertical-align: bottom;
-        }
       }
-      &__media {
+      img {
+        object-fit: contain; 
+        vertical-align: bottom;
+      }
+    }
+    &__media {
+      background-image: url(/assets/images/banner-background.jpg);
+      background-size: cover;
+      background-position: center center;
+      box-shadow: inset 8px 0 20px -8px rgba(68, 68, 68, 0.6);
+      display: flex;
+      height: 75vh;
+      order:2;
+      transition: height 0.75s ease-out;
+      @include breakpoint($tablet-large) {
+        height: 100vh;
         @include layout-width(50%);
-        background-image: url(/assets/images/banner-background.jpg);
-        background-size: cover;
-        background-position: center center;
-        box-shadow: inset 8px 0 20px -8px rgba(68, 68, 68, 0.6);
-        display: flex;
-        order:2;
         transition: max-width 0.75s ease-out, width 0.75s ease-out, min-width 0.75s ease-out;
       }
-  
+    }
   }
 }
 
@@ -121,9 +154,14 @@
 .banner--designer {
   .banner {
     &__introduction {
-      @include layout-width(100%);
       background-color: $theme-green;
       color: $white;
+      height: 150vh;
+      @include breakpoint($tablet-large) {
+        @include layout-width(100%);
+        height: 100vh;
+        padding-bottom: 0;
+      }
     }
     &__subtitle {
       a {
@@ -136,7 +174,11 @@
       }
     }
     &__media {
-      @include layout-width(100%);
+      height: 0;
+      @include breakpoint($tablet-large) {
+        @include layout-width(100%);
+        height: 100vh;
+      }
     }
   }
 }
@@ -144,9 +186,14 @@
 .banner--developer {
   .banner {
     &__introduction {
-      @include layout-width(100%);
       background-color: $theme-light-blue;
       color: $type-dark;
+      height: 150vh;
+      @include breakpoint($tablet-large) {
+        @include layout-width(100%);
+        height: 100vh;
+        padding-bottom: 0;
+      }
     }
     &__subtitle {
       a {
@@ -159,7 +206,11 @@
       }
     }
     &__media {
-      @include layout-width(100%);
+      height: 0;
+      @include breakpoint($tablet-large) {
+        @include layout-width(100%);
+        height: 100vh;
+      }
     }
   }
 }
@@ -167,9 +218,14 @@
 .banner--strategist {
   .banner {
     &__introduction {
-      @include layout-width(100%);
       background-color: $theme-blue;
       color: $white;
+      height: 150vh;
+      @include breakpoint($tablet-large) {
+        @include layout-width(100%);
+        height: 100vh;
+        padding-bottom: 0;
+      }
     }
     &__subtitle {
       a {
@@ -182,7 +238,11 @@
       }
     }
     &__media {
-      @include layout-width(100%);
+      height: 0;
+      @include breakpoint($tablet-large) {
+        @include layout-width(100%);
+        height: 100vh;
+      }
     }
   }
 }
@@ -200,12 +260,15 @@
   justify-content: center;
   .banner {
     &__container {
-      @include container-wide;
       align-items: center;
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
       padding-bottom: $padding-navigation-desktop;
       padding-top: $padding-navigation-desktop;
+      @include breakpoint($tablet-large) {
+        @include container-wide;
+        flex-direction: row;
+      }
     }
     &__content {
       @include layout-width(50%);
@@ -213,12 +276,25 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
+      margin-top: -50vh;
+      order: 2;
+      @include breakpoint($tablet-large) {
+        margin-top: 0;
+        order: 1;
+      }
     }
     &__content-container {
+      @include container-wide;
       @include layout-width(26.25rem);
+      background: $theme-light-green;
       display: flex;
       flex-direction: column;
       justify-content: center;
+      padding-top: $padding-medium-size;
+      @include breakpoint($tablet-large) {
+        background: inherit;
+        padding-top: 0;
+      }
     }
     &__form {
       display: flex;
@@ -238,8 +314,12 @@
       margin-bottom: 2rem;
     }
     &__media {
-      @include layout-width(50%);
       display: flex;
+      order: 1;
+      @include breakpoint($tablet-large) {
+        @include layout-width(50%);
+        order: 2;
+      }
       img {
         object-fit: none;
         object-position: 0 150%;

@@ -86,27 +86,39 @@
 
 @mixin container-extra-small(){
   @include layout-container();
-  width: $container-extra-small;
+  width: 100%;
+  @include breakpoint($tablet) {
+    width: $container-extra-small;
+  }
 }
 
 // CONTAINER SMALL
 
 @mixin container-small(){
   @include layout-container();
-  width: $container-small;
+  width: 100%;
+  @include breakpoint($tablet-large) {
+    width: $container-small;
+  }
 }
 
 // CONTAINER NORMAL
 
 @mixin container-normal(){
   @include layout-container();
-  width: $container-normal;
+  width: 100%;
+  @include breakpoint($tablet-large) {
+    width: $container-normal;
+  }
 }
 
 // CONTAINER WIDE
 @mixin container-wide(){
   @include layout-container();
-  width: $container-wide;
+  width: 100%;
+  @include breakpoint($desktop) {
+    width: $container-wide;
+  }
   
 }
 
@@ -128,30 +140,46 @@
 
 @mixin header-title ($text-transform:"inherit"){
   font-family: $oswald;
-  font-size: $title-large;
+  font-size: 2.95rem;
   font-weight: $font-weight-medium;
   line-height: $line-height-standard;
   text-transform: $text-transform;
+  @include breakpoint($tablet-large) {
+    font-size: 3.5rem;
+  }
+  @include breakpoint($desktop) {
+    font-size: $title-large;
+  }
 }
 
 // TYPOGRAPHY -- TITLE SMALL
 
 @mixin header-title-small ($text-transform:"inherit"){
   font-family: $lato;
-  font-size: $title-small;
+  font-size: $text-medium;
   font-weight: $font-weight-semi-bold;
   line-height: $line-height-standard;
   text-transform: $text-transform;
+  @include breakpoint($tablet-large) {
+    font-size: $title-small;
+  }
+  
 }
 
 // TYPOGRAPHY -- SUBTITLE
 
 @mixin header-subtitle ($text-transform:inherit){
   font-family: $oswald;
-  font-size: $subtitle-large;
+  font-size: 1.5rem;
   font-weight: $font-weight-light;
   line-height: $line-height-standard;
   text-transform: $text-transform;
+  @include breakpoint($tablet-large) {
+    font-size: 2rem;
+  }
+  @include breakpoint($desktop) {
+    font-size: $subtitle-large;
+  }
 }
 
 // TYPOGRAPHY -- STANDALONE LINK
@@ -200,50 +228,70 @@
 
 @mixin contact-large-text ($text-transform:uppercase){
   font-family: $oswald;
-  font-size: $title-large;
+  font-size: 3.5rem;
   font-weight: $font-weight-medium;
-  line-height: $line-height-large;
+  line-height: $line-height-standard;
   text-transform: $text-transform;
+  @include breakpoint($tablet) {
+    font-size: $title-large;
+    line-height: $line-height-large;
+  }
 }
 
 // TYPOGRAPHY -- CONTACT SMALL TEXT
 
 @mixin contact-small-text ($text-transform:inherit){
   font-family: $oswald;
-  font-size: $title-medium;
+  font-size: $title-small;
   font-weight: $font-weight-medium;
-  line-height: $line-height-none;
+  line-height: $line-height-large;
   text-transform: $text-transform;
+  @include breakpoint($tablet) {
+    line-height: $line-height-none;
+    font-size: $title-medium;
+  }
 }
 
 // TYPOGRAPHY -- PROJECT LARGE TEXT
 
 @mixin project-large-text ($text-transform:inherit){
   font-family: $oswald;
-  font-size: $title-large;
+  font-size: 3rem;
   font-weight: $font-weight-bold;
   line-height: $line-height-large;
   text-transform: $text-transform;
+  @include breakpoint($tablet) {
+    font-size: 3.5rem;
+  }
+  @include breakpoint($desktop) {
+    font-size: $title-large;
+  }
 }
 
 // TYPOGRAPHY -- PROJECT SMALL TEXT
 
 @mixin project-small-text ($text-transform:inherit){
   font-family: $oswald;
-  font-size: $title-medium;
+  font-size: $title-small;
   font-weight: $font-weight-light;
   line-height: $line-height-large;
   text-transform: $text-transform;
+  @include breakpoint($tablet) {
+    font-size: $title-medium;
+  }
 }
 
 // TYPOGRAPHY -- MAIN MENU
 
 @mixin main-menu-text ($text-transform:uppercase){
   font-family: $oswald;
-  font-size: $title-large;
+  font-size: 3.5rem;
   font-weight: $font-weight-light;
   line-height: $line-height-large;
   text-transform: $text-transform;
+  @include breakpoint($tablet) {
+    font-size: $title-large;
+  }
 }
 
 // TYPOGRAPHY -- INPUT

@@ -46,11 +46,18 @@
   .contact-card {
     &__title {
       @include contact-large-text(uppercase);
-      letter-spacing: $letter-space-large;
+      margin-bottom: $padding-standard-size;
+      @include breakpoint($tablet) {
+        letter-spacing: $letter-space-large;
+        line-height: 1.4em;
+      }
+      
     }
     &__subtitle {
       @include contact-small-text(uppercase); 
-      letter-spacing: $letter-space-large;
+      @include breakpoint($tablet) {
+        letter-spacing: $letter-space-large;
+      }
     }
   }
 }

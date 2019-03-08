@@ -9,8 +9,10 @@
 
 .projects {
   &__container {
-    @include container-normal;
     //padding-bottom: 4rem;
+    @include breakpoint($tablet) {
+      @include container-normal;
+    }
   }
 }
 
@@ -26,6 +28,7 @@
   }
   &__content {
     @include link-dark(none);
+    @include container-normal;
     display: flex;
     flex-direction: column;
     position: relative;
@@ -33,11 +36,17 @@
   }
   &__title {
     @include project-large-text;
-    max-width: 80%;
+    max-width: 100%;
+    @include breakpoint($tablet) {
+      max-width: 80%;
+    }
   }
   &__subtitle {
     @include project-small-text;
-    max-width: 60%;
+    max-width: 100%;
+    @include breakpoint($tablet) {
+      max-width: 60%;
+    }
   }
   &__white-background {
     background-color: $white;
