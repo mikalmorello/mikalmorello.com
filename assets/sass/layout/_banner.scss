@@ -29,7 +29,7 @@
         background: $theme-offwhite;
         display: flex;
         order: 1;
-        transition: background-color .5s ease, max-width 0.75s ease, width 0.75s ease, min-width 0.75s ease;
+        transition: background-color .5s ease-out, max-width 0.75s ease-out, width 0.75s ease-out, min-width 0.75s ease;
       }
       &__content {
         align-items: center;
@@ -89,14 +89,16 @@
         }
       }
       &__portrait {
+        bottom: 0;
         display: flex;
         justify-content: flex-end;
         position: absolute;
         right: 0;
-        height: 100vh;
+        //height: 100vh;
         width:50vw;
         img {
           object-fit: contain; 
+          vertical-align: bottom;
         }
       }
       &__media {
@@ -107,7 +109,7 @@
         box-shadow: inset 8px 0 20px -8px rgba(68, 68, 68, 0.6);
         display: flex;
         order:2;
-        transition: max-width 0.75s ease, width 0.75s ease, min-width 0.75s ease;
+        transition: max-width 0.75s ease-out, width 0.75s ease-out, min-width 0.75s ease-out;
       }
   
   }

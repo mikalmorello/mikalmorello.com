@@ -22,19 +22,21 @@
     header.classList.remove('header--light', 'header--dark'),
     bannerSubtitleClear();
     bannerButtonClear();
-    this.classList.add('button--active');
     if (this.classList.contains('banner__button--designer')){ 
       banner.classList.add('banner--designer');
       subtitleDesigner.classList.add('banner__subtitle--active');
       header.classList.add('header--light');
+      this.classList.add('button--active');
     } else if (this.classList.contains('banner__button--developer')){
       banner.classList.add('banner--developer');
       subtitleDeveloper.classList.add('banner__subtitle--active');
       header.classList.add('header--dark');
+      this.classList.add('button--active');
     } else if (this.classList.contains('banner__button--strategist')) {
       banner.classList.add('banner--strategist');
       subtitleStrategist.classList.add('banner__subtitle--active');
       header.classList.add('header--light');
+      this.classList.add('button--active');
     } else {
       console.log('no match');
     }
@@ -62,10 +64,7 @@
     bannerButton[i].addEventListener("click", bannerButtonClick);
   }
   
-  bannerPortrait.addEventListener("click", function(){
-    bannerButtonClick();
-  });
+  bannerPortrait.addEventListener("click", bannerButtonClick);
   
-
    
 })();
