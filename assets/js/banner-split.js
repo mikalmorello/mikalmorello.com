@@ -4,12 +4,14 @@
   
   // VARIABLES
   
-  var bannerButton = document.getElementsByClassName('banner__button'),
+  var header = document.getElementById('header'),
+      bannerButton = document.getElementsByClassName('banner__button'),
       banner = document.getElementById('banner'),
       subtitleDesigner = document.getElementById('subtitleDesigner'),
+      bannerSubtitle = document.getElementsByClassName('banner__subtitle'),
       subtitleDeveloper = document.getElementById('subtitleDeveloper'),
-      subtitleStrategist = document.getElementById('subtitleStrategist'),
-      bannerSubtitle = document.getElementsByClassName('banner__subtitle');
+      subtitleStrategist = document.getElementById('subtitleStrategist');
+
       
   
   // FUNCTIONS
@@ -17,18 +19,22 @@
     event.preventDefault();
     console.log(this + " has been clicked");
     banner.classList.remove('banner--designer', 'banner--developer', 'banner--strategist' );
+    header.classList.remove('header--light', 'header--dark'),
     bannerSubtitleClear();
     bannerButtonClear();
     this.classList.add('button--active');
     if (this.classList.contains('banner__button--designer')){ 
       banner.classList.add('banner--designer');
       subtitleDesigner.classList.add('banner__subtitle--active');
+      header.classList.add('header--light');
     } else if (this.classList.contains('banner__button--developer')){
       banner.classList.add('banner--developer');
       subtitleDeveloper.classList.add('banner__subtitle--active');
+      header.classList.add('header--dark');
     } else if (this.classList.contains('banner__button--strategist')) {
       banner.classList.add('banner--strategist');
       subtitleStrategist.classList.add('banner__subtitle--active');
+      header.classList.add('header--light');
     } else {
       console.log('no match');
     }

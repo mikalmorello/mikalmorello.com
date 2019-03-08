@@ -29,7 +29,7 @@
         background: $theme-offwhite;
         display: flex;
         order: 1;
-        transition: all .75s ease, background-color 0.5s ease;
+        transition: background-color .5s ease, max-width 0.75s ease, width 0.75s ease, min-width 0.75s ease;
       }
       &__content {
         align-items: center;
@@ -45,8 +45,9 @@
         display: flex;
         flex-direction: column;
         flex-grow: 1;
-        justify-content: center;
-        margin-top: 5.625rem;
+        //justify-content: center;
+        //margin-top: 5.625rem;
+        margin-top: 25vh;
         max-width: 40vw;
       }
       &__title {
@@ -80,7 +81,7 @@
       }
       &__link {
         @include standalone-link(uppercase);
-        @include layout-vertical-padding($vertical-padding-large);
+        //@include layout-vertical-padding($vertical-padding-large);
         width: 40vw;
         a {
           @include link-dark-underline;
@@ -106,7 +107,7 @@
         box-shadow: inset 8px 0 20px -8px rgba(68, 68, 68, 0.6);
         display: flex;
         order:2;
-        transition: all .75s ease, background-color 0.5s ease;
+        transition: max-width 0.75s ease, width 0.75s ease, min-width 0.75s ease;
       }
   
   }
@@ -122,6 +123,16 @@
       background-color: $theme-green;
       color: $white;
     }
+    &__subtitle {
+      a {
+        @include link-light-underline;
+      }
+    }
+    &__link {
+      a {
+        @include link-light-underline;
+      }
+    }
     &__media {
       @include layout-width(100%);
     }
@@ -135,6 +146,16 @@
       background-color: $theme-light-blue;
       color: $type-dark;
     }
+    &__subtitle {
+      a {
+        @include link-dark-underline;
+      }
+    }
+    &__link {
+      a {
+        @include link-dark-underline;
+      }
+    }
     &__media {
       @include layout-width(100%);
     }
@@ -147,6 +168,16 @@
       @include layout-width(100%);
       background-color: $theme-blue;
       color: $white;
+    }
+    &__subtitle {
+      a {
+        @include link-light-underline;
+      }
+    }
+    &__link {
+      a {
+        @include link-light-underline;
+      }
     }
     &__media {
       @include layout-width(100%);
