@@ -9,7 +9,7 @@ var plumber = require('gulp-plumber');
 var cssmin = require('gulp-cssmin');
 var gulpwatch = require('gulp-watch');
 var baseimg = require('gulp-baseimg');
-var imagemin = require('gulp-imagemin');
+//var imagemin = require('gulp-imagemin');
 var svgstore = require('gulp-svgstore');
 
 
@@ -29,11 +29,11 @@ var svgstore_config = {
   opts: {
     inlineSvg: true
   },
-  imagemin: {
+  /*imagemin: {
     svgoPlugins: [
     {removeTitle: true}
     ]
-  }
+  }*/
 };
 
 gulp.task('gulp-watch', function() {
@@ -65,7 +65,7 @@ gulp.task('svgstore-sass', function() {
 // create an optimized svg sprite sheet for base
 gulp.task('svgstore', function() {
   return gulp.src(svgstore_config.src)
-    .pipe(imagemin(svgstore_config.imagemin))
+    ///.pipe(imagemin(svgstore_config.imagemin))
     .pipe(svgstore(svgstore_config.opts))
     .pipe(gulp.dest(svgstore_config.dist))
 });
