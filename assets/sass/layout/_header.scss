@@ -50,12 +50,48 @@
 // HEADER STATES
 
 .header--light {
+  .header {
+    &__logo {
+      svg {
+        fill: $white;
+      }
+    }
+    &__menu-button {
+      svg {
+        fill: $white;
+      }
+    }
+  }
 }
 
 .header--menu-light {
+  .header {
+    &__logo {
+      svg {
+        fill: $white;
+      }
+    }
+    &__menu-button {
+      svg {
+        fill: $white;
+      }
+    }
+  }
 }
 
 .header--dark {
+  .header {
+    &__logo {
+      svg {
+        fill: $black;
+      }
+    }
+    &__menu-button {
+      svg {
+        fill: $black;
+      }
+    }
+  }
 } 
 
 // Initiates when the page is scrolled, but remains hidden
