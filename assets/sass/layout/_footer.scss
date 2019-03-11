@@ -18,6 +18,12 @@
   &__brand {
   }
   &__logo {
+    display: flex;
+    height: 2.25rem;
+    width: 5.125rem;
+    svg {
+      fill: white;
+    }
   }
   &__actions {
     margin-top: 1rem;
@@ -26,7 +32,6 @@
     @include list-horizontal(1rem);
   }
   &__link {
-    
   }
   a {
     @include link-light;

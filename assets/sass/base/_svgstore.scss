@@ -1,0 +1,44 @@
+/* SVG STORE */
+/* automatically generated from svgstore-sass task template */
+
+// GENERAL STYLES
+
+.svgstore {
+  display: block;
+  height: 0;
+  pointer-events: none;
+  position: relative;
+  width: 100%;
+  //.svgstore svg
+  svg {
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+  }
+}
+
+.svgstore--close {
+  padding-bottom: 46 / 46 * 100%;
+}
+
+.svgstore--contact-cannon {
+  padding-bottom: 63 / 125 * 100%;
+}
+
+.svgstore--header-logo {
+  padding-bottom: 36 / 82 * 100%;
+}
+
+.svgstore--header-menu {
+  padding-bottom: 18 / 20 * 100%;
+}
+
+.svgstore--search {
+  padding-bottom: 24 / 24 * 100%;
+}
+
+.svgstore--wave-divider {
+  padding-bottom: 9 / 83 * 100%;
+}
