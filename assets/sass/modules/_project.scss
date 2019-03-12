@@ -10,14 +10,22 @@
   &__section {
     display: flex;
     justify-content: center;
-    padding-bottom: $padding-large-size;
+    padding-bottom: $padding-medium-size;
+    @include breakpoint($tablet) {
+      padding-bottom: $padding-large-size;
+    }
   }
   &__banner {
     img {
-      object-fit: contain;
+      object-fit: cover;
+      height: 125vw;
       max-height: 50rem;
       max-width: $container-max;
       min-width: 100%;
+      @include breakpoint($tablet) {
+        object-fit: contain;
+        height: auto;
+      }
     }
   }
 }

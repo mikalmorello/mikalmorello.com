@@ -34,26 +34,57 @@
 .text-block--sidebar {
   @include layout-container(); 
   display: flex;
+  flex-direction: column;
   width: $container-normal;
+  @include breakpoint($tablet-large) {
+    flex-direction: row;
+  }
   .text-block {
     &__main {
-      width: calc(75% - 4rem);
-      margin-right: 4rem;
+      width: 100%;
+      @include breakpoint($tablet-large) {
+        width: calc(75% - 4rem);
+        margin-right: 4rem;
+      }
     }
     &__sidebar {
-      width: calc(25%);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      width: 100%;
+      @include breakpoint($tablet-large) {
+        flex-direction: column;
+        width: 25%;
+      }
       a {
         @include link-dark;
       }
     }
     &__divider {
-      align-self: flex-start;
       margin-bottom: 2rem;
-      opacity: .25;
-      width: $divider-width;
+      margin-top: 3rem;
+      width: 100%;
+      @include breakpoint($tablet-large) {
+        align-self: flex-start;
+        margin-bottom: 2rem;
+        margin-top: 0;
+        opacity: .25;
+        width: $divider-width;
+      }
+      img {
+        width: $divider-width;
+        min-width: auto;
+      }
     }
     &__section {
       margin-bottom: 2rem;
+      width: calc(50% - 2rem);
+      @include breakpoint($tablet) {
+        width: calc(33% - 2rem);
+      }
+      @include breakpoint($tablet-large) {
+        width: 100%;
+      }
     }
     &__section-title {
       @include project-aside-title-text; 

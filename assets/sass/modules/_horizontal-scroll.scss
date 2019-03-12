@@ -29,7 +29,7 @@
     cursor: pointer;
     overflow-x: scroll;
     overflow-y: hidden;
-    padding: $padding-large-size $padding-small-size;
+    padding: $vertical-padding-none $padding-small-size;
     position: relative;
     white-space: nowrap;
     transition: all 0.2s;
@@ -37,6 +37,9 @@
     user-select: none;
     width: 100%;
     will-change: transform;
+    @include breakpoint($tablet) {
+      padding: $padding-large-size $padding-small-size;
+    }
   }
   &__items--active {
     background: rgba(0,0,0,0.3);
@@ -47,6 +50,17 @@
     display: inline-block;
     margin: 2em 1em;
     vertical-align: top;
+    img {
+      max-height: 20rem;
+      min-width: auto;
+      width: auto;
+      @include breakpoint($tablet) {
+        max-height: auto;
+        min-width: 100%;
+        width: 100%;
+        
+      }
+    }
   }
   &__item-label {
     @include header-title-small(uppercase);
@@ -67,9 +81,13 @@
     &__item {
       height: 28rem;
       &:first-child {
-        width: 300px;
+        width: 12.5rem;
         white-space: normal;
+        @include breakpoint($tablet) {
+          width: 18.75rem;
+        }
       }
+      
     }
   }
 }
@@ -77,10 +95,10 @@
 .horizontal-scroll--center {
   .horizontal-scroll {
     &__item-container {
-      height: 700px;
+      height: 43.75rem;
     }
     &__item {
-      height: 700px;
+      height: 43.75rem;
     }
   }
 }

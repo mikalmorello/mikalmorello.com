@@ -338,10 +338,15 @@
       @include container-normal;
       align-items: flex-start;
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
       justify-content: center;
-      padding-bottom: $padding-project-bottom;
-      padding-top: $padding-project-top;
+      padding-bottom: $padding-project-bottom--mobile;
+      padding-top: $padding-project-top-mobile;
+      @include breakpoint($tablet) {
+        flex-direction: row;
+        padding-bottom: $padding-project-bottom;
+        padding-top: $padding-project-top;
+      }
       @include breakpoint($desktop) {
         padding-left: 0;
         padding-right: 0;
@@ -350,8 +355,11 @@
     &__introduction {
       display: flex;
       flex-direction: column;
-      margin-right: 3rem;
-      width: calc(75% - 3rem);
+      width: 100%;
+      @include breakpoint($tablet) {
+        margin-right: 3rem;
+        width: calc(75% - 3rem);
+      }
     }
     &__title {
       @include project-title-text;
@@ -360,17 +368,26 @@
     &__description {
       @include project-introduction-text;
     }
-    &__sidebar {
+    &__introduction-sidebar {
       align-items: flex-start;
       display: flex;
-      flex-direction: row;
-      width: calc(25%);
+      flex-direction: column;
+      width: 100%;
+      @include breakpoint($tablet) {
+        width: 25%;
+      }
+      
     }
     &__divider {
       align-self: flex-start;
-      margin-bottom: 5rem;
+      margin-top: 3rem;
+      margin-bottom: 2rem;
       opacity: .25;
       width: $divider-width;
+      @include breakpoint($tablet) {
+        margin-bottom: 5rem;
+        margin-top: 0;
+      }
     }
     &__role {
       margin-bottom: 2rem;

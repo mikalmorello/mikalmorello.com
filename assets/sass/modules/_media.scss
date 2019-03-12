@@ -21,8 +21,17 @@
 // MEDIA BLOCK STATES
 
 .media-block--fullwidth {
-  max-width: 100%;
-  width: $container-max;
+  img {
+    object-fit: cover;
+    height: 125vw;
+    max-height: 50rem;
+    max-width: $container-max;
+    min-width: 100%;
+    @include breakpoint($tablet) {
+      object-fit: contain;
+      height: auto;
+    }
+  }
 }
 
 
@@ -66,15 +75,28 @@
   color: $white;
   display: grid;
   grid-template-areas: 
-    'media-one media-two media-introduction'
-    'media-three media-four media-introduction'
-    'media-three media-four media-five';
-  grid-template-columns: 33% 33% 33%; 
-  grid-template-rows: 50% 25% 25%; 
-  height: 824px;
+    'media-one media-introduction'
+    'media-two media-introduction'
+    'media-two media-five'
+    'media-three media-four'; 
+  grid-template-columns: 50% 50%; 
+  grid-template-rows: 33.33% 16.66% 16.66% 33.33%; 
+  height: 150vw;
   max-width: $container-wide;
   overflow: hidden; 
   width: 100%;
+  @include breakpoint($tablet) {
+    grid-template-areas: 
+      'media-one media-two media-introduction'
+      'media-three media-four media-introduction'
+      'media-three media-four media-five';
+    grid-template-columns: 33.33% 33.33% 33.33%; 
+    grid-template-rows: 50% 25% 25%; 
+    height: 68vw;
+  }
+  @include breakpoint($desktop) {
+    height: 51.5rem;
+  }
   &__introduction {
     @include media-overlay-text;
     align-items: center;
@@ -154,7 +176,12 @@
   width: 100%;
   &__container {
     @include flex-center;
-    max-width: $container-wide;
+    @include layout-container();
+    max-width: $container-wide; 
+    @include breakpoint($desktop) {
+      padding-left: 0;
+      padding-right: 0;
+    }
   }
   &__introduction {
     @include flex-center;
@@ -196,14 +223,16 @@
       padding-left: .625rem;
       font-size: 1rem;
       line-height: 1.5rem;
-      
     }
     img {
       vertical-align: bottom;
     }
   }
   &__media-element--wrap {
-    width: calc(50% - 1rem);
+    width: 100%;
+    @include breakpoint($tablet) {
+      width: calc(50% - 1rem);
+    }
   }
   &__content {
     @include layout-vertical-padding($padding-large-size);

@@ -207,10 +207,13 @@
 
 @mixin subheader-text ($text-transform:uppercase){
   font-family: $oswald;
-  font-size: $text-subheader;
+  font-size: $text-subheader-mobile;
   font-weight: $font-weight-regular;
   line-height: $line-height-standard;
   text-transform: $text-transform;
+  @include breakpoint($tablet) {
+    font-size: $text-subheader;
+  }
 }
 
 
@@ -387,10 +390,13 @@
 
 @mixin media-overlay-text ($text-transform:inherit){
   font-family: $lato;
-  font-size: $title-medium;
+  font-size: $title-small;
   font-weight: $font-weight-regular;
   letter-spacing: $letter-space-none;
   text-transform: $text-transform;
+  @include breakpoint($tablet-large) {
+    font-size: $title-medium;
+  }
 }
 
 
