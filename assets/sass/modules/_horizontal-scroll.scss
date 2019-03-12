@@ -52,10 +52,8 @@
     vertical-align: top;
     img {
       max-height: 20rem;
-      min-width: auto;
-      width: auto;
       @include breakpoint($tablet) {
-        max-height: auto;
+        max-height: inherit;
         min-width: 100%;
         width: 100%;
         
