@@ -15,14 +15,26 @@
     @include layout-vertical-padding($vertical-padding-large);
     align-items: flex-start;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-around;
+    @include breakpoint($tablet) {
+      flex-direction: row;
+    }
   }
   &__address {
+    margin-bottom: 3rem;
+    @include breakpoint($tablet) {
+      margin-bottom: 0;
+    }
   }
   &__contact {
+    margin-bottom: 3rem;
+    @include breakpoint($tablet) {
+      margin-bottom: 0;
+    }
   }
   &__availability {
+    
   }
   &__title {
     @include small-text(uppercase);
