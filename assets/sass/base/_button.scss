@@ -7,10 +7,13 @@
 // BUTTON RESET
 
 button {
+  @include button;
   padding: 0;
   border: none;
   font: inherit;
   color: inherit;
   background-color: transparent;
   cursor: pointer;
+  text-decoration: none; 
+  text-transform: uppercase;
 }

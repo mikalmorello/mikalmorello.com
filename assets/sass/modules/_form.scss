@@ -22,19 +22,18 @@
     &:hover,
     &:active,
     &:valid {
-      background: $white;
+      background: tint($theme-light-green, 80%);
     }
   }
   &__submit {
     @include form-input;
-    @include button;
-    background: $theme-dark;
+    @include button-outline;
+    background: rgba($theme-dark, 1);
     color: $white;
     height: 5rem;
     transition: all 0.3s ease;
     &:hover,
     &:active {
-      background: rgba($theme-dark, .8);
     }
   }
 }
