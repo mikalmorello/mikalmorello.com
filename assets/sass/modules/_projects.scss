@@ -23,9 +23,6 @@
   @include layout-vertical-padding($vertical-padding-large);
   color: $type-dark;
   position: relative;
-  &__container {
-    
-  }
   &__content {
     @include link-dark(none);
     @include container-normal;

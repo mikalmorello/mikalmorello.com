@@ -20,21 +20,15 @@
 // SECTION STATES
 
 .section--introduction {
-  padding-top: $padding-large-size;
+  padding-top: $padding-standard-size;
+  @include breakpoint($tablet) {
+    padding-top: $padding-large-size;
+  }
 }
 
 .section--contact, 
 .section--horizontal-scroll {
   @include layout-vertical-padding($vertical-padding-none); 
-}
-
-.section--projects {
-}
-
-.section--contact-information {
-}
-
-.section--map {
 }
 
 .section--jesuit-bg {

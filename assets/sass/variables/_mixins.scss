@@ -141,10 +141,13 @@
 
 @mixin header-title ($text-transform:"inherit"){
   font-family: $oswald;
-  font-size: 2.95rem;
+  font-size: 2.5rem;
   font-weight: $font-weight-medium;
   line-height: $line-height-standard;
   text-transform: $text-transform;
+  @include breakpoint($mobile-small) {
+    font-size: 2.95rem;
+  }
   @include breakpoint($tablet-large) {
     font-size: 3.5rem;
   }
@@ -171,10 +174,13 @@
 
 @mixin header-subtitle ($text-transform:inherit){
   font-family: $oswald;
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   font-weight: $font-weight-light;
   line-height: $line-height-standard;
   text-transform: $text-transform;
+  @include breakpoint($mobile-small) {
+    font-size: 1.5rem;
+  }
   @include breakpoint($tablet-large) {
     font-size: 2rem;
   }
@@ -232,7 +238,7 @@
 
 @mixin contact-large-text ($text-transform:uppercase){
   font-family: $oswald;
-  font-size: 3.5rem;
+  font-size: 3rem;
   font-weight: $font-weight-medium;
   line-height: $line-height-standard;
   text-transform: $text-transform;
@@ -261,11 +267,12 @@
 @mixin project-large-text ($text-transform:inherit){
   font-family: $oswald;
   font-size: 3rem;
-  font-weight: $font-weight-bold;
+  font-weight: $font-weight-medium;
   line-height: $line-height-large;
   text-transform: $text-transform;
   @include breakpoint($tablet) {
     font-size: 3.5rem;
+    font-weight: $font-weight-bold;
   }
   @include breakpoint($desktop) {
     font-size: $title-large;
