@@ -49,9 +49,12 @@
       flex-direction: column;
       justify-content: center;
       padding-bottom: $padding-navigation-desktop;
-      padding-top: $padding-navigation-desktop; 
+      padding-top: 3rem; 
+      text-align: center;
       @include breakpoint($tablet-large) {
         min-height: 100vh;
+        padding-top: $padding-navigation-desktop; 
+        text-align: left;
         width: calc(50vw - 4rem);
       }
     }
@@ -114,17 +117,14 @@
       align-content: flex-end;
       display: flex;
       min-height: 43.125rem;
-      //height: 75vh; 
       overflow: hidden;
       padding-top: 5.625rem;
       position: absolute;
       top: 0;
       width: 100%;
-      transition: top 0.75s ease-out;
+      transition: top 0.25s ease;
       @include breakpoint($mobile-large) {
-        min-height: 37.5rem;
-        padding-top: 0;
-        top: calc(75vh - 37.5rem);
+        top: calc(75vh - 43.125rem);
       }
       @include breakpoint($tablet-large) {
         bottom: 0;
@@ -138,13 +138,23 @@
       }
       img {
         height: 37.5rem;
-        object-fit: contain; 
+        object-fit: cover; 
+        object-position: 50% 50%;
         vertical-align: bottom;
-        width: auto;
+        width: 100%;
+        @include breakpoint($mobile) {
+          object-fit: contain; 
+          object-position: center;
+        }
         @include breakpoint($tablet-large) {
          height: inherit;
-          width: 100%;
         }
+      }
+    }
+    &__portrait-button {
+      width: 100%;
+      @include breakpoint($tablet-large) {
+        width: auto;
       }
     }
     &__media {
@@ -156,10 +166,7 @@
       height: 75vh;
       min-height: 43.125rem;
       order:1;
-      transition: height 0.75s ease-out;
-      @include breakpoint($mobile-large) {
-        min-height: 37.5rem;
-      }
+      transition: height 0.25s ease;
       @include breakpoint($tablet-large) {
         @include layout-width(50%);
         height: 100vh;
