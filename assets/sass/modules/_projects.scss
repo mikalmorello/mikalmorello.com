@@ -20,43 +20,81 @@
 // PROJECT 
 
 .project-teaser {
-  @include layout-vertical-padding($vertical-padding-large);
+  @include layout-vertical-padding($vertical-padding-standard);
   color: $type-dark;
   position: relative;
+  @include breakpoint($tablet) {
+    @include layout-vertical-padding($vertical-padding-large);
+  }
+  &__container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+    @include breakpoint($tablet) {
+      display: block;
+      margin-bottom: 4rem;
+    }
+  }
   &__content {
     @include link-dark(none);
     @include container-normal;
     display: flex;
     flex-direction: column;
+    order: 2;
+    margin-left: -2rem;
+    margin-top: -3rem;
     position: relative;
     z-index: $z-project-title;
+    @include breakpoint($tablet) {
+      margin-top: 0;
+      order: 1;
+    }
   }
   &__title {
     @include project-large-text;
     max-width: 100%;
+    background-color: $white;
+    padding-left: 2rem;
+    padding-top: .5rem;
     @include breakpoint($tablet) {
+      background: none;
       max-width: 80%;
+      padding-left: 0;
+      padding-top: 0;
     }
   }
   &__subtitle {
     @include project-small-text;
     max-width: 100%;
+    padding-left: 2rem;
+    padding-top: .5rem;
     @include breakpoint($tablet) {
       max-width: 60%;
+      padding-left: 0;
+      padding-top: 0;
     }
   }
   &__white-background {
-    background-color: $white;
-    display: inline;
-    box-shadow: 1em 0 0 $white,-1em 0 0 $white;
+    @include breakpoint($tablet) {
+      background-color: $white;
+      display: inline;
+      box-shadow: 1em 0 0 $white,-1em 0 0 $white;
+    }
   }
   &__media {
-    position: absolute;
-    top: 0;
-    right: 0;
-    visibility: hidden;
-    .project-teaser:hover & {
-      visibility: visible;
+    order: 1;
+    transition: opacity 0.5s ease;
+    @include breakpoint($tablet) {
+      order: 2;
+      position: absolute;
+      top: 0;
+      right: 0;
+      //visibility: hidden;
+      opacity: 0;
+    }
+    .project-teaser:hover &, .project-teaser:active & {
+      //visibility: visible;
+      opacity: 1;
     }
   }
 }

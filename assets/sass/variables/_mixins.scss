@@ -266,13 +266,14 @@
 
 @mixin project-large-text ($text-transform:inherit){
   font-family: $oswald;
-  font-size: 3rem;
+  font-size: 2.75rem;
   font-weight: $font-weight-medium;
-  line-height: $line-height-large;
+  line-height: $line-height-small;
   text-transform: $text-transform;
   @include breakpoint($tablet) {
     font-size: 3.5rem;
     font-weight: $font-weight-bold;
+    line-height: $line-height-large;
   }
   @include breakpoint($desktop) {
     font-size: $title-large;
