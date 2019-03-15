@@ -558,10 +558,12 @@
 }
 
 @mixin button-outline() {
+  @include button;
   background: none;
   border: 0;
   box-shadow: inset 0 0 0 2px $theme-light-green;
   position: relative;
+  text-transform: uppercase;
   transition: color 0.25s;
   vertical-align: middle;
   &::before,

@@ -7,7 +7,6 @@
 // BUTTON RESET
 
 button {
-  @include button;
   padding: 0;
   border: none;
   font: inherit;
@@ -15,5 +14,4 @@ button {
   background-color: transparent;
   cursor: pointer;
   text-decoration: none; 
-  text-transform: uppercase;
 }
