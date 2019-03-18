@@ -18,6 +18,10 @@
     @include body-text;  
   }
   &__button-container {
+    display: none;
+    @include breakpoint($desktop) {
+      display: block;
+    }
   }
   &__button {
   }

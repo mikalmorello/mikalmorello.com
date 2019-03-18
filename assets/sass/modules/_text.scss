@@ -10,6 +10,22 @@
 .text-block {
   @include container-extra-small;
   @include body-text;
+  &__circle {
+    height: 18.75rem;
+    shape-outside: ellipse(4.6875rem 9.375rem at 50% 50%);
+    width: 9.375rem;
+    @include breakpoint($tablet) { 
+      display: none;
+    } 
+  }
+  &__circle--left {
+    float: left;
+    margin: 3.125rem 0 .25rem 2rem;
+  }
+  &__circle--right {
+    float: right;
+    margin: 3.125rem 2rem .25rem 0;
+  }
 }
 
 // TEXT BLOCK STATES
@@ -78,7 +94,7 @@
     }
     &__section {
       margin-bottom: 2rem;
-      width: calc(50% - 2rem);
+      width: 100%;
       @include breakpoint($tablet) {
         width: calc(33% - 2rem);
       }

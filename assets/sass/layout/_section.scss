@@ -33,14 +33,20 @@
 
 .section--jesuit-bg {
   background-image: url(/assets/images/boston-college-jesuit-logo.png);
-  background-position: left center;
+  background-position: left 3rem;
   background-repeat: no-repeat;
+  @include breakpoint($tablet) {
+    background-position: left center;
+  }
 }
 
 .section--rays-bg {
   background-image: url(/assets/images/boston-college-rays.png);
-  background-position: right center;
+  background-position: right 3rem;
   background-repeat: no-repeat;
+  @include breakpoint($tablet) {
+    background-position: right center;
+  }
 }
 
 .section--media-responsive {
