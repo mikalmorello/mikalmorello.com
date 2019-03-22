@@ -38,9 +38,17 @@
   headerMenuButton.addEventListener('click', function() {
     if(mainMenu.classList.contains('main-menu--is-visible') ) {
       hideMenu(bodyOverflowShow);
+      headerMenuButton.classList.remove('header__menu-button--active');
+      headerMenuButton.setAttribute('aria-expanded', 'false');
     } else {
       showMenu(bodyOverflowHide);
+      headerMenuButton.classList.add('header__menu-button--active');
+      headerMenuButton.setAttribute('aria-expanded', 'true');
     }
   });
+  
+  // MENU SVG TEST
+
+  
   
 })();

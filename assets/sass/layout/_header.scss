@@ -136,3 +136,50 @@
     transition: none;
   }
 }
+
+// HEADER MENU ICON
+
+.header__menu-button {
+  font-size: 0.875em;
+  &:focus {
+    outline: thin dotted;
+    outline-offset: -2px;
+  }
+  svg {
+    display: inline-block;
+    fill: currentColor;
+    vertical-align: middle;
+    position: relative; /* Align more nicely with capital letters */
+    top: -0.0625em;
+    width: 1.5em;
+    height: 1.5em;
+  }
+}
+
+.svg-menu-toggle {
+  .line {
+    opacity: 1;
+    transform: rotate(0) translateY(0) translateX(0);
+    transform-origin: 1em 1em;
+    transition: transform 0.3s ease-in-out, opacity 0.2s ease-in-out;
+  }
+  .line-1 {
+    transform-origin: 1em 2.5em;
+  }
+  .line-3 {
+    transform-origin: 1em 4.5em;
+  }
+}
+
+
+.header__menu-button--active .svg-menu-toggle {
+  .line-1 {
+    transform: rotate(45deg) translateY(0) translateX(0);
+  }
+  .line-2 {
+    opacity: 0;
+  }
+  .line-3 {
+    transform: rotate(-45deg) translateY(0em) translateX(0em);
+  }
+}
