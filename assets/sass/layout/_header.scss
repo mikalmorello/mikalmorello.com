@@ -148,13 +148,16 @@
   svg {
     display: inline-block;
     fill: currentColor;
-    vertical-align: middle;
-    position: relative; /* Align more nicely with capital letters */
-    top: -0.0625em;
-    width: 1.5em;
     height: 1.5em;
+    overflow: hidden;
+    position: relative; 
+    top: -0.0625em;
+    vertical-align: middle;
+    width: 1.5em;
   }
 }
+
+
 
 .svg-menu-toggle {
   .line {
@@ -164,16 +167,28 @@
     transition: transform 0.3s ease-in-out, opacity 0.2s ease-in-out;
   }
   .line-1 {
-    transform-origin: 1em 2.5em;
+    transform-origin: 1em 3em;
+    transform: translateX(3em);
   }
   .line-3 {
     //transform-origin: 1em 4.5em;
-    transform-origin: .4em 4.4em; 
+    transform-origin: .2em 3.9em; 
+    transform: translateX(1em);
+  }
+}
+
+.header__menu-button:hover .svg-menu-toggle{
+  .line-1 {
+    transform: translateX(0);
+  }
+  .line-3 {
+    transform: translateX(0);
   }
 }
 
 
-.header__menu-button--active .svg-menu-toggle {
+.header__menu-button--active .svg-menu-toggle,
+.header__menu-button--active:hover .svg-menu-toggle, {
   .line-1 {
     transform: rotate(45deg) translateY(0) translateX(0);
   }
@@ -181,6 +196,6 @@
     opacity: 0;
   }
   .line-3 {
-    transform: rotate(-45deg) translateY(0em) translateX(0em);
+    transform: rotate(-45deg) translateY(0em) translateX(0);
   }
 }
