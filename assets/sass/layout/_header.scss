@@ -28,7 +28,7 @@
   &__logo {
     display: flex;
     height: 1.625rem;
-    width: 3.75rem;
+    width: 5rem;
   }
   &__actions {
     @include layout-width(50%); 
@@ -52,6 +52,45 @@
 
 
 // HEADER STATES
+
+// Initiates when the page is scrolled, but remains hidden
+.header--scroll {
+  background: $white;
+  box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.2);
+  //position: sticky;
+  opacity: 0;
+  transform: translate(0, -200px);
+  visibility: hidden;
+  .body--menu-open & {
+    background: transparent;
+    box-shadow: none;
+    transition: none;
+  }
+}
+
+// Initiates when the page is scrolled past a certain point, revealing the navigation
+.header--sticky {
+  opacity:1;
+  position: fixed;
+  transition: all 0.3s ease;
+  transform: translate(0, 0);
+  visibility: visible;
+  .header {
+    &__logo {
+      svg {
+        fill: $black;
+      }
+    }
+    &__menu-button {
+      svg {
+        fill: $black;
+      }
+    }
+  }
+  .body--menu-open & {
+    transition: none;
+  }
+}
 
 .header--light {
   .header {
@@ -97,45 +136,6 @@
     }
   }
 } 
-
-// Initiates when the page is scrolled, but remains hidden
-.header--scroll {
-  background: $white;
-  box-shadow: 0px 0px 6px 0px rgba(0, 0, 0, 0.2);
-  //position: sticky;
-  opacity: 0;
-  transform: translate(0, -200px);
-  visibility: hidden;
-  .body--menu-open & {
-    background: transparent;
-    box-shadow: none;
-    transition: none;
-  }
-}
-
-// Initiates when the page is scrolled past a certain point, revealing the navigation
-.header--sticky {
-  opacity:1;
-  position: fixed;
-  transition: all 0.3s ease;
-  transform: translate(0, 0);
-  visibility: visible;
-  .header {
-    &__logo {
-      svg {
-        fill: $black;
-      }
-    }
-    &__menu-button {
-      svg {
-        fill: $black;
-      }
-    }
-  }
-  .body--menu-open & {
-    transition: none;
-  }
-}
 
 // HEADER MENU ICON
 
