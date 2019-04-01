@@ -400,6 +400,87 @@
   }
 }
 
+
+// BANNER PROJECTS 
+
+.banner--projects {
+  @include layout-partialscreen;
+  align-items: center;
+  background: $theme-dark-blue;
+  background-image: url(/assets/images/wave-group-medium-light.svg);
+  background-position: bottom right;
+  background-repeat: repeat-x;
+  color: $white;
+  display: flex;
+  justify-content: center;
+  min-height: 43.75rem;
+  .banner {
+    &__container {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      padding-bottom: $padding-navigation-desktop;
+      @include breakpoint($tablet-large) {
+        @include container-wide;
+        flex-direction: row;
+        padding-top: $padding-navigation-desktop;
+      }
+    }
+    &__content {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-top: -30rem;
+      order: 2;
+      padding-top: $padding-navigation-desktop;
+      z-index: $z-contact-form;
+      @include breakpoint($tablet) {
+        @include layout-width(50%);
+        padding-top: 0;
+      }
+      @include breakpoint($tablet-large) {
+        margin-top: 0;
+        order: 1;
+      }
+    } 
+    &__content-container {
+      @include container-wide;
+      @include layout-width(26.25rem);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-top: $padding-medium-size;
+      padding-bottom: $padding-standard-size;
+      @include breakpoint($tablet) {
+        background: $theme-light-green;
+      }
+      @include breakpoint($tablet-large) {
+        background: inherit;
+        padding-bottom: 0;
+        padding-top: 0;
+      }
+    }
+    &__divider {
+      align-self: flex-start;
+      margin-bottom: .5rem;
+      width: $divider-width;
+    }
+    &__title {
+      @include contact-large-text(uppercase);
+      margin-bottom: 2rem;
+    }
+    &__subtitle {
+      @include body-text;
+      margin-bottom: 3rem;
+      @include breakpoint($tablet) {
+        margin-bottom: 2rem;
+      }
+    }
+  }
+}
+
+
 // BANNER PROJECT
 
 .banner--project {
