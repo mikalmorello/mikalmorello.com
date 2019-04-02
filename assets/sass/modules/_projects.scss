@@ -150,7 +150,10 @@
     order: 1;
   }
   &__tag {
-
+    &:not(:last-child):after {
+      content: "/";
+      padding-left: .5rem;
+    }
   }
   &__media {
     margin-bottom: 2rem;

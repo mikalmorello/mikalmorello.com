@@ -29,5 +29,8 @@
     @include body-text-large;
     line-height: 2em;
     white-space: nowrap;
+    &:not(:last-child):after {
+      content: ",";
+    }
   }
 }
