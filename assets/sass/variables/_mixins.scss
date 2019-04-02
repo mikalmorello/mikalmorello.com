@@ -384,6 +384,17 @@
 }
 
 
+// TYPOGRAPHY -- PROJECT CARD TITLE
+
+@mixin project-card-title ($text-transform:inherit){
+  font-family: $lato;
+  font-size: $title-medium;
+  font-weight: $font-weight-regular;
+  letter-spacing: $letter-space-none;
+  line-height: $line-height-small;
+  text-transform: $text-transform;
+}
+
 // TYPOGRAPHY -- DROP CAP
 
 @mixin dropcap-text ($text-transform:uppercase){
@@ -435,6 +446,18 @@
   li {
     padding-bottom: $vertical-padding;
     padding-top: $vertical-padding;
+  }
+}
+
+// INLINE LIST
+
+@mixin list-inline($padding) {
+  list-style: none;
+  padding-left: 0;
+  li {
+    display: inline;
+    padding-right: $padding; 
+    padding-left: $padding; 
   }
 }
 

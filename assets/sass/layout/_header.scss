@@ -68,46 +68,7 @@
   }
 }
 
-// Initiates when the page is scrolled past a certain point, revealing the navigation
-.header--sticky {
-  opacity:1;
-  position: fixed;
-  transition: all 0.3s ease;
-  transform: translate(0, 0);
-  visibility: visible;
-  .header {
-    &__logo {
-      svg {
-        fill: $black;
-      }
-    }
-    &__menu-button {
-      svg {
-        fill: $black;
-      }
-    }
-  }
-  .body--menu-open & {
-    transition: none;
-  }
-}
-
 .header--light {
-  .header {
-    &__logo {
-      svg {
-        fill: $white;
-      }
-    }
-    &__menu-button {
-      svg {
-        fill: $white;
-      }
-    }
-  }
-}
-
-.header--menu-light {
   .header {
     &__logo {
       svg {
@@ -136,6 +97,46 @@
     }
   }
 } 
+
+// Initiates when the page is scrolled past a certain point, revealing the navigation
+.header--sticky {
+  opacity:1;
+  position: fixed;
+  transition: all 0.3s ease;
+  transform: translate(0, 0);
+  visibility: visible;
+  .header {
+    &__logo {
+      svg {
+        fill: $black;
+      }
+    }
+    &__menu-button {
+      svg {
+        fill: $black;
+      }
+    }
+  }
+  .body--menu-open & {
+    transition: none;
+  }
+}
+
+.header--menu-light {
+  .header {
+    &__logo {
+      svg {
+        fill: $white;
+      }
+    }
+    &__menu-button {
+      svg {
+        fill: $white;
+      }
+    }
+  }
+}
+
 
 // HEADER MENU ICON
 
