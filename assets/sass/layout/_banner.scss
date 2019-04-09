@@ -28,7 +28,7 @@
     height: 100vh;
     max-height: calc(100vw * (9/12));
     width: 100vw;
-    min-height: 40rem;
+    min-height: 45rem;
   }
   @include breakpoint($desktop-max) {
     min-height: 56.25rem;
@@ -64,6 +64,12 @@
         width: calc(50vw - 4rem);
       }
       @include breakpoint($tablet-short){
+        padding-top: 30vh;
+      }
+      @include breakpoint($tablet-tall){
+        padding-top: 20vh;
+      }
+      @include breakpoint($desktop-short){
         padding-top: 30vh;
       }
     }
