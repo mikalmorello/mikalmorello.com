@@ -16,6 +16,10 @@
       body.classList.add('body--mit');
       console.log('MIT ' + company);
       break;
+    case 'massart':
+      body.classList.add('body--massart');
+      console.log('MassArt ' + company);
+      break;
     default:
       break;
   }

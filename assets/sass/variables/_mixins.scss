@@ -273,11 +273,11 @@
   line-height: $line-height-small;
   text-transform: $text-transform;
   @include breakpoint($tablet) {
-    font-size: 3.5rem;
+    font-size: 4.5vw;
     font-weight: $font-weight-bold;
     line-height: $line-height-large;
   }
-  @include breakpoint($desktop) {
+  @include breakpoint($desktop-max) {
     font-size: $title-large;
   }
 }
@@ -291,6 +291,9 @@
   line-height: $line-height-large;
   text-transform: $text-transform;
   @include breakpoint($tablet) {
+    font-size: 1.75vw;
+  }
+  @include breakpoint($desktop-max) {
     font-size: $title-medium;
   }
 }

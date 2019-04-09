@@ -20,7 +20,6 @@
 // BANNER SPLIT
 
 .banner--split {
-  background: purple;
   flex-direction: column;
   width: 100vw;
   @include breakpoint($tablet-large) {
