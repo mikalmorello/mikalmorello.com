@@ -149,10 +149,10 @@
     font-size: 2.95rem;
   }
   @include breakpoint($tablet-large) {
-    font-size: 3.5rem;
+    font-size: 3.5vw;
   }
-  @include breakpoint($desktop) {
-    font-size: $title-large;
+  @include breakpoint($desktop-max) {
+    font-size: 4rem;
   }
 }
 
@@ -165,9 +165,11 @@
   line-height: $line-height-standard;
   text-transform: $text-transform;
   @include breakpoint($tablet-large) {
-    font-size: $title-small;
+    font-size: 1.5vw;
   }
-  
+  @include breakpoint($desktop-max) {
+    font-size: 1.75rem;
+  }
 }
 
 // TYPOGRAPHY -- SUBTITLE
@@ -182,10 +184,10 @@
     font-size: 1.5rem;
   }
   @include breakpoint($tablet-large) {
-    font-size: 2rem;
+    font-size: 2vw;
   }
-  @include breakpoint($desktop) {
-    font-size: $subtitle-large;
+  @include breakpoint($desktop-max) {
+    font-size: 1.875rem;
   }
 }
 
