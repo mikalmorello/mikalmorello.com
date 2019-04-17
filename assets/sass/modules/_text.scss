@@ -45,6 +45,14 @@
   }
 }
 
+.text-block--contact {
+  .text-block {
+    &__main {
+      font-style: italic;
+    }
+  }
+}
+
 // TEXT BLOCK & SIDEBAR
 
 .text-block--sidebar {
