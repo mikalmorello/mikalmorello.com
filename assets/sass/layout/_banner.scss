@@ -455,7 +455,7 @@
     } 
     &__content-container {
       @include container-wide;
-      @include layout-width(26.25rem);
+      @include layout-width(40rem);
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -485,6 +485,9 @@
       @include breakpoint($tablet) {
         margin-bottom: 2rem;
       }
+    }
+    &__number {
+      font-weight: $font-weight-bold;
     }
   }
 }
