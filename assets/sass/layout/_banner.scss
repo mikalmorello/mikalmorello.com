@@ -43,10 +43,12 @@
       transition: background-color .5s ease-out, height 0.75s ease-out;
       @include breakpoint($tablet-large) {
         @include layout-width(50%);
+        animation: .75s ease-out 0s 1 introductionSlide;
         flex-direction: row;
         height: 100%;
         order: 1;
         transition: background-color .5s ease-out, max-width 0.75s ease-out, width 0.75s ease-out, min-width 0.75s ease;
+        
       }
     }
     &__content {
@@ -84,13 +86,19 @@
       }
     }
     &__title {
-
+      /*animation: .75s ease-out 0s 1 introductionTitle;
+      @include breakpoint($tablet-large) {
+        animation: 1.5s ease-out 0s 1 introductionTitle;
+      }*/
     }
     &__title-small {
       @include header-title-small;
+      animation: 1.5s ease-out 0s 1 introductionSubtitle;
+      display: block;
     }
     &__title-large {
       @include header-title;
+      animation: 1.5s ease-out 0s 1 introductionTitle;
       display: block;
       button {
         text-decoration: none;
@@ -115,9 +123,10 @@
     }
     &__link {
       @include standalone-link(uppercase);
-      //@include layout-vertical-padding($vertical-padding-large);
+      animation: .75s ease-out 0s 1 introductionLink;
       width: 80vw;
       @include breakpoint($tablet-large) {
+        animation: 1.5s ease-out 0s 1 introductionLink;
         width: 40vw;
       }
       a {
