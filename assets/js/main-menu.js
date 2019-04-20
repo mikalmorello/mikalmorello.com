@@ -13,6 +13,7 @@
   
   function showMenu(callback){
     mainMenu.classList.add('main-menu--is-visible');
+    mainMenu.classList.remove('main-menu--is-hidden');
     header.classList.add('header--menu-light');
     body.classList.add('body--menu-open');
     setTimeout(callback, 400);
@@ -20,6 +21,7 @@
   
   function hideMenu(callback){
     mainMenu.classList.remove('main-menu--is-visible');
+    mainMenu.classList.add('main-menu--is-hidden');
     header.classList.remove('header--menu-light');
     body.classList.remove('body--menu-open');
     callback();
