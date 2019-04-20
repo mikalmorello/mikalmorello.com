@@ -6,6 +6,8 @@
 - INTRODUCTION SLIDE
 - MENU SLIDE
 - MENU TEXT
+- MENU BACKGROUND
+- CONTACT BACKGROUND
 */
 
 // INTRODUCTION TITLE
@@ -139,9 +141,23 @@
   }
 }
 
+
+// MENU BACKGROUND
+
 @keyframes menuBackground{
   50% {
     transform: translateY(110%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+// MENU BACKGROUND
+
+@keyframes contactBackground {
+  0% {
+    transform: translateY(100%);
   }
   100% {
     transform: translateY(0);

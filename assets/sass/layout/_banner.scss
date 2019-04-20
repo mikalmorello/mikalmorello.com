@@ -299,11 +299,20 @@
   @include layout-partialscreen;
   align-items: center;
   background: $theme-light-green;
-  background-image: url(/assets/images/wave-group-angled.svg);
-  background-position: bottom right;
-  background-repeat: no-repeat;
   display: flex;
   justify-content: center;
+  &:after{
+    content: '';
+    background-image: url(/assets/images/wave-group-angled.svg);
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    @include breakpoint($tablet-large) {
+      animation: 1.5s normal forwards ease-in-out contactBackground;
+    }
+  }
   .banner {
     &__container {
       align-items: center;
@@ -386,6 +395,7 @@
       max-height: 100vh;
       order: 1;
       position: relative;
+      z-index: $z-contact-media;
       @include breakpoint($tablet-large) {
         @include layout-width(50%);
         min-height: 0;

@@ -35,6 +35,7 @@
     width: 100%;
     @include breakpoint($tablet) {
       background-position: top center;
+      
     }
   }
   &__links {
