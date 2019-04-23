@@ -8,6 +8,7 @@
 - MENU TEXT
 - MENU BACKGROUND
 - CONTACT BACKGROUND
+- LIGHTBOX MODAL
 */
 
 // INTRODUCTION TITLE
@@ -153,7 +154,8 @@
   }
 }
 
-// MENU BACKGROUND
+
+// CONTACT BACKGROUND
 
 @keyframes contactBackground {
   0% {
@@ -161,5 +163,17 @@
   }
   100% {
     transform: translateY(0);
+  }
+}
+
+
+// LIGHTBOX MODAL
+
+@keyframes zoom {
+  from {
+    transform:scale(0)
+  } 
+  to {
+    transform:scale(1)
   }
 }
