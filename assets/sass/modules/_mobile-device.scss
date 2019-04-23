@@ -65,6 +65,7 @@
     overflow: scroll;
     position: relative;
     user-select: none;
+    -webkit-overflow-scrolling: touch;
     &:after {
       content: '';
       position: absolute;

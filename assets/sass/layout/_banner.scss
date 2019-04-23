@@ -474,14 +474,13 @@
     } 
     &__content-container {
       @include container-wide;
-      @include layout-width(40rem);
       display: flex;
       flex-direction: column;
       justify-content: center;
       padding-top: $padding-medium-size;
       padding-bottom: $padding-standard-size;
       @include breakpoint($tablet) {
-        background: $theme-light-green;
+        @include layout-width(40rem);
       }
       @include breakpoint($tablet-large) {
         background: inherit;
