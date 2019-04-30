@@ -108,7 +108,7 @@
         <div class="banner__introduction">
           <h1 class="banner__title">Tufts Web Standard</h1>
           <div class="banner__description">
-            In didn’t take me long working at Tufts to realize that our current development model was going to become unsustainable. As a small team managing a large portfolio of Drupal sites, we needed a solution for scaling our development, while reducing our maintenance burden.
+            From a university’s main .edu website to its individual school, department and center sites, in higher ed, the digital footprint for a single institution can be vast. With limited resources and a continuously growing portfolio of Drupal sites, it was clear our existing development model was unsustainable for our small digital team. We needed a solution for scaling development, while simultaneously reducing our maintenance burden.
           </div>
         </div>
         <div class="banner__introduction-sidebar">
@@ -136,7 +136,11 @@
   <section class="section section--text-block project__section fadein">
         <div class="text-block text-block--intro">
           <div class="text-block__main">
-            <p>We identified early on the need for a multi-site style approach for managing Drupal sites. Unlike Wordpress, there was no clear path in Drupal 7 for this type of site configuration.  The best we could do at the time was to develop a starter theme and preset list of configurations that we would copy for each new site.  We called this approach our “standard”.</p>
+            
+            <h2>Rapid Recreation</h2>
+            
+            <p>Unlike WordPress, Drupal 7 doesn’t provide a clear path for this type of site configuration. Using a multi-site style approach for managing Drupal sites, we developed a starter theme and a preset list of configurations that we could duplicate with each new site. This became what we refer to as the university “standard”.</p>
+            
           </div>
         </div>
       </section>
@@ -151,8 +155,11 @@
       <section class="section section--text-block project__section fadein">
         <div class="text-block text-block--sidebar">
           <div class="text-block__main">
-            <p>This strategy worked in that it helped us standardize many aspects of our site development.  We refined a list of common modules, applied consistent front-end tooling, and reused base functionality for each site. In addition, our “standard” sites started to share a common design, allowing for a consistent user experience across sites.</p>
-            <p>Using this model we were able to launch sites more rapidly, adding new functionality and improvements with each one. The problem was that we rarely had an opportunity to backport enhancements to previous versions of the build.  This led to slight variations between sites that made it impossible to upgrade or test the sites in any unified way.</p>
+ 
+            <p>The strategy behind this approach was to standardize many aspects of our site development process, refining a list of common modules, applying consistent front-end tooling, and reusing base functionality across sites. As an added bonus, applying our “standard” created a consistent user and brand experience across our sites.</p>
+            
+            <p>While this model gave us the capability to rapidly launch new sites, adding improvements and new functionality along the way, we rarely had an opportunity to backport enhancements to previous versions of the build. In turn, this lead to slight variations between sites and made it impossible to upgrade or test the sites in any unified way.</p>
+            
           </div>
           <div class="text-block__sidebar">
             <div class="text-block__divider">
@@ -201,9 +208,14 @@
       <section class="section section--text-block project__section fadein">
         <div class="text-block">
           <div class="text-block__main">
-            <p>With the release of Drupal 8, and the integration of composer to manage project dependencies, we had an opportunity to revisit our approach for building a scalable Drupal platform.  The first step was rebuilding our Drupal 7 offering in Drupal 8.</p>
-            <p>Luckily we had shifted to developing a component based structure within our projects over the last few years. With the introduction of Drupal 8, we were able to isolate our components using libraries and utilized modules like the paragraphs to flexible page layouts with reusable elements. This type of approach easily lent itself to a “standard” based web framework. Over time we would be able to introduce new components, and add additional functionality to existing components to serve the community as whole, and not just focus our time and effort on a single site.</p>
-            <p>We stored all of the reusable site features in a base theme, while allowing site overrides and customizations to be stored in a child theme.  The goal however was to not use the child theme unless absolutely necessary.  All site functionality requests would be vetted against the needs of the community and ported into base regularly, allowing for an iterative development cycle.</p>
+            <h2>The “Standard” Revisited</h2>
+            
+            <p>With the release of Drupal 8, we had the unique opportunity to once again revisit our approach for building a scalable Drupal platform, utilizing the integration of composer to manage project dependencies. First step; rebuilding our Drupal 7 offering in Drupal 8.</p>
+
+            <p>Having shifted to a component-based structure for our later site builds, Drupal 8 allowed us to isolate our components using libraries, while the paragraphs module helped us create flexible page layouts with reusable elements, aligning perfectly to a “standard” based web framework. Over time, we could seamlessly incorporate new components and add additional functionality, shifting our time and effort toward serving the community as whole, instead of one site at time.</p>
+            
+            <p>Reusable site features were stored in a base theme, allowing for site overrides and customizations to be stored in a child theme, which would only be used if absolutely necessary. All site functionality requests were to be vetted against the needs of the community and ported into the base theme regularly, allowing for an iterative development cycle. Isolating common site functionality by setting up unique repositories for our base theme and custom modules, allowed us to pull these remote repositories to each site using composer.</p>
+            
           </div>
         </div>
       </section>
@@ -234,7 +246,11 @@
       <section class="section section--text-block project__section fadein">
         <div class="text-block">
           <div class="text-block__main">
-            <p>In order to isolate our common site functionality, we set up unique repositories for our base theme, custom modules, and configuration profiles.  Using composer, we were able to pull these remote repositories into each site. By having a scalable framework, we could ensure that we are able to develop new sites rapidly, continue to support and grow the functionality of existing sites, while adhere to DRY principles of not maintaining the same code in multiple locations.  With limited customizations, we would be confident that we could push up core and module upgrades to all sites without worrying about testing each one independently.</p>
+            
+            <h2>Scaling Sustainably</h2>
+            
+            <p>Creating a scalable framework has ensured our ability to develop new sites rapidly, while supporting and growing the functionality of existing sites and adhering to DRY principles of not maintaining the same code in multiple locations. With limited customizations, we can confidently push core and module upgrades to all sites without worrying about independently testing each one.</p>
+            
           </div>
         </div>
       </section>
@@ -262,14 +278,18 @@
       <section class="section section--text-block project__section fadein">
         <div class="text-block">
           <div class="text-block__main">
-            <p>Although this is still a work in progress, we have made great strides in building out a web development process that will help our small team stay agile with the ever changing needs of the University.</p>
+            
+            <p>Although this is still a work in progress, we have made great strides in building out a web development process that can help a small team stay agile with the ever-changing needs of the university.</p>
+            
           </div>
         </div>
       </section>
       <section class="section section--text-block project__section fadein">
         <div class="text-block text-block--contact">
           <div class="text-block__main">
+            
             <p>Interested in learning more about Drupal 8 development?</p>
+            
           </div>
         </div>
       </section>
