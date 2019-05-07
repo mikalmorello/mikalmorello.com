@@ -141,24 +141,45 @@
             
             <p>Unlike WordPress, Drupal 7 doesn’t provide a clear path for this type of site configuration. Using a multi-site style approach for managing Drupal sites, we developed a starter theme and a preset list of configurations that we could duplicate with each new site. This became what we refer to as the university “standard”.</p>
             
+            <p>The strategy behind this approach was to standardize many aspects of our site development process, refining a list of common modules, applying consistent front-end tooling, and reusing base functionality across sites. As an added bonus, applying our “standard” created a consistent user and brand experience across our sites.</p>
+            
+            <p>While this model gave us the capability to rapidly launch new sites, adding improvements and new functionality along the way, we rarely had an opportunity to backport enhancements to previous versions of the build. In turn, this lead to slight variations between sites and made it impossible to upgrade or test the sites in any unified way.</p>
+            
           </div>
         </div>
       </section>
-      <section class="section section--text-block project__section fadein">
-        <div class="media-background media-background--grid">
-          <h2 class="media-background__title">Common Code Base</h2>
-          <div class="media-background__content">
-            <img src="/assets/images/tufts-standard-theme-structure.svg" />
+      <section class="section section--horizontal-scroll project__section fadein">
+        <div class="horizontal-scroll horizontal-scroll--center">
+          <div class="horizontal-scroll__items">
+            <div class="horizontal-scroll__item horizontal-scroll__item--1">
+              <div class="horizontal-scroll__item-container">
+                <img class="horizontal-scroll__item-media media--lightbox" src="/assets/images/tufts-standard-screenshot-1.jpg" alt="1"/>
+                <div class="horizontal-scroll__item-label">Global Tufts</div>
+              </div>
+            </div><!--
+         --><div class="horizontal-scroll__item horizontal-scroll__item--2">
+              <div class="horizontal-scroll__item-container">
+                <img class="horizontal-scroll__item-media media--lightbox" src="/assets/images/tufts-standard-screenshot-1.jpg" alt="2" />
+                <div class="horizontal-scroll__item-label">Summer at Tufts</div>
+              </div>
+            </div><!--
+         --><div class="horizontal-scroll__item horizontal-scroll__item--3">
+              <div class="horizontal-scroll__item-container">
+                <img class="horizontal-scroll__item-media media--lightbox" src="/assets/images/tufts-standard-screenshot-1.jpg" alt="3" />
+                <div class="horizontal-scroll__item-label">Tufts Dental</div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
       <section class="section section--text-block project__section fadein">
         <div class="text-block text-block--sidebar">
           <div class="text-block__main">
- 
-            <p>The strategy behind this approach was to standardize many aspects of our site development process, refining a list of common modules, applying consistent front-end tooling, and reusing base functionality across sites. As an added bonus, applying our “standard” created a consistent user and brand experience across our sites.</p>
+            <h2>The “Standard” Revisited</h2>
             
-            <p>While this model gave us the capability to rapidly launch new sites, adding improvements and new functionality along the way, we rarely had an opportunity to backport enhancements to previous versions of the build. In turn, this lead to slight variations between sites and made it impossible to upgrade or test the sites in any unified way.</p>
+            <p>With the release of Drupal 8, we had the unique opportunity to once again revisit our approach for building a scalable Drupal platform, utilizing the integration of composer to manage project dependencies. First step; rebuilding our Drupal 7 offering in Drupal 8.</p>
+
+            <p>Having shifted to a component-based structure for our later site builds, Drupal 8 allowed us to isolate our components using libraries, while the paragraphs module helped us create flexible page layouts with reusable elements, aligning perfectly to a “standard” based web framework. Over time, we could seamlessly incorporate new components and add additional functionality, shifting our time and effort toward serving the community as whole, instead of one site at time.</p>
             
           </div>
           <div class="text-block__sidebar">
@@ -196,7 +217,7 @@
                 Modular Design
               </h2>
               <div class="media-text__description">
-                We developed our sites in a modular way  in order to isolate functionality and allow for ease of reuse  across projects.
+                We developed our sites in a modular way, isolating functionality and allowing for ease of replication across projects.
               </div>
             </div>
             <div class="media-text__media">
@@ -208,38 +229,17 @@
       <section class="section section--text-block project__section fadein">
         <div class="text-block">
           <div class="text-block__main">
-            <h2>The “Standard” Revisited</h2>
-            
-            <p>With the release of Drupal 8, we had the unique opportunity to once again revisit our approach for building a scalable Drupal platform, utilizing the integration of composer to manage project dependencies. First step; rebuilding our Drupal 7 offering in Drupal 8.</p>
-
-            <p>Having shifted to a component-based structure for our later site builds, Drupal 8 allowed us to isolate our components using libraries, while the paragraphs module helped us create flexible page layouts with reusable elements, aligning perfectly to a “standard” based web framework. Over time, we could seamlessly incorporate new components and add additional functionality, shifting our time and effort toward serving the community as whole, instead of one site at time.</p>
             
             <p>Reusable site features were stored in a base theme, allowing for site overrides and customizations to be stored in a child theme, which would only be used if absolutely necessary. All site functionality requests were to be vetted against the needs of the community and ported into the base theme regularly, allowing for an iterative development cycle. Isolating common site functionality by setting up unique repositories for our base theme and custom modules, allowed us to pull these remote repositories to each site using composer.</p>
             
           </div>
         </div>
       </section>
-      <section class="section section--horizontal-scroll project__section fadein">
-        <div class="horizontal-scroll horizontal-scroll--center">
-          <div class="horizontal-scroll__items">
-            <div class="horizontal-scroll__item horizontal-scroll__item--1">
-              <div class="horizontal-scroll__item-container">
-                <img class="horizontal-scroll__item-media media--lightbox" src="/assets/images/tufts-standard-screenshot-1.jpg" alt="1"/>
-                <div class="horizontal-scroll__item-label">Global Tufts</div>
-              </div>
-            </div><!--
-         --><div class="horizontal-scroll__item horizontal-scroll__item--2">
-              <div class="horizontal-scroll__item-container">
-                <img class="horizontal-scroll__item-media media--lightbox" src="/assets/images/tufts-standard-screenshot-1.jpg" alt="2" />
-                <div class="horizontal-scroll__item-label">Summer at Tufts</div>
-              </div>
-            </div><!--
-         --><div class="horizontal-scroll__item horizontal-scroll__item--3">
-              <div class="horizontal-scroll__item-container">
-                <img class="horizontal-scroll__item-media media--lightbox" src="/assets/images/tufts-standard-screenshot-1.jpg" alt="3" />
-                <div class="horizontal-scroll__item-label">Tufts Dental</div>
-              </div>
-            </div>
+      <section class="section section--text-block project__section fadein">
+        <div class="media-background media-background--grid">
+          <h2 class="media-background__title">Common Code Base</h2>
+          <div class="media-background__content">
+            <img src="/assets/images/tufts-standard-theme-structure.svg" />
           </div>
         </div>
       </section>
@@ -251,10 +251,12 @@
             
             <p>Creating a scalable framework has ensured our ability to develop new sites rapidly, while supporting and growing the functionality of existing sites and adhering to DRY principles of not maintaining the same code in multiple locations. With limited customizations, we can confidently push core and module upgrades to all sites without worrying about independently testing each one.</p>
             
+            <p>Although this is still a work in progress, we have made great strides in building out a web development process that can help a small team stay agile with the ever-changing needs of the university.</p>
+            
           </div>
         </div>
       </section>
-      <section class="section section--mobile-device project__section fadein">
+      <!--<section class="section section--mobile-device project__section fadein">
         <div class="mobile-device mobile-device--left">
           <div class="mobile-device__container">
             <div class="mobile-device__introduction">
@@ -274,16 +276,7 @@
             </div>
           </div>
         </div>
-      </section>
-      <section class="section section--text-block project__section fadein">
-        <div class="text-block">
-          <div class="text-block__main">
-            
-            <p>Although this is still a work in progress, we have made great strides in building out a web development process that can help a small team stay agile with the ever-changing needs of the university.</p>
-            
-          </div>
-        </div>
-      </section>
+      </section>-->
       <section class="section section--text-block project__section fadein">
         <div class="text-block text-block--contact">
           <div class="text-block__main">
