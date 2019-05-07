@@ -464,7 +464,7 @@
       padding-top: $padding-navigation-desktop;
       z-index: $z-contact-form;
       @include breakpoint($tablet) {
-        @include layout-width(50%);
+        //@include layout-width(50%);
         padding-top: 0;
       }
       @include breakpoint($tablet-large) {
@@ -507,6 +507,9 @@
     &__number {
       font-weight: $font-weight-bold;
     }
+  }
+  a {
+    color: $white;
   }
 }
 
