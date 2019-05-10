@@ -18,11 +18,15 @@
     align-items: center;
     //background: pink;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center; 
     position: relative;
     max-width: 68.75rem;
     width: 100%;
+    @include breakpoint($tablet-large) {
+      align-items: flex-start;
+      flex-direction: row;
+    }
   }
 
 }

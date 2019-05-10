@@ -9,16 +9,26 @@
 }
 
 .text-block-wrapper--sidebar {
-  width: calc(75% - 4rem);
-  margin-right: 4rem;
+  @include breakpoint($tablet-large) {
+    width: calc(75% - 4rem);
+    margin-right: 4rem;
+  }
 }
 
 .text-sidebar {
+  @include container-extra-small; 
   display: flex;
+  flex-direction: row;
   flex-wrap: wrap;
   //justify-content: space-between; 
+  padding: 0 2rem;
   width: 100%;
+  @include breakpoint($tablet) {
+    width: 100%;
+  }
   @include breakpoint($tablet-large) {
+    flex-direction: column;
+    padding: 0;
     width: 25%;
   }
   a {
@@ -44,6 +54,7 @@
     margin-bottom: 2rem;
     width: 100%;
     @include breakpoint($tablet) {
+      margin-right: 2rem;
       width: calc(33% - 2rem);
     }
     @include breakpoint($tablet-large) {
@@ -65,7 +76,14 @@
   //@include container-extra-small;
   @include body-text;
   display: flex;
+  flex-direction: column;
   justify-content: center;
+  @include breakpoint($tablet-large) {
+    //flex-direction: row;
+  }
+  &:nth-of-type(2){
+    margin-top: 2.5rem;
+  }
   &__circle {
     height: 18.75rem;
     shape-outside: ellipse(4.6875rem 9.375rem at 50% 50%);
@@ -83,31 +101,40 @@
     margin: 3.125rem 2rem .25rem 0;
   }
   &__verticle-title {
-    align-items: center;
     display: flex;
-    font-size: .75rem;
+    font-size: 1.2rem;
     font-weight: $font-weight-bold;
-    justify-content: center;
-    left: 0;
     letter-spacing: .15rem;
-    position: absolute;
-    top: 1.6rem;
-    transform: rotate(180deg);
-    text-orientation: sideways;
-    text-align:right;
-    text-orientation: sideways;
     text-transform: uppercase;
-    writing-mode: vertical-lr;
+    @include breakpoint($tablet-large) {
+      align-items: center;
+      font-size: .75rem;
+      justify-content: center;
+      left: 0;
+      padding: 0;
+      position: absolute;
+      top: 1.6rem;
+      transform: rotate(180deg);
+      text-align:right;
+      text-orientation: sideways;
+      white-space: nowrap;
+      writing-mode: vertical-lr; 
+    }
     &:after {
-      content: url(/assets/images/title-dash.svg);
-      margin-top: 2rem;
-      padding-left: .4rem;
+      @include breakpoint($tablet-large) {
+        content: url(/assets/images/title-dash.svg);
+        margin-top: 2rem;
+        padding-left: .4rem;
+      }
     }
   }
   &__side {
-    align-self: flex-start;
-    //background: yellow;
+    @include container-extra-small;
     position: relative;
+    @include breakpoint($tablet-large) {
+      align-self: flex-start;
+      width: auto;
+    }
   }
   &__main {
     @include container-extra-small;
@@ -119,11 +146,14 @@
 }
 
 .text-block--title {
-  justify-content: space-between;
+  align-items: center;
   padding: 0;
   width: 100%;
-  &:after {
-    content: '';
+  @include breakpoint($tablet-large) {
+    justify-content: space-between;
+    &:after {
+      content: '';
+    }
   }
 }
 
