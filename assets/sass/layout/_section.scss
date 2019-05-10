@@ -12,7 +12,16 @@
   @include layout-vertical-padding($vertical-padding-standard);
   align-items: center;
   display: flex;
+  flex-direction: column;
   justify-content: center; 
+  &__container {
+    align-items: center;
+    display: flex;
+    justify-content: center; 
+    position: relative;
+    max-width: 68.75rem;
+    width: 100%;
+  }
 
 }
 

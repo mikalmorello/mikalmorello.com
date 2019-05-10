@@ -133,18 +133,15 @@
           <img src="/assets/images/tufts-standard-project-banner.jpg" alt="Tufts Standard design System"/>
         </div>
       </section>
-  <section class="section section--text-block project__section fadein">
-        <div class="text-block text-block--intro">
-          <div class="text-block__main">
-            
-            <h2>Rapid Recreation</h2>
-            
-            <p>Unlike WordPress, Drupal 7 doesn’t provide a clear path for this type of site configuration. Using a multi-site style approach for managing Drupal sites, we developed a starter theme and a preset list of configurations that we could duplicate with each new site. This became what we refer to as the university “standard”.</p>
-            
-            <p>The strategy behind this approach was to standardize many aspects of our site development process, refining a list of common modules, applying consistent front-end tooling, and reusing base functionality across sites. As an added bonus, applying our “standard” created a consistent user and brand experience across our sites.</p>
-            
-            <p>While this model gave us the capability to rapidly launch new sites, adding improvements and new functionality along the way, we rarely had an opportunity to backport enhancements to previous versions of the build. In turn, this lead to slight variations between sites and made it impossible to upgrade or test the sites in any unified way.</p>
-            
+      <section class="section section--text-block project__section fadein">
+        <div class="section__container">
+          <div class="text-block text-block--intro">
+            <div class="text-block__main">
+              <h2 class="text-block__verticle-title">Rapid Recreation</h2>
+              <p>Unlike WordPress, Drupal 7 doesn’t provide a clear path for this type of site configuration. Using a multi-site style approach for managing Drupal sites, we developed a starter theme and a preset list of configurations that we could duplicate with each new site. This became what we refer to as the university “standard”.</p>
+              <p>The strategy behind this approach was to standardize many aspects of our site development process, refining a list of common modules, applying consistent front-end tooling, and reusing base functionality across sites. As an added bonus, applying our “standard” created a consistent user and brand experience across our sites.</p>
+              <p>While this model gave us the capability to rapidly launch new sites, adding improvements and new functionality along the way, we rarely had an opportunity to backport enhancements to previous versions of the build. In turn, this lead to slight variations between sites and made it impossible to upgrade or test the sites in any unified way.</p>
+            </div>
           </div>
         </div>
       </section>
@@ -173,38 +170,37 @@
         </div>
       </section>
       <section class="section section--text-block project__section fadein">
-        <div class="text-block text-block--sidebar">
-          <div class="text-block__main">
-            <h2>The “Standard” Revisited</h2>
-            
-            <p>With the release of Drupal 8, we had the unique opportunity to once again revisit our approach for building a scalable Drupal platform, utilizing the integration of composer to manage project dependencies. First step; rebuilding our Drupal 7 offering in Drupal 8.</p>
-
-            <p>Having shifted to a component-based structure for our later site builds, Drupal 8 allowed us to isolate our components using libraries, while the paragraphs module helped us create flexible page layouts with reusable elements, aligning perfectly to a “standard” based web framework. Over time, we could seamlessly incorporate new components and add additional functionality, shifting our time and effort toward serving the community as whole, instead of one site at time.</p>
-            
-          </div>
-          <div class="text-block__sidebar">
-            <div class="text-block__divider">
-              <img src="/assets/images/wave-divider.svg" alt=""/>
+        <div class="section__container">
+          <div class="text-block text-block--sidebar">
+            <div class="text-block__main">
+              <h2 class="text-block__verticle-title">The “Standard” Revisited</h2>
+              <p>With the release of Drupal 8, we had the unique opportunity to once again revisit our approach for building a scalable Drupal platform, utilizing the integration of composer to manage project dependencies. First step; rebuilding our Drupal 7 offering in Drupal 8.</p>
+              <p>Having shifted to a component-based structure for our later site builds, Drupal 8 allowed us to isolate our components using libraries, while the paragraphs module helped us create flexible page layouts with reusable elements, aligning perfectly to a “standard” based web framework. Over time, we could seamlessly incorporate new components and add additional functionality, shifting our time and effort toward serving the community as whole, instead of one site at time.</p>
             </div>
-            <div class="text-block__section">
-              <div class="text-block__section-title">Client</div>
-              <ul class="text-block__section-list">
-                <li>Digital Services, Tufts University</li>
-              </ul>
-            </div>
-            <div class="text-block__section">
-              <div class="text-block__section-title">Technologies</div>
-              <ul class="text-block__section-list">
-                <li>Drupal 8</li>
-              </ul>
-            </div>
-            <div class="text-block__section">
-              <div class="text-block__section-title">SITE</div>
-              <ul class="text-block__section-list">
-                <li><a href="http://global.tufts.edu">global.tufts.edu</a></li>
-                <li><a href="http://summer.tufts.edu">summer.tufts.edu</a></li>
-                <li><a href="http://dental.tufts.edu">dental.tufts.edu</a></li>
-              </ul>
+            <div class="text-block__sidebar">
+              <div class="text-block__divider">
+                <img src="/assets/images/wave-divider.svg" alt=""/>
+              </div>
+              <div class="text-block__section">
+                <div class="text-block__section-title">Client</div>
+                <ul class="text-block__section-list">
+                  <li>Digital Services, Tufts University</li>
+                </ul>
+              </div>
+              <div class="text-block__section">
+                <div class="text-block__section-title">Technologies</div>
+                <ul class="text-block__section-list">
+                  <li>Drupal 8</li>
+                </ul>
+              </div>
+              <div class="text-block__section">
+                <div class="text-block__section-title">SITE</div>
+                <ul class="text-block__section-list">
+                  <li><a href="http://global.tufts.edu">global.tufts.edu</a></li>
+                  <li><a href="http://summer.tufts.edu">summer.tufts.edu</a></li>
+                  <li><a href="http://dental.tufts.edu">dental.tufts.edu</a></li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
@@ -227,11 +223,11 @@
         </div>
       </section>
       <section class="section section--text-block project__section fadein">
-        <div class="text-block">
-          <div class="text-block__main">
-            
-            <p>Reusable site features were stored in a base theme, allowing for site overrides and customizations to be stored in a child theme, which would only be used if absolutely necessary. All site functionality requests were to be vetted against the needs of the community and ported into the base theme regularly, allowing for an iterative development cycle. Isolating common site functionality by setting up unique repositories for our base theme and custom modules, allowed us to pull these remote repositories to each site using composer.</p>
-            
+        <div class="section__container">
+          <div class="text-block">
+            <div class="text-block__main">
+              <p>Reusable site features were stored in a base theme, allowing for site overrides and customizations to be stored in a child theme, which would only be used if absolutely necessary. All site functionality requests were to be vetted against the needs of the community and ported into the base theme regularly, allowing for an iterative development cycle. Isolating common site functionality by setting up unique repositories for our base theme and custom modules, allowed us to pull these remote repositories to each site using composer.</p>
+            </div>
           </div>
         </div>
       </section>
@@ -244,15 +240,13 @@
         </div>
       </section>
       <section class="section section--text-block project__section fadein">
-        <div class="text-block">
-          <div class="text-block__main">
-            
-            <h2>Scaling Sustainably</h2>
-            
-            <p>Creating a scalable framework has ensured our ability to develop new sites rapidly, while supporting and growing the functionality of existing sites and adhering to DRY principles of not maintaining the same code in multiple locations. With limited customizations, we can confidently push core and module upgrades to all sites without worrying about independently testing each one.</p>
-            
-            <p>Although this is still a work in progress, we have made great strides in building out a web development process that can help a small team stay agile with the ever-changing needs of the university.</p>
-            
+        <div class="section__container">
+          <div class="text-block">
+            <div class="text-block__main">
+              <h2 class="text-block__verticle-title">Scaling Sustainably</h2>
+              <p>Creating a scalable framework has ensured our ability to develop new sites rapidly, while supporting and growing the functionality of existing sites and adhering to DRY principles of not maintaining the same code in multiple locations. With limited customizations, we can confidently push core and module upgrades to all sites without worrying about independently testing each one.</p>
+              <p>Although this is still a work in progress, we have made great strides in building out a web development process that can help a small team stay agile with the ever-changing needs of the university.</p>
+            </div>
           </div>
         </div>
       </section>
@@ -280,9 +274,7 @@
       <section class="section section--text-block project__section fadein">
         <div class="text-block text-block--contact">
           <div class="text-block__main">
-            
             <p>Interested in learning more about Drupal 8 development?</p>
-            
           </div>
         </div>
       </section>
@@ -298,7 +290,6 @@
         </div>
       </section>
     </main>
-
     
   <!-- MODAL -->
   <section id="modal" class="modal">
