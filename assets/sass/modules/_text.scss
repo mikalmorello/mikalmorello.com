@@ -4,12 +4,68 @@
 - TEXT BLOCK STATES
 */
 
+.text-block-wrapper {
+  width: 100%;
+}
 
+.text-block-wrapper--sidebar {
+  width: calc(75% - 4rem);
+  margin-right: 4rem;
+}
+
+.text-sidebar {
+  display: flex;
+  flex-wrap: wrap;
+  //justify-content: space-between; 
+  width: 100%;
+  @include breakpoint($tablet-large) {
+    width: 25%;
+  }
+  a {
+    @include link-dark;
+  }
+  &__divider {
+    margin-bottom: 2rem;
+    margin-top: 3rem;
+    width: 100%;
+    @include breakpoint($tablet-large) {
+      align-self: flex-start;
+      margin-bottom: 2rem;
+      margin-top: 0;
+      opacity: .25;
+      width: $divider-width;
+    }
+    img {
+      width: $divider-width;
+      min-width: auto;
+    }
+  }
+  &__section {
+    margin-bottom: 2rem;
+    width: 100%;
+    @include breakpoint($tablet) {
+      width: calc(33% - 2rem);
+    }
+    @include breakpoint($tablet-large) {
+      width: 100%;
+    }
+  }
+  &__section-title {
+    @include project-aside-title-text; 
+    margin-bottom: .75rem;
+  }
+  &__section-list {
+    @include list-vertical(.25rem);
+    @include project-aside-text;
+  }
+}
 // TEXT BLOCK
 
 .text-block {
-  @include container-extra-small;
+  //@include container-extra-small;
   @include body-text;
+  display: flex;
+  justify-content: center;
   &__circle {
     height: 18.75rem;
     shape-outside: ellipse(4.6875rem 9.375rem at 50% 50%);
@@ -47,6 +103,27 @@
       margin-top: 2rem;
       padding-left: .4rem;
     }
+  }
+  &__side {
+    align-self: flex-start;
+    //background: yellow;
+    position: relative;
+  }
+  &__main {
+    @include container-extra-small;
+    align-self: center;
+    //background: orange;
+    position: relative;
+  }
+
+}
+
+.text-block--title {
+  justify-content: space-between;
+  padding: 0;
+  width: 100%;
+  &:after {
+    content: '';
   }
 }
 
