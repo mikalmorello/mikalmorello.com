@@ -257,7 +257,7 @@
     }
     &__section-list {
       @include list-vertical(.25rem);
-      @include project-aside-text;
+      @include project-aside-text; 
     }
   } 
 }
