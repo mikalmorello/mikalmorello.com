@@ -7,7 +7,7 @@
 // MOCKUP
 
 .mockup {
-  background-color: $bc-red;
+  background-color: $theme-dark;
   color: $white;
   overflow: hidden;
   width: 100%;
@@ -25,7 +25,7 @@
     }
   }
   &__button {
-    @include button-outline($white, $bc-darkred);
+    @include button-outline($white, $theme-dark);
     font-family: Oswald,sans-serif;
     height: 4rem;
     padding-left: 2rem;

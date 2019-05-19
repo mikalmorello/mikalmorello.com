@@ -115,7 +115,19 @@
     //background: orange;
     position: relative;
   }
-
+  &__list {
+    @include list-vertical(.25rem);
+    border-left: 4px solid $gray;
+    font-style: italic;
+    margin: 3rem 0;
+    padding-left: 4rem;
+    li:first-child {
+      padding-top: 0;
+    }
+    li:last-child {
+      padding-bottom: 0;
+    }
+  }
 }
 
 .text-block--title {
