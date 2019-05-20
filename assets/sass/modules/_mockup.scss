@@ -26,6 +26,7 @@
   }
   &__button {
     @include button-outline($white, $theme-dark);
+    align-items: center;
     font-family: Oswald,sans-serif;
     height: 4rem;
     padding-left: 2rem;

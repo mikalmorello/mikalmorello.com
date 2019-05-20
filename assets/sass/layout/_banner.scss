@@ -398,7 +398,7 @@
       z-index: $z-contact-media;
       @include breakpoint($tablet-large) {
         @include layout-width(50%);
-        min-height: 0;
+        //min-height: 0;
         order: 2;
       }
       &:before {

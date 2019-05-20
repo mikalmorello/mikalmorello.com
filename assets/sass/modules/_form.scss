@@ -28,6 +28,7 @@
   &__submit {
     @include form-input;
     @include button-outline($theme-light-green, $button-border);
+    align-items: center;
     background: rgba($theme-dark, 1);
     color: $white;
     height: 5rem;
