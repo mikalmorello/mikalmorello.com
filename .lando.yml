@@ -2,7 +2,7 @@ name: mikal-morello
 recipe: lamp
 services:
   node:
-    type: node:6.10
+    type: node:10
     globals:
       gulp-cli: "latest"
 tooling:
