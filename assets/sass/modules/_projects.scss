@@ -136,18 +136,19 @@
   &__content {
     display: flex;
     flex-direction: column;
-    order: 2;
-    padding: 0 $padding-standard-size;
+    order: 1;
   }
   &__title {
     @include project-card-title;
-    order: 2;
+    order: 3;
+    padding: 0 $padding-standard-size;
   }
   &__tags {
     @include list-horizontal(.25rem); 
     @include small-text(uppercase);
     letter-spacing: $letter-space-extra-large;
-    order: 1;
+    order: 2;
+    padding: 0 $padding-standard-size;
   }
   &__tag {
     &:not(:last-child):after {

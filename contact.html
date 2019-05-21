@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en-US">
   <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -85,6 +85,7 @@
               </svg>
             </span>-->
             <svg class="svg-menu" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 100 100">
+              <title>Menu</title>
               <g class="svg-menu-toggle">
                   <path class="line line-1" d="M0.1,5.7H100v10H0.1V5.7z"/>
                   <path class="line line-2" d="M0.1,45.6H100v10H0.1V45.6z"/>
@@ -125,15 +126,14 @@
             </div>
             <div class="banner__form-wrapper">
               <form class="banner__form form form--vertical" action="https://formspree.io/mikalmorello+website@gmail.com" method="POST">
-                <label class="form__label">Name</label>
+                <label class="form__label" for="contactName">Name</label>
                 <input id="contactName" class="form__input" type="text"  name="name" placeholder="Your Name" required />
-                <label class="form__label">Email</label>
+                <label class="form__label" for="contactEmail">Email</label>
                 <input id="contactEmail" class="form__input" type="email" name="_replyto" placeholder="Your Email" required />
-                <label class="form__label">Subject</label>
+                <label class="form__label" for="contactSubject">Subject</label>
                 <input id="contactSubject" class="form__input" type="text" name="subject" placeholder="Subject" required />
                 <input type="hidden" name="_next" value="/contact-thanks.html" />
                 <input type="hidden" name="_subject" value="Website contact" />
-                <input type="text" name="_gotcha" style="display:none" />
                 <button id="contactSubmit" class="form__submit button" type="submit" value="Send">Submit</button>
               </form>
             </div>

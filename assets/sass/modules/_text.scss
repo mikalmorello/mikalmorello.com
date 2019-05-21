@@ -142,6 +142,9 @@
     //background: orange;
     position: relative;
   }
+  &__title {
+    @include container-extra-small;
+  }
   &__list {
     @include list-vertical(.25rem);
     border-left: 4px solid $gray;
