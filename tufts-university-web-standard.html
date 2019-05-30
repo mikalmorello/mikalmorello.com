@@ -143,7 +143,11 @@
     <main id="main" class="main project">
       <section class="section section--project-banner project__section fadein">
         <div class="project__banner">
-          <img src="/assets/images/tufts-standard-project-banner.jpg" alt="Tufts Standard design System"/>
+          <picture>
+            <source srcset="/assets/images/tufts-standard-project-banner.jpg" media="(min-width: 1025px)">
+            <source srcset="/assets/images/tufts-standard-project-banner--tablet.jpg" media="(min-width: 769px)">
+            <img srcset="/assets/images/tufts-standard-project-banner--mobile.jpg" alt="Tufts Standard design System">
+          </picture>
         </div>
       </section>
       <section class="section section--text-block project__section fadein">
@@ -161,7 +165,7 @@
       </section>
       <section class="section section--project-media project__section fadein">
         <div class="media-block media-block--fullwidth">
-          <img src="/assets/images/tufts-standard-devices-desktop" alt="Laptop with Global site displayed" />
+          <img src="/assets/images/tufts-standard-devices-desktop.jpg" alt="Laptop with Global site displayed" />
         </div>
       </section>
       <section class="section section--text-block project__section fadein">
@@ -390,7 +394,7 @@
     <script src="assets/js/fadein.js"></script>
     <script src="assets/js/scroll.js"></script>
     <script src="assets/js/main.js"></script>
-    <script src="assets/js/horizontal-scroll.js"></script>
+    <!--<script src="assets/js/horizontal-scroll.js"></script>-->
     <script src="assets/js/lightbox.js"></script>
   </body>
 </html>

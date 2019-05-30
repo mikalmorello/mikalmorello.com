@@ -140,7 +140,11 @@
     <main id="main" class="main project">
       <section class="section section--project-banner project__section fadein">
         <div class="project__banner">
-          <img src="/assets/images/boston-college-redesign-project-banner.jpg" alt="Boston College Website Screenshot"/>
+          <picture>
+            <source srcset="/assets/images/boston-college-redesign-project-banner.jpg" media="(min-width: 1025px)">
+            <source srcset="/assets/images/boston-college-redesign-project-banner--tablet.jpg" media="(min-width: 769px)">
+            <img srcset="/assets/images/boston-college-redesign-project-banner--mobile.jpg" alt="Boston College Website Screenshot">
+          </picture>
         </div>
       </section>
       <section class="section section--text-block project__section fadein">
