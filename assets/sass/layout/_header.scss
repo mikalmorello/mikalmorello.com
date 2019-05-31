@@ -48,6 +48,21 @@
       }
     }
   }
+  &__company {
+    align-items: center;
+    display: flex;
+  }
+  &__company-logo {
+    max-height: 1.625rem;
+    min-width: auto;
+    width: auto;
+  }
+  &__company-sign {
+    font-family: $oswald;
+    font-size: 2rem;
+    font-weight: $font-weight-light;
+    padding: 0 1rem;
+  }
 }
 
 
