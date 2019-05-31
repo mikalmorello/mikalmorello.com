@@ -1,16 +1,19 @@
-"use strict";
-
 /* COMPANY */
 (function () {
   // VARIABLES
-  var body = document.getElementsByTagName('body')[0],
-      logo = document.getElementsByClassName('header__brand')[0];
-  var company = window.location.hash.substring(1),
+  const body = document.getElementsByTagName('body')[0],
+        logo = document.getElementsByClassName('header__brand')[0];
+  let company = window.location.hash.substring(1),
       companyDiv = document.createElement("div"); // FUNCTIONS
 
   function setCompany(companyName) {
     console.log(companyName + 'existing');
-    companyDiv.innerHTML = "\n          <div class=\"header__company\">\n            <span class=\"header__company-sign\">+ </span>\n            <img class=\"header__company-logo\" src=\"/assets/images/company/".concat(company, ".svg\" alt=\"").concat(company, "\" />\n          </div> \n        ");
+    companyDiv.innerHTML = `
+          <div class="header__company">
+            <span class="header__company-sign">+ </span>
+            <img class="header__company-logo" src="/assets/images/company/edx.svg" alt="edx" />
+          </div> 
+        `;
     logo.appendChild(companyDiv);
   }
 

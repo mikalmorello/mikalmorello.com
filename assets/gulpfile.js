@@ -1,8 +1,8 @@
 'use strict';
 
 var gulp = require('gulp');
+var babel = require("gulp-babel");
 var sass = require('gulp-sass');
-var sourcemaps = require('gulp-sourcemaps');
 var autoprefixer = require('gulp-autoprefixer');
 var importer = require('node-sass-globbing');
 var plumber = require('gulp-plumber');
@@ -38,6 +38,7 @@ var svgstore_config = {
 
 gulp.task('gulp-watch', function() {
   gulp.watch("sass/**/*.scss", ['sass']);
+  gulp.watch("babel/*.js", ['babels']);
   gulp.watch(svgstore_config.src, ['svgstore', 'svgstore-sass' ]);
   gulp.watch(svgstore_config.template, ['svgstore-sass']);
 });
@@ -68,6 +69,12 @@ gulp.task('svgstore', function() {
     ///.pipe(imagemin(svgstore_config.imagemin))
     .pipe(svgstore(svgstore_config.opts))
     .pipe(gulp.dest(svgstore_config.dist))
+});
+
+gulp.task("babels", function () {
+  return gulp.src("babel/*.js")
+    .pipe(babel())
+    .pipe(gulp.dest("js"));
 });
 
 gulp.task('default', [ 'gulp-watch']);

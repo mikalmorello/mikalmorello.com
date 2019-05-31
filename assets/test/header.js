@@ -1,11 +1,9 @@
-"use strict";
-
 /* HEADER SCROLL */
 (function () {
   // VARIABLES
-  var header = document.getElementById('header'),
-      headerTop = header.offsetTop,
-      headerHeight = header.clientHeight; // FUNCTIONS
+  const header = document.getElementById('header'),
+        headerTop = header.offsetTop,
+        headerHeight = header.clientHeight; // FUNCTIONS
 
   function stickyNavigation() {
     var scrollAmount = window.scrollY,

@@ -1,5 +1,3 @@
-"use strict";
-
 (function () {
   // VARIABLES
   var body = document.getElementsByTagName('body')[0],
@@ -18,7 +16,7 @@
   } // EVENTS
 
 
-  modalImages.forEach(function (arrayElement, index) {
+  modalImages.forEach((arrayElement, index) => {
     modalImages[index].onclick = function () {
       modalImage.src = modalImages[index].src;
       modalCaption.innerHTML = modalImages[index].alt;

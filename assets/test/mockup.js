@@ -1,11 +1,9 @@
-"use strict";
-
 /* MOCKUP */
 (function () {
   // VARIABLES
-  var mockupCloseButton = document.getElementById('mockupCloseButton'),
-      mockupContainer = document.getElementById('mockupContainer'),
-      mockupButton = document.getElementById('mockupButton'); // FUNCTION
+  const mockupCloseButton = document.getElementById('mockupCloseButton'),
+        mockupContainer = document.getElementById('mockupContainer'),
+        mockupButton = document.getElementById('mockupButton'); // FUNCTION
 
   function showOverlay(callback) {
     mockupContainer.classList.add('mockup__container--open');

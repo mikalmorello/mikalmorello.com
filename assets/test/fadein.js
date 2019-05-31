@@ -1,8 +1,6 @@
-"use strict";
-
 /* FADE IN CONTENT */
 (function () {
-  var animateHTML = function animateHTML() {
+  var animateHTML = function () {
     var elems;
     var windowHeight;
 

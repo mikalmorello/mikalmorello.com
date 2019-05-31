@@ -1,5 +1,3 @@
-"use strict";
-
 /* MAIN MENU */
 (function () {
   // VARIABLES
@@ -55,7 +53,7 @@
   } // CLICK EVENT
 
 
-  for (var i = 0; i < bannerButton.length; i++) {
+  for (i = 0; i < bannerButton.length; i++) {
     bannerButton[i].addEventListener("click", bannerButtonClick);
   }
 

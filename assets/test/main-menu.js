@@ -1,12 +1,10 @@
-"use strict";
-
 /* MAIN MENU */
 (function () {
   // VARIABLES
-  var body = document.getElementsByTagName('body')[0],
-      header = document.getElementById('header'),
-      headerMenuButton = document.getElementById('headerMenuButton'),
-      mainMenu = document.getElementById('mainMenu'); // FUNCTIONS
+  const body = document.getElementsByTagName('body')[0],
+        header = document.getElementById('header'),
+        headerMenuButton = document.getElementById('headerMenuButton'),
+        mainMenu = document.getElementById('mainMenu'); // FUNCTIONS
 
   function showMenu(callback) {
     mainMenu.classList.add('main-menu--is-visible');
