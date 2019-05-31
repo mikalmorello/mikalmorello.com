@@ -19,11 +19,15 @@
     width: 100vw;
   }
   &__brand {
-    @include layout-width(50%); 
     align-items: center;
     display: flex;
+    flex-grow: 1;
     height: 1.625rem;
     justify-content: flex-start;
+    @include breakpoint($tablet){
+      @include layout-width(50%); 
+      flex-grow: 0;
+    }
   }
   &__logo {
     display: flex;
@@ -31,11 +35,13 @@
     width: 5rem;
   }
   &__actions {
-    @include layout-width(50%); 
     align-items: center;
     display: flex;
     height: 1.625rem;
     justify-content: flex-end;
+    @include breakpoint($tablet){
+      @include layout-width(50%); 
+    }
   }
   &__menu {
     height: 100%;
@@ -95,6 +101,9 @@
         fill: $white;
       }
     }
+    &__company {
+      color: $white;
+    }
   }
 }
 
@@ -148,6 +157,9 @@
       svg {
         fill: $white;
       }
+    }
+    &__company {
+      color: $white;
     }
   }
 }

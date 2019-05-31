@@ -11,12 +11,18 @@
 
 // HARVARD 
 
-.body--harvard {
+.header__company-logo {
+  .body--harvard & {
+    max-height: 3rem;
+  }
 }
 
 // HBSP
 
-.body--hbsp {
+.header__company-logo {
+  .body--hbsp & {
+    max-height: 3rem;
+  }
 }
 
 // EDX
