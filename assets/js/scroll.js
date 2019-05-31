@@ -6,7 +6,7 @@ window.onload = function () {
     return t * t * t;
   };
 
-  var scrollElems = document.getElementsByClassName('scroll'); //console.log(scrollElems);
+  var scrollElems = document.getElementsByClassName('scroll');
 
   var scrollToElem = function scrollToElem(start, stamp, duration, scrollEndElemTop, startScrollOffset) {
     //debugger;
@@ -14,7 +14,6 @@ window.onload = function () {
     var progress = runtime / duration;
     var ease = easeInCubic(progress);
     progress = Math.min(progress, 1);
-    console.log(startScrollOffset, startScrollOffset + scrollEndElemTop * ease);
     var newScrollOffset = startScrollOffset + scrollEndElemTop * ease;
     window.scroll(0, startScrollOffset + scrollEndElemTop * ease);
 

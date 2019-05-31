@@ -9,7 +9,6 @@
       companyDiv = document.createElement("div"); // FUNCTIONS
 
   function setCompany(companyName) {
-    console.log(companyName + 'existing');
     companyDiv.classList.add('header__company');
     companyDiv.innerHTML = "\n          <span class=\"header__company-sign\">+ </span>\n          <img class=\"header__company-logo\" src=\"/assets/images/company/".concat(company, ".svg\" alt=\"").concat(company, "\" />\n        ");
     logo.appendChild(companyDiv);

@@ -13,7 +13,6 @@
 
   function bannerButtonClick() {
     event.preventDefault();
-    console.log(this + " has been clicked");
     banner.classList.remove('banner--designer', 'banner--developer', 'banner--strategist');
     header.classList.remove('header--light', 'header--dark'), bannerSubtitleClear();
     bannerButtonClear();
@@ -33,8 +32,6 @@
       subtitleStrategist.classList.add('banner__subtitle--active');
       header.classList.add('header--light');
       this.classList.add('button--active');
-    } else {
-      console.log('no match');
     }
   }
 
@@ -42,7 +39,6 @@
     for (var i = 0; i < bannerSubtitle.length; ++i) {
       var item = bannerSubtitle[i];
       item.classList.remove('banner__subtitle--active');
-      console.log('subtitle class loop');
     }
   }
 
@@ -50,7 +46,6 @@
     for (var i = 0; i < bannerButton.length; ++i) {
       var item = bannerButton[i];
       item.classList.remove('button--active');
-      console.log('bannerButton class loop');
     }
   } // CLICK EVENT
 

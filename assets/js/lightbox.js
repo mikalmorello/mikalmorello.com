@@ -22,7 +22,6 @@
     modalImages[index].onclick = function () {
       modalImage.src = modalImages[index].src;
       modalCaption.innerHTML = modalImages[index].alt;
-      console.log('this click event is working' + modalImages[index]);
       modal.classList.remove('modal--closed');
       modal.classList.add('modal--open');
       bodyOverflowHide();

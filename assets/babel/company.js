@@ -14,7 +14,6 @@
   // FUNCTIONS
   
   function setCompany(companyName){
-    console.log(companyName + 'existing');
     companyDiv.classList.add('header__company');
     companyDiv.innerHTML =       
         `

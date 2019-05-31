@@ -5,8 +5,6 @@ window.onload = function() {
 const easeInCubic = function (t) { return t*t*t }	
 const scrollElems = document.getElementsByClassName('scroll');
 
-
-//console.log(scrollElems);
 const scrollToElem = (start, stamp, duration, scrollEndElemTop, startScrollOffset) => {
     //debugger;
     const runtime = stamp - start;
@@ -14,7 +12,6 @@ const scrollToElem = (start, stamp, duration, scrollEndElemTop, startScrollOffse
     const ease = easeInCubic(progress);
     
     progress = Math.min(progress, 1);
-    console.log(startScrollOffset,startScrollOffset + (scrollEndElemTop * ease));
     
     const newScrollOffset = startScrollOffset + (scrollEndElemTop * ease);
     window.scroll(0, startScrollOffset + (scrollEndElemTop * ease));
