@@ -122,6 +122,24 @@
   }
 } 
 
+.header--menu-light {
+  .header {
+    &__logo {
+      svg {
+        fill: $white;
+      }
+    }
+    &__menu-button {
+      svg {
+        fill: $white;
+      }
+    }
+    &__company {
+      color: $white;
+    }
+  }
+}
+
 // Initiates when the page is scrolled past a certain point, revealing the navigation
 .header--sticky {
   opacity:1;
@@ -145,25 +163,6 @@
     transition: none;
   }
 }
-
-.header--menu-light {
-  .header {
-    &__logo {
-      svg {
-        fill: $white;
-      }
-    }
-    &__menu-button {
-      svg {
-        fill: $white;
-      }
-    }
-    &__company {
-      color: $white;
-    }
-  }
-}
-
 
 // HEADER MENU ICON
 

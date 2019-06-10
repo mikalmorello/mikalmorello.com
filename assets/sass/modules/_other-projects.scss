@@ -22,6 +22,9 @@
   }
   &__list {
     @include list-inline(.5rem);
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
     text-align: center;
     
   }
