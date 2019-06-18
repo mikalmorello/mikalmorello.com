@@ -140,6 +140,7 @@
   }
 }
 
+
 // Initiates when the page is scrolled past a certain point, revealing the navigation
 .header--sticky {
   opacity:1;
@@ -161,6 +162,24 @@
   }
   .body--menu-open & {
     transition: none;
+  }
+}
+
+.header--menu-open {
+  .header {
+    &__logo {
+      svg {
+        fill: $white;
+      }
+    }
+    &__menu-button {
+      svg {
+        fill: $white;
+      }
+    }
+    &__company {
+      color: $white;
+    } 
   }
 }
 
