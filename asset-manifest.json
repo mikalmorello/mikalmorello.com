@@ -1,12 +1,12 @@
 {
-  "main.js": "/mikalmorello.github.io/static/js/main.234efc7d.chunk.js",
-  "main.js.map": "/mikalmorello.github.io/static/js/main.234efc7d.chunk.js.map",
-  "static/js/1.1ca1f98a.chunk.js": "/mikalmorello.github.io/static/js/1.1ca1f98a.chunk.js",
-  "static/js/1.1ca1f98a.chunk.js.map": "/mikalmorello.github.io/static/js/1.1ca1f98a.chunk.js.map",
-  "runtime~main.js": "/mikalmorello.github.io/static/js/runtime~main.2a109ca0.js",
-  "runtime~main.js.map": "/mikalmorello.github.io/static/js/runtime~main.2a109ca0.js.map",
-  "static/media/logo.1d15f510.svg": "/mikalmorello.github.io/static/media/logo.1d15f510.svg",
-  "index.html": "/mikalmorello.github.io/index.html",
-  "precache-manifest.df0767ab0ad0b7022c22f066686b2396.js": "/mikalmorello.github.io/precache-manifest.df0767ab0ad0b7022c22f066686b2396.js",
-  "service-worker.js": "/mikalmorello.github.io/service-worker.js"
+  "main.js": "/static/js/main.26c46ea9.chunk.js",
+  "main.js.map": "/static/js/main.26c46ea9.chunk.js.map",
+  "static/js/1.1ca1f98a.chunk.js": "/static/js/1.1ca1f98a.chunk.js",
+  "static/js/1.1ca1f98a.chunk.js.map": "/static/js/1.1ca1f98a.chunk.js.map",
+  "runtime~main.js": "/static/js/runtime~main.229c360f.js",
+  "runtime~main.js.map": "/static/js/runtime~main.229c360f.js.map",
+  "static/media/logo.1d15f510.svg": "/static/media/logo.1d15f510.svg",
+  "index.html": "/index.html",
+  "precache-manifest.009ec97316f70c7a51d989d89a7abb06.js": "/precache-manifest.009ec97316f70c7a51d989d89a7abb06.js",
+  "service-worker.js": "/service-worker.js"
 }
