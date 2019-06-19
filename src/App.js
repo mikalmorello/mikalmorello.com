@@ -7,7 +7,7 @@ import TuftsStandard from './components/TuftsStandard'
 import BostonCollege from './components/BostonCollege'
 import ScrollIntoView from './components/ScrollIntoView'
 import { 
-  HashRouter as Router, 
+  BrowserRouter as Router, 
   Route
 } from 'react-router-dom';
 
