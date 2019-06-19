@@ -1,5 +1,5 @@
 import React from 'react';
-//import Map from './Map';
+import Map from './Map';
 import Fade from 'react-reveal/Fade';
 
 class ContactMain extends React.Component {
@@ -33,7 +33,7 @@ class ContactMain extends React.Component {
             </div>
           </section>
         </Fade>
-        {/*<Fade>
+        <Fade>
           <section className="map">
             <Map
               id="map"
@@ -50,7 +50,7 @@ class ContactMain extends React.Component {
               }}
             />
           </section>
-        </Fade>*/}
+        </Fade>
       </main>
     )
   }
