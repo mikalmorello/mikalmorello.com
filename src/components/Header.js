@@ -94,7 +94,6 @@ class Header extends React.Component {
   
   checkMenuState(menuState){
     var header = document.getElementById('header');
-    console.log(header);
     if (menuState === 'true') {
       document.body.classList.add('body--menu-open');
       document.body.classList.add('body--overflow-hidden');

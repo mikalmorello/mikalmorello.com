@@ -1,6 +1,17 @@
 import React from 'react';
+import { 
+  withRouter
+} from 'react-router-dom';
 
 class HomeBanner extends React.Component {
+  
+    componentWillMount() {
+    this.props.history.listen(() => {
+      this.props.setBannerState('default');
+      this.props.setHeaderStyle('dark');
+    });
+  }
+  
   
   setBannerTheme(bannerState, headerStyle){
     this.props.setBannerState(bannerState);
@@ -74,4 +85,4 @@ class HomeBanner extends React.Component {
   
 }
 
-export default HomeBanner;
+export default withRouter(HomeBanner);
