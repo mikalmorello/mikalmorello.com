@@ -65,7 +65,7 @@ class App extends React.Component {
       //console.log(this.state.location.hash);
       //console.log(this.state.headerStyle);
     return (
-      <Router> 
+      <Router basename={process.env.PUBLIC_URL}> 
           <ScrollIntoView>
           <Route 
             exact path="/" 
