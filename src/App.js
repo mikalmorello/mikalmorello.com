@@ -2,6 +2,7 @@ import React from 'react';
 import Home from './components/Home'
 import Projects from './components/Projects'
 import Contact from './components/Contact'
+import ContactThanks from './components/ContactThanks'
 import TuftsMagazine from './components/TuftsMagazine'
 import TuftsStandard from './components/TuftsStandard'
 import BostonCollege from './components/BostonCollege'
@@ -99,6 +100,19 @@ class App extends React.Component {
             path="/contact"
             render={(props) => (
               <Contact
+                {...props} 
+                setMenuState={this.setMenuState} 
+                menuState={this.state.menuState}
+                setHeaderStyle={this.setHeaderStyle} 
+                headerStyle='dark'
+                closeMenu={this.closeMenu}
+              />
+            )} 
+          />
+          <Route 
+            path="/contact-thanks"
+            render={(props) => (
+              <ContactThanks
                 {...props} 
                 setMenuState={this.setMenuState} 
                 menuState={this.state.menuState}

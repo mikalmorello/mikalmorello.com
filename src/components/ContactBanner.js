@@ -23,7 +23,7 @@ class ContactBanner extends React.Component {
                   <input id="contactEmail" className="form__input" type="email" name="_replyto" placeholder="Your Email" required />
                   <label className="form__label" htmlFor="contactSubject">Subject</label>
                   <input id="contactSubject" className="form__input" type="text" name="subject" placeholder="Subject" required />
-                  <input type="hidden" name="_next" value="/contact-thanks.html" />
+                  <input type="hidden" name="_next" value="/contact-thanks" />
                   <input type="hidden" name="_subject" value="Website contact" />
                   <button id="contactSubmit" className="form__submit button" type="submit" value="Send">Submit</button>
                 </form>
