@@ -61,7 +61,11 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/ad
 
 ### Deployment
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
+### `npm run deploy`
+
+Deploy public build to master branch, will be published live.
+
+You still need to push source changes to the react-js branch
 
 ### `npm run build` fails to minify
 

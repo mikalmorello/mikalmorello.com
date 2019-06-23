@@ -1,0 +1,179 @@
+/* ANIMATION */
+/*
+- INTRODUCTION TITLE
+- INTRODUCTION SUBTITLE
+- INTRODUCTION LINK
+- INTRODUCTION SLIDE
+- MENU SLIDE
+- MENU TEXT
+- MENU BACKGROUND
+- CONTACT BACKGROUND
+- LIGHTBOX MODAL
+*/
+
+// INTRODUCTION TITLE
+
+@keyframes introductionTitle{
+  0% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+  90% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+// INTRODUCTION SUBTITLE
+
+@keyframes introductionSubtitle{
+  0% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+// INTRODUCTION LINK
+
+@keyframes introductionLink{
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+  80% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+// INTRODUCTION SLIDE
+
+@keyframes introductionSlide {
+  0% {
+    max-width: 100%;
+    min-width: 100%;
+    width: 100%;
+  }
+  100% {
+    max-width: 50%;
+    min-width: 50%;
+    width: 50%;
+  }
+}
+
+
+// MENU SLIDE
+
+@keyframes menuOpen {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+   transform: translateY(0);
+  }
+}
+
+@keyframes menuClose {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-100%);
+  }
+}
+
+
+// MENU LINKS
+
+@keyframes menuLinkOne{
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+  80% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes menuLinkTwo{
+  0% {
+    opacity: 0;
+  }
+  60% {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+  90% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes menuLinkThree{
+  0% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 0;
+    transform: translateY(1rem);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+// MENU BACKGROUND
+
+@keyframes menuBackground{
+  50% {
+    transform: translateY(110%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
+// CONTACT BACKGROUND
+
+@keyframes contactBackground {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
+// LIGHTBOX MODAL
+
+@keyframes zoom {
+  from {
+    transform:scale(0)
+  } 
+  to {
+    transform:scale(1)
+  }
+}

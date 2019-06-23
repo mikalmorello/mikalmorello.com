@@ -1,0 +1,29 @@
+/* BREAKPOINTS */
+
+
+// BREAKPOINTS - WIDTH
+
+$mobile-small: 400px;
+$mobile: 420px;
+$mobile-large: min-height 920px;
+$tablet: 768px;
+$tablet-large: 960px;
+$desktop-small: 1024px;
+$desktop: 1200px;
+$desktop-max: 1600px;
+
+// BREAKPOINTS - HEIGHT
+
+
+$height-short: (min-height 600px);
+$height-medium: (min-height 800px);
+$height-tall: (min-height 900px);
+
+
+$tablet-short: (min-height 0px)(min-width 960px);
+$tablet-medium: (min-height 800px)(min-width 960px);
+$tablet-tall: (min-height 900px)(min-width 960px);
+
+$desktop-short: (min-height 0px)(min-width 1200px);
+$desktop-medium: (min-height 800px)(min-width 1200px);
+$desktop-tall: (min-height 900px)(min-width 1200px);

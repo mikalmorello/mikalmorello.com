@@ -1,0 +1,590 @@
+/* BANNER REGION */
+/*
+- BANNER
+- BANNER SPLIT
+- BANNER STATES
+- BANNER CONTACT
+
+*/
+
+// BANNER
+
+.banner { 
+  color: $type-dark;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  overflow: hidden;
+}
+
+// BANNER SPLIT
+
+.banner--split {
+  flex-direction: column;
+  width: 100vw;
+  @include breakpoint($tablet-large) {
+    flex-direction: row;
+    height: 100vh;
+    max-height: calc(100vw * (9/12));
+    width: 100vw;
+    min-height: 45rem;
+  }
+  @include breakpoint($desktop-max) {
+    min-height: 56.25rem;
+  }
+  .banner {
+    &__introduction {
+      @include layout-container();
+      align-items: center;
+      background: $theme-offwhite;
+      display: flex;
+      flex-direction: column;
+      order: 2;
+      transition: background-color .5s ease-out, height 0.75s ease-out;
+      @include breakpoint($tablet-large) {
+        @include layout-width(50%);
+        animation: .75s ease-out 0s 1 introductionSlide;
+        flex-direction: row;
+        height: 100%;
+        order: 1;
+        transition: background-color .5s ease-out, max-width 0.75s ease-out, width 0.75s ease-out, min-width 0.75s ease;
+        
+      }
+    }
+    &__content {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-bottom: $padding-navigation-desktop;
+      padding-top: 3rem; 
+      text-align: center;
+      @include breakpoint($tablet-large) {
+        height: 100%;
+        text-align: left;
+        width: calc(50vw - 4rem);
+      }
+      @include breakpoint($tablet-short){
+        padding-top: 30vh;
+      }
+      @include breakpoint($tablet-tall){
+        padding-top: 20vh;
+      }
+      @include breakpoint($desktop-short){
+        padding-top: 30vh;
+      }
+    }
+    &__header {
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      margin-bottom: 5rem;
+      max-width: 80vw;
+      @include breakpoint($tablet-large) {
+        margin-bottom: 0;
+        max-width: 40vw;
+      }
+    }
+    &__title {
+      /*animation: .75s ease-out 0s 1 introductionTitle;
+      @include breakpoint($tablet-large) {
+        animation: 1.5s ease-out 0s 1 introductionTitle;
+      }*/
+    }
+    &__title-small {
+      @include header-title-small;
+      animation: 1.5s ease-out 0s 1 introductionSubtitle;
+      display: block;
+    }
+    &__title-large {
+      @include header-title;
+      animation: 1.5s ease-out 0s 1 introductionTitle;
+      display: block;
+      button {
+        text-decoration: none;
+        &:hover {
+          text-decoration: underline;
+        }
+        &.button--active {
+          text-decoration: underline;
+        }
+      }
+    }
+    &__subtitle {
+      @include header-subtitle;
+      display: none;
+      margin-top: $padding-small-size;
+      &--active {
+        display: block;
+      }
+      a {
+        @include link-dark-underline;
+      }
+    }
+    &__link {
+      @include standalone-link(uppercase);
+      animation: .75s ease-out 0s 1 introductionLink;
+      width: 80vw;
+      @include breakpoint($tablet-large) {
+        animation: 1.5s ease-out 0s 1 introductionLink;
+        width: 40vw;
+      }
+      a {
+        @include link-dark-underline;
+        padding-bottom: $link-padding;
+      }
+    }
+    &__portrait {
+      align-content: flex-end;
+      display: flex;
+      min-height: 43.125rem;
+      overflow: hidden;
+      padding-top: 5.625rem;
+      position: absolute;
+      top: 0;
+      width: 100%;
+      transition: top 0.25s ease;
+      @include breakpoint($mobile-large) {
+        top: calc(75vh - 43.125rem);
+      }
+      @include breakpoint($tablet-large) {
+        bottom: 0;
+        height: auto;
+        justify-content: center;
+        min-height: auto;
+        padding-top: 0;
+        right: 0;
+        width: 50vw;
+      }
+      @include breakpoint($tablet-short){
+        top: 5vh;
+      }
+      @include breakpoint($tablet-medium){
+        top: 10vh;
+      }
+      @include breakpoint($tablet-tall){
+        top: 10vh;
+      }
+      img {
+        height: 37.5rem;
+        object-fit: cover; 
+        object-position: 50% 50%;
+        vertical-align: bottom;
+        width: 100%;
+        @include breakpoint($mobile) {
+          object-fit: contain; 
+          object-position: center;
+        }
+        @include breakpoint($tablet-large) {
+         height: inherit;
+        }
+      }
+    }
+    &__portrait-button {
+      width: 100%;
+      @include breakpoint($tablet-large) {
+        width: auto;
+      }
+    }
+    &__media {
+      background-image: url(/assets/images/banner-background.jpg);
+      background-size: cover;
+      background-position: center center;
+      box-shadow: inset 8px 0 20px -8px rgba(68, 68, 68, 0.6);
+      display: flex;
+      height: 75vh;
+      min-height: 43.125rem;
+      order:1;
+      transition: height 0.25s ease;
+      @include breakpoint($tablet-large) {
+        @include layout-width(50%);
+        height: 100%;
+        order:2;
+        transition: max-width 0.75s ease-out, width 0.75s ease-out, min-width 0.75s ease-out;
+      }
+    }
+  }
+}
+
+
+// BANNER STATES
+
+.banner--designer {
+  .banner {
+    &__introduction {
+      background-color: $theme-green;
+      color: $white;
+      @include breakpoint($tablet-large) {
+        @include layout-width(100%);
+        padding-bottom: 0;
+      }
+    }
+    &__subtitle {
+      a {
+        @include link-light-underline;
+      }
+    }
+    &__link {
+      a {
+        @include link-light-underline;
+      }
+    }
+    &__media {
+      @include breakpoint($tablet-large) {
+        @include layout-width(100%);
+      }
+    }
+  }
+}
+
+.banner--developer {
+  .banner {
+    &__introduction {
+      background-color: $theme-light-blue;
+      color: $type-dark;
+      @include breakpoint($tablet-large) {
+        @include layout-width(100%);
+        padding-bottom: 0;
+      }
+    }
+    &__subtitle {
+      a {
+        @include link-dark-underline;
+      }
+    }
+    &__link {
+      a {
+        @include link-dark-underline;
+      }
+    }
+    &__media {
+      @include breakpoint($tablet-large) {
+        @include layout-width(100%);
+      }
+    }
+  }
+}
+
+.banner--strategist {
+  .banner {
+    &__introduction {
+      background-color: $theme-blue;
+      color: $white;
+      @include breakpoint($tablet-large) {
+        @include layout-width(100%);
+        padding-bottom: 0;
+      }
+    }
+    &__subtitle {
+      a {
+        @include link-light-underline;
+      }
+    }
+    &__link {
+      a {
+        @include link-light-underline;
+      }
+    }
+    &__media {
+      @include breakpoint($tablet-large) {
+        @include layout-width(100%);
+      }
+    }
+  }
+}
+
+// BANNER CONTACT 
+
+.banner--contact {
+  @include layout-partialscreen;
+  align-items: center;
+  background: $theme-light-green;
+  display: flex;
+  justify-content: center;
+  &:after{
+    content: '';
+    background-image: url(/assets/images/wave-group-angled.svg);
+    background-position: bottom right;
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    @include breakpoint($tablet-large) {
+      animation: 1.5s normal forwards ease-in-out contactBackground;
+    }
+  }
+  .banner {
+    &__container {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      padding-bottom: $padding-navigation-desktop;
+      @include breakpoint($tablet-large) {
+        @include container-wide;
+        flex-direction: row;
+        padding-top: $padding-navigation-desktop;
+      }
+    }
+    &__content {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      margin-top: -30rem;
+      order: 2;
+      padding-top: $padding-navigation-desktop;
+      z-index: $z-contact-form;
+      @include breakpoint($tablet) {
+        @include layout-width(50%);
+        padding-top: 0;
+      }
+      @include breakpoint($tablet-large) {
+        margin-top: 0;
+        order: 1;
+      }
+    }
+    &__content-container {
+      @include container-wide;
+      @include layout-width(26.25rem);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-top: $padding-medium-size;
+      padding-bottom: $padding-standard-size;
+      @include breakpoint($tablet) {
+        background: $theme-light-green;
+      }
+      @include breakpoint($tablet-large) {
+        background: inherit;
+        padding-bottom: 0;
+        padding-top: 0;
+      }
+    }
+    &__form {
+      background: $theme-light-green;
+      display: flex;
+      justify-content: center;
+      margin-left: -2rem;
+      margin-right: -2rem;
+      padding: 2rem;
+      @include breakpoint($tablet) {
+        background: inherit;
+        margin: 0;
+        padding: 0;
+      }
+    }
+    &__divider {
+      align-self: flex-start;
+      margin-bottom: .5rem;
+      width: $divider-width;
+    }
+    &__title {
+      @include contact-large-text(uppercase);
+      margin-bottom: 2rem;
+    }
+    &__subtitle {
+      @include body-text;
+      margin-bottom: 3rem;
+      @include breakpoint($tablet) {
+        margin-bottom: 2rem;
+      }
+    }
+    &__media {
+      display: flex;
+      min-height: 37.5rem;
+      max-height: 100vh;
+      order: 1;
+      position: relative;
+      z-index: $z-contact-media;
+      @include breakpoint($tablet-large) {
+        @include layout-width(50%);
+        //min-height: 0;
+        order: 2;
+      }
+      &:before {
+        content:"";
+        display: block;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background-color: rgba(255, 255, 255, .8);
+        @include breakpoint($tablet) {
+          background-color: transparent;
+        }
+      }
+      img {
+        object-fit: cover;
+        object-position: 0 0;
+        //height: 100vh;
+        @include breakpoint($tablet) {
+          height: auto;
+          object-fit: none;
+          object-position: 0 150%;
+          
+        }
+      }
+    }
+  }
+}
+
+
+// BANNER PROJECTS 
+
+.banner--projects {
+  @include layout-partialscreen;
+  align-items: center;
+  background: $theme-dark-blue;
+  background-image: url(/assets/images/wave-group-medium-light.svg);
+  background-position: bottom right;
+  background-repeat: repeat-x;
+  color: $white;
+  display: flex;
+  justify-content: center;
+  min-height: 43.75rem;
+  .banner {
+    &__container {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      padding-bottom: $padding-navigation-desktop;
+      @include breakpoint($tablet-large) {
+        @include container-wide;
+        flex-direction: row;
+        padding-top: $padding-navigation-desktop;
+      }
+    }
+    &__content {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      order: 2;
+      padding-top: $padding-navigation-desktop;
+      z-index: $z-contact-form;
+      @include breakpoint($tablet) {
+        //@include layout-width(50%);
+        padding-top: 0;
+      }
+      @include breakpoint($tablet-large) {
+        margin-top: 0;
+        order: 1;
+      }
+    } 
+    &__content-container {
+      @include container-wide;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-top: $padding-medium-size;
+      padding-bottom: $padding-standard-size;
+      @include breakpoint($tablet) {
+        @include layout-width(40rem);
+      }
+      @include breakpoint($tablet-large) {
+        background: inherit;
+        padding-bottom: 0;
+        padding-top: 0;
+      }
+    }
+    &__divider {
+      align-self: flex-start;
+      margin-bottom: .5rem;
+      width: $divider-width;
+    }
+    &__title {
+      @include contact-large-text(uppercase);
+      margin-bottom: 2rem;
+    }
+    &__subtitle {
+      @include body-text;
+      margin-bottom: 3rem;
+      @include breakpoint($tablet) {
+        margin-bottom: 2rem;
+      }
+    }
+    &__number {
+      font-weight: $font-weight-bold;
+    }
+  }
+  a {
+    color: $white;
+  }
+}
+
+
+// BANNER PROJECT
+
+.banner--project {
+  display: flex;
+  justify-content: center;
+  .banner {
+    &__container {
+      @include container-normal;
+      align-items: flex-start;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding-bottom: $padding-project-bottom--mobile;
+      padding-top: $padding-project-top-mobile;
+      @include breakpoint($tablet) {
+        flex-direction: row;
+        padding-bottom: $padding-project-bottom;
+        padding-top: $padding-project-top;
+      }
+      @include breakpoint($desktop) {
+        padding-left: 0;
+        padding-right: 0;
+      }
+    }
+    &__introduction {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      @include breakpoint($tablet) {
+        margin-right: 3rem;
+        width: calc(75% - 3rem);
+      }
+    }
+    &__title {
+      @include project-title-text;
+      margin-bottom: 2rem;
+    }
+    &__description {
+      @include project-introduction-text;
+    }
+    &__introduction-sidebar {
+      align-items: flex-start;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      @include breakpoint($tablet) {
+        width: 25%;
+      }
+      
+    }
+    &__divider {
+      align-self: flex-start;
+      margin-top: 3rem;
+      margin-bottom: 2rem;
+      opacity: .25;
+      width: $divider-width;
+      @include breakpoint($tablet) {
+        margin-bottom: 5rem;
+        margin-top: 0;
+      }
+    }
+    &__role {
+      margin-bottom: 2rem;
+    }
+    &__role-title {
+      @include project-aside-title-text; 
+      margin-bottom: .75rem;
+    }
+    &__role-position {
+      @include list-vertical(.25rem);
+      @include project-aside-text;
+    }
+  }
+}

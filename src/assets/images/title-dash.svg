@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="2px" height="51px" viewBox="0 0 2 51" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 54.1 (76490) - https://sketchapp.com -->
+    <title>Rectangle</title>
+    <desc>Created with Sketch.</desc>
+    <g id="MAIN" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="ARTICLE-TEMPLATE---TUFTS-MAGAZINE-" transform="translate(-134.000000, -3124.000000)" fill="#D8D8D8">
+            <g id="MAIN" transform="translate(-437.000000, 1513.000000)">
+                <g id="Body-Text" transform="translate(557.000000, 1312.000000)">
+                    <g id="Subheader" transform="translate(0.000000, 299.000000)">
+                        <rect id="Rectangle" x="14" y="0" width="2" height="51"></rect>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

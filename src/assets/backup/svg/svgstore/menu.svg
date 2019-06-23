@@ -1,0 +1,13 @@
+<svg width="20px" height="18px" viewBox="0 0 20 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <g id="menu">
+    <g id="line-1">
+      <path d="M7.23083731,2.96L7.23083731 0.96 19.8 0.96 19.8 2.96z"></path>
+    </g>
+    <g id="line-2">
+      <path d="M0.2,10L0.2 8 19.8 8 19.8 10z"></path>
+    </g>
+    <g id="line-3">
+      <path d="M3.71312668,17.04L3.71312668 15.04 19.8 15.04 19.8 17.04z"></path>
+    </g>
+  </g>
+</svg>

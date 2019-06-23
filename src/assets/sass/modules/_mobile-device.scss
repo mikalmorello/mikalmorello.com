@@ -1,0 +1,131 @@
+/* MOBILE DEVICE */
+/*
+- MOBILE DEVICE
+- MOBILE DEVICE STATES
+*/
+
+
+// MOBILE DEVICE
+
+.mobile-device {
+  &__container {
+    @include layout-vertical-padding($padding-standard-size);
+    @include container-normal;
+    display: flex;
+    flex-direction: column;
+    @include breakpoint($tablet) {
+      @include layout-vertical-padding($padding-large-size);
+      flex-direction: row;
+      max-width: $container-wide;
+    }
+  }
+  &__introduction {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 3rem;
+    max-width: 25rem;
+    text-align: center;
+    @include breakpoint($tablet) {
+      margin-top: 0;
+      max-width: 100%;
+      width: 33.33%;
+    }
+  }
+  &__title {
+    @include subheader-text(capitalize); 
+    margin-bottom: .5rem;
+  }
+  &__description {
+    @include body-text;  
+  }
+  &__device-container {
+    @include flex-center;
+    @include breakpoint($tablet) {
+      width: 33.33%;
+    }
+  }
+  &__device {
+    @include flex-center;
+    background-image: url(/assets/images/device-phone.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 1.25rem;
+    box-shadow: 0 0 1rem 0 rgba(0,0,0,0.15);
+    height: 32.5625rem;
+    overflow: hidden;
+    position: relative;
+    width: 15.75rem;
+  }
+  &__phone {
+    cursor: pointer;
+    max-width: 14.125rem;
+    min-width: 14.125rem;
+    height: 25rem;
+    overflow: scroll;
+    position: relative;
+    user-select: none;
+    -webkit-overflow-scrolling: touch;
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      box-shadow: inset 0 0 .25rem 0 rgba(0,0,0,0.2);
+      z-index: 5;
+    }
+    img {
+      vertical-align: bottom;
+    }
+  }
+}
+
+
+// MOBILE DEVICE STATES
+
+.mobile-device--left {
+  .mobile-device {
+    &__container {
+      @include breakpoint($tablet) {
+        justify-content: flex-start;
+      }
+    }
+    &__introduction {
+      order: 2;
+      @include breakpoint($tablet) {
+        order: 1;
+        padding-right: $padding-small-size;
+        text-align: right;
+      }
+    }
+    &__device-container {
+      order: 1;
+      @include breakpoint($tablet) {
+        order: 2;
+      }
+    }
+  }
+}
+
+.mobile-device--right {
+  .mobile-device {
+    &__container {
+      @include breakpoint($tablet) {
+        justify-content: flex-end;
+      }
+    }
+    &__introduction {
+      order: 2;
+      @include breakpoint($tablet) {
+        padding-left: $padding-small-size;
+        text-align: left;
+      }
+    }
+    &__device-container {
+      order: 1;
+    }
+  }
+}
+

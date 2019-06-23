@@ -1,0 +1,85 @@
+/* MENU */
+/*
+- MAIN MENU
+- MAIN MENU STATES
+*/
+
+
+// MAIN MENU
+
+.main-menu { 
+  align-items: center;
+  backface-visibility: hidden;
+  background-color: rgba($theme-blue,0.99);
+  color: $white;
+  justify-content: center;
+  left: 0;
+  min-height:25rem;
+  overflow: auto;
+  position: fixed;
+  text-align: center;
+  top: 0;
+  transform: translateY(-100%);
+  width: 100%;
+  -webkit-overflow-scrolling: touch;
+  z-index: $z-index-main-menu;
+  &:after {
+    content: '';
+    background-image: url(/assets/images/wave-group-large.svg);
+    //background-position: top -10rem center;
+    background-position: top center;
+    background-repeat: repeat-x;
+    bottom: 0;
+    height: 20vh;
+    position: absolute;
+    width: 100%;
+    @include breakpoint($tablet) {
+      background-position: top center;
+      
+    }
+  }
+  &__links {
+    @include list-vertical($padding-small-size);
+    margin: 0;
+    @include breakpoint($tablet) {
+      @include list-vertical($padding-standard-size);
+      margin-bottom: 20vh;
+    }
+  }
+  &__link {
+    @include main-menu-text;
+    a {
+      @include link-light;
+    }
+  }
+}
+
+
+// MAIN MENU STATES
+
+.main-menu--is-hidden {
+  animation: .5s normal forwards ease-in-out menuClose;
+  display: flex;
+  height: 100vh;
+}
+
+.main-menu--is-visible {
+  animation: .5s normal forwards ease-in-out menuOpen;
+  display: flex;
+  height: 100vh;
+  .main-menu {
+    &__link:nth-of-type(1) {
+      animation: 1.25s ease-out 0s 1 menuLinkThree; 
+    }
+    &__link:nth-of-type(2) {
+      animation: 1.25s ease-out 0s 1 menuLinkTwo;
+    }
+    &__link:nth-of-type(3) {
+      animation: 1.25s ease-out 0s 1 menuLinkOne;
+    }
+  }
+  &.main-menu:after {
+    animation: 1s ease-out 0s 1 menuBackground;
+  }
+}
+

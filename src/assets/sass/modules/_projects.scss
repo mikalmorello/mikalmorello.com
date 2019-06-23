@@ -1,0 +1,167 @@
+/* PROJECTS */
+/*
+- PROJECTS
+- PROJECT TEASER
+- PROJECT CARD
+*/
+
+
+// PROJECTS
+
+.projects {
+  &__container {
+    //padding-bottom: 4rem;
+    @include breakpoint($tablet) {
+      @include container-normal;
+    }
+  }
+}
+
+.projects--horizontal {
+  margin-top: -9.375rem;
+  position: relative;
+  @include breakpoint($tablet) {
+    margin-bottom: 8rem;
+  }
+  .projects {
+    &__container {
+      display: flex;
+      flex-direction: column;
+      max-width: $container-wide;
+      width: auto;
+      @include breakpoint($tablet) {
+        flex-direction: row;
+      }
+      
+    }
+  }
+}
+
+
+// PROJECT TEASER
+
+.project-teaser {
+  @include layout-vertical-padding($vertical-padding-standard);
+  color: $type-dark;
+  position: relative;
+  @include breakpoint($tablet) {
+    @include layout-vertical-padding($vertical-padding-large);
+  }
+  &__container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2rem;
+    @include breakpoint($tablet) {
+      display: block;
+      margin-bottom: 4rem;
+    }
+  }
+  &__content {
+    @include link-dark(none);
+    @include container-normal;
+    display: flex;
+    flex-direction: column;
+    order: 2;
+    margin-left: -2rem;
+    margin-top: -3rem;
+    position: relative;
+    z-index: $z-project-title;
+    @include breakpoint($tablet) {
+      margin-top: 0;
+      order: 1;
+    }
+  }
+  &__title {
+    @include project-large-text;
+    max-width: 100%;
+    background-color: $white;
+    padding-left: 2rem;
+    padding-top: .5rem;
+    @include breakpoint($tablet) {
+      background: none;
+      max-width: 80%;
+      padding-left: 0;
+      padding-top: 0;
+    }
+  }
+  &__subtitle {
+    @include project-small-text;
+    max-width: 100%;
+    padding-left: 2rem;
+    padding-top: .5rem;
+    @include breakpoint($tablet) {
+      max-width: 60%;
+      padding-left: 0;
+      padding-top: 0;
+    }
+  }
+  &__white-background {
+    @include breakpoint($tablet) {
+      background-color: $white;
+      display: inline;
+      box-shadow: 1em 0 0 $white,-1em 0 0 $white;
+    }
+  }
+  &__media { 
+    order: 1;
+    transition: opacity 0.5s ease;
+    @include breakpoint($tablet) {
+      order: 2;
+      position: absolute;
+      top: 0;
+      right: 0;
+      //visibility: hidden;
+      opacity: 0;
+    }
+    .project-teaser:hover &, .project-teaser:active & {
+      //visibility: visible;
+      opacity: 1;
+    }
+  }
+}
+
+
+// PROJECT CARD
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 6rem;
+  text-align: center;
+  @include breakpoint($tablet) {
+    flex-basis: 0;
+    flex-grow: 1;
+    margin-bottom: 0;
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    order: 1;
+  }
+  &__title {
+    @include project-card-title;
+    order: 3;
+    padding: 0 $padding-standard-size;
+  }
+  &__tags {
+    @include list-horizontal(.25rem); 
+    @include small-text(uppercase);
+    letter-spacing: $letter-space-extra-large;
+    order: 2;
+    padding: 0 $padding-standard-size;
+  }
+  &__tag {
+    &:not(:last-child):after {
+      content: "/";
+      padding-left: .5rem;
+    }
+  }
+  &__media {
+    margin-bottom: 2rem;
+    order: 1;
+  }
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+}

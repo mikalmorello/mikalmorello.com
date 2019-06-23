@@ -1,0 +1,59 @@
+/* TYPOGRSAPHY */
+/*
+- FONTS
+- LETTER SPACING
+- LINE HEIGHT
+- FONT SIZE
+- FONT WEIGHT
+*/
+
+
+// FONTS
+
+$lato: 'Lato', sans-serif;
+$oswald: 'Oswald', sans-serif;
+
+
+// LETTER SPACING
+
+$letter-space-extra-large: .1em;
+$letter-space-large: .04em;
+$letter-space-small: .03em;
+$letter-space-none: 0;
+
+
+// LINE HEIGHT
+
+$line-height-small: 1.2em;
+$line-height-standard: 1.3em;
+$line-height-large: 1.4em;
+$line-height-extra-large: 1.8em;
+$line-height-none: 1em;
+
+
+
+// FONT SIZE
+
+$title-large: 4.25rem; // 68px
+$title-medium: 1.875rem; // 30px
+$title-small: 1.25rem; // 20px
+$subtitle-large: 2.25rem; // 36px
+$text-extra-large: 1.5rem; // 24px
+$text-large: 1.25rem; // 20px
+$text-medium: 1rem; // 16px
+$text-small: .875rem; // 14px
+$text-body: 1.125rem; // 18px
+$text-project-title: 2.75rem; // 44px
+$text-subheader-mobile: 2rem; // 44px
+$text-subheader: 2.75rem; // 44px
+$text-dropcap: 6.25rem; // 100px
+
+
+// FONT WEIGHT
+
+$font-weight-extra-light: 300;
+$font-weight-light: 300;
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-semi-bold: 600;
+$font-weight-bold: 700;
