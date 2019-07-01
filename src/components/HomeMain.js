@@ -35,7 +35,7 @@ class HomeMain extends React.Component {
                         <span className="project-teaser__white-background">Tufts Magazine</span>
                       </h3>
                       <h4 className="project-teaser__subtitle">
-                        <span className="project-teaser__white-background">Reimaging an award-winning print publication and bringing it t to life on the web</span>
+                        <span className="project-teaser__white-background">Reimaging an award-winning print publication and bringing it to life on the web</span>
                       </h4>
                     </Link>
                     <div className="project-teaser__media">
