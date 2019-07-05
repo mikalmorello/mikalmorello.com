@@ -31,22 +31,22 @@ class Header extends React.Component {
   hasHash(){
     switch(window.location.hash.substring(1).toLowerCase()) {
       case 'harvard': 
-        this.setCompany(window.location.hash.substring(1));
+        this.setCompany(window.location.hash.substring(1).toLowerCase());
         break;
       case 'mit':
-        this.setCompany(window.location.hash.substring(1));
+        this.setCompany(window.location.hash.substring(1).toLowerCase());
         break;
       case 'edx':
-        this.setCompany(window.location.hash.substring(1));
+        this.setCompany(window.location.hash.substring(1).toLowerCase());
         break;
       case 'hbsp':
-        this.setCompany(window.location.hash.substring(1));
+        this.setCompany(window.location.hash.substring(1).toLowerCase());
         break;
       case 'wgbh':
-        this.setCompany(window.location.hash.substring(1));
+        this.setCompany(window.location.hash.substring(1).toLowerCase());
         break;
       case 'massart':
-        this.setCompany(window.location.hash.substring(1));
+        this.setCompany(window.location.hash.substring(1).toLowerCase());
         break;
       default:
         this.setCompany('');
