@@ -29,7 +29,7 @@ class Header extends React.Component {
   
   
   hasHash(){
-    switch(window.location.hash.substring(1)) {
+    switch(window.location.hash.substring(1).toLowerCase()) {
       case 'harvard': 
         this.setCompany(window.location.hash.substring(1));
         break;
