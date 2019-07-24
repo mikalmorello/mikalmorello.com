@@ -51,6 +51,12 @@ class Header extends React.Component {
       case 'ibm':
         this.setCompany(window.location.hash.substring(1).toLowerCase());
         break;
+      case '829':
+        this.setCompany(window.location.hash.substring(1).toLowerCase());
+        break;
+      case 'hubspot':
+        this.setCompany(window.location.hash.substring(1).toLowerCase());
+        break;
       default:
         this.setCompany('');
         break;
