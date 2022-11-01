@@ -12,7 +12,7 @@
     "@babel/preset-env": "^7.4.5",
     "breakpoint-sass": "^2.6.1",
     "compass-mixins": "^0.12.7",
-    "gulp": "^3.9.0",
+    "gulp": "^4.0.2",
     "gulp-autoprefixer": "^5.0.0",
     "gulp-babel": "^8.0.0-beta.2",
     "gulp-baseimg": "^0.3.0",
