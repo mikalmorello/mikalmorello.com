@@ -13,7 +13,7 @@ class HomeMain extends React.Component {
               <div className="introduction__container">
                 <div className="introduction__text">
                   <p>
-                    Currently a<span className="semi-bold">digital accessibility developer</span> at Harvard University, I am passionate about building scalable design systems that enhance the user-experience. From hands-on development to high-level strategic planning, I've done it all. Check out my latest work below:
+                    Currently a <span className="semi-bold">senior software engineer</span> at Harvard University, I am passionate about building scalable design systems that enhance the user-experience. From hands-on development to high-level strategic planning, I've done it all. Check out my latest work below:
                   </p>
                 </div>
                 <div className="introduction__divider">
